@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hesketon.co.il/sitemap-index.xml

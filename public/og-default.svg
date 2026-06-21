@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="הסכתון">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#13635c"/>
+      <stop offset="1" stop-color="#0e4a45"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g fill="none" stroke="#fdfbf5" stroke-opacity="0.16" stroke-width="2">
+    <circle cx="980" cy="160" r="120"/>
+    <circle cx="980" cy="160" r="190"/>
+    <circle cx="980" cy="160" r="260"/>
+  </g>
+  <g transform="translate(150,250)" fill="#fdfbf5" font-family="'Frank Ruhl Libre', Georgia, serif">
+    <text x="0" y="0" font-size="120" font-weight="700" direction="rtl">הסכתון</text>
+    <text x="0" y="86" font-size="40" font-weight="400" fill="#d7eae7" direction="rtl" font-family="'Heebo', sans-serif">תקצירים חכמים מהפודקאסטים הכי טובים</text>
+  </g>
+</svg>

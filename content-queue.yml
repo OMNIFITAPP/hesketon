@@ -1,0 +1,22 @@
+# ============================================================
+#  Phase 2 — cloud content queue
+#
+#  This file is the "to-do list" for the automated pipeline. Unlike the
+#  inbox/ briefs (which hold pasted transcripts and stay on your machine),
+#  this file is committed to the repo and read by the GitHub Action. Each
+#  entry needs only a YouTube URL — the transcript is fetched at run time
+#  (Apify, or the free fetcher).
+#
+#  Add an entry, commit, and the scheduled Action drafts a post and opens
+#  a pull request for you to approve. The generator sets `done: true` after
+#  it processes an entry so it isn't redone.
+# ============================================================
+
+episodes: []
+  # - youtubeUrl: "https://www.youtube.com/watch?v=XXXXXXXXXXX"
+  #   podcast: "שם הפודקאסט"
+  #   episode: "כותרת הפרק"
+  #   host: "שם המנחה"
+  #   guest: "שם האורח"
+  #   categoryHint: "בריאות וכושר"
+  #   done: false

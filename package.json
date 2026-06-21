@@ -1,0 +1,28 @@
+{
+  "name": "hesketon",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "הסכתון — תקצירים חכמים ומקוריים מהפודקאסטים הכי טובים, בעברית.",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "new-post": "node scripts/generate.mjs",
+    "new-post:dry": "node scripts/generate.mjs --dry-run"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^6.4.8"
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "^0.105.0",
+    "dotenv": "^17.4.2",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.2.0",
+    "youtube-transcript": "^1.3.1"
+  }
+}

@@ -1,0 +1,28 @@
+---
+import FormattedDate from './FormattedDate.astro';
+import { categoryByName } from '../consts';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+const { post } = Astro.props;
+const cat = categoryByName(post.data.category);
+---
+
+<article class="card">
+  {cat && <a class="chip" href={`/categories/${cat.slug}`}>{cat.name}</a>}
+  <h2 class="card__title"><a href={`/posts/${post.id}`}>{post.data.title}</a></h2>
+  <p class="card__desc">{post.data.description}</p>
+  <div class="card__meta">
+    <FormattedDate date={post.data.pubDate} />
+    {post.data.readingTime && <span class="dot">{post.data.readingTime} דק׳ קריאה</span>}
+  </div>
+</article>
+
+<style>
+  /* Keep the category chip hugging its text inside the flex column. */
+  .chip {
+    align-self: flex-start;
+  }
+</style>

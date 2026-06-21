@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+import { SITE, CATEGORIES } from '../consts';
+import { getPublishedPosts } from '../utils';
+
+const posts = await getPublishedPosts();
+const latest = posts.slice(0, 9);
+---
+
+<BaseLayout>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">תקצירים חכמים · בעברית</p>
+      <h1>{SITE.title}</h1>
+      <p class="lead">
+        {SITE.description} בלי לבזבז שעות — הרעיונות, התובנות והשורה התחתונה מכל פרק.
+      </p>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    {
+      latest.length === 0 ? (
+        <p class="muted">
+          עדיין אין פוסטים. צרו את הראשון עם <code>npm run new-post</code> 🙂
+        </p>
+      ) : (
+        <>
+          <h2 style="margin-bottom:1.5rem">הכי חדש</h2>
+          <div class="post-grid">
+            {latest.map((post) => (
+              <PostCard post={post} />
+            ))}
+          </div>
+          {posts.length > latest.length && (
+            <p style="margin-top:2rem">
+              <a class="btn btn--ghost" href="/posts">
+                לכל הפרקים ←
+              </a>
+            </p>
+          )}
+        </>
+      )
+    }
+  </section>
+
+  <section class="section wrap" style="padding-top:0">
+    <h2 style="margin-bottom:1.25rem">לפי נושא</h2>
+    <div class="tag-list">
+      {CATEGORIES.map((c) => <a class="chip" href={`/categories/${c.slug}`}>{c.name}</a>)}
+    </div>
+  </section>
+</BaseLayout>

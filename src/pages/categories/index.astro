@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { CATEGORIES } from '../../consts';
+import { getPublishedPosts } from '../../utils';
+
+const posts = await getPublishedPosts();
+const countFor = (name: string) => posts.filter((p) => p.data.category === name).length;
+---
+
+<BaseLayout title="קטגוריות" description="כל הנושאים בהסכתון — בריאות, מיינדסט, עסקים, מדע וכסף.">
+  <section class="section wrap">
+    <div class="page-title">
+      <h1>קטגוריות</h1>
+      <p class="muted">בחרו נושא וצללו פנימה</p>
+    </div>
+    <div class="post-grid">
+      {
+        CATEGORIES.map((c) => (
+          <article class="card">
+            <h2 class="card__title">
+              <a href={`/categories/${c.slug}`}>{c.name}</a>
+            </h2>
+            <p class="card__desc">{c.description}</p>
+            <div class="card__meta">{countFor(c.name)} פרקים</div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

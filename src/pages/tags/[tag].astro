@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { tagToSlug } from '../../consts';
+import { getPublishedPosts } from '../../utils';
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+  const seen = new Map<string, string>(); // slug -> original tag
+  for (const p of posts) {
+    for (const t of p.data.tags ?? []) {
+      const slug = tagToSlug(t);
+      if (!seen.has(slug)) seen.set(slug, t);
+    }
+  }
+  return [...seen.entries()].map(([slug, tag]) => ({
+    params: { tag: slug },
+    props: { tag },
+  }));
+}
+
+const { tag } = Astro.props;
+const posts = (await getPublishedPosts()).filter((p) => (p.data.tags ?? []).includes(tag));
+---
+
+<BaseLayout title={`#${tag}`} description={`כל התקצירים בתגית ${tag}.`}>
+  <section class="section wrap">
+    <div class="page-title">
+      <p class="eyebrow">תגית</p>
+      <h1>#{tag}</h1>
+      <p class="muted">{posts.length} תקצירים</p>
+    </div>
+    <div class="post-grid">
+      {posts.map((post) => <PostCard post={post} />)}
+    </div>
+  </section>
+</BaseLayout>

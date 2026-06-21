@@ -1,0 +1,57 @@
+name: Generate draft posts (AI)
+
+# Phase 2 automation. Runs the generator in the cloud and opens a Pull
+# Request with the new drafts, so you can review and merge from your phone.
+#
+# Requires repo secrets:  ANTHROPIC_API_KEY  (and APIFY_TOKEN for scraping)
+# Optional repo variables: CLAUDE_MODEL, APIFY_ACTOR
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (no API calls)"
+        type: boolean
+        default: false
+  # ── Uncomment to run on a schedule (e.g. daily at 06:00 UTC) ──
+  # schedule:
+  #   - cron: "0 6 * * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Generate drafts
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          APIFY_ACTOR: ${{ vars.APIFY_ACTOR }}
+        run: node scripts/generate.mjs ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Open a Pull Request with the new drafts
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto/new-drafts
+          title: "תוכן חדש: טיוטות לבדיקה 🎙️"
+          commit-message: "content: add AI-generated drafts"
+          body: |
+            נוצרו טיוטות חדשות אוטומטית.
+
+            לפרסום: עברו על כל טיוטה, ערכו אם צריך, שנו `draft: false`, ומזגו את ה-PR.
+            המיזוג ל-main יפעיל את ה-deploy והאתר יתעדכן לבד.
+          labels: content, automated
+          delete-branch: true

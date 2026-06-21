@@ -1,0 +1,100 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import { SITE, categoryByName, tagToSlug } from '../consts';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+const { post } = Astro.props;
+const d = post.data;
+const cat = categoryByName(d.category);
+const siteUrl = Astro.site ?? new URL(SITE.url);
+const url = new URL(`/posts/${post.id}`, siteUrl).href;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: d.title,
+  description: d.description,
+  inLanguage: 'he-IL',
+  datePublished: d.pubDate.toISOString(),
+  dateModified: (d.updatedDate ?? d.pubDate).toISOString(),
+  mainEntityOfPage: url,
+  author: { '@type': 'Organization', name: SITE.title },
+  publisher: { '@type': 'Organization', name: SITE.title },
+  ...(d.source?.youtubeUrl ? { isBasedOn: d.source.youtubeUrl } : {}),
+};
+---
+
+<BaseLayout
+  title={d.title}
+  description={d.description}
+  type="article"
+  publishedTime={d.pubDate.toISOString()}
+  modifiedTime={(d.updatedDate ?? d.pubDate).toISOString()}
+  jsonLd={jsonLd}
+>
+  <article>
+    <header class="post-header wrap wrap--reading">
+      {cat && <a class="chip" href={`/categories/${cat.slug}`}>{cat.name}</a>}
+      <h1>{d.title}</h1>
+      <div class="post-meta">
+        <FormattedDate date={d.pubDate} />
+        {d.readingTime && <span class="dot">{d.readingTime} דק׳ קריאה</span>}
+        {d.source?.podcast && <span class="dot">מבוסס על {d.source.podcast}</span>}
+      </div>
+    </header>
+
+    <div class="prose wrap wrap--reading">
+      <slot />
+
+      {
+        d.source && (
+          <aside class="source-box">
+            <strong>על מה מבוסס התקציר?</strong>
+            <br />
+            התקציר מבוסס על
+            {d.source.episode ? <> הפרק «{d.source.episode}»</> : <> פרק</>}
+            {d.source.podcast ? (
+              <>
+                {' '}
+                מתוך הפודקאסט <strong>{d.source.podcast}</strong>
+              </>
+            ) : null}
+            {d.source.guest ? <> עם {d.source.guest}</> : null}.
+            {d.source.youtubeUrl && (
+              <>
+                {' '}
+                <a href={d.source.youtubeUrl} target="_blank" rel="noopener noreferrer">
+                  צפו במקור המלא ביוטיוב ↗
+                </a>
+              </>
+            )}
+            <br />
+            <span class="muted">
+              זהו תקציר מקורי ופרשני. כל הזכויות על התוכן המקורי שמורות ליוצרים.
+            </span>
+          </aside>
+        )
+      }
+
+      {
+        d.tags?.length > 0 && (
+          <ul class="tag-list" style="margin-top:1.5rem">
+            {d.tags.map((t) => (
+              <li>
+                <a class="tag" href={`/tags/${tagToSlug(t)}`}>
+                  #{t}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+
+      <p style="margin-top:2rem"><a href="/posts">← לכל הפרקים</a></p>
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getPublishedPosts } from '../../utils';
+
+const posts = await getPublishedPosts();
+---
+
+<BaseLayout title="כל הפרקים" description="כל תקצירי הפודקאסטים שפורסמו בהסכתון.">
+  <section class="section wrap">
+    <div class="page-title">
+      <h1>כל הפרקים</h1>
+      <p class="muted">{posts.length} תקצירים — ומתעדכן כל הזמן</p>
+    </div>
+    {
+      posts.length === 0 ? (
+        <p class="muted">עדיין אין פוסטים.</p>
+      ) : (
+        <div class="post-grid">
+          {posts.map((post) => (
+            <PostCard post={post} />
+          ))}
+        </div>
+      )
+    }
+  </section>
+</BaseLayout>
