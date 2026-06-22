@@ -1,22 +1,57 @@
 # ============================================================
 #  Phase 2 — cloud content queue
 #
-#  This file is the "to-do list" for the automated pipeline. Unlike the
-#  inbox/ briefs (which hold pasted transcripts and stay on your machine),
-#  this file is committed to the repo and read by the GitHub Action. Each
-#  entry needs only a YouTube URL — the transcript is fetched at run time
-#  (Apify, or the free fetcher).
+#  The "to-do list" for the automated pipeline. Each entry needs only a
+#  YouTube URL; the transcript is fetched at run time (Apify or the free
+#  fetcher), Claude writes the post in the house style, and a Pull Request
+#  is opened for you to review + merge.
 #
-#  Add an entry, commit, and the scheduled Action drafts a post and opens
-#  a pull request for you to approve. The generator sets `done: true` after
-#  it processes an entry so it isn't redone.
+#  Add entries, commit, and run the "Generate draft posts (AI)" workflow
+#  (or let the schedule run it). `done: true` is set after each is processed.
 # ============================================================
 
-episodes: []
-  # - youtubeUrl: "https://www.youtube.com/watch?v=XXXXXXXXXXX"
-  #   podcast: "שם הפודקאסט"
-  #   episode: "כותרת הפרק"
-  #   host: "שם המנחה"
-  #   guest: "שם האורח"
-  #   categoryHint: "בריאות וכושר"
-  #   done: false
+episodes:
+  - youtubeUrl: "https://www.youtube.com/watch?v=DwtNC2A8gBk"
+    podcast: "FoundMyFitness"
+    episode: "Dr. Andy Galpin: Optimal Diet, Supplements & Recovery"
+    host: "רונדה פטריק"
+    guest: "אנדי גלפין"
+    categoryHint: "בריאות וכושר"
+    durationMinutes: 228
+    done: false
+
+  - youtubeUrl: "https://www.youtube.com/watch?v=UPfN2G0RyQM"
+    podcast: "The Joe Rogan Experience"
+    episode: "Joe Rogan Experience #2450 — Tommy Wood"
+    host: "ג'ו רוגן"
+    guest: "טומי ווד"
+    categoryHint: "בריאות וכושר"
+    durationMinutes: 131
+    done: false
+
+  - youtubeUrl: "https://www.youtube.com/watch?v=YvWU4Zd-IMc"
+    podcast: "Modern Wisdom"
+    episode: "It Has Never Been Easier to Be Exceptional — Andrew Huberman"
+    host: "כריס וויליאמסון"
+    guest: "אנדרו הוברמן"
+    categoryHint: "פסיכולוגיה ומיינדסט"
+    durationMinutes: 186
+    done: false
+
+  - youtubeUrl: "https://www.youtube.com/watch?v=I_w81rptxkc"
+    podcast: "The Diary of a CEO"
+    episode: "Tony Robbins: The Truth About AI"
+    host: "סטיבן בארטלט"
+    guest: "טוני רובינס"
+    categoryHint: "מדע וטכנולוגיה"
+    durationMinutes: 121
+    done: false
+
+  - youtubeUrl: "https://www.youtube.com/watch?v=mMMQYz_vJFw"
+    podcast: "The Jordan B. Peterson Podcast"
+    episode: "Jordan Peterson × Tony Robbins (EP 517)"
+    host: "ג'ורדן פיטרסון"
+    guest: "טוני רובינס"
+    categoryHint: "פסיכולוגיה ומיינדסט"
+    durationMinutes: 113
+    done: false
