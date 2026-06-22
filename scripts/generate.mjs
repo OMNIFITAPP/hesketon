@@ -181,7 +181,9 @@ function writePost(post, item) {
     pubDate: new Date().toISOString().slice(0, 10),
     category,
     tags: Array.isArray(post.tags) ? post.tags : [],
-    draft: true,
+    // Publish-ready: the Pull Request is the review gate (merge = publish).
+    // Set this to true manually for any post you want to hold back.
+    draft: false,
     readingTime,
     source: Object.keys(source).length ? source : undefined,
   });
