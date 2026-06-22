@@ -22,3 +22,7 @@ npm-debug.log*
 inbox/**/*.md
 !inbox/README.md
 !inbox/_example-episode.md
+# transcripts in any format stay local too
+inbox/**/*.txt
+inbox/**/*.vtt
+inbox/**/*.srt

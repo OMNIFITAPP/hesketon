@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Compression from '../components/Compression.astro';
+import Share from '../components/Share.astro';
 import { SITE, categoryByName, tagToSlug } from '../consts';
 import type { CollectionEntry } from 'astro:content';
 
@@ -97,6 +98,8 @@ const jsonLd = {
           </ul>
         )
       }
+
+      <Share title={d.title} url={url} />
 
       <p style="margin-top:2rem"><a href="/posts">← לכל הפרקים</a></p>
     </div>

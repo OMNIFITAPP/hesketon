@@ -1,0 +1,84 @@
+---
+interface Props {
+  title: string;
+  url: string;
+}
+const { title, url } = Astro.props;
+
+const text = `${title} — הסכתון`;
+const enc = encodeURIComponent;
+const whatsapp = `https://wa.me/?text=${enc(`${text} ${url}`)}`;
+const x = `https://twitter.com/intent/tweet?text=${enc(text)}&url=${enc(url)}`;
+const facebook = `https://www.facebook.com/sharer/sharer.php?u=${enc(url)}`;
+---
+
+<div class="share" data-url={url} data-text={text}>
+  <span class="share__label">שתפו:</span>
+  <a class="share__btn" href={whatsapp} target="_blank" rel="noopener noreferrer" aria-label="שיתוף בוואטסאפ">WhatsApp</a>
+  <a class="share__btn" href={x} target="_blank" rel="noopener noreferrer" aria-label="שיתוף ב-X">X</a>
+  <a class="share__btn" href={facebook} target="_blank" rel="noopener noreferrer" aria-label="שיתוף בפייסבוק">פייסבוק</a>
+  <button class="share__btn share__copy" type="button" aria-label="העתקת קישור לפוסט">העתקת קישור</button>
+  <button class="share__btn share__native" type="button" aria-label="שיתוף" hidden>שיתוף…</button>
+</div>
+
+<script>
+  for (const el of document.querySelectorAll<HTMLElement>('.share')) {
+    const url = el.dataset.url ?? location.href;
+    const text = el.dataset.text ?? document.title;
+
+    const copyBtn = el.querySelector<HTMLButtonElement>('.share__copy');
+    copyBtn?.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(url);
+        const prev = copyBtn.textContent;
+        copyBtn.textContent = 'הקישור הועתק ✓';
+        setTimeout(() => (copyBtn.textContent = prev), 1800);
+      } catch {
+        /* clipboard unavailable — the platform links still work */
+      }
+    });
+
+    const nativeBtn = el.querySelector<HTMLButtonElement>('.share__native');
+    if (nativeBtn && typeof navigator.share === 'function') {
+      nativeBtn.hidden = false;
+      nativeBtn.addEventListener('click', () =>
+        navigator.share({ title: text, url }).catch(() => {}),
+      );
+    }
+  }
+</script>
+
+<style>
+  .share {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2.25rem 0 0.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+  .share__label {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .share__btn {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--accent-ink);
+    background: transparent;
+    border: 1.5px solid color-mix(in srgb, var(--accent) 45%, transparent);
+    border-radius: 999px;
+    padding: 0.35rem 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background var(--speed) ease, color var(--speed) ease;
+  }
+  .share__btn:hover {
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+  }
+</style>
