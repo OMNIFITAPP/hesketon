@@ -407,6 +407,53 @@ a.chip:hover {
   margin-inline: 0.15rem;
 }
 
+/* ---------- YouTube thumbnails ---------- */
+.card__media {
+  margin: -1.4rem -1.45rem 0; /* full-bleed to the card edges (cancels card padding) */
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: var(--accent-soft);
+}
+.card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.post-hero {
+  display: block;
+  position: relative;
+  margin: 1.9rem 0 0.5rem;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+}
+.post-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.post-hero__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, #0b0b12 16%, transparent);
+  transition: background var(--speed) ease;
+}
+.post-hero:hover .post-hero__play {
+  background: color-mix(in srgb, #0b0b12 30%, transparent);
+}
+.post-hero__play svg {
+  width: 66px;
+  height: 66px;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.25));
+}
+
 /* ---------- Article ---------- */
 .post-header {
   padding-block: 3rem 1.5rem;

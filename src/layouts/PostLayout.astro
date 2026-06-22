@@ -3,7 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Compression from '../components/Compression.astro';
 import Share from '../components/Share.astro';
-import { SITE, categoryByName, tagToSlug } from '../consts';
+import { SITE, categoryByName, tagToSlug, youtubeThumb } from '../consts';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -14,6 +14,8 @@ const d = post.data;
 const cat = categoryByName(d.category);
 const siteUrl = Astro.site ?? new URL(SITE.url);
 const url = new URL(`/posts/${post.id}`, siteUrl).href;
+const thumb = youtubeThumb(d.source?.youtubeUrl);
+const thumbHq = youtubeThumb(d.source?.youtubeUrl, 'hq');
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -27,12 +29,14 @@ const jsonLd = {
   author: { '@type': 'Organization', name: SITE.title },
   publisher: { '@type': 'Organization', name: SITE.title },
   ...(d.source?.youtubeUrl ? { isBasedOn: d.source.youtubeUrl } : {}),
+  ...(thumb ? { image: thumb } : {}),
 };
 ---
 
 <BaseLayout
   title={d.title}
   description={d.description}
+  image={thumb}
   type="article"
   publishedTime={d.pubDate.toISOString()}
   modifiedTime={(d.updatedDate ?? d.pubDate).toISOString()}
@@ -51,6 +55,34 @@ const jsonLd = {
         {d.source?.podcast && <span class="dot">מבוסס על {d.source.podcast}</span>}
       </div>
     </header>
+
+    {
+      thumb && (
+        <div class="wrap wrap--reading">
+          <a
+            class="post-hero"
+            href={d.source?.youtubeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="צפו בפרק המלא ביוטיוב"
+          >
+            <img
+              src={thumb}
+              alt={d.title}
+              width="1280"
+              height="720"
+              onerror={`this.onerror=null;this.src='${thumbHq}'`}
+            />
+            <span class="post-hero__play">
+              <svg viewBox="0 0 80 80" aria-hidden="true">
+                <circle cx="40" cy="40" r="40" fill="rgba(255,255,255,0.93)" />
+                <path d="M33 26l22 14-22 14z" fill="#d6336c" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      )
+    }
 
     <div class="prose wrap wrap--reading">
       <slot />

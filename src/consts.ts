@@ -59,3 +59,20 @@ export function categoryBySlug(slug: string): Category | undefined {
 export function tagToSlug(tag: string): string {
   return tag.trim().replace(/\s+/g, '-');
 }
+
+/** Extract the 11-char video id from any common YouTube URL form. */
+export function youtubeId(url?: string): string | undefined {
+  if (!url) return undefined;
+  const m = url.match(/(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/)([\w-]{11})/);
+  return m?.[1];
+}
+
+/** Thumbnail URL for a YouTube video. `maxres` is sharp but not always present;
+ *  pair it with an onerror fallback to `hq` (which always exists). */
+export function youtubeThumb(
+  url?: string,
+  quality: 'maxres' | 'hq' = 'maxres',
+): string | undefined {
+  const id = youtubeId(url);
+  return id ? `https://i.ytimg.com/vi/${id}/${quality}default.jpg` : undefined;
+}

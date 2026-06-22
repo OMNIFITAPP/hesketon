@@ -1,7 +1,7 @@
 ---
 import FormattedDate from './FormattedDate.astro';
 import Compression from './Compression.astro';
-import { categoryByName } from '../consts';
+import { categoryByName, youtubeThumb } from '../consts';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -11,9 +11,26 @@ const { post } = Astro.props;
 const d = post.data;
 const cat = categoryByName(d.category);
 const audio = d.source?.durationMinutes;
+const thumb = youtubeThumb(d.source?.youtubeUrl);
+const thumbHq = youtubeThumb(d.source?.youtubeUrl, 'hq');
 ---
 
 <article class="card">
+  {
+    thumb && (
+      <div class="card__media">
+        <img
+          src={thumb}
+          alt={d.title}
+          loading="lazy"
+          decoding="async"
+          width="640"
+          height="360"
+          onerror={`this.onerror=null;this.src='${thumbHq}'`}
+        />
+      </div>
+    )
+  }
   <div class="card__top">
     {cat ? <a class="chip" href={`/categories/${cat.slug}`}>{cat.name}</a> : <span></span>}
     <Compression audioMinutes={audio} readMinutes={d.readingTime} />
