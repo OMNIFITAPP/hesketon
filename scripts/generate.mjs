@@ -150,6 +150,7 @@ function pickMeta(d = {}) {
     youtubeUrl: d.youtubeUrl,
     categoryHint: d.categoryHint,
     publishedAt: d.publishedAt,
+    durationMinutes: d.durationMinutes,
   };
 }
 
@@ -171,6 +172,7 @@ function writePost(post, item) {
     guest: item.meta.guest,
     youtubeUrl: item.meta.youtubeUrl,
     publishedAt: item.meta.publishedAt,
+    durationMinutes: item.meta.durationMinutes,
   });
 
   const frontmatter = clean({

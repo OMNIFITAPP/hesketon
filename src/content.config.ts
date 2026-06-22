@@ -33,6 +33,8 @@ const posts = defineCollection({
         guest: z.string().optional(),
         youtubeUrl: z.string().url().optional(),
         publishedAt: z.string().optional(),
+        /** Episode length in minutes — drives the "audio → reading" signature. */
+        durationMinutes: z.number().optional(),
       })
       .optional(),
   }),

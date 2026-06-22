@@ -4,6 +4,7 @@ episode: "כותרת הפרק המדויקת"
 host: "שם המנחה"
 guest: "שם האורח/ת"
 youtubeUrl: "https://www.youtube.com/watch?v=XXXXXXXXXXX"
+durationMinutes: 120   # אורך הפרק בדקות — מפעיל את חתימת "האזנה ⟶ קריאה"
 # רמז לקטגוריה (לא חובה). חייב להיות אחד מהשמות שב-categories.json:
 # בריאות וכושר · פסיכולוגיה ומיינדסט · עסקים וקריירה · מדע וטכנולוגיה · כסף והשקעות
 categoryHint: "בריאות וכושר"

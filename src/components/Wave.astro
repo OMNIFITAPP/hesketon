@@ -1,0 +1,16 @@
+---
+// The brand's signature audio waveform — a row of centered bars.
+// Heights are percentages of the parent `.wave` height (set via CSS).
+interface Props {
+  bars?: number[];
+  class?: string;
+}
+const {
+  bars = [38, 64, 100, 52, 82, 44, 92, 60, 34],
+  class: cls = '',
+} = Astro.props;
+---
+
+<span class:list={['wave', cls]} aria-hidden="true">
+  {bars.map((h) => <span style={`height:${h}%`}></span>)}
+</span>

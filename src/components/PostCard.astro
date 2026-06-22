@@ -1,5 +1,6 @@
 ---
 import FormattedDate from './FormattedDate.astro';
+import Compression from './Compression.astro';
 import { categoryByName } from '../consts';
 import type { CollectionEntry } from 'astro:content';
 
@@ -7,22 +8,20 @@ interface Props {
   post: CollectionEntry<'posts'>;
 }
 const { post } = Astro.props;
-const cat = categoryByName(post.data.category);
+const d = post.data;
+const cat = categoryByName(d.category);
+const audio = d.source?.durationMinutes;
 ---
 
 <article class="card">
-  {cat && <a class="chip" href={`/categories/${cat.slug}`}>{cat.name}</a>}
-  <h2 class="card__title"><a href={`/posts/${post.id}`}>{post.data.title}</a></h2>
-  <p class="card__desc">{post.data.description}</p>
+  <div class="card__top">
+    {cat ? <a class="chip" href={`/categories/${cat.slug}`}>{cat.name}</a> : <span></span>}
+    <Compression audioMinutes={audio} readMinutes={d.readingTime} />
+  </div>
+  <h2 class="card__title"><a href={`/posts/${post.id}`}>{d.title}</a></h2>
+  <p class="card__desc">{d.description}</p>
   <div class="card__meta">
-    <FormattedDate date={post.data.pubDate} />
-    {post.data.readingTime && <span class="dot">{post.data.readingTime} דק׳ קריאה</span>}
+    <FormattedDate date={d.pubDate} />
+    {!audio && d.readingTime && <span class="dot">{d.readingTime} דק׳ קריאה</span>}
   </div>
 </article>
-
-<style>
-  /* Keep the category chip hugging its text inside the flex column. */
-  .chip {
-    align-self: flex-start;
-  }
-</style>

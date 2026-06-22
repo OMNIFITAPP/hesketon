@@ -1,0 +1,33 @@
+---
+// The signature: hours of audio, compressed to minutes of reading.
+import Wave from './Wave.astro';
+
+interface Props {
+  audioMinutes?: number;
+  readMinutes?: number;
+  class?: string;
+}
+const { audioMinutes, readMinutes, class: cls = '' } = Astro.props;
+
+function fmtAudio(min: number): string {
+  const h = Math.floor(min / 60);
+  const m = min % 60;
+  return h ? `${h}:${String(m).padStart(2, '0')}:00` : `${m}:00`;
+}
+
+const show = Boolean(audioMinutes && readMinutes);
+const label = show
+  ? `כ-${fmtAudio(audioMinutes!)} שעות האזנה, מזוקקות ל-${readMinutes} דקות קריאה`
+  : '';
+---
+
+{
+  show && (
+    <span class:list={['compress', cls]} role="img" aria-label={label} title={label}>
+      <Wave bars={[40, 72, 100, 52, 84, 44]} />
+      <span>{fmtAudio(audioMinutes!)}</span>
+      <span class="arrow">⟶</span>
+      <span>{readMinutes}′</span>
+    </span>
+  )
+}
