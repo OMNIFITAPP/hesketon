@@ -1,7 +1,7 @@
 ---
 // "Listen to this post" — free, client-side Text-to-Speech via the Web Speech
-// API. Reads the title + body (skips source box, share, tags). Hides itself if
-// the browser has no speech support.
+// API. Reads the title + body (skips source box, share, tags). Lets the reader
+// pick among the device's Hebrew voices. Hides itself if speech is unsupported.
 ---
 
 <div class="listen">
@@ -9,7 +9,11 @@
     <span class="listen__icon" aria-hidden="true">▶</span>
     <span class="listen__label">האזינו לכתבה</span>
   </button>
-  <span class="listen__note">קול קריינות אוטומטי</span>
+  <label class="listen__voicewrap" hidden>
+    <span class="sr-only">בחירת קול</span>
+    <select class="listen__voice" aria-label="בחירת קול קריינות"></select>
+  </label>
+  <span class="listen__note">קריינות אוטומטית (קול המכשיר)</span>
 </div>
 
 <script>
@@ -17,18 +21,52 @@
   const btn = root?.querySelector<HTMLButtonElement>('.listen__btn');
   const icon = root?.querySelector<HTMLElement>('.listen__icon');
   const label = root?.querySelector<HTMLElement>('.listen__label');
+  const select = root?.querySelector<HTMLSelectElement>('.listen__voice');
+  const voicewrap = root?.querySelector<HTMLElement>('.listen__voicewrap');
   const synth = window.speechSynthesis;
+  const KEY = 'hesketon-tts-voice';
 
   if (!root || !btn || !synth) {
     root?.setAttribute('hidden', '');
   } else {
     let state: 'idle' | 'playing' | 'paused' = 'idle';
     let chunks: string[] = [];
+    let voices: SpeechSynthesisVoice[] = [];
 
     const setState = (s: typeof state) => {
       state = s;
       if (icon) icon.textContent = s === 'playing' ? '⏸' : '▶';
       if (label) label.textContent = s === 'playing' ? 'השהה' : s === 'paused' ? 'המשך' : 'האזינו לכתבה';
+    };
+
+    const loadVoices = () => {
+      const all = synth.getVoices();
+      const he = all.filter((v) => /^(he|iw)/i.test(v.lang));
+      voices = he.length ? he : all;
+      if (!select || !voicewrap) return;
+      select.innerHTML = '';
+      for (const v of voices) {
+        const o = document.createElement('option');
+        o.value = v.name;
+        o.textContent = v.name + (/google/i.test(v.name) ? ' ☁︎' : '');
+        select.appendChild(o);
+      }
+      const saved = localStorage.getItem(KEY);
+      const preferred =
+        (saved && voices.some((v) => v.name === saved) && saved) ||
+        voices.find((v) => /google/i.test(v.name))?.name ||
+        voices[0]?.name;
+      if (preferred) select.value = preferred;
+      voicewrap.hidden = voices.length <= 1;
+    };
+
+    const chosenVoice = (): SpeechSynthesisVoice | null => {
+      const name = select?.value || localStorage.getItem(KEY) || '';
+      return (
+        voices.find((v) => v.name === name) ||
+        voices.find((v) => /^(he|iw)/i.test(v.lang)) ||
+        null
+      );
     };
 
     const gatherText = (): string => {
@@ -43,7 +81,6 @@
       return `${title}. ${body}`.replace(/\s+/g, ' ').trim();
     };
 
-    // Group sentences into ~220-char chunks (avoids the Chrome long-utterance cutoff).
     const chunkText = (t: string): string[] => {
       const sentences = t.match(/[^.!?]+[.!?]*/g) ?? [t];
       const out: string[] = [];
@@ -52,29 +89,19 @@
         if ((buf + s).length > 220 && buf) {
           out.push(buf.trim());
           buf = s;
-        } else {
-          buf += s;
-        }
+        } else buf += s;
       }
       if (buf.trim()) out.push(buf.trim());
       return out;
     };
 
-    const pickVoice = (): SpeechSynthesisVoice | null => {
-      const vs = synth.getVoices();
-      return vs.find((v) => /^(he|iw)/i.test(v.lang)) ?? null;
-    };
-
     const speakFrom = (i: number) => {
-      if (i >= chunks.length) {
-        setState('idle');
-        return;
-      }
+      if (i >= chunks.length) return setState('idle');
       const u = new SpeechSynthesisUtterance(chunks[i]);
       u.lang = 'he-IL';
-      const v = pickVoice();
+      const v = chosenVoice();
       if (v) u.voice = v;
-      u.rate = 1;
+      u.rate = 0.95;
       u.onend = () => {
         if (state === 'playing') speakFrom(i + 1);
       };
@@ -97,9 +124,16 @@
       }
     });
 
-    // Voices can load asynchronously; nothing to do but ensure they're requested.
-    synth.getVoices();
-    synth.addEventListener?.('voiceschanged', () => synth.getVoices());
+    select?.addEventListener('change', () => {
+      localStorage.setItem(KEY, select.value);
+      if (state !== 'idle') {
+        synth.cancel();
+        setState('idle');
+      }
+    });
+
+    synth.addEventListener?.('voiceschanged', loadVoices);
+    loadVoices();
     addEventListener('pagehide', () => synth.cancel());
   }
 </script>
@@ -108,7 +142,7 @@
   .listen {
     display: flex;
     align-items: center;
-    gap: 0.7rem;
+    gap: 0.6rem;
     flex-wrap: wrap;
     margin: 1.3rem 0 0;
   }
@@ -133,8 +167,25 @@
   .listen__icon {
     font-size: 0.78em;
   }
+  .listen__voice {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.35rem 0.7rem;
+    max-width: 13rem;
+  }
   .listen__note {
     font-size: 0.8rem;
     color: var(--muted);
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
   }
 </style>
