@@ -27,7 +27,7 @@ episodes:
     guest: "טומי ווד"
     categoryHint: "בריאות וכושר"
     durationMinutes: 131
-    done: false
+    done: true   # hand-written 2026-06-22
 
   - youtubeUrl: "https://www.youtube.com/watch?v=YvWU4Zd-IMc"
     podcast: "Modern Wisdom"
