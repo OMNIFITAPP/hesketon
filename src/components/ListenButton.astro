@@ -1,0 +1,140 @@
+---
+// "Listen to this post" — free, client-side Text-to-Speech via the Web Speech
+// API. Reads the title + body (skips source box, share, tags). Hides itself if
+// the browser has no speech support.
+---
+
+<div class="listen">
+  <button class="listen__btn" type="button" aria-label="האזינו לכתבה">
+    <span class="listen__icon" aria-hidden="true">▶</span>
+    <span class="listen__label">האזינו לכתבה</span>
+  </button>
+  <span class="listen__note">קול קריינות אוטומטי</span>
+</div>
+
+<script>
+  const root = document.querySelector<HTMLElement>('.listen');
+  const btn = root?.querySelector<HTMLButtonElement>('.listen__btn');
+  const icon = root?.querySelector<HTMLElement>('.listen__icon');
+  const label = root?.querySelector<HTMLElement>('.listen__label');
+  const synth = window.speechSynthesis;
+
+  if (!root || !btn || !synth) {
+    root?.setAttribute('hidden', '');
+  } else {
+    let state: 'idle' | 'playing' | 'paused' = 'idle';
+    let chunks: string[] = [];
+
+    const setState = (s: typeof state) => {
+      state = s;
+      if (icon) icon.textContent = s === 'playing' ? '⏸' : '▶';
+      if (label) label.textContent = s === 'playing' ? 'השהה' : s === 'paused' ? 'המשך' : 'האזינו לכתבה';
+    };
+
+    const gatherText = (): string => {
+      const title = document.querySelector('.post-header h1')?.textContent?.trim() ?? '';
+      const proseEl = document.querySelector('.prose');
+      let body = '';
+      if (proseEl) {
+        const clone = proseEl.cloneNode(true) as HTMLElement;
+        clone.querySelectorAll('.source-box, .share, .tag-list, .tts-skip').forEach((el) => el.remove());
+        body = clone.textContent ?? '';
+      }
+      return `${title}. ${body}`.replace(/\s+/g, ' ').trim();
+    };
+
+    // Group sentences into ~220-char chunks (avoids the Chrome long-utterance cutoff).
+    const chunkText = (t: string): string[] => {
+      const sentences = t.match(/[^.!?]+[.!?]*/g) ?? [t];
+      const out: string[] = [];
+      let buf = '';
+      for (const s of sentences) {
+        if ((buf + s).length > 220 && buf) {
+          out.push(buf.trim());
+          buf = s;
+        } else {
+          buf += s;
+        }
+      }
+      if (buf.trim()) out.push(buf.trim());
+      return out;
+    };
+
+    const pickVoice = (): SpeechSynthesisVoice | null => {
+      const vs = synth.getVoices();
+      return vs.find((v) => /^(he|iw)/i.test(v.lang)) ?? null;
+    };
+
+    const speakFrom = (i: number) => {
+      if (i >= chunks.length) {
+        setState('idle');
+        return;
+      }
+      const u = new SpeechSynthesisUtterance(chunks[i]);
+      u.lang = 'he-IL';
+      const v = pickVoice();
+      if (v) u.voice = v;
+      u.rate = 1;
+      u.onend = () => {
+        if (state === 'playing') speakFrom(i + 1);
+      };
+      u.onerror = () => setState('idle');
+      synth.speak(u);
+    };
+
+    btn.addEventListener('click', () => {
+      if (state === 'idle') {
+        synth.cancel();
+        chunks = chunkText(gatherText());
+        setState('playing');
+        speakFrom(0);
+      } else if (state === 'playing') {
+        synth.pause();
+        setState('paused');
+      } else {
+        synth.resume();
+        setState('playing');
+      }
+    });
+
+    // Voices can load asynchronously; nothing to do but ensure they're requested.
+    synth.getVoices();
+    synth.addEventListener?.('voiceschanged', () => synth.getVoices());
+    addEventListener('pagehide', () => synth.cancel());
+  }
+</script>
+
+<style>
+  .listen {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    margin: 1.3rem 0 0;
+  }
+  .listen__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #fff;
+    background: var(--accent);
+    border: 0;
+    padding: 0.55rem 1.15rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background var(--speed) ease;
+  }
+  .listen__btn:hover {
+    background: var(--accent-ink);
+  }
+  .listen__icon {
+    font-size: 0.78em;
+  }
+  .listen__note {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+</style>

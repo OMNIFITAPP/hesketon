@@ -1,0 +1,48 @@
+---
+// A thin scroll-progress bar for article pages. Decorative (aria-hidden);
+// uses transform: scaleX for performance and tracks scroll position.
+---
+
+<div class="reading-progress" aria-hidden="true"><span></span></div>
+
+<script>
+  const bar = document.querySelector<HTMLElement>('.reading-progress span');
+  if (bar) {
+    let ticking = false;
+    const update = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      bar.style.transform = `scaleX(${p})`;
+      ticking = false;
+    };
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+    addEventListener('scroll', onScroll, { passive: true });
+    addEventListener('resize', onScroll, { passive: true });
+    update();
+  }
+</script>
+
+<style>
+  .reading-progress {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 3px;
+    z-index: 60; /* above the sticky header (z 50) */
+    pointer-events: none;
+    background: transparent;
+  }
+  .reading-progress span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: right; /* RTL: fills from the right as you read down */
+    will-change: transform;
+  }
+</style>

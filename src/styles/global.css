@@ -583,12 +583,15 @@ a.chip:hover {
   color: var(--accent);
 }
 
-/* Highlight marker — "good to remember" (a raspberry marker swipe) */
+/* Highlight marker — "good to remember". Wraps the words themselves
+   (box-decoration-break) so it stays aligned on every line, in RTL too. */
 .prose mark {
-  background: linear-gradient(transparent 58%, color-mix(in srgb, var(--accent) 32%, transparent) 58%);
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
   color: inherit;
-  padding: 0 0.08em;
-  border-radius: 1px;
+  padding: 0.05em 0.22em;
+  border-radius: 4px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 /* Premium / companion content marker */

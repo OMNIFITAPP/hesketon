@@ -3,6 +3,8 @@ import BaseLayout from './BaseLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Compression from '../components/Compression.astro';
 import Share from '../components/Share.astro';
+import ReadingProgress from '../components/ReadingProgress.astro';
+import ListenButton from '../components/ListenButton.astro';
 import { SITE, categoryByName, tagToSlug, youtubeThumb } from '../consts';
 import type { CollectionEntry } from 'astro:content';
 
@@ -42,6 +44,8 @@ const jsonLd = {
   modifiedTime={(d.updatedDate ?? d.pubDate).toISOString()}
   jsonLd={jsonLd}
 >
+  <ReadingProgress />
+
   <article>
     <header class="post-header wrap wrap--reading">
       {cat && <a class="chip" href={`/categories/${cat.slug}`}>{cat.name}</a>}
@@ -55,6 +59,8 @@ const jsonLd = {
         )}
         {d.source?.podcast && <span class="dot">מבוסס על {d.source.podcast}</span>}
       </div>
+
+      <ListenButton />
     </header>
 
     {
@@ -134,7 +140,7 @@ const jsonLd = {
 
       <Share title={d.title} url={url} />
 
-      <p style="margin-top:2rem"><a href="/posts">← לכל הפרקים</a></p>
+      <p class="tts-skip" style="margin-top:2rem"><a href="/posts">← לכל הפרקים</a></p>
     </div>
   </article>
 </BaseLayout>
