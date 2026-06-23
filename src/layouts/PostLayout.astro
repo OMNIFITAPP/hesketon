@@ -45,6 +45,7 @@ const jsonLd = {
   <article>
     <header class="post-header wrap wrap--reading">
       {cat && <a class="chip" href={`/categories/${cat.slug}`}>{cat.name}</a>}
+      {d.premium && <span class="premium-tag">✦ פרימיום</span>}
       <h1>{d.title}</h1>
       <div class="post-meta">
         <Compression audioMinutes={d.source?.durationMinutes} readMinutes={d.readingTime} />

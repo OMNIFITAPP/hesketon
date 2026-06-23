@@ -32,7 +32,10 @@ const thumbHq = youtubeThumb(d.source?.youtubeUrl, 'hq');
     )
   }
   <div class="card__top">
-    {cat ? <a class="chip" href={`/categories/${cat.slug}`}>{cat.name}</a> : <span></span>}
+    <span class="card__chips">
+      {cat && <a class="chip" href={`/categories/${cat.slug}`}>{cat.name}</a>}
+      {d.premium && <span class="premium-tag">✦ פרימיום</span>}
+    </span>
     <Compression audioMinutes={audio} readMinutes={d.readingTime} />
   </div>
   <h2 class="card__title"><a href={`/posts/${post.id}`}>{d.title}</a></h2>

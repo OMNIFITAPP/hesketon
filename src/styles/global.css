@@ -583,6 +583,35 @@ a.chip:hover {
   color: var(--accent);
 }
 
+/* Highlight marker — "good to remember" (a raspberry marker swipe) */
+.prose mark {
+  background: linear-gradient(transparent 58%, color-mix(in srgb, var(--accent) 32%, transparent) 58%);
+  color: inherit;
+  padding: 0 0.08em;
+  border-radius: 1px;
+}
+
+/* Premium / companion content marker */
+.premium-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.72rem;
+  color: var(--bg);
+  background: var(--ink);
+  padding: 0.2rem 0.62rem;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+.card__chips {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
 /* ---------- Source attribution box ---------- */
 .source-box {
   margin: 2.6rem 0 1rem;

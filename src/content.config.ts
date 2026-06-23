@@ -21,6 +21,8 @@ const posts = defineCollection({
     tags: z.array(z.string()).default([]),
     /** Drafts are hidden in production but visible in `npm run dev`. */
     draft: z.boolean().default(false),
+    /** Marks companion/deep-dive pieces as premium (for future paid access). */
+    premium: z.boolean().default(false),
     heroImage: z.string().optional(),
     /** Estimated reading time in minutes (filled by the generator). */
     readingTime: z.number().optional(),
