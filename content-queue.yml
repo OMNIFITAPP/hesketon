@@ -18,7 +18,7 @@ episodes:
     guest: "אנדי גלפין"
     categoryHint: "בריאות וכושר"
     durationMinutes: 228
-    done: false
+    done: true   # hand-written 2026-06-22
 
   - youtubeUrl: "https://www.youtube.com/watch?v=UPfN2G0RyQM"
     podcast: "The Joe Rogan Experience"
