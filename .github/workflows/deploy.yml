@@ -5,9 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# Allow this workflow to publish to GitHub Pages and commit generated audio.
+# Allow this workflow to publish to GitHub Pages.
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -28,25 +28,6 @@ jobs:
           cache: npm
 
       - run: npm ci
-
-      - name: Generate post audio (Google TTS — no-op without the key)
-        env:
-          GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
-          GOOGLE_TTS_VOICE: ${{ vars.GOOGLE_TTS_VOICE }}
-        run: npm run audio
-
-      - name: Commit any newly generated audio
-        run: |
-          if [ -n "$(git status --porcelain public/audio)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add public/audio
-            git commit -m "chore: generate post audio"
-            git push
-          else
-            echo "No new audio to commit."
-          fi
-
       - run: npm run build
 
       - uses: actions/upload-pages-artifact@v3

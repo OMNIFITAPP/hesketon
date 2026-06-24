@@ -4,10 +4,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Compression from '../components/Compression.astro';
 import Share from '../components/Share.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
-import ListenButton from '../components/ListenButton.astro';
 import { SITE, categoryByName, tagToSlug, youtubeThumb } from '../consts';
-import { existsSync } from 'node:fs';
-import path from 'node:path';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -20,8 +17,6 @@ const siteUrl = Astro.site ?? new URL(SITE.url);
 const url = new URL(`/posts/${post.id}`, siteUrl).href;
 const thumb = youtubeThumb(d.source?.youtubeUrl);
 const thumbHq = youtubeThumb(d.source?.youtubeUrl, 'hq');
-const audioFile = path.join(process.cwd(), 'public', 'audio', `${post.id}.mp3`);
-const audioSrc = existsSync(audioFile) ? `/audio/${post.id}.mp3` : undefined;
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -63,8 +58,6 @@ const jsonLd = {
         )}
         {d.source?.podcast && <span class="dot">מבוסס על {d.source.podcast}</span>}
       </div>
-
-      <ListenButton audioSrc={audioSrc} />
     </header>
 
     {
@@ -144,7 +137,7 @@ const jsonLd = {
 
       <Share title={d.title} url={url} />
 
-      <p class="tts-skip" style="margin-top:2rem"><a href="/posts">← לכל הפרקים</a></p>
+      <p style="margin-top:2rem"><a href="/posts">← לכל הפרקים</a></p>
     </div>
   </article>
 </BaseLayout>
