@@ -21,6 +21,7 @@ source:
   hostId: chris-williamson
   podcastId: modern-wisdom
   youtubeUrl: https://www.youtube.com/watch?v=YvWU4Zd-IMc
+  publishedAt: 2026-01-05
   durationMinutes: 186
 ---
 

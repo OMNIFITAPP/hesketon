@@ -18,6 +18,7 @@ source:
   host: כריס וויליאמסון
   guest: מייק איסראטל
   youtubeUrl: https://www.youtube.com/watch?v=aJFiGC13xIw
+  publishedAt: 2024-07-01
   durationMinutes: 142
 ---
 

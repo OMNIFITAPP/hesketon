@@ -15,6 +15,9 @@ interface Props {
 const { post } = Astro.props;
 const d = post.data;
 const cat = categoryByName(d.category);
+// Prefer the episode's own publish date over when we posted the summary.
+const episodeDate = d.source?.publishedAt ?? d.pubDate;
+const isEpisodeDate = !!d.source?.publishedAt;
 const siteUrl = Astro.site ?? new URL(SITE.url);
 const url = new URL(`/posts/${post.id}`, siteUrl).href;
 const thumb = youtubeThumb(d.source?.youtubeUrl);
@@ -54,7 +57,7 @@ const jsonLd = {
       <h1>{d.title}</h1>
       <div class="post-meta">
         <Compression audioMinutes={d.source?.durationMinutes} readMinutes={d.readingTime} />
-        <FormattedDate date={d.pubDate} />
+        <FormattedDate date={episodeDate} title={isEpisodeDate ? 'תאריך פרסום הפרק' : undefined} />
         {!d.source?.durationMinutes && d.readingTime && (
           <span class="dot">{d.readingTime} דק׳ קריאה</span>
         )}

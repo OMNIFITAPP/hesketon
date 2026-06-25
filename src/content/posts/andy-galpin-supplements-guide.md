@@ -13,6 +13,7 @@ source:
   host: "רונדה פטריק"
   guest: "אנדי גלפין"
   youtubeUrl: "https://www.youtube.com/watch?v=DwtNC2A8gBk"
+  publishedAt: 2025-04-28
 ---
 
 <blockquote class="pull--lead">

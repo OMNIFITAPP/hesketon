@@ -21,6 +21,7 @@ source:
   hostId: jordan-peterson
   podcastId: jordan-b-peterson-podcast
   youtubeUrl: https://www.youtube.com/watch?v=mMMQYz_vJFw
+  publishedAt: 2025-01-23
   durationMinutes: 113
 references:
   - authors: "Ganz AB, Rolnik B, Chakraborty M, Wilson J, Tau C, Sharp M, Reber D, Slavich GM, Snyder MP"

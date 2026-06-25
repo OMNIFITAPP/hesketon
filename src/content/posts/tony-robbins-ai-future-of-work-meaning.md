@@ -21,6 +21,7 @@ source:
   hostId: steven-bartlett
   podcastId: diary-of-a-ceo
   youtubeUrl: https://www.youtube.com/watch?v=I_w81rptxkc
+  publishedAt: 2026-01-15
   durationMinutes: 121
 ---
 

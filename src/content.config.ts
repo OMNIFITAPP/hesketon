@@ -64,7 +64,8 @@ const posts = defineCollection({
         /** Canonical person id from src/data/people.json. */
         guestId: z.string().optional(),
         youtubeUrl: z.string().url().optional(),
-        publishedAt: z.string().optional(),
+        /** When the source episode was published (shown on cards + post). */
+        publishedAt: z.coerce.date().optional(),
         /** Episode length in minutes — drives the "audio → reading" signature. */
         durationMinutes: z.number().optional(),
       })

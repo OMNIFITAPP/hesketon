@@ -81,6 +81,12 @@ async function main() {
       });
       console.log(`  ↳ תמלול: ${source} (${transcript.length.toLocaleString('en-US')} תווים)`);
 
+      // Capture the episode's own publish date (shown on cards + post) if not given.
+      if (!DRY && !item.meta.publishedAt && item.meta.youtubeUrl) {
+        item.meta.publishedAt = await fetchUploadDate(item.meta.youtubeUrl);
+        if (item.meta.publishedAt) console.log(`  ↳ תאריך הפרק: ${item.meta.publishedAt}`);
+      }
+
       const post = DRY ? stubPost(item, transcript) : await generatePost({ transcript, meta: item.meta, categories });
       const file = writePost(post, item);
       console.log(`  ↳ טיוטה: ${path.relative(ROOT, file)}\n`);
@@ -152,6 +158,20 @@ function pickMeta(d = {}) {
     publishedAt: d.publishedAt,
     durationMinutes: d.durationMinutes,
   };
+}
+
+// ---------- youtube metadata ----------
+
+/** Best-effort: pull the episode's upload date (YYYY-MM-DD) from the watch page. */
+async function fetchUploadDate(url) {
+  try {
+    const res = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0' } });
+    const html = await res.text();
+    const m = html.match(/"uploadDate":"(\d{4}-\d{2}-\d{2})/);
+    return m ? m[1] : undefined;
+  } catch {
+    return undefined;
+  }
 }
 
 // ---------- writing ----------

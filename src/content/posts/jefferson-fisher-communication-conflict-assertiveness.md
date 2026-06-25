@@ -18,6 +18,7 @@ source:
   host: כריס וויליאמסון
   guest: ג'פרסון פישר
   youtubeUrl: https://www.youtube.com/watch?v=AwPNjPR-vVY
+  publishedAt: 2026-05-04
   durationMinutes: 130
 ---
 

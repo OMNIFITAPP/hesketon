@@ -12,6 +12,7 @@ source:
   host: "ג'ו רוגן"
   guest: "טומי ווד"
   youtubeUrl: "https://www.youtube.com/watch?v=UPfN2G0RyQM"
+  publishedAt: 2026-02-06
   durationMinutes: 131
 ---
 

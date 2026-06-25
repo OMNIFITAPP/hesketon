@@ -18,6 +18,7 @@ source:
   host: ניקהיל קאמאת'
   guest: אילון מאסק
   youtubeUrl: https://www.youtube.com/watch?v=Rni7Fz7208c
+  publishedAt: 2025-11-30
   durationMinutes: 114
 ---
 

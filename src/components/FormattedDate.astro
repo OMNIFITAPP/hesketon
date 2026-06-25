@@ -1,12 +1,14 @@
 ---
 interface Props {
   date: Date;
+  /** Optional tooltip, e.g. to clarify this is the episode's publish date. */
+  title?: string;
 }
-const { date } = Astro.props;
+const { date, title } = Astro.props;
 const formatted = new Intl.DateTimeFormat('he-IL', {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
 }).format(date);
 ---
-<time datetime={date.toISOString()}>{formatted}</time>
+<time datetime={date.toISOString()} title={title}>{formatted}</time>
