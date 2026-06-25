@@ -46,7 +46,7 @@ episodes:
     guest: מייק איסראטל
     categoryHint: בריאות וכושר
     durationMinutes: 142
-    done: false
+    done: true
   - youtubeUrl: https://www.youtube.com/watch?v=AwPNjPR-vVY
     podcast: Modern Wisdom
     episode: A Blueprint For Mastering Every Conversation — Jefferson Fisher
@@ -54,7 +54,7 @@ episodes:
     guest: ג'פרסון פישר
     categoryHint: פסיכולוגיה ומיינדסט
     durationMinutes: 130
-    done: false
+    done: true
   - youtubeUrl: https://www.youtube.com/watch?v=Rni7Fz7208c
     podcast: People by WTF
     episode: 'Elon Musk: A Different Conversation w/ Nikhil Kamath (Ep. 16)'
@@ -62,4 +62,4 @@ episodes:
     guest: אילון מאסק
     categoryHint: עסקים וקריירה
     durationMinutes: 114
-    done: false
+    done: true
