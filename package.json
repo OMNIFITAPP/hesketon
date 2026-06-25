@@ -11,7 +11,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "new-post": "node scripts/generate.mjs",
-    "new-post:dry": "node scripts/generate.mjs --dry-run"
+    "new-post:dry": "node scripts/generate.mjs --dry-run",
+    "postbuild": "pagefind --site dist"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.18",
@@ -23,6 +24,7 @@
     "dotenv": "^17.4.2",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.2.0",
+    "pagefind": "^1.5.2",
     "youtube-transcript": "^1.3.1"
   }
 }

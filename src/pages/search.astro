@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+// Search is powered by Pagefind, which indexes `dist/` after the build
+// (see the `postbuild` script). The UI assets live at /pagefind/ in
+// production — they won't exist during `astro dev`, so search only works
+// against a real build (`npm run build && npm run preview`).
+---
+
+<BaseLayout title="חיפוש" description="חיפוש בכל תקצירי הסכתון.">
+  <section class="section wrap wrap--reading">
+    <div class="page-title">
+      <h1>חיפוש</h1>
+      <p class="muted">חפשו לפי אורח, פודקאסט, נושא או מילת מפתח.</p>
+    </div>
+    <div id="search"></div>
+  </section>
+</BaseLayout>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+<script src="/pagefind/pagefind-ui.js" is:inline></script>
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', () => {
+    if (typeof PagefindUI === 'undefined') return;
+    new PagefindUI({
+      element: '#search',
+      showSubResults: true,
+      showImages: false,
+      translations: {
+        placeholder: 'חיפוש…',
+        clear_search: 'נקה',
+        load_more: 'עוד תוצאות',
+        search_label: 'חיפוש באתר',
+        zero_results: 'לא נמצאו תוצאות עבור [SEARCH_TERM]',
+        many_results: '[COUNT] תוצאות עבור [SEARCH_TERM]',
+        one_result: 'תוצאה אחת עבור [SEARCH_TERM]',
+      },
+    });
+  });
+</script>
+
+<style>
+  #search {
+    margin-top: 1.5rem;
+    --pagefind-ui-primary: var(--accent-ink, #a61e4d);
+    --pagefind-ui-text: var(--ink, #1a1722);
+    --pagefind-ui-background: var(--bg, #faf8f3);
+    --pagefind-ui-border: var(--line, #e7e2d6);
+    --pagefind-ui-font: inherit;
+  }
+</style>

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "andy-galpin",
+    "nameHe": "אנדי גלפין",
+    "nameEn": "Andy Galpin",
+    "title": "פרופ' לפיזיולוגיה הישגית"
+  },
+  {
+    "id": "tommy-wood",
+    "nameHe": "טומי ווד",
+    "nameEn": "Tommy Wood",
+    "title": "חוקר מוח ובריאות"
+  },
+  {
+    "id": "jd-vance",
+    "nameHe": "ג'יי.די ואנס",
+    "nameEn": "JD Vance",
+    "title": "סגן נשיא ארה\"ב"
+  },
+  {
+    "id": "andrew-huberman",
+    "nameHe": "אנדרו הוברמן",
+    "nameEn": "Andrew Huberman",
+    "title": "נוירוביולוג, אוניברסיטת סטנפורד"
+  },
+  {
+    "id": "tony-robbins",
+    "nameHe": "טוני רובינס",
+    "nameEn": "Tony Robbins",
+    "title": "מאמן ומרצה"
+  },
+  {
+    "id": "jordan-peterson",
+    "nameHe": "ג'ורדן פיטרסון",
+    "nameEn": "Jordan Peterson",
+    "title": "פסיכולוג קליני ומחבר"
+  },
+  {
+    "id": "rhonda-patrick",
+    "nameHe": "רונדה פטריק",
+    "nameEn": "Rhonda Patrick",
+    "title": "חוקרת ביו-רפואה"
+  },
+  {
+    "id": "joe-rogan",
+    "nameHe": "ג'ו רוגן",
+    "nameEn": "Joe Rogan",
+    "title": "מנחה פודקאסט"
+  },
+  {
+    "id": "steven-bartlett",
+    "nameHe": "סטיבן בארטלט",
+    "nameEn": "Steven Bartlett",
+    "title": "יזם ומנחה פודקאסט"
+  },
+  {
+    "id": "chris-williamson",
+    "nameHe": "כריס וויליאמסון",
+    "nameEn": "Chris Williamson",
+    "title": "מנחה פודקאסט"
+  }
+]

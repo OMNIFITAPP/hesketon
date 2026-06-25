@@ -1,0 +1,99 @@
+---
+import { NEWSLETTER } from '../consts';
+// Renders only once a provider URL is set in consts.ts → NEWSLETTER.action.
+const enabled = NEWSLETTER.action.length > 0;
+---
+
+{
+  enabled && (
+    <aside class="newsletter">
+      <div class="newsletter__text">
+        <p class="newsletter__heading">{NEWSLETTER.heading}</p>
+        <p class="newsletter__subtext">{NEWSLETTER.subtext}</p>
+      </div>
+      <form class="newsletter__form" action={NEWSLETTER.action} method="post" target="_blank">
+        <input
+          class="newsletter__input"
+          type="email"
+          name="email"
+          required
+          placeholder="כתובת אימייל"
+          aria-label="כתובת אימייל"
+        />
+        <button class="newsletter__btn" type="submit">
+          {NEWSLETTER.cta}
+        </button>
+      </form>
+    </aside>
+  )
+}
+
+<style>
+  .newsletter {
+    margin: 3rem 0 1rem;
+    padding: 1.6rem 1.8rem;
+    border: 1px solid var(--line, #e7e2d6);
+    border-radius: 14px;
+    background: var(--accent-soft, #fbe0ea);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+  }
+  .newsletter__heading {
+    font-family: var(--font-display, 'Rubik', sans-serif);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin: 0 0 0.25rem;
+    color: var(--ink, #1a1722);
+  }
+  .newsletter__subtext {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--muted, #6b6577);
+  }
+  .newsletter__form {
+    display: flex;
+    gap: 0.5rem;
+    flex: 1 1 280px;
+    max-width: 420px;
+  }
+  .newsletter__input {
+    flex: 1;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid var(--line, #d9d3c5);
+    border-radius: 10px;
+    background: var(--bg, #faf8f3);
+    font: inherit;
+    color: var(--ink, #1a1722);
+  }
+  .newsletter__input:focus-visible {
+    outline: 2px solid var(--accent-ink, #a61e4d);
+    outline-offset: 1px;
+  }
+  .newsletter__btn {
+    padding: 0.7rem 1.3rem;
+    border: none;
+    border-radius: 10px;
+    background: var(--accent-ink, #a61e4d);
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: filter 0.15s ease;
+  }
+  .newsletter__btn:hover {
+    filter: brightness(1.1);
+  }
+  @media (max-width: 560px) {
+    .newsletter {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .newsletter__form {
+      max-width: none;
+    }
+  }
+</style>

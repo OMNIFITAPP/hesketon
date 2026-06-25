@@ -24,6 +24,22 @@ export const SITE = {
   },
 } as const;
 
+// ──────────────────────────────────────────────────────────────
+//  Newsletter. To turn the signup form on:
+//   1. Create a list at Buttondown / Kit / MailerLite.
+//   2. Paste the form's POST URL into `action` below.
+//   3. The form appears automatically in the footer + under each post.
+//  The email field is named "email" (works with Buttondown & Kit).
+// ──────────────────────────────────────────────────────────────
+export const NEWSLETTER = {
+  /** Provider form-submit URL. While empty, the signup form stays hidden. */
+  action: '',
+  /** e.g. 'https://buttondown.com/api/emails/embed-subscribe/USERNAME' */
+  heading: 'הפודקאסטים הכי טובים, מזוקקים לתיבה שלך',
+  subtext: 'גיליון שבועי. בלי ספאם, אפשר לבטל בכל רגע.',
+  cta: 'הרשמה',
+} as const;
+
 export type Category = {
   /** Hebrew display name — this is what posts reference in frontmatter. */
   name: string;
@@ -58,6 +74,26 @@ export function categoryBySlug(slug: string): Category | undefined {
 /** Turn a free-form tag into a URL-safe slug (keeps Hebrew letters). */
 export function tagToSlug(tag: string): string {
   return tag.trim().replace(/\s+/g, '-');
+}
+
+// ── Canonical entities (prevents "אנדי גלפין"/"ד״ר אנדי גלפין" fragmenting) ──
+import peopleData from './data/people.json';
+import podcastsData from './data/podcasts.json';
+
+export type Person = { id: string; nameHe: string; nameEn: string; title?: string };
+export type Podcast = { id: string; name: string; hostId?: string; description?: string };
+
+export const PEOPLE: Person[] = peopleData as Person[];
+export const PODCASTS: Podcast[] = podcastsData as Podcast[];
+
+/** Look up a person (host or guest) by canonical id. */
+export function personById(id?: string): Person | undefined {
+  return id ? PEOPLE.find((p) => p.id === id) : undefined;
+}
+
+/** Look up a podcast by canonical id. */
+export function podcastById(id?: string): Podcast | undefined {
+  return id ? PODCASTS.find((p) => p.id === id) : undefined;
 }
 
 /** Extract the 11-char video id from any common YouTube URL form. */

@@ -3,6 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Compression from '../components/Compression.astro';
 import Share from '../components/Share.astro';
+import Newsletter from '../components/Newsletter.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
 import { SITE, categoryByName, tagToSlug, youtubeThumb } from '../consts';
 import type { CollectionEntry } from 'astro:content';
@@ -92,6 +93,19 @@ const jsonLd = {
       <slot />
 
       {
+        d.premium && d.premiumHooks && d.premiumHooks.length > 0 && (
+          <aside class="premium-hooks">
+            <strong>✦ בגרסה המורחבת</strong>
+            <ul>
+              {d.premiumHooks.map((h) => (
+                <li>{h}</li>
+              ))}
+            </ul>
+          </aside>
+        )
+      }
+
+      {
         d.source && (
           <aside class="source-box">
             <strong>על מה מבוסס התקציר?</strong>
@@ -137,7 +151,32 @@ const jsonLd = {
 
       <Share title={d.title} url={url} />
 
+      <Newsletter />
+
       <p style="margin-top:2rem"><a href="/posts">← לכל הפרקים</a></p>
     </div>
   </article>
 </BaseLayout>
+
+<style>
+  .premium-hooks {
+    margin: 2.5rem 0 1rem;
+    padding: 1.3rem 1.5rem;
+    border: 1px solid var(--accent-soft, #fbe0ea);
+    border-inline-start: 3px solid var(--accent-ink, #a61e4d);
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--accent-soft, #fbe0ea) 35%, transparent);
+  }
+  .premium-hooks strong {
+    font-family: var(--font-display, 'Rubik', sans-serif);
+    color: var(--accent-ink, #a61e4d);
+  }
+  .premium-hooks ul {
+    margin: 0.7rem 0 0;
+    padding-inline-start: 1.2rem;
+  }
+  .premium-hooks li {
+    margin: 0.35rem 0;
+    color: var(--ink, #1a1722);
+  }
+</style>

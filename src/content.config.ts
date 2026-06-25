@@ -21,8 +21,14 @@ const posts = defineCollection({
     tags: z.array(z.string()).default([]),
     /** Drafts are hidden in production but visible in `npm run dev`. */
     draft: z.boolean().default(false),
+    /** Already sent in a newsletter issue? Orthogonal flag, not a lifecycle state. */
+    inNewsletter: z.boolean().default(false),
+    /** Show in the homepage hero rotation? */
+    featured: z.boolean().default(false),
     /** Marks companion/deep-dive pieces as premium (for future paid access). */
     premium: z.boolean().default(false),
+    /** 2–4 pointers to the depth we left out — the premium "hook", not the hidden core. */
+    premiumHooks: z.array(z.string()).optional(),
     heroImage: z.string().optional(),
     /** Estimated reading time in minutes (filled by the generator). */
     readingTime: z.number().optional(),
@@ -30,9 +36,15 @@ const posts = defineCollection({
     source: z
       .object({
         podcast: z.string(),
+        /** Canonical podcast id from src/data/podcasts.json (prevents entity drift). */
+        podcastId: z.string().optional(),
         episode: z.string().optional(),
         host: z.string().optional(),
+        /** Canonical person id from src/data/people.json. */
+        hostId: z.string().optional(),
         guest: z.string().optional(),
+        /** Canonical person id from src/data/people.json. */
+        guestId: z.string().optional(),
         youtubeUrl: z.string().url().optional(),
         publishedAt: z.string().optional(),
         /** Episode length in minutes — drives the "audio → reading" signature. */

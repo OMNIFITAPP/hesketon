@@ -1,0 +1,32 @@
+[
+  {
+    "id": "found-my-fitness",
+    "name": "FoundMyFitness",
+    "hostId": "rhonda-patrick",
+    "description": "מדע הבריאות, אריכות הימים והביצועים — לעומק, עם ד\"ר רונדה פטריק."
+  },
+  {
+    "id": "joe-rogan-experience",
+    "name": "The Joe Rogan Experience",
+    "hostId": "joe-rogan",
+    "description": "שיחות ארוכות ופתוחות עם מומחים, מדענים ואמנים."
+  },
+  {
+    "id": "diary-of-a-ceo",
+    "name": "The Diary of a CEO",
+    "hostId": "steven-bartlett",
+    "description": "ראיונות אישיים עם מנהיגים, יזמים ודמויות מפתח."
+  },
+  {
+    "id": "modern-wisdom",
+    "name": "Modern Wisdom",
+    "hostId": "chris-williamson",
+    "description": "שיחות על פסיכולוגיה, מיינדסט, בריאות והגשמה עצמית."
+  },
+  {
+    "id": "jordan-b-peterson-podcast",
+    "name": "The Jordan B. Peterson Podcast",
+    "hostId": "jordan-peterson",
+    "description": "פסיכולוגיה, משמעות, תרבות ופילוסופיה — עם ג'ורדן פיטרסון."
+  }
+]
