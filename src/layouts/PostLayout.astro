@@ -3,6 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Compression from '../components/Compression.astro';
 import Share from '../components/Share.astro';
+import References from '../components/References.astro';
 import Newsletter from '../components/Newsletter.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
 import { SITE, categoryByName, tagToSlug, youtubeThumb } from '../consts';
@@ -148,6 +149,8 @@ const jsonLd = {
           </ul>
         )
       }
+
+      {d.references && d.references.length > 0 && <References items={d.references} />}
 
       <Share title={d.title} url={url} />
 

@@ -29,6 +29,24 @@ const posts = defineCollection({
     premium: z.boolean().default(false),
     /** 2–4 pointers to the depth we left out — the premium "hook", not the hidden core. */
     premiumHooks: z.array(z.string()).optional(),
+    /**
+     * Manually-curated, verified studies/sources mentioned in the episode.
+     * NEVER auto-generated — the AI must not fabricate citations. A human adds
+     * only real, checked references so readers can dig deeper on their own.
+     */
+    references: z
+      .array(
+        z.object({
+          /** "Ganz AB, Rolnik B, … Snyder MP" — as published. */
+          authors: z.string().optional(),
+          year: z.union([z.number(), z.string()]).optional(),
+          title: z.string(),
+          /** Journal / publisher, e.g. "Journal of Psychiatric Research". */
+          source: z.string().optional(),
+          url: z.string().url().optional(),
+        }),
+      )
+      .optional(),
     heroImage: z.string().optional(),
     /** Estimated reading time in minutes (filled by the generator). */
     readingTime: z.number().optional(),
