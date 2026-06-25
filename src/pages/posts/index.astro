@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
 import { getPublishedPosts } from '../../utils';
+import { CATEGORIES } from '../../consts';
 
 const posts = await getPublishedPosts();
 ---
@@ -10,18 +11,148 @@ const posts = await getPublishedPosts();
   <section class="section wrap">
     <div class="page-title">
       <h1>כל הפרקים</h1>
-      <p class="muted">{posts.length} תקצירים — ומתעדכן כל הזמן</p>
+      <p class="muted"><span id="post-count">{posts.length}</span> תקצירים — ומתעדכן כל הזמן</p>
     </div>
+
+    {
+      posts.length > 0 && (
+        <div class="archive-controls">
+          <div class="filter-row" role="group" aria-label="סינון לפי קטגוריה">
+            <button class="filt is-active" data-cat="all">הכול</button>
+            {CATEGORIES.map((c) => (
+              <button class="filt" data-cat={c.name}>
+                {c.name}
+              </button>
+            ))}
+          </div>
+          <label class="sort-wrap">
+            <span class="muted">מיון</span>
+            <select id="sort-select">
+              <option value="date-desc">מהחדש לישן</option>
+              <option value="date-asc">מהישן לחדש</option>
+            </select>
+          </label>
+        </div>
+      )
+    }
+
     {
       posts.length === 0 ? (
         <p class="muted">עדיין אין פוסטים.</p>
       ) : (
-        <div class="post-grid">
-          {posts.map((post) => (
-            <PostCard post={post} />
-          ))}
-        </div>
+        <>
+          <div class="post-grid">
+            {posts.map((post) => (
+              <PostCard post={post} />
+            ))}
+          </div>
+          <p class="muted no-results" hidden>
+            אין פרקים בקטגוריה הזו.
+          </p>
+        </>
       )
     }
   </section>
 </BaseLayout>
+
+<style>
+  .archive-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0 0 1.8rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid var(--line, #e7e2d6);
+  }
+  .filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .filt {
+    border: 1px solid var(--line, #d9d3c5);
+    background: transparent;
+    color: var(--muted, #6b6577);
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .filt:hover {
+    color: var(--ink, #1a1722);
+    border-color: var(--accent-ink, #a61e4d);
+  }
+  .filt.is-active {
+    background: var(--accent-ink, #a61e4d);
+    border-color: var(--accent-ink, #a61e4d);
+    color: #fff;
+  }
+  .sort-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+  .sort-wrap select {
+    font: inherit;
+    padding: 0.35rem 0.6rem;
+    border: 1px solid var(--line, #d9d3c5);
+    border-radius: 8px;
+    background: var(--bg, #faf8f3);
+    color: var(--ink, #1a1722);
+    cursor: pointer;
+  }
+  .no-results {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    function init() {
+      const grid = document.querySelector('.post-grid');
+      if (!grid) return;
+      const cards = Array.from(grid.querySelectorAll('.card'));
+      const filts = Array.from(document.querySelectorAll('.filt'));
+      const sortSel = document.getElementById('sort-select');
+      const countEl = document.getElementById('post-count');
+      const noRes = document.querySelector('.no-results');
+      let cat = 'all';
+
+      function apply() {
+        const dir = sortSel && sortSel.value === 'date-asc' ? 1 : -1;
+        [...cards]
+          .sort((a, b) => dir * (Date.parse(a.dataset.date) - Date.parse(b.dataset.date)))
+          .forEach((c) => grid.appendChild(c));
+
+        let shown = 0;
+        cards.forEach((c) => {
+          const ok = cat === 'all' || c.dataset.category === cat;
+          c.hidden = !ok;
+          if (ok) shown++;
+        });
+        if (countEl) countEl.textContent = shown;
+        if (noRes) noRes.hidden = shown > 0;
+      }
+
+      filts.forEach((f) =>
+        f.addEventListener('click', () => {
+          filts.forEach((x) => x.classList.remove('is-active'));
+          f.classList.add('is-active');
+          cat = f.dataset.cat;
+          apply();
+        }),
+      );
+      if (sortSel) sortSel.addEventListener('change', apply);
+      apply();
+    }
+    if (document.readyState !== 'loading') init();
+    else document.addEventListener('DOMContentLoaded', init);
+  })();
+</script>
