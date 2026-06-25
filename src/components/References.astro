@@ -16,13 +16,13 @@ const { items } = Astro.props;
 
 {
   items && items.length > 0 && (
-    <details class="refs">
+    <details class="refs" id="post-references">
       <summary class="refs__summary">
         מקורות שהוזכרו בפרק ({items.length})
       </summary>
       <ol class="refs__list">
-        {items.map((r) => (
-          <li class="refs__item">
+        {items.map((r, i) => (
+          <li class="refs__item" id={`ref-${i + 1}`}>
             {r.authors && <span class="refs__authors">{r.authors} </span>}
             {r.year && <span class="refs__year">({r.year}). </span>}
             {r.url ? (
@@ -40,6 +40,20 @@ const { items } = Astro.props;
         המקורות הובאו לעיון עצמאי בלבד; הם הוזכרו בפרק ולא סוכמו או נבדקו על ידינו.
       </p>
     </details>
+  )
+}
+
+{/* Open the (collapsed) references box when an inline citation is clicked. */}
+{
+  items && items.length > 0 && (
+    <script is:inline>
+      document.querySelectorAll('a.cite').forEach(function (a) {
+        a.addEventListener('click', function () {
+          var d = document.getElementById('post-references');
+          if (d) d.open = true;
+        });
+      });
+    </script>
   )
 }
 
@@ -93,5 +107,26 @@ const { items } = Astro.props;
     margin: 0 0 1rem;
     font-size: 0.82rem;
     color: var(--muted, #6b6577);
+  }
+  /* highlight the targeted reference when arrived via a citation */
+  .refs__item:target {
+    background: var(--accent-soft, #fbe0ea);
+    border-radius: 6px;
+    box-shadow: 0 0 0 6px var(--accent-soft, #fbe0ea);
+  }
+</style>
+
+<style is:global>
+  /* Inline citation marker, authored in post markdown as
+     <sup><a class="cite" href="#ref-1">1</a></sup> */
+  a.cite {
+    color: var(--accent-ink, #a61e4d);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.7em;
+    padding: 0 0.1em;
+  }
+  a.cite:hover {
+    text-decoration: underline;
   }
 </style>
