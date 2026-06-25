@@ -16,6 +16,7 @@ source:
   podcast: The Diary of a CEO
   episode: 'אזהרת מיליארדר: אני מוכר הכול — המשבר כבר כאן'
   host: סטיבן בארטלט
+  guest: ג'רמי גרנת'ם
   youtubeUrl: https://www.youtube.com/watch?v=32u5T6lO8qk
   publishedAt: 2026-06-25T00:00:00.000Z
   durationMinutes: 105
