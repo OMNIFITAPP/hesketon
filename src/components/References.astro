@@ -1,0 +1,97 @@
+---
+// Collapsible "מקורות" box. Hidden by default (native <details>, zero JS).
+// Renders ONLY manually-verified references — never AI-generated citations.
+interface Ref {
+  authors?: string;
+  year?: number | string;
+  title: string;
+  source?: string;
+  url?: string;
+}
+interface Props {
+  items: Ref[];
+}
+const { items } = Astro.props;
+---
+
+{
+  items && items.length > 0 && (
+    <details class="refs">
+      <summary class="refs__summary">
+        מקורות שהוזכרו בפרק ({items.length})
+      </summary>
+      <ol class="refs__list">
+        {items.map((r) => (
+          <li class="refs__item">
+            {r.authors && <span class="refs__authors">{r.authors} </span>}
+            {r.year && <span class="refs__year">({r.year}). </span>}
+            {r.url ? (
+              <a href={r.url} target="_blank" rel="noopener noreferrer">
+                {r.title}
+              </a>
+            ) : (
+              <span>{r.title}</span>
+            )}
+            {r.source && <span class="refs__source"> — {r.source}</span>}
+          </li>
+        ))}
+      </ol>
+      <p class="refs__note">
+        המקורות הובאו לעיון עצמאי בלבד; הם הוזכרו בפרק ולא סוכמו או נבדקו על ידינו.
+      </p>
+    </details>
+  )
+}
+
+<style>
+  .refs {
+    margin: 2.5rem 0 1rem;
+    border: 1px solid var(--line, #e7e2d6);
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--line, #e7e2d6) 18%, transparent);
+    padding: 0 1.3rem;
+  }
+  .refs__summary {
+    cursor: pointer;
+    padding: 1rem 0;
+    font-family: var(--font-display, 'Rubik', sans-serif);
+    font-weight: 600;
+    color: var(--ink, #1a1722);
+    list-style: none;
+  }
+  .refs__summary::-webkit-details-marker {
+    display: none;
+  }
+  .refs__summary::before {
+    content: '▸';
+    display: inline-block;
+    margin-inline-end: 0.5rem;
+    color: var(--accent-ink, #a61e4d);
+    transition: transform 0.15s ease;
+  }
+  .refs[open] .refs__summary::before {
+    transform: rotate(90deg);
+  }
+  .refs__list {
+    margin: 0 0 0.8rem;
+    padding-inline-start: 1.4rem;
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+  .refs__item {
+    margin: 0.5rem 0;
+    color: var(--ink, #1a1722);
+  }
+  .refs__authors {
+    font-weight: 600;
+  }
+  .refs__source {
+    font-style: italic;
+    color: var(--muted, #6b6577);
+  }
+  .refs__note {
+    margin: 0 0 1rem;
+    font-size: 0.82rem;
+    color: var(--muted, #6b6577);
+  }
+</style>
