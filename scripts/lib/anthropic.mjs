@@ -1,6 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { buildSystemPrompt, buildUserPrompt } from './prompt.mjs';
 import { editHebrew, validateEdit } from './editor.mjs';
+import { groundQuotes, appendQuoteAudit } from './quotes.mjs';
 
 // Very long transcripts cost a lot of tokens. Favorite-podcast volume is low,
 // so we allow a generous cap and trim only the extreme tail.
@@ -44,6 +45,20 @@ export async function generatePost({ transcript, meta, categories, model }) {
 
   const post = parsePostJson(out);
 
+  // ── Quote-fidelity pass: ensure each quote is a faithful, complete
+  //    translation of its source (the writer supplies the verbatim English).
+  let quotePairs = [];
+  if (process.env.QUOTE_GROUNDING !== 'false' && post.bodyMarkdown && Array.isArray(post.quotes)) {
+    try {
+      const grounded = await groundQuotes({ body: post.bodyMarkdown, quotes: post.quotes, model });
+      post.bodyMarkdown = grounded.body;
+      quotePairs = grounded.pairs;
+      console.log(`  ↳ נאמנות ציטוטים: ${grounded.corrections} תוקנו מתוך ${grounded.pairs.length}`);
+    } catch (err) {
+      console.warn(`  ⚠️  דילוג על נאמנות ציטוטים: ${err.message}`);
+    }
+  }
+
   // ── Editor pass: polish the Hebrew of the body (cheap; skips the transcript).
   //    Falls back to the original draft if the edit fails its guardrails.
   if (process.env.EDITOR_PASS !== 'false' && post.bodyMarkdown) {
@@ -58,6 +73,11 @@ export async function generatePost({ transcript, meta, categories, model }) {
     } catch (err) {
       console.warn(`  ⚠️  דילוג על עריכת לשון: ${err.message}`);
     }
+  }
+
+  // Append the (invisible) quote audit trail last, so the editor can't strip it.
+  if (quotePairs.length && post.bodyMarkdown) {
+    post.bodyMarkdown = appendQuoteAudit(post.bodyMarkdown, quotePairs);
   }
 
   return post;
