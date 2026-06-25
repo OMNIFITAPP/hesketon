@@ -90,3 +90,29 @@ episodes:
     publishedAt: 2024-10-28T00:00:00.000Z
     durationMinutes: 97
     done: true
+  - youtubeUrl: https://www.youtube.com/watch?v=qgeQ5kMVwRA
+    podcast: The Diary of a CEO
+    episode: מוניש פבראי — הדרך המהירה לחופש כלכלי
+    host: סטיבן בארטלט
+    guest: מוניש פבראי
+    categoryHint: כסף והשקעות
+    publishedAt: 2025-08-21
+    durationMinutes: 106
+    done: false
+  - youtubeUrl: https://www.youtube.com/watch?v=32u5T6lO8qk
+    podcast: The Diary of a CEO
+    episode: 'אזהרת מיליארדר: אני מוכר הכול — המשבר כבר כאן'
+    host: סטיבן בארטלט
+    categoryHint: כסף והשקעות
+    publishedAt: 2026-06-25
+    durationMinutes: 105
+    done: false
+  - youtubeUrl: https://www.youtube.com/watch?v=flBuEEenQRg
+    podcast: Jack Neel
+    episode: אלכס הורמוזי — איך הייתי מרוויח 100K בשלושה חודשים ב-2026
+    host: ג'ק ניל
+    guest: אלכס הורמוזי
+    categoryHint: עסקים וקריירה
+    publishedAt: 2026-06-19
+    durationMinutes: 98
+    done: false

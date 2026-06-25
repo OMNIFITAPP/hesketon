@@ -119,4 +119,23 @@
     "nameEn": "Rich Roll",
     "title": "מנחה פודקאסט"
   }
+,
+  {
+    "id": "mohnish-pabrai",
+    "nameHe": "מוניש פבראי",
+    "nameEn": "Mohnish Pabrai",
+    "title": "משקיע ערך"
+  },
+  {
+    "id": "alex-hormozi",
+    "nameHe": "אלכס הורמוזי",
+    "nameEn": "Alex Hormozi",
+    "title": "יזם ומשקיע"
+  },
+  {
+    "id": "jack-neel",
+    "nameHe": "ג'ק ניל",
+    "nameEn": "Jack Neel",
+    "title": "יוצר תוכן ומנחה"
+  }
 ]

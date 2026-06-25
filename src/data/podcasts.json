@@ -53,4 +53,11 @@
     "hostId": "rich-roll",
     "description": "בריאות, ביצועים, משמעות וקיימות — עם ריץ' רול."
   }
+,
+  {
+    "id": "jack-neel",
+    "name": "Jack Neel",
+    "hostId": "jack-neel",
+    "description": "שיחות עם יזמים ומובילי עסקים — עם ג'ק ניל."
+  }
 ]

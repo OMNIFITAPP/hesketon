@@ -13,6 +13,9 @@ export default defineConfig({
     format: 'directory',
   },
   markdown: {
+    // Keep Hebrew punctuation exactly as written (straight quotes/geresh)
+    // instead of converting to English-style curly quotes & dashes.
+    smartypants: false,
     shikiConfig: {
       theme: 'github-light',
       wrap: true,
