@@ -4,7 +4,7 @@ description: "אנדי גלפין על תוספים: למה לסגור חוסר�
 pubDate: 2026-06-22
 category: "בריאות וכושר"
 tags: ["אנדי גלפין", "תוספים", "קריאטין", "מגנזיום", "קפאין"]
-draft: false
+draft: true
 premium: true
 readingTime: 8
 source:
