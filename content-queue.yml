@@ -1,57 +1,41 @@
-# ============================================================
-#  Phase 2 — cloud content queue
-#
-#  The "to-do list" for the automated pipeline. Each entry needs only a
-#  YouTube URL; the transcript is fetched at run time (Apify or the free
-#  fetcher), Claude writes the post in the house style, and a Pull Request
-#  is opened for you to review + merge.
-#
-#  Add entries, commit, and run the "Generate draft posts (AI)" workflow
-#  (or let the schedule run it). `done: true` is set after each is processed.
-# ============================================================
-
 episodes:
-  - youtubeUrl: "https://www.youtube.com/watch?v=DwtNC2A8gBk"
-    podcast: "FoundMyFitness"
-    episode: "Dr. Andy Galpin: Optimal Diet, Supplements & Recovery"
-    host: "רונדה פטריק"
-    guest: "אנדי גלפין"
-    categoryHint: "בריאות וכושר"
+  - youtubeUrl: https://www.youtube.com/watch?v=DwtNC2A8gBk
+    podcast: FoundMyFitness
+    episode: 'Dr. Andy Galpin: Optimal Diet, Supplements & Recovery'
+    host: רונדה פטריק
+    guest: אנדי גלפין
+    categoryHint: בריאות וכושר
     durationMinutes: 228
-    done: true   # hand-written 2026-06-22
-
-  - youtubeUrl: "https://www.youtube.com/watch?v=UPfN2G0RyQM"
-    podcast: "The Joe Rogan Experience"
-    episode: "Joe Rogan Experience #2450 — Tommy Wood"
-    host: "ג'ו רוגן"
-    guest: "טומי ווד"
-    categoryHint: "בריאות וכושר"
+    done: true
+  - youtubeUrl: https://www.youtube.com/watch?v=UPfN2G0RyQM
+    podcast: The Joe Rogan Experience
+    episode: 'Joe Rogan Experience #2450 — Tommy Wood'
+    host: ג'ו רוגן
+    guest: טומי ווד
+    categoryHint: בריאות וכושר
     durationMinutes: 131
-    done: true   # hand-written 2026-06-22
-
-  - youtubeUrl: "https://www.youtube.com/watch?v=YvWU4Zd-IMc"
-    podcast: "Modern Wisdom"
-    episode: "It Has Never Been Easier to Be Exceptional — Andrew Huberman"
-    host: "כריס וויליאמסון"
-    guest: "אנדרו הוברמן"
-    categoryHint: "פסיכולוגיה ומיינדסט"
+    done: true
+  - youtubeUrl: https://www.youtube.com/watch?v=YvWU4Zd-IMc
+    podcast: Modern Wisdom
+    episode: It Has Never Been Easier to Be Exceptional — Andrew Huberman
+    host: כריס וויליאמסון
+    guest: אנדרו הוברמן
+    categoryHint: פסיכולוגיה ומיינדסט
     durationMinutes: 186
-    done: false
-
-  - youtubeUrl: "https://www.youtube.com/watch?v=I_w81rptxkc"
-    podcast: "The Diary of a CEO"
-    episode: "Tony Robbins: The Truth About AI"
-    host: "סטיבן בארטלט"
-    guest: "טוני רובינס"
-    categoryHint: "מדע וטכנולוגיה"
+    done: true
+  - youtubeUrl: https://www.youtube.com/watch?v=I_w81rptxkc
+    podcast: The Diary of a CEO
+    episode: 'Tony Robbins: The Truth About AI'
+    host: סטיבן בארטלט
+    guest: טוני רובינס
+    categoryHint: מדע וטכנולוגיה
     durationMinutes: 121
-    done: false
-
-  - youtubeUrl: "https://www.youtube.com/watch?v=mMMQYz_vJFw"
-    podcast: "The Jordan B. Peterson Podcast"
-    episode: "Jordan Peterson × Tony Robbins (EP 517)"
-    host: "ג'ורדן פיטרסון"
-    guest: "טוני רובינס"
-    categoryHint: "פסיכולוגיה ומיינדסט"
+    done: true
+  - youtubeUrl: https://www.youtube.com/watch?v=mMMQYz_vJFw
+    podcast: The Jordan B. Peterson Podcast
+    episode: Jordan Peterson × Tony Robbins (EP 517)
+    host: ג'ורדן פיטרסון
+    guest: טוני רובינס
+    categoryHint: פסיכולוגיה ומיינדסט
     durationMinutes: 113
-    done: false
+    done: true
