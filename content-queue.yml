@@ -69,24 +69,24 @@ episodes:
     host: ראנגן צ'טרג'י
     guest: הנרי שוקמן
     categoryHint: פסיכולוגיה ומיינדסט
-    publishedAt: 2025-10-29
+    publishedAt: 2025-10-29T00:00:00.000Z
     durationMinutes: 114
-    done: false
+    done: true
   - youtubeUrl: https://www.youtube.com/watch?v=s0DohADRRlY
     podcast: On Purpose with Jay Shetty
     episode: טים פריס — הסיבה האמיתית שאתה מרגיש תקוע
     host: ג'יי שטי
     guest: טים פריס
     categoryHint: פסיכולוגיה ומיינדסט
-    publishedAt: 2026-04-20
+    publishedAt: 2026-04-20T00:00:00.000Z
     durationMinutes: 118
-    done: false
+    done: true
   - youtubeUrl: https://www.youtube.com/watch?v=_jl64f-821o
     podcast: The Rich Roll Podcast
     episode: יובל נח הררי — עתיד ה-AI גרוע ממה שנדמה
     host: ריץ' רול
     guest: יובל נח הררי
     categoryHint: מדע וטכנולוגיה
-    publishedAt: 2024-10-28
+    publishedAt: 2024-10-28T00:00:00.000Z
     durationMinutes: 97
-    done: false
+    done: true
