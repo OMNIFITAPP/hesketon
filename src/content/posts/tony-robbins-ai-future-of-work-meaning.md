@@ -17,6 +17,9 @@ source:
   episode: 'Tony Robbins: The Truth About AI'
   host: סטיבן בארטלט
   guest: טוני רובינס
+  guestId: tony-robbins
+  hostId: steven-bartlett
+  podcastId: diary-of-a-ceo
   youtubeUrl: https://www.youtube.com/watch?v=I_w81rptxkc
   durationMinutes: 121
 ---
