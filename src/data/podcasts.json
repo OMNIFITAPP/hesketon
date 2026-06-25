@@ -28,5 +28,11 @@
     "name": "The Jordan B. Peterson Podcast",
     "hostId": "jordan-peterson",
     "description": "פסיכולוגיה, משמעות, תרבות ופילוסופיה — עם ג'ורדן פיטרסון."
+  },
+  {
+    "id": "people-by-wtf",
+    "name": "People by WTF",
+    "hostId": "nikhil-kamath",
+    "description": "שיחות עם מייסדים, יזמים ומובילי דעה — עם ניקהיל קאמאת'."
   }
 ]

@@ -58,5 +58,29 @@
     "nameHe": "כריס וויליאמסון",
     "nameEn": "Chris Williamson",
     "title": "מנחה פודקאסט"
+  },
+  {
+    "id": "mike-israetel",
+    "nameHe": "מייק איסראטל",
+    "nameEn": "Mike Israetel",
+    "title": "מדען ספורט"
+  },
+  {
+    "id": "jefferson-fisher",
+    "nameHe": "ג'פרסון פישר",
+    "nameEn": "Jefferson Fisher",
+    "title": "עורך דין ומומחה תקשורת"
+  },
+  {
+    "id": "nikhil-kamath",
+    "nameHe": "ניקהיל קאמאת'",
+    "nameEn": "Nikhil Kamath",
+    "title": "יזם ומשקיע, מנחה פודקאסט"
+  },
+  {
+    "id": "elon-musk",
+    "nameHe": "אילון מאסק",
+    "nameEn": "Elon Musk",
+    "title": "יזם, מנכ\"ל טסלה ו-SpaceX"
   }
 ]
