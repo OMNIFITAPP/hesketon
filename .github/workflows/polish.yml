@@ -1,0 +1,53 @@
+name: Polish posts (Hebrew editor)
+
+# Runs the Hebrew editor pass over existing posts and opens a PR with the
+# polished versions for review. Uses Anthropic API credit (not your chat plan).
+#
+# Requires repo secret: ANTHROPIC_API_KEY
+
+on:
+  workflow_dispatch:
+    inputs:
+      slugs:
+        description: "Post slugs to polish (space-separated). Empty = latest batch."
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  polish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Run the editor pass
+        timeout-minutes: 30
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Use the top model for a one-off polish of existing posts.
+          EDITOR_MODEL: ${{ vars.EDITOR_MODEL || 'claude-opus-4-8' }}
+        run: node scripts/polish.mjs ${{ inputs.slugs }}
+
+      - name: Open a Pull Request with the polished posts
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto/polish
+          title: "ליטוש לשוני: עריכת פוסטים ✍️"
+          commit-message: "content: Hebrew editor pass over existing posts"
+          body: |
+            עברתי על הפוסטים דרך מעבר עריכת הלשון (editor pass).
+
+            עברו על ה-diff — שמרתי עובדות, מספרים, ציטוטים ובלוקי HTML; שיניתי רק ניסוח.
+            למיזוג: אשרו ומזגו, וה-deploy יתעדכן לבד.
+          labels: content, automated
+          delete-branch: true
