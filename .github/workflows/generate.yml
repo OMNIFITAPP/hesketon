@@ -41,6 +41,9 @@ jobs:
           CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           APIFY_ACTOR: ${{ vars.APIFY_ACTOR }}
+          # Hebrew copy-editor pass (on by default). Set EDITOR_PASS=false to skip.
+          EDITOR_PASS: ${{ vars.EDITOR_PASS }}
+          EDITOR_MODEL: ${{ vars.EDITOR_MODEL }}
         run: node scripts/generate.mjs ${{ inputs.dry_run && '--dry-run' || '' }}
 
       - name: Open a Pull Request with the new drafts

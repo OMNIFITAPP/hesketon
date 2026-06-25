@@ -1,5 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { buildSystemPrompt, buildUserPrompt } from './prompt.mjs';
+import { editHebrew, validateEdit } from './editor.mjs';
 
 // Very long transcripts cost a lot of tokens. Favorite-podcast volume is low,
 // so we allow a generous cap and trim only the extreme tail.
@@ -38,7 +39,25 @@ export async function generatePost({ transcript, meta, categories, model }) {
     .join('')
     .trim();
 
-  return parsePostJson(out);
+  const post = parsePostJson(out);
+
+  // ── Editor pass: polish the Hebrew of the body (cheap; skips the transcript).
+  //    Falls back to the original draft if the edit fails its guardrails.
+  if (process.env.EDITOR_PASS !== 'false' && post.bodyMarkdown) {
+    try {
+      const edited = await editHebrew({ body: post.bodyMarkdown, model });
+      if (validateEdit(post.bodyMarkdown, edited)) {
+        post.bodyMarkdown = edited;
+        console.log('  ↳ עריכת לשון: הוחלה ✓');
+      } else {
+        console.warn('  ⚠️  עריכת לשון נדחתה (לא עברה ולידציה) — נשמרת הטיוטה המקורית');
+      }
+    } catch (err) {
+      console.warn(`  ⚠️  דילוג על עריכת לשון: ${err.message}`);
+    }
+  }
+
+  return post;
 }
 
 /** Best-effort JSON extraction from the model's reply. */
