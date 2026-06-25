@@ -25,20 +25,26 @@ export const SITE = {
 } as const;
 
 // ──────────────────────────────────────────────────────────────
-//  Newsletter. To turn the signup form on:
-//   1. Create a list at Buttondown / Kit / MailerLite.
-//   2. Paste the form's POST URL into `action` below.
+//  Newsletter (Buttondown). To turn the signup form on:
+//   1. Create a free list at buttondown.com.
+//   2. Put your username below (Settings → your handle in the URL).
 //   3. The form appears automatically in the footer + under each post.
-//  The email field is named "email" (works with Buttondown & Kit).
+//  While `buttondownUsername` is empty, the form stays hidden.
 // ──────────────────────────────────────────────────────────────
 export const NEWSLETTER = {
-  /** Provider form-submit URL. While empty, the signup form stays hidden. */
-  action: '',
-  /** e.g. 'https://buttondown.com/api/emails/embed-subscribe/USERNAME' */
+  /** Your Buttondown handle, e.g. 'hesketon'. Empty → form hidden. */
+  buttondownUsername: '',
   heading: 'הפודקאסטים הכי טובים, מזוקקים לתיבה שלך',
   subtext: 'גיליון שבועי. בלי ספאם, אפשר לבטל בכל רגע.',
   cta: 'הרשמה',
 } as const;
+
+/** Buttondown embed-subscribe endpoint, or '' when no username is set. */
+export function newsletterAction(): string {
+  return NEWSLETTER.buttondownUsername
+    ? `https://buttondown.com/api/emails/embed-subscribe/${NEWSLETTER.buttondownUsername}`
+    : '';
+}
 
 export type Category = {
   /** Hebrew display name — this is what posts reference in frontmatter. */

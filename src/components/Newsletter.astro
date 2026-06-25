@@ -1,7 +1,9 @@
 ---
-import { NEWSLETTER } from '../consts';
-// Renders only once a provider URL is set in consts.ts → NEWSLETTER.action.
-const enabled = NEWSLETTER.action.length > 0;
+import { NEWSLETTER, newsletterAction } from '../consts';
+// Renders only once a Buttondown username is set in consts.ts.
+const action = newsletterAction();
+const enabled = action.length > 0;
+const profile = `https://buttondown.com/${NEWSLETTER.buttondownUsername}`;
 ---
 
 {
@@ -11,7 +13,13 @@ const enabled = NEWSLETTER.action.length > 0;
         <p class="newsletter__heading">{NEWSLETTER.heading}</p>
         <p class="newsletter__subtext">{NEWSLETTER.subtext}</p>
       </div>
-      <form class="newsletter__form" action={NEWSLETTER.action} method="post" target="_blank">
+      <form
+        class="newsletter__form"
+        action={action}
+        method="post"
+        target="popupwindow"
+        onsubmit={`window.open('${profile}', 'popupwindow')`}
+      >
         <input
           class="newsletter__input"
           type="email"
@@ -20,6 +28,7 @@ const enabled = NEWSLETTER.action.length > 0;
           placeholder="כתובת אימייל"
           aria-label="כתובת אימייל"
         />
+        <input type="hidden" name="embed" value="1" />
         <button class="newsletter__btn" type="submit">
           {NEWSLETTER.cta}
         </button>
