@@ -96,23 +96,23 @@ episodes:
     host: סטיבן בארטלט
     guest: מוניש פבראי
     categoryHint: כסף והשקעות
-    publishedAt: 2025-08-21
+    publishedAt: 2025-08-21T00:00:00.000Z
     durationMinutes: 106
-    done: false
+    done: true
   - youtubeUrl: https://www.youtube.com/watch?v=32u5T6lO8qk
     podcast: The Diary of a CEO
     episode: 'אזהרת מיליארדר: אני מוכר הכול — המשבר כבר כאן'
     host: סטיבן בארטלט
     categoryHint: כסף והשקעות
-    publishedAt: 2026-06-25
+    publishedAt: 2026-06-25T00:00:00.000Z
     durationMinutes: 105
-    done: false
+    done: true
   - youtubeUrl: https://www.youtube.com/watch?v=flBuEEenQRg
     podcast: Jack Neel
     episode: אלכס הורמוזי — איך הייתי מרוויח 100K בשלושה חודשים ב-2026
     host: ג'ק ניל
     guest: אלכס הורמוזי
     categoryHint: עסקים וקריירה
-    publishedAt: 2026-06-19
+    publishedAt: 2026-06-19T00:00:00.000Z
     durationMinutes: 98
-    done: false
+    done: true
