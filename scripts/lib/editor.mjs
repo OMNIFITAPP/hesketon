@@ -49,13 +49,16 @@ export async function editHebrew({ body, model }) {
   const chosenModel =
     model || process.env.EDITOR_MODEL || process.env.CLAUDE_MODEL || DEFAULT_EDITOR_MODEL;
 
-  const message = await client.messages.create({
+  const params = {
     model: chosenModel,
     max_tokens: 8000,
-    temperature: 0.3, // low: fidelity over creativity
     system: buildEditorSystemPrompt(),
     messages: [{ role: 'user', content: body }],
-  });
+  };
+  // Some models (e.g. opus-4-8) reject `temperature`; only send it where supported.
+  if (!/opus-4-8/.test(chosenModel)) params.temperature = 0.3; // low: fidelity over creativity
+
+  const message = await client.messages.create(params);
 
   let out = message.content
     .filter((b) => b.type === 'text')

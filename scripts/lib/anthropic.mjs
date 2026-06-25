@@ -25,13 +25,16 @@ export async function generatePost({ transcript, meta, categories, model }) {
     text = text.slice(0, MAX_TRANSCRIPT_CHARS);
   }
 
-  const message = await client.messages.create({
+  const params = {
     model: chosenModel,
     max_tokens: 8000,
-    temperature: 0.7,
     system: buildSystemPrompt(categories),
     messages: [{ role: 'user', content: buildUserPrompt({ transcript: text, meta }) }],
-  });
+  };
+  // Some models (e.g. opus-4-8) reject `temperature`; only send it where supported.
+  if (!/opus-4-8/.test(chosenModel)) params.temperature = 0.7;
+
+  const message = await client.messages.create(params);
 
   const out = message.content
     .filter((b) => b.type === 'text')
