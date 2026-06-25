@@ -34,5 +34,23 @@
     "name": "People by WTF",
     "hostId": "nikhil-kamath",
     "description": "שיחות עם מייסדים, יזמים ומובילי דעה — עם ניקהיל קאמאת'."
+  },
+  {
+    "id": "feel-better-live-more",
+    "name": "Feel Better, Live More",
+    "hostId": "rangan-chatterjee",
+    "description": "בריאות, אורח חיים ורווחה — עם ד\"ר ראנגן צ'טרג'י."
+  },
+  {
+    "id": "on-purpose-jay-shetty",
+    "name": "On Purpose with Jay Shetty",
+    "hostId": "jay-shetty",
+    "description": "מיינדסט, מערכות יחסים ומשמעות — עם ג'יי שטי."
+  },
+  {
+    "id": "the-rich-roll-podcast",
+    "name": "The Rich Roll Podcast",
+    "hostId": "rich-roll",
+    "description": "בריאות, ביצועים, משמעות וקיימות — עם ריץ' רול."
   }
 ]

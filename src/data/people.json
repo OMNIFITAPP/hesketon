@@ -82,5 +82,41 @@
     "nameHe": "אילון מאסק",
     "nameEn": "Elon Musk",
     "title": "יזם, מנכ\"ל טסלה ו-SpaceX"
+  },
+  {
+    "id": "henry-shukman",
+    "nameHe": "הנרי שוקמן",
+    "nameEn": "Henry Shukman",
+    "title": "מורה זן ומחבר"
+  },
+  {
+    "id": "rangan-chatterjee",
+    "nameHe": "ראנגן צ'טרג'י",
+    "nameEn": "Rangan Chatterjee",
+    "title": "רופא ומנחה פודקאסט"
+  },
+  {
+    "id": "tim-ferriss",
+    "nameHe": "טים פריס",
+    "nameEn": "Tim Ferriss",
+    "title": "מחבר ומשקיע"
+  },
+  {
+    "id": "jay-shetty",
+    "nameHe": "ג'יי שטי",
+    "nameEn": "Jay Shetty",
+    "title": "מנחה פודקאסט ומחבר"
+  },
+  {
+    "id": "yuval-noah-harari",
+    "nameHe": "יובל נח הררי",
+    "nameEn": "Yuval Noah Harari",
+    "title": "היסטוריון ומחבר"
+  },
+  {
+    "id": "rich-roll",
+    "nameHe": "ריץ' רול",
+    "nameEn": "Rich Roll",
+    "title": "מנחה פודקאסט"
   }
 ]
