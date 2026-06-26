@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getPodcastsWithPosts } from '../../utils';
+import { personById } from '../../consts';
+
+export async function getStaticPaths() {
+  const podcasts = await getPodcastsWithPosts();
+  return podcasts.map(({ podcast, posts }) => ({
+    params: { id: podcast.id },
+    props: { podcast, posts },
+  }));
+}
+
+const { podcast, posts } = Astro.props;
+const host = personById(podcast.hostId);
+const desc = `כל תקצירי הפרקים מהפודקאסט ${podcast.name}${
+  host ? ` (בהנחיית ${host.nameHe})` : ''
+} — בעברית, בהסכתון.`;
+---
+
+<BaseLayout title={`${podcast.name} — כל התקצירים`} description={desc}>
+  <section class="section wrap">
+    <div class="page-title">
+      <p class="muted person-eyebrow">פודקאסט</p>
+      <h1>{podcast.name}</h1>
+      {host && <p class="muted">בהנחיית {host.nameHe}</p>}
+      {podcast.description && <p class="muted">{podcast.description}</p>}
+      <p class="muted">{posts.length} תקצירים בהסכתון</p>
+    </div>
+    <div class="post-grid">
+      {posts.map((post) => <PostCard post={post} />)}
+    </div>
+    <p style="margin-top:2rem"><a href="/posts">← לכל הפרקים</a></p>
+  </section>
+</BaseLayout>
+
+<style>
+  .person-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+</style>

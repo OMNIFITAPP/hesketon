@@ -171,7 +171,8 @@ const podcasts = uniq(posts.map((p) => p.data.source?.podcast));
             (cat === 'all' || c.dataset.category === cat) &&
             (guest === 'all' || c.dataset.guest === guest) &&
             (pod === 'all' || c.dataset.podcast === pod);
-          c.hidden = !ok;
+          // Use inline display (not [hidden]) so an explicit .card { display } can't override it.
+          c.style.display = ok ? '' : 'none';
           if (ok) shown++;
         });
         if (countEl) countEl.textContent = shown;

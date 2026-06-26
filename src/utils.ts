@@ -1,5 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
-import { PEOPLE, type Person } from './consts';
+import { PEOPLE, PODCASTS, type Person, type Podcast } from './consts';
 
 /** The episode's own publish date when available, else when we posted it. */
 function postDate(p: CollectionEntry<'posts'>): number {
@@ -40,6 +40,28 @@ export async function getPeopleWithPosts(): Promise<
 > {
   const posts = await getPublishedPosts();
   return PEOPLE.map((person) => ({ person, posts: postsForPerson(person, posts) })).filter(
+    (x) => x.posts.length > 0,
+  );
+}
+
+/** Posts from a given podcast (by canonical id or name). */
+export function postsForPodcast(
+  podcast: Podcast,
+  posts: CollectionEntry<'posts'>[],
+): CollectionEntry<'posts'>[] {
+  return posts.filter((p) => {
+    const s = p.data.source;
+    if (!s) return false;
+    return s.podcastId === podcast.id || s.podcast === podcast.name;
+  });
+}
+
+/** Every podcast with at least one published post, with its posts. */
+export async function getPodcastsWithPosts(): Promise<
+  { podcast: Podcast; posts: CollectionEntry<'posts'>[] }[]
+> {
+  const posts = await getPublishedPosts();
+  return PODCASTS.map((podcast) => ({ podcast, posts: postsForPodcast(podcast, posts) })).filter(
     (x) => x.posts.length > 0,
   );
 }

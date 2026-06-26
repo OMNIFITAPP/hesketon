@@ -107,6 +107,11 @@ export function podcastById(id?: string): Podcast | undefined {
   return id ? PODCASTS.find((p) => p.id === id) : undefined;
 }
 
+/** Look up a podcast by its display name (fallback when no id is set). */
+export function podcastByName(name?: string): Podcast | undefined {
+  return name ? PODCASTS.find((p) => p.name === name) : undefined;
+}
+
 /** Extract the 11-char video id from any common YouTube URL form. */
 export function youtubeId(url?: string): string | undefined {
   if (!url) return undefined;
