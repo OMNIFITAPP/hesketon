@@ -60,4 +60,11 @@
     "hostId": "jack-neel",
     "description": "שיחות עם יזמים ומובילי עסקים — עם ג'ק ניל."
   }
+,
+  {
+    "id": "huberman-lab",
+    "name": "Huberman Lab",
+    "hostId": "andrew-huberman",
+    "description": "מדע, בריאות וביצועים — עם פרופ' אנדרו הוברמן."
+  }
 ]

@@ -116,3 +116,29 @@ episodes:
     publishedAt: 2026-06-19T00:00:00.000Z
     durationMinutes: 98
     done: true
+  - youtubeUrl: https://www.youtube.com/watch?v=BTJGr78-zyw
+    podcast: The Diary of a CEO
+    episode: "פרופ' ג'יאנג — מלחמת העולם השלישית עומדת להתחיל"
+    host: סטיבן בארטלט
+    guest: "פרופ' ג'יאנג"
+    categoryHint: פוליטיקה ואקטואליה
+    publishedAt: 2026-05-07
+    durationMinutes: 131
+    done: false
+  - youtubeUrl: https://www.youtube.com/watch?v=DnvWAP99r3Y
+    podcast: The Diary of a CEO
+    episode: 'ד"ר דיוויד סינקלייר — האם אפשר להפוך את ההזדקנות לאחור?'
+    host: סטיבן בארטלט
+    guest: דיוויד סינקלייר
+    categoryHint: בריאות וכושר
+    publishedAt: 2026-03-23
+    durationMinutes: 149
+    done: false
+  - youtubeUrl: https://www.youtube.com/watch?v=tkH2-_jMCSk
+    podcast: Huberman Lab
+    episode: שיפור הגמישות — פרוטוקולי מתיחות מבוססי-מחקר
+    host: אנדרו הוברמן
+    categoryHint: בריאות וכושר
+    publishedAt: 2022-06-13
+    durationMinutes: 126
+    done: false
