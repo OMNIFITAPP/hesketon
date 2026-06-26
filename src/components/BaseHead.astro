@@ -1,5 +1,6 @@
 ---
 import { SITE } from '../consts';
+import Analytics from './Analytics.astro';
 
 interface Props {
   title?: string;
@@ -65,3 +66,5 @@ const ogImage = new URL(image ?? '/og-default.svg', siteUrl);
 <link rel="alternate" type="application/rss+xml" title={SITE.title} href={new URL('/rss.xml', siteUrl).href} />
 
 {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+
+<Analytics />

@@ -1,0 +1,17 @@
+---
+import { ANALYTICS } from '../consts';
+// Renders the analytics script only once a provider is configured in consts.ts.
+const enabled = ANALYTICS.scriptSrc.length > 0;
+---
+
+{
+  enabled && (
+    <script
+      is:inline
+      defer
+      src={ANALYTICS.scriptSrc}
+      data-domain={ANALYTICS.domain || undefined}
+      data-website-id={ANALYTICS.websiteId || undefined}
+    />
+  )
+}

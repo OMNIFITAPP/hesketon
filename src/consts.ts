@@ -46,6 +46,18 @@ export function newsletterAction(): string {
     : '';
 }
 
+// ──────────────────────────────────────────────────────────────
+//  Analytics — privacy-friendly, cookieless (no consent banner needed).
+//  Leave scriptSrc empty to disable. To enable, pick ONE provider:
+//   • Plausible: scriptSrc 'https://plausible.io/js/script.js' + domain 'hesketon.co.il'
+//   • Umami:     scriptSrc 'https://cloud.umami.is/script.js' + websiteId '<uuid>'
+// ──────────────────────────────────────────────────────────────
+export const ANALYTICS = {
+  scriptSrc: '',
+  domain: '', // Plausible → data-domain
+  websiteId: '', // Umami → data-website-id
+} as const;
+
 export type Category = {
   /** Hebrew display name — this is what posts reference in frontmatter. */
   name: string;
