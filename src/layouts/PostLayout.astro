@@ -6,7 +6,7 @@ import Share from '../components/Share.astro';
 import References from '../components/References.astro';
 import Newsletter from '../components/Newsletter.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
-import { SITE, categoryByName, tagToSlug, youtubeThumb } from '../consts';
+import { SITE, categoryByName, tagToSlug, youtubeThumb, personById, personByName } from '../consts';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -15,6 +15,7 @@ interface Props {
 const { post } = Astro.props;
 const d = post.data;
 const cat = categoryByName(d.category);
+const guestPerson = personById(d.source?.guestId) ?? personByName(d.source?.guest);
 // Prefer the episode's own publish date over when we posted the summary.
 const episodeDate = d.source?.publishedAt ?? d.pubDate;
 const isEpisodeDate = !!d.source?.publishedAt;
@@ -122,7 +123,13 @@ const jsonLd = {
                 מתוך הפודקאסט <strong>{d.source.podcast}</strong>
               </>
             ) : null}
-            {d.source.guest ? <> עם {d.source.guest}</> : null}.
+            {d.source.guest ? (
+              guestPerson ? (
+                <> עם <a href={`/people/${guestPerson.id}`}>{d.source.guest}</a></>
+              ) : (
+                <> עם {d.source.guest}</>
+              )
+            ) : null}.
             {d.source.youtubeUrl && (
               <>
                 {' '}

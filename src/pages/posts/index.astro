@@ -5,6 +5,10 @@ import { getPublishedPosts } from '../../utils';
 import { CATEGORIES } from '../../consts';
 
 const posts = await getPublishedPosts();
+const uniq = (arr: (string | undefined)[]) =>
+  [...new Set(arr.filter(Boolean) as string[])].sort((a, b) => a.localeCompare(b, 'he'));
+const guests = uniq(posts.map((p) => p.data.source?.guest));
+const podcasts = uniq(posts.map((p) => p.data.source?.podcast));
 ---
 
 <BaseLayout title="כל הפרקים" description="כל תקצירי הפודקאסטים שפורסמו בהסכתון.">
@@ -25,13 +29,33 @@ const posts = await getPublishedPosts();
               </button>
             ))}
           </div>
-          <label class="sort-wrap">
-            <span class="muted">מיון</span>
-            <select id="sort-select">
-              <option value="date-desc">מהחדש לישן</option>
-              <option value="date-asc">מהישן לחדש</option>
-            </select>
-          </label>
+          <div class="select-row">
+            <label class="sel">
+              <span class="muted">אורח</span>
+              <select id="guest-select">
+                <option value="all">כל האורחים</option>
+                {guests.map((g) => (
+                  <option value={g}>{g}</option>
+                ))}
+              </select>
+            </label>
+            <label class="sel">
+              <span class="muted">פודקאסט</span>
+              <select id="podcast-select">
+                <option value="all">כל הפודקאסטים</option>
+                {podcasts.map((p) => (
+                  <option value={p}>{p}</option>
+                ))}
+              </select>
+            </label>
+            <label class="sel">
+              <span class="muted">מיון</span>
+              <select id="sort-select">
+                <option value="date-desc">מהחדש לישן</option>
+                <option value="date-asc">מהישן לחדש</option>
+              </select>
+            </label>
+          </div>
         </div>
       )
     }
@@ -47,7 +71,7 @@ const posts = await getPublishedPosts();
             ))}
           </div>
           <p class="muted no-results" hidden>
-            אין פרקים בקטגוריה הזו.
+            אין פרקים שמתאימים לסינון.
           </p>
         </>
       )
@@ -91,14 +115,19 @@ const posts = await getPublishedPosts();
     border-color: var(--accent-ink, #a61e4d);
     color: #fff;
   }
-  .sort-wrap {
+  .select-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+  }
+  .sel {
     display: flex;
     align-items: center;
-    gap: 0.45rem;
+    gap: 0.4rem;
     font-size: 0.9rem;
     white-space: nowrap;
   }
-  .sort-wrap select {
+  .sel select {
     font: inherit;
     padding: 0.35rem 0.6rem;
     border: 1px solid var(--line, #d9d3c5);
@@ -106,6 +135,7 @@ const posts = await getPublishedPosts();
     background: var(--bg, #faf8f3);
     color: var(--ink, #1a1722);
     cursor: pointer;
+    max-width: 12rem;
   }
   .no-results {
     margin-top: 1.5rem;
@@ -121,6 +151,8 @@ const posts = await getPublishedPosts();
       const cards = Array.from(grid.querySelectorAll('.card'));
       const filts = Array.from(document.querySelectorAll('.filt'));
       const sortSel = document.getElementById('sort-select');
+      const guestSel = document.getElementById('guest-select');
+      const podSel = document.getElementById('podcast-select');
       const countEl = document.getElementById('post-count');
       const noRes = document.querySelector('.no-results');
       let cat = 'all';
@@ -131,9 +163,14 @@ const posts = await getPublishedPosts();
           .sort((a, b) => dir * (Date.parse(a.dataset.date) - Date.parse(b.dataset.date)))
           .forEach((c) => grid.appendChild(c));
 
+        const guest = guestSel ? guestSel.value : 'all';
+        const pod = podSel ? podSel.value : 'all';
         let shown = 0;
         cards.forEach((c) => {
-          const ok = cat === 'all' || c.dataset.category === cat;
+          const ok =
+            (cat === 'all' || c.dataset.category === cat) &&
+            (guest === 'all' || c.dataset.guest === guest) &&
+            (pod === 'all' || c.dataset.podcast === pod);
           c.hidden = !ok;
           if (ok) shown++;
         });
@@ -149,7 +186,7 @@ const posts = await getPublishedPosts();
           apply();
         }),
       );
-      if (sortSel) sortSel.addEventListener('change', apply);
+      [sortSel, guestSel, podSel].forEach((s) => s && s.addEventListener('change', apply));
       apply();
     }
     if (document.readyState !== 'loading') init();

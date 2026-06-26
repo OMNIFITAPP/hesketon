@@ -97,6 +97,11 @@ export function personById(id?: string): Person | undefined {
   return id ? PEOPLE.find((p) => p.id === id) : undefined;
 }
 
+/** Look up a person by their Hebrew display name (fallback when no id is set). */
+export function personByName(name?: string): Person | undefined {
+  return name ? PEOPLE.find((p) => p.nameHe === name) : undefined;
+}
+
 /** Look up a podcast by canonical id. */
 export function podcastById(id?: string): Podcast | undefined {
   return id ? PODCASTS.find((p) => p.id === id) : undefined;

@@ -18,7 +18,13 @@ const episodeDate = d.source?.publishedAt ?? d.pubDate;
 const isEpisodeDate = !!d.source?.publishedAt;
 ---
 
-<article class="card" data-category={d.category} data-date={episodeDate.toISOString()}>
+<article
+  class="card"
+  data-category={d.category}
+  data-date={episodeDate.toISOString()}
+  data-guest={d.source?.guest}
+  data-podcast={d.source?.podcast}
+>
   {
     thumb && (
       <div class="card__media">

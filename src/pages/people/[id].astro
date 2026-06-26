@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getPeopleWithPosts } from '../../utils';
+
+export async function getStaticPaths() {
+  const people = await getPeopleWithPosts();
+  return people.map(({ person, posts }) => ({
+    params: { id: person.id },
+    props: { person, posts },
+  }));
+}
+
+const { person, posts } = Astro.props;
+const desc = `כל תקצירי הפודקאסטים עם ${person.nameHe}${
+  person.title ? ` — ${person.title}` : ''
+} בהסכתון.`;
+---
+
+<BaseLayout title={`${person.nameHe} — כל התקצירים`} description={desc}>
+  <section class="section wrap">
+    <div class="page-title">
+      <p class="muted person-eyebrow">אורח/ת</p>
+      <h1>{person.nameHe}</h1>
+      {person.title && <p class="muted">{person.title}</p>}
+      <p class="muted">{posts.length} תקצירים בהסכתון</p>
+    </div>
+    <div class="post-grid">
+      {posts.map((post) => <PostCard post={post} />)}
+    </div>
+    <p style="margin-top:2rem"><a href="/posts">← לכל הפרקים</a></p>
+  </section>
+</BaseLayout>
+
+<style>
+  .person-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+</style>
