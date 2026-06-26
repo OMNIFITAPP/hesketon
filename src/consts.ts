@@ -33,7 +33,7 @@ export const SITE = {
 // ──────────────────────────────────────────────────────────────
 export const NEWSLETTER = {
   /** Your Buttondown handle, e.g. 'hesketon'. Empty → form hidden. */
-  buttondownUsername: '',
+  buttondownUsername: 'hesketon',
   heading: 'הפודקאסטים הכי טובים, מזוקקים לתיבה שלך',
   subtext: 'גיליון שבועי. בלי ספאם, אפשר לבטל בכל רגע.',
   cta: 'הרשמה',
@@ -53,9 +53,9 @@ export function newsletterAction(): string {
 //   • Umami:     scriptSrc 'https://cloud.umami.is/script.js' + websiteId '<uuid>'
 // ──────────────────────────────────────────────────────────────
 export const ANALYTICS = {
-  scriptSrc: '',
+  scriptSrc: 'https://cloud.umami.is/script.js',
   domain: '', // Plausible → data-domain
-  websiteId: '', // Umami → data-website-id
+  websiteId: '43adec1a-d8bf-4522-adc7-aaf6602c3973', // Umami → data-website-id
 } as const;
 
 export type Category = {
