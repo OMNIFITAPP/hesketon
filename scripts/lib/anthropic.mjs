@@ -27,8 +27,10 @@ export async function generatePost({ transcript, meta, categories, model }) {
   }
 
   const params = {
+    // Generous ceiling: the JSON now also carries the quotes[] array (he+en
+    // pairs), so 8000 could truncate a rich post mid-JSON → parse failure.
     model: chosenModel,
-    max_tokens: 8000,
+    max_tokens: 16000,
     system: buildSystemPrompt(categories),
     messages: [{ role: 'user', content: buildUserPrompt({ transcript: text, meta }) }],
   };
