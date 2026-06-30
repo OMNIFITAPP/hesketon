@@ -133,7 +133,7 @@ episodes:
     categoryHint: בריאות וכושר
     publishedAt: 2026-03-23T00:00:00.000Z
     durationMinutes: 149
-    done: false
+    done: true
   - youtubeUrl: https://www.youtube.com/watch?v=tkH2-_jMCSk
     podcast: Huberman Lab
     episode: שיפור הגמישות — פרוטוקולי מתיחות מבוססי-מחקר
