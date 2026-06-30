@@ -11,8 +11,29 @@
 const DEFAULT_ACTOR = 'codepoetry~youtube-transcript-ai-scraper';
 const POLL_INTERVAL_MS = 20_000;        // 20 s between status polls
 const MAX_WAIT_MS     = 35 * 60_000;   // 35 min ceiling (8× realtime, 3 hr video ≈ 23 min)
+const MIN_USABLE_CHARS = 200;          // below this we treat the run as "empty"
+const MAX_ATTEMPTS     = 2;            // a SUCCEEDED-but-empty run is usually transient (Whisper flaked)
 
+/**
+ * Fetch a transcript via Apify. An actor run can finish SUCCEEDED yet return
+ * no text (Whisper occasionally flakes on a perfectly valid video — this is
+ * what happened to the Jiang episode). When that happens we retry once before
+ * giving up, so one bad roll of the dice doesn't kill the post.
+ */
 export async function fetchApifyTranscript(youtubeUrl) {
+  let lastDiag = '';
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    const { text, diag } = await runOnce(youtubeUrl, attempt);
+    if (text.length >= MIN_USABLE_CHARS) return text;
+    lastDiag = diag;
+    if (attempt < MAX_ATTEMPTS) {
+      console.warn(`  ⚠️  Apify run returned no usable text (${diag}) — retrying (${attempt + 1}/${MAX_ATTEMPTS})`);
+    }
+  }
+  throw new Error(`Apify returned no usable transcript after ${MAX_ATTEMPTS} attempts (${lastDiag})`);
+}
+
+async function runOnce(youtubeUrl, attempt) {
   const token = process.env.APIFY_TOKEN;
   const actor = process.env.APIFY_ACTOR || DEFAULT_ACTOR;
   if (!token) throw new Error('APIFY_TOKEN is not set.');
@@ -62,7 +83,11 @@ export async function fetchApifyTranscript(youtubeUrl) {
         `https://api.apify.com/v2/datasets/${status.defaultDatasetId}/items?token=${encodeURIComponent(token)}`,
       );
       const items = await dsRes.json();
-      return extractTranscriptText(items);
+      const text  = extractTranscriptText(items);
+      // When empty, report what the actor actually returned so the failure is
+      // diagnosable from the run log instead of a silent "little/no text".
+      const diag  = text.length >= MIN_USABLE_CHARS ? `${text.length} chars` : describeEmpty(items);
+      return { text, diag };
     }
 
     if (['FAILED', 'TIMED-OUT', 'ABORTED'].includes(status.status)) {
@@ -88,4 +113,14 @@ function extractTranscriptText(items) {
     if (typeof item.text           === 'string')  { parts.push(item.text);             continue; }
   }
   return parts.join('\n').trim();
+}
+
+/** Summarize an empty/unusable dataset for the log (item count, keys, any error). */
+function describeEmpty(items) {
+  const arr = Array.isArray(items) ? items : [items];
+  if (arr.length === 0) return 'dataset empty (0 items)';
+  const first = arr[0] || {};
+  const keys = Object.keys(first).join(',') || 'no keys';
+  const err = first.error || first.errorMessage || first.message;
+  return `${arr.length} item(s); keys=[${keys}]${err ? `; error="${String(err).slice(0, 120)}"` : ''}`;
 }
