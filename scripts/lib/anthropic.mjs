@@ -45,6 +45,12 @@ export async function generatePost({ transcript, meta, categories, model }) {
     .join('')
     .trim();
 
+  // If the model hit the token ceiling the JSON is cut off mid-structure.
+  // parsePostJson will try to repair it, but flag the cause so it's obvious.
+  if (message.stop_reason === 'max_tokens') {
+    console.warn(`  ⚠️  הפלט נחתך בתקרת ${params.max_tokens} טוקנים — מנסה לשקם JSON חלקי`);
+  }
+
   const post = parsePostJson(out);
 
   // ── Quote-fidelity pass: ensure each quote is a faithful, complete
@@ -89,20 +95,56 @@ export async function generatePost({ transcript, meta, categories, model }) {
 export function parsePostJson(text) {
   let raw = (text || '').trim();
 
-  // Strip ```json … ``` fences if present.
-  const fence = raw.match(/```(?:json)?\s*([\s\S]*?)```/i);
-  if (fence) raw = fence[1].trim();
+  // Strip a ```json … ``` fence. Tolerate a *missing* closing fence (which is
+  // exactly what truncated output looks like) by matching the opener alone.
+  const fenced = raw.match(/```(?:json)?\s*([\s\S]*?)```/i);
+  if (fenced) raw = fenced[1].trim();
+  else raw = raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
 
-  // Otherwise grab the outermost { … }.
-  if (!raw.startsWith('{')) {
-    const start = raw.indexOf('{');
-    const end = raw.lastIndexOf('}');
-    if (start !== -1 && end !== -1) raw = raw.slice(start, end + 1);
+  // Take from the first { onward (drop any prose preamble).
+  const start = raw.indexOf('{');
+  if (start > 0) raw = raw.slice(start);
+
+  // Happy path: trim to the outermost balanced brace and parse.
+  const end = raw.lastIndexOf('}');
+  const balanced = end !== -1 ? raw.slice(0, end + 1) : raw;
+  try {
+    return JSON.parse(balanced);
+  } catch {
+    /* fall through to repair */
   }
 
+  // Repair path: output was cut off mid-JSON (token ceiling). Close any open
+  // string and balance the remaining brackets so we can still salvage the post.
   try {
-    return JSON.parse(raw);
+    return JSON.parse(repairTruncatedJson(raw));
   } catch {
     throw new Error('Could not parse the model output as JSON.\n--- first 800 chars ---\n' + text.slice(0, 800));
   }
+}
+
+/** Best-effort close of a JSON string/object/array tree that was cut off. */
+function repairTruncatedJson(raw) {
+  const stack = [];
+  let inString = false;
+  let escaped = false;
+
+  for (const ch of raw) {
+    if (inString) {
+      if (escaped) escaped = false;
+      else if (ch === '\\') escaped = true;
+      else if (ch === '"') inString = false;
+      continue;
+    }
+    if (ch === '"') inString = true;
+    else if (ch === '{' || ch === '[') stack.push(ch);
+    else if (ch === '}' || ch === ']') stack.pop();
+  }
+
+  let out = raw;
+  if (inString) out += '"';
+  // Drop a dangling trailing comma / partial key before closing.
+  out = out.replace(/,\s*$/, '').replace(/:\s*$/, ': null');
+  for (let i = stack.length - 1; i >= 0; i--) out += stack[i] === '{' ? '}' : ']';
+  return out;
 }
