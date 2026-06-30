@@ -729,3 +729,86 @@ a.chip:hover {
     transform: none;
   }
 }
+
+/* ---------- Overflow safety (long English terms, RTL) ---------- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  overflow-wrap: break-word;
+}
+h1,
+h2,
+h3,
+.card__title,
+.prose {
+  overflow-wrap: break-word;
+}
+
+/* ---------- Mobile (phones) — most readers are here ---------- */
+@media (max-width: 640px) {
+  .wrap {
+    padding-inline: 1.1rem;
+  }
+  .section {
+    padding-block: 2.25rem;
+  }
+  .hero {
+    padding-block: 2.5rem 2rem;
+  }
+  .post-header {
+    padding-block: 1.75rem 1.1rem;
+  }
+  .page-title {
+    padding-block: 1.75rem 1.1rem;
+  }
+
+  body {
+    font-size: 1.02rem;
+  }
+  .prose {
+    font-size: 1.08rem;
+    line-height: 1.85;
+  }
+  .prose > p:first-of-type {
+    font-size: 1.12rem;
+  }
+  .prose blockquote {
+    padding-inline: 1rem;
+    font-size: 1.08rem;
+  }
+  .prose .tldr {
+    padding: 1.1rem 1.15rem 1.2rem;
+  }
+
+  .post-grid {
+    gap: 1.1rem;
+  }
+  .card {
+    padding: 1.2rem 1.2rem 1.3rem;
+  }
+  .card__media {
+    margin: -1.2rem -1.2rem 0; /* keep full-bleed with the reduced padding */
+  }
+  .card__title {
+    font-size: 1.3rem;
+  }
+
+  /* Header: brand + nav stay comfortable, never cramped */
+  .brand {
+    font-size: 1.3rem;
+  }
+  .nav {
+    gap: 0.85rem 0.95rem;
+  }
+  .nav a {
+    font-size: 0.92rem;
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+}
