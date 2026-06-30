@@ -16,8 +16,8 @@ const isActive = (href: string) =>
     <nav class="nav" aria-label="ניווט ראשי">
       <a href="/posts" aria-current={isActive('/posts') ? 'page' : undefined}>כל הפרקים</a>
       <a href="/categories" aria-current={isActive('/categories') ? 'page' : undefined}>קטגוריות</a>
+      <a href="/search" aria-current={isActive('/search') ? 'page' : undefined}>חיפוש</a>
       <a href="/about" aria-current={isActive('/about') ? 'page' : undefined}>אודות</a>
-      <a href="/rss.xml" aria-label="הזנת RSS">RSS</a>
     </nav>
   </div>
 </header>

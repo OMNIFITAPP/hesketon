@@ -100,9 +100,21 @@ const profile = `https://buttondown.com/${NEWSLETTER.buttondownUsername}`;
     .newsletter {
       flex-direction: column;
       align-items: stretch;
+      padding: 1.3rem 1.3rem 1.4rem;
     }
+    /* Stack input over button; flex:none so the form doesn't grow vertically. */
     .newsletter__form {
       max-width: none;
+      flex: none;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .newsletter__input {
+      flex: none;
+    }
+    .newsletter__btn {
+      width: 100%;
+      padding: 0.8rem;
     }
   }
 </style>
