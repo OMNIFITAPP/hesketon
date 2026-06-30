@@ -124,7 +124,7 @@ episodes:
     categoryHint: פוליטיקה ואקטואליה
     publishedAt: 2026-05-07T00:00:00.000Z
     durationMinutes: 131
-    done: false
+    done: true  # ויתרנו: Apify לא מצליח לשלוף תמליל לסרטון הזה (תוכן גאופוליטי רגיש)
   - youtubeUrl: https://www.youtube.com/watch?v=DnvWAP99r3Y
     podcast: The Diary of a CEO
     episode: ד"ר דיוויד סינקלייר — האם אפשר להפוך את ההזדקנות לאחור?
