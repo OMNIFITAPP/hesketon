@@ -19,6 +19,17 @@ source:
   youtubeUrl: https://www.youtube.com/watch?v=tkH2-_jMCSk
   publishedAt: 2022-06-13T00:00:00.000Z
   durationMinutes: 126
+references:
+  - authors: "Bandy WD, Irion JM, Briggler M"
+    year: 1997
+    title: "The Effect of Time and Frequency of Static Stretching on Flexibility of the Hamstring Muscles"
+    source: "Physical Therapy 77(10)"
+    url: "https://doi.org/10.1093/ptj/77.10.1090"
+  - authors: "Wyon M, Felton L, Galloway S"
+    year: 2009
+    title: "A comparison of two stretching modalities on lower-limb range of motion measurements in recreational dancers"
+    source: "Journal of Strength and Conditioning Research 23(7)"
+    url: "https://pubmed.ncbi.nlm.nih.gov/19855344/"
 ---
 
 <blockquote class="pull--lead">
@@ -65,7 +76,7 @@ source:
 
 ## הפרמטרים: כמה זמן, כמה סטים, כמה פעמים בשבוע
 
-מחקר שבחן 93 נבדקים בגילאי 21–39, שנמתחו חמישה ימים בשבוע במשך שישה שבועות, הגיע לממצא ברור:
+מחקר שבחן 93 נבדקים בגילאי 21–39, שנמתחו חמישה ימים בשבוע במשך שישה שבועות, הגיע לממצא ברור<sup><a class="cite" href="#ref-1">1</a></sup>:
 
 > "30 שניות הן משך זמן יעיל להחזקת מתיחה סטטית של שרירי הירך האחורית לצורך הגדלת טווח התנועה. לא נמצאה עלייה נוספת בגמישות כאשר משך המתיחה הוגדל מ-30 שניות ל-60 שניות, או כאשר תדירות המתיחה הוגדלה מפעם אחת לשלוש פעמים ביום."
 
@@ -77,7 +88,7 @@ source:
 
 ## הפתעה: עצימות נמוכה עדיפה על עצימות בינונית
 
-מחקר שבחן רקדנים חובבים במשך שישה שבועות השווה בין מתיחה בעצימות בינונית לבין מתיחה בעצימות נמוכה מאוד — שהוגדרה כ-30%–40% מסף הכאב. הממצא היה מפתיע:
+מחקר שבחן רקדנים חובבים במשך שישה שבועות השווה בין מתיחה בעצימות בינונית לבין מתיחה בעצימות נמוכה מאוד — שהוגדרה כ-30%–40% מסף הכאב<sup><a class="cite" href="#ref-2">2</a></sup>. הממצא היה מפתיע:
 
 > "ההיבט המעניין ביותר במחקר היה העלייה הגדולה יותר בטווח התנועה האקטיבי בהשוואה לטווח התנועה הפסיבי בקבוצת המיקרוסטרצ'ינג."
 

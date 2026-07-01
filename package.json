@@ -12,6 +12,7 @@
     "astro": "astro",
     "new-post": "node scripts/generate.mjs",
     "new-post:dry": "node scripts/generate.mjs --dry-run",
+    "check:refs": "node scripts/check-references.mjs",
     "social": "node scripts/social.mjs",
     "social:dry": "node scripts/social.mjs --dry-run",
     "social:publish": "node scripts/publish-social.mjs",

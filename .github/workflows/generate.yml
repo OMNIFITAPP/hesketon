@@ -49,6 +49,11 @@ jobs:
           QUOTE_AUDIT: ${{ vars.QUOTE_AUDIT }}
         run: node scripts/generate.mjs ${{ inputs.dry_run && '--dry-run' || '' }}
 
+      # Warn (don't block) if any draft mentions a study but has no references.
+      - name: Flag study mentions missing references
+        continue-on-error: true
+        run: node scripts/check-references.mjs
+
       - name: Open a Pull Request with the new drafts
         uses: peter-evans/create-pull-request@v6
         with:
