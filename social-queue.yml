@@ -1,6 +1,231 @@
 # social-queue.yml — תור הפרסום לרשתות.
 # status: pending_review → (אישור/מיזוג) → approved → published.
 # ערכו כיתוב/תאריך כאן, או מזגו את ה-PR כדי לאשר את כל הפריטים.
-# כדי לפסול פריט בודד לפני מיזוג: שנו את ה-status שלו ל-"hold".
 
-items: []
+items:
+  - id: 2026-06-28_sun-carousel
+    slug: andy-galpin-diet-supplements-recovery
+    platform: instagram
+    format: carousel
+    kicker: תקציר השבוע
+    scheduledFor: '2026-06-28T19:00:00.000Z'
+    status: pending_review
+    caption: |-
+      "אתה לא חייב חלבון אבקתי. אף פעם." 💪
+
+      ד"ר אנדי גלפין — אחד המומחים הגדולים לפיזיולוגיה של ביצועים — שם את הדברים על השולחן.
+
+      לפני קריאטין ומאיצים? סגרו חוסרים: מגנזיום, אומגה-3, ויטמין D.
+      שם נמצא הרווח האמיתי.
+
+      טבילה בקרח אחרי כוח? פוגעת בבניית שריר. 🧊
+      CO2 גבוה בחדר השינה? פוגע בשינה — פתחו חלון.
+
+      החליקו את הקרוסלה, שמרו אותה — ואת הסיפור המלא תמצאו בבלוג, קישור בביו.
+    hashtags:
+      - '#אנדיגלפין'
+      - '#פיזיולוגיהשלביצועים'
+      - '#תוספיתזונה'
+      - '#התאוששות'
+      - '#קריאטין'
+      - '#בריאותוכושר'
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#תזונהספורטיבית'
+      - '#שינה'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-06-28_sun-carousel/andy-galpin-diet-supplements-recovery-01-01-cover.png
+      - >-
+        https://hesketon.co.il/social/2026-06-28_sun-carousel/andy-galpin-diet-supplements-recovery-02-b01.png
+      - >-
+        https://hesketon.co.il/social/2026-06-28_sun-carousel/andy-galpin-diet-supplements-recovery-03-b02.png
+      - >-
+        https://hesketon.co.il/social/2026-06-28_sun-carousel/andy-galpin-diet-supplements-recovery-04-b03.png
+      - >-
+        https://hesketon.co.il/social/2026-06-28_sun-carousel/andy-galpin-diet-supplements-recovery-05-b04.png
+      - >-
+        https://hesketon.co.il/social/2026-06-28_sun-carousel/andy-galpin-diet-supplements-recovery-06-t01.png
+      - >-
+        https://hesketon.co.il/social/2026-06-28_sun-carousel/andy-galpin-diet-supplements-recovery-07-t02.png
+      - >-
+        https://hesketon.co.il/social/2026-06-28_sun-carousel/andy-galpin-diet-supplements-recovery-08-t03.png
+      - >-
+        https://hesketon.co.il/social/2026-06-28_sun-carousel/andy-galpin-diet-supplements-recovery-09-t04.png
+      - >-
+        https://hesketon.co.il/social/2026-06-28_sun-carousel/andy-galpin-diet-supplements-recovery-10-99-cta.png
+    permalink: ''
+  - id: 2026-06-28_sun-carousel-story
+    slug: andy-galpin-diet-supplements-recovery
+    platform: instagram
+    format: story
+    kicker: ''
+    scheduledFor: '2026-06-28T20:00:00.000Z'
+    status: pending_review
+    caption: |-
+      אתה לא חייב אבקת חלבון. אף פעם. 💪
+
+      ד"ר אנדי גלפין אומר שרוב האנשים קופצים ישר לתוספים — ומדלגים על הדברים שבאמת מזיזים מחט.
+
+      קודם מגנזיום, אומגה-3 וויטמין D.
+      רק אחר כך קריאטין.
+      וה-cold plunge שאתם אוהבים? הוא עשוי לפגוע בבניית שריר.
+
+      הסיפור המלא — עם הפרוטוקול המלא של גלפין — בבלוג. קישור בביו 🔗
+    hashtags:
+      - '#בריאות'
+      - '#כושר'
+      - '#תזונה'
+      - '#תוספים'
+      - '#התאוששות'
+      - '#קריאטין'
+      - '#שינה'
+      - '#אימון'
+      - '#פיזיולוגיה'
+      - '#הסכתון'
+      - '#פודקאסט'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-06-28_sun-carousel-story/andy-galpin-diet-supplements-recovery-01-story.png
+    permalink: ''
+  - id: 2026-06-28_tue-quote
+    slug: jd-vance-diary-of-a-ceo
+    platform: instagram
+    format: quote
+    kicker: ציטוט
+    scheduledFor: '2026-06-30T13:00:00.000Z'
+    status: pending_review
+    caption: >-
+      "חשבתי שטראמפ יהיה נשיא כושל. הוא לא היה."
+
+
+      ג'יי.די ואנס — מי שכינה את טראמפ "היטלר של אמריקה" — מסביר איך הפך לסגן הנשיא שלו. 🎙️
+
+
+      בראיון ב-Diary of a CEO הוא מדבר על עסקת איראן, על הגירה, על AI — ועל ילדות שעיצבה כל עמדה שיש
+      לו.
+
+
+      הוויכוח עם המראיין על הגירה לבד שווה את הצפייה.
+
+
+      קראתם את התקציר המלא? הסיפור המלא בבלוג — קישור בביו. 👆
+    hashtags:
+      - '#פוליטיקה'
+      - '#ואנס'
+      - '#טראמפ'
+      - '#פודקאסט'
+      - '#דיארי_אוף_א_סיאו'
+      - '#אקטואליה'
+      - '#הסכתון'
+      - '#ארצותהברית'
+      - '#ראיון'
+    assets:
+      - https://hesketon.co.il/social/2026-06-28_tue-quote/jd-vance-diary-of-a-ceo-01-quote.png
+    permalink: ''
+  - id: 2026-06-28_tue-quote-story
+    slug: jd-vance-diary-of-a-ceo
+    platform: instagram
+    format: story
+    kicker: ''
+    scheduledFor: '2026-06-30T14:00:00.000Z'
+    status: pending_review
+    caption: >-
+      "חשבתי שטראמפ יהיה נשיא כושל. הוא לא היה."
+
+
+      ג'יי.די ואנס — שב-2016 כינה את טראמפ "היטלר של אמריקה" — מסביר איך הפך לסגן נשיאו. 🎙️
+
+
+      בראיון אצל סטיבן בארטלט הוא מדבר על עסקת איראן, הגירה, ובינה מלאכותית — וקושר את כל אחת
+      מהעמדות האלה לילדות של עוני והתמכרות.
+
+
+      הוויכוח על הגירה לבדו שווה את הצפייה: שני הצדדים חולקים בחריפות — בלי להשתלח. 🔥
+
+
+      תקציר מלא בבלוג — קישור בביו.
+    hashtags:
+      - '#פוליטיקה'
+      - '#ואנס'
+      - '#טראמפ'
+      - '#פודקאסט'
+      - '#דיארי_אוף_א_סיאו'
+      - '#הסכתון'
+      - '#ארצות_הברית'
+      - '#אקטואליה'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-06-28_tue-quote-story/jd-vance-diary-of-a-ceo-01-story.png
+    permalink: ''
+  - id: 2026-06-28_thu-lessons
+    slug: tommy-wood-future-proof-brain
+    platform: instagram
+    format: lessons
+    kicker: 3 דברים שלמדנו
+    scheduledFor: '2026-07-02T19:00:00.000Z'
+    status: pending_review
+    caption: |-
+      45%–70% ממקרי הדמנציה ניתנים למניעה. 🧠
+
+      זה לא עניין של גנים — זה עניין של אורח חיים.
+      לחץ דם, סוכר בדם, שינה, כושר — זו בריאות מוח.
+
+      ד"ר טומי ווד אצל ג'ו רוגן: איך לבנות מוח שמחזיק לאורך זמן.
+
+      שמרתם את הסליידים? שתפו מישהו שצריך לראות את זה. 👇
+      הסיפור המלא בבלוג — קישור בביו.
+    hashtags:
+      - '#בריאות'
+      - '#מוח'
+      - '#דמנציה'
+      - '#פודקאסט'
+      - '#הסכתון'
+      - '#כושר'
+      - '#בריאותהמוח'
+      - '#טומיווד'
+      - '#ג''וורוגן'
+      - '#אורחחיים'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-06-28_thu-lessons/tommy-wood-future-proof-brain-01-01-cover.png
+      - >-
+        https://hesketon.co.il/social/2026-06-28_thu-lessons/tommy-wood-future-proof-brain-02-t01.png
+      - >-
+        https://hesketon.co.il/social/2026-06-28_thu-lessons/tommy-wood-future-proof-brain-03-t02.png
+      - >-
+        https://hesketon.co.il/social/2026-06-28_thu-lessons/tommy-wood-future-proof-brain-04-t03.png
+      - >-
+        https://hesketon.co.il/social/2026-06-28_thu-lessons/tommy-wood-future-proof-brain-05-99-cta.png
+    permalink: ''
+  - id: 2026-06-28_thu-lessons-story
+    slug: tommy-wood-future-proof-brain
+    platform: instagram
+    format: story
+    kicker: ''
+    scheduledFor: '2026-07-02T20:00:00.000Z'
+    status: pending_review
+    caption: |-
+      70% ממקרי הדמנציה ניתנים למניעה. 🧠
+
+      זה לא עניין של גנים — זה עניין של מה שעושים לאורך החיים.
+
+      לחץ דם, סוכר בדם, כמה מאתגרים את המוח — כל אלה קובעים יותר מה-DNA.
+
+      ד"ר טומי ווד אצל רוגן: "אנחנו במצב של גירוי-יתר וגם גירוי-בחסר — באותו הזמן."
+
+      התקציר המלא בבלוג — קישור בביו 👆
+    hashtags:
+      - '#דמנציה'
+      - '#בריאותהמוח'
+      - '#טומיווד'
+      - '#ג''ורוגן'
+      - '#בריאותוכושר'
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#מניעתדמנציה'
+      - '#בריאות'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-06-28_thu-lessons-story/tommy-wood-future-proof-brain-01-story.png
+    permalink: ''
