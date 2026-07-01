@@ -62,6 +62,18 @@ async function publishItem(item) {
 async function main() {
   log(`\n🚀 הסכתון — מפרסם לרשתות ${DRY ? '(dry-run)' : ''}\n`);
 
+  // Dry-run always verifies the IG credentials, even with an empty queue —
+  // this is the fastest way to confirm IG_USER_ID/IG_ACCESS_TOKEN are wired
+  // correctly right after setup, before any post is actually due.
+  if (DRY) {
+    try {
+      const me = await ig.whoami();
+      log(`חשבון IG מחובר: @${me.username || '?'} (${me.name || ''})`);
+    } catch (err) {
+      log(`⚠️  בדיקת חיבור נכשלה: ${err.message}`);
+    }
+  }
+
   const queue = loadQueue(QUEUE_FILE);
   const now = Date.now();
   const due = queue.items.filter((it) => isPublishable(it, now));
@@ -73,12 +85,6 @@ async function main() {
   log(`${due.length} פריטים בשלים לפרסום.`);
 
   if (DRY) {
-    try {
-      const me = await ig.whoami();
-      log(`חשבון IG מחובר: @${me.username || '?'} (${me.name || ''})`);
-    } catch (err) {
-      log(`⚠️  בדיקת חיבור נכשלה: ${err.message}`);
-    }
     for (const it of due) log(`  - [${it.format}] ${it.slug} · ${it.assets.length} נכסים → היה מתפרסם עכשיו`);
     log('\n(dry-run — לא פורסם דבר.)');
     return;
