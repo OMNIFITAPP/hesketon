@@ -152,4 +152,29 @@
     "nameEn": "David Sinclair",
     "title": "חוקר אריכות ימים, אוניברסיטת הרווארד"
   }
+,
+  {
+    "id": "michelle-thaller",
+    "nameHe": "מישל ת'אלר",
+    "nameEn": "Michelle Thaller",
+    "title": "אסטרופיזיקאית"
+  },
+  {
+    "id": "sam-harris",
+    "nameHe": "סם האריס",
+    "nameEn": "Sam Harris",
+    "title": "פילוסוף וחוקר מדעי המוח"
+  },
+  {
+    "id": "dan-martell",
+    "nameHe": "דן מרטל",
+    "nameEn": "Dan Martell",
+    "title": "יזם ומשקיע"
+  },
+  {
+    "id": "grant-owen",
+    "nameHe": "גרנט אואן",
+    "nameEn": "Grant Owen",
+    "title": "יוצר תוכן ומנחה"
+  }
 ]

@@ -67,4 +67,17 @@
     "hostId": "andrew-huberman",
     "description": "מדע, בריאות וביצועים — עם פרופ' אנדרו הוברמן."
   }
+,
+  {
+    "id": "perform-andy-galpin",
+    "name": "Perform with Dr. Andy Galpin",
+    "hostId": "andy-galpin",
+    "description": "מדע הביצועים, הכושר והבריאות."
+  },
+  {
+    "id": "grant-owen",
+    "name": "Grant Owen",
+    "hostId": "grant-owen",
+    "description": "שיחות על עסקים, פרודוקטיביות וטכנולוגיה."
+  }
 ]

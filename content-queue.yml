@@ -142,3 +142,30 @@ episodes:
     publishedAt: 2022-06-13T00:00:00.000Z
     durationMinutes: 126
     done: true
+  - youtubeUrl: https://www.youtube.com/watch?v=GZCmYrgOZU0
+    podcast: The Joe Rogan Experience
+    episode: "ג'ו רוגן #2506 — מישל ת'אלר על היקום"
+    host: ג'ו רוגן
+    guest: מישל ת'אלר
+    categoryHint: מדע וטכנולוגיה
+    publishedAt: 2026-05-28
+    durationMinutes: 157
+    done: false
+  - youtubeUrl: https://www.youtube.com/watch?v=fzllImE-hbE
+    podcast: Perform with Dr. Andy Galpin
+    episode: סם האריס — איך לחשוב בבהירות בעידן של הסחות דעת
+    host: אנדי גלפין
+    guest: סם האריס
+    categoryHint: פסיכולוגיה ומיינדסט
+    publishedAt: 2026-05-27
+    durationMinutes: 148
+    done: false
+  - youtubeUrl: https://www.youtube.com/watch?v=9q5JnlCyu4U
+    podcast: Grant Owen
+    episode: דן מרטל — איך להשתמש ב-AI טוב יותר מ-95% מהעולם
+    host: גרנט אואן
+    guest: דן מרטל
+    categoryHint: עסקים וקריירה
+    publishedAt: 2026-06-24
+    durationMinutes: 72
+    done: false
