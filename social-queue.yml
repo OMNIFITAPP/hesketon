@@ -9,7 +9,7 @@ items:
     format: carousel
     kicker: תקציר השבוע
     scheduledFor: '2026-06-28T19:00:00.000Z'
-    status: pending_review
+    status: published
     caption: |-
       "אתה לא חייב חלבון אבקתי. אף פעם." 💪
 
@@ -54,14 +54,16 @@ items:
         https://hesketon.co.il/social/2026-06-28_sun-carousel/andy-galpin-diet-supplements-recovery-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-06-28_sun-carousel/andy-galpin-diet-supplements-recovery-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DaQiVoPDwpA/
+    publishedAt: '2026-07-01T17:18:59.253Z'
+    mediaId: '17953638036187620'
   - id: 2026-06-28_sun-carousel-story
     slug: andy-galpin-diet-supplements-recovery
     platform: instagram
     format: story
     kicker: ''
     scheduledFor: '2026-06-28T20:00:00.000Z'
-    status: pending_review
+    status: published
     caption: |-
       אתה לא חייב אבקת חלבון. אף פעם. 💪
 
@@ -87,14 +89,16 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-06-28_sun-carousel-story/andy-galpin-diet-supplements-recovery-01-story.png
-    permalink: ''
+    permalink: https://www.instagram.com/stories/hesketon/3931793577104964825
+    publishedAt: '2026-07-01T17:19:07.031Z'
+    mediaId: '17947077285238566'
   - id: 2026-06-28_tue-quote
     slug: jd-vance-diary-of-a-ceo
     platform: instagram
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-06-30T13:00:00.000Z'
-    status: pending_review
+    status: published
     caption: >-
       "חשבתי שטראמפ יהיה נשיא כושל. הוא לא היה."
 
@@ -122,14 +126,16 @@ items:
       - '#ראיון'
     assets:
       - https://hesketon.co.il/social/2026-06-28_tue-quote/jd-vance-diary-of-a-ceo-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DaQiXuxG7e8/
+    publishedAt: '2026-07-01T17:19:15.269Z'
+    mediaId: '17929471482345903'
   - id: 2026-06-28_tue-quote-story
     slug: jd-vance-diary-of-a-ceo
     platform: instagram
     format: story
     kicker: ''
     scheduledFor: '2026-06-30T14:00:00.000Z'
-    status: pending_review
+    status: published
     caption: >-
       "חשבתי שטראמפ יהיה נשיא כושל. הוא לא היה."
 
@@ -157,7 +163,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-06-28_tue-quote-story/jd-vance-diary-of-a-ceo-01-story.png
-    permalink: ''
+    permalink: https://www.instagram.com/stories/hesketon/3931793714829957150
+    publishedAt: '2026-07-01T17:19:22.469Z'
+    mediaId: '18068201624435648'
   - id: 2026-06-28_thu-lessons
     slug: tommy-wood-future-proof-brain
     platform: instagram
