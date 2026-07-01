@@ -12,6 +12,10 @@
     "astro": "astro",
     "new-post": "node scripts/generate.mjs",
     "new-post:dry": "node scripts/generate.mjs --dry-run",
+    "social": "node scripts/social.mjs",
+    "social:dry": "node scripts/social.mjs --dry-run",
+    "social:publish": "node scripts/publish-social.mjs",
+    "social:publish:dry": "node scripts/publish-social.mjs --dry-run",
     "postbuild": "pagefind --site dist"
   },
   "dependencies": {
@@ -25,6 +29,7 @@
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.2.0",
     "pagefind": "^1.5.2",
+    "puppeteer": "^24.10.0",
     "youtube-transcript": "^1.3.1"
   }
 }

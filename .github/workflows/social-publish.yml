@@ -1,0 +1,63 @@
+name: Social — publish due posts
+
+# Phase A automation. Runs hourly: publishes any approved + due item from
+# social-queue.yml to Instagram, then commits the updated queue state back.
+#
+# Requires repo secrets:  IG_USER_ID  IG_ACCESS_TOKEN
+# (A Business-Manager System-User token never expires — preferred.)
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (verify creds + list due items, post nothing)"
+        type: boolean
+        default: false
+  schedule:
+    # Every hour, on the hour. Items publish at their scheduledFor time.
+    - cron: "0 * * * *"
+
+permissions:
+  contents: write
+
+# Never let two publish runs race on the queue file.
+concurrency:
+  group: social-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    # Scheduled runs only fire once you opt in (repo variable SOCIAL_ENABLED=true).
+    # Manual "Run workflow" always works, so you can test before enabling.
+    if: ${{ vars.SOCIAL_ENABLED == 'true' || github.event_name == 'workflow_dispatch' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Publish due items
+        timeout-minutes: 20
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          SOCIAL_PUBLIC_BASE: ${{ vars.SOCIAL_PUBLIC_BASE }}
+        run: node scripts/publish-social.mjs ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Commit updated queue state
+        if: ${{ !inputs.dry_run }}
+        run: |
+          if [[ -n "$(git status --porcelain social-queue.yml)" ]]; then
+            git config user.name  "hesketon-bot"
+            git config user.email "bot@hesketon.co.il"
+            git add social-queue.yml
+            git commit -m "social: mark published items [skip ci]"
+            git push
+          else
+            echo "No queue changes to commit."
+          fi

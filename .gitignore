@@ -26,3 +26,7 @@ inbox/**/*.md
 inbox/**/*.txt
 inbox/**/*.vtt
 inbox/**/*.srt
+
+# Local-only social render previews (the real, deployable assets live in
+# public/social/ and ARE tracked so the Meta API can fetch them by URL).
+.social-preview/

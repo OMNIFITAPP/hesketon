@@ -1,0 +1,66 @@
+name: Social — generate weekly posts (AI)
+
+# Phase A automation. Renders Instagram assets from published posts and
+# opens a Pull Request with the images + queue entries, so you can review
+# and approve from your phone. Merging the PR = approval to publish.
+#
+# Requires repo secret:  ANTHROPIC_API_KEY  (for captions)
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (offline captions, no queue write)"
+        type: boolean
+        default: false
+  schedule:
+    # Sundays 04:00 UTC — stages the week's posts for review.
+    - cron: "0 4 * * 0"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    # Scheduled runs only fire once you opt in (repo variable SOCIAL_ENABLED=true).
+    # Manual "Run workflow" always works, so you can test before enabling.
+    if: ${{ vars.SOCIAL_ENABLED == 'true' || github.event_name == 'workflow_dispatch' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Render assets + captions
+        timeout-minutes: 20
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+          SOCIAL_PUBLIC_BASE: ${{ vars.SOCIAL_PUBLIC_BASE }}
+          SOCIAL_WEEKLY_FEED: ${{ vars.SOCIAL_WEEKLY_FEED }}
+        run: node scripts/social.mjs ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Open a Pull Request with the staged posts
+        if: ${{ !inputs.dry_run }}
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto/social-queue
+          title: "📣 פוסטים לרשתות — לאישור"
+          commit-message: "social: stage weekly Instagram posts"
+          body: |
+            נוצרו פוסטים אוטומטית לרשתות (אינסטגרם).
+
+            לאישור: עברו על התמונות והכיתובים, ערכו אם צריך ב-`social-queue.yml`,
+            ומזגו את ה-PR. המיזוג ל-main מאשר את כל הפריטים לפרסום.
+
+            לפסילת פריט בודד לפני מיזוג: שנו את ה-`status` שלו ל-`hold`.
+
+            הפרסום עצמו קורה אוטומטית בזמן המתוזמן (workflow: Social — publish).
+          labels: social, automated
+          delete-branch: true

@@ -107,6 +107,42 @@ www  →  <שם-המשתמש-שלך>.github.io
 
 ---
 
+## פרסום אוטומטי לרשתות (אינסטגרם)
+
+הופך כל פוסט מפורסם לתוכן אינסטגרם — **בחינם**, דרך ה-Meta Graph API, עם **אישור לפני פרסום**.
+החומר נלקח 1:1 מהפוסטים הקיימים (ציטוט פותח, אמ;לק, "מה לוקחים מזה") — אפס כתיבה נוספת.
+
+**התוכנית השבועית** (`scripts/lib/social/select.mjs`):
+
+| יום | פורמט | מקור |
+|-----|-------|------|
+| ראשון | קרוסלה "תקציר השבוע" | ציטוט פותח → אמ;לק → לקחים → קישור בביו |
+| שלישי | כרטיס ציטוט | הציטוט הפותח של פוסט אחר |
+| חמישי | קרוסלה "3 דברים שלמדנו" | 3 לקחים מפוסט שלישי |
+| ~יומי | סטוריז | שיתוף הציטוט + קישור |
+
+(רילים — שלב B, דרך ffmpeg; פלטפורמות נוספות — שלב C, ע"י הוספת adapter ב-`scripts/lib/social/platforms/`.)
+
+**איך הזרימה עובדת:**
+1. **`Social — generate`** (ראשון 04:00 UTC, או ידני) מרנדר תמונות ל-`public/social/`, כותב כיתובים, ומוסיף פריטים ל-[`social-queue.yml`](social-queue.yml) — ופותח **PR לאישור**.
+2. אתם עוברים על התמונות/כיתובים בטלפון, עורכים אם צריך, **ומזגים = אישור** (לפסילת פריט בודד: שנו את ה-`status` שלו ל-`hold`). המיזוג גם מפרסם את הנכסים ל-Pages (כתובות ציבוריות).
+3. **`Social — publish`** (כל שעה) מפרסם כל פריט שאושר והגיע זמנו, ומסמן אותו `published` עם קישור.
+
+**הגדרה חד-פעמית (חינם):**
+1. הפכו את חשבון האינסטגרם ל-**Business** או **Creator**, וחברו אותו ל-**Facebook Page**.
+2. ב-[Meta for Developers](https://developers.facebook.com/) צרו אפליקציה מסוג **Business** והוסיפו את **Instagram Graph API**.
+3. הפיקו טוקן עם ההרשאות: `instagram_basic`, `instagram_content_publish`, `pages_show_list`, `business_management`.
+   טוקן של **System User** מ-Business Manager **לא פג** — מומלץ.
+4. ב-GitHub → **Settings → Secrets and variables → Actions** הוסיפו:
+   - Secrets: `IG_USER_ID` (המזהה המספרי של החשבון), `IG_ACCESS_TOKEN`
+   - Variable (לא חובה): `SOCIAL_PUBLIC_BASE` (ברירת מחדל `https://hesketon.co.il`)
+5. בדיקה מקומית: `npm run social:dry` (תצוגה מקדימה ב-`.social-preview/`), ו-`npm run social:publish:dry` (בודק חיבור, לא מפרסם).
+
+> הערה: לחשבון שבבעלותכם, עם אפליקציה ב-Development mode, הפרסום עובד **בלי App Review** מלא.
+> נכסים חייבים להיות נגישים בכתובת HTTPS ציבורית — לכן הם נשמרים ב-`public/social/` ומתפרסמים ל-Pages.
+
+---
+
 ## מבנה הפרויקט
 
 ```
@@ -120,11 +156,17 @@ hesketon/
 │  └─ styles/global.css      ← העיצוב (RTL, גופנים, צבעים — ערכו כאן)
 ├─ scripts/
 │  ├─ generate.mjs           ← הצינור: inbox/queue → קלוד → טיוטה
-│  └─ lib/                   ← prompt (הקול העברי), anthropic, transcript, apify
+│  ├─ social.mjs             ← מחולל תוכן לרשתות (רינדור + כיתוב → תור)
+│  ├─ publish-social.mjs     ← מפרסם פריטים מאושרים לאינסטגרם
+│  └─ lib/
+│     ├─ prompt · anthropic · transcript · apify   ← צינור הפוסטים
+│     └─ social/             ← parse-post · templates · render · caption · select · platforms/
+├─ public/social/            ← תמונות מרונדרות (מתפרסמות ל-Pages, כתובות ציבוריות)
 ├─ inbox/                    ← briefs ידניים (תמלולים נשארים מקומית, לא ב-git)
 ├─ categories.json           ← הקטגוריות (משותף לאתר ולסקריפט)
 ├─ content-queue.yml         ← תור הפרקים לאוטומציה (שלב 2)
-└─ .github/workflows/        ← deploy (Pages) + generate (AI → PR)
+├─ social-queue.yml          ← תור הפרסום לרשתות (pending_review → published)
+└─ .github/workflows/        ← deploy · generate (AI→PR) · social-generate · social-publish
 ```
 
 ## שינוי העיצוב / הקול

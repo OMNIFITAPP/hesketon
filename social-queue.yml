@@ -1,0 +1,6 @@
+# social-queue.yml — תור הפרסום לרשתות.
+# status: pending_review → (אישור/מיזוג) → approved → published.
+# ערכו כיתוב/תאריך כאן, או מזגו את ה-PR כדי לאשר את כל הפריטים.
+# כדי לפסול פריט בודד לפני מיזוג: שנו את ה-status שלו ל-"hold".
+
+items: []
