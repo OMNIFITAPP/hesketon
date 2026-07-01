@@ -4,7 +4,6 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Compression from '../components/Compression.astro';
 import Share from '../components/Share.astro';
 import References from '../components/References.astro';
-import Newsletter from '../components/Newsletter.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
 import { SITE, categoryByName, tagToSlug, youtubeThumb, personById, personByName, podcastById, podcastByName } from '../consts';
 import type { CollectionEntry } from 'astro:content';
@@ -169,8 +168,6 @@ const jsonLd = {
       {d.references && d.references.length > 0 && <References items={d.references} />}
 
       <Share title={d.title} url={url} />
-
-      <Newsletter />
 
       <p style="margin-top:2rem"><a href="/posts">← לכל הפרקים</a></p>
     </div>
