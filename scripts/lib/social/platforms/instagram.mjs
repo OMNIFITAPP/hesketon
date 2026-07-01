@@ -30,11 +30,19 @@ function creds() {
 async function graph(method, pathname, params) {
   const { token } = creds();
   const url = new URL(`${GRAPH}/${pathname}`);
-  const body = new URLSearchParams({ ...params, access_token: token });
+  const all = { ...params, access_token: token };
+  // GET can't carry a body, so its params (incl. the token!) must ride in the
+  // query string. Only POST/DELETE send a form-encoded body.
+  let body;
+  if (method === 'GET') {
+    for (const [k, v] of Object.entries(all)) url.searchParams.set(k, v);
+  } else {
+    body = new URLSearchParams(all);
+  }
   const res = await fetch(url, {
     method,
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: method === 'GET' ? undefined : body,
+    headers: method === 'GET' ? undefined : { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body,
   });
   const json = await res.json().catch(() => ({}));
   if (!res.ok || json.error) {
