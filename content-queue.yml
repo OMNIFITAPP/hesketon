@@ -169,3 +169,12 @@ episodes:
     publishedAt: 2026-06-24T00:00:00.000Z
     durationMinutes: 72
     done: true
+  - youtubeUrl: https://www.youtube.com/watch?v=7ARBJQn6QkM
+    podcast: Huge Conversations
+    episode: החזון של ג'נסן הואנג לעתיד
+    host: קלאו אברם
+    guest: ג'נסן הואנג
+    categoryHint: מדע וטכנולוגיה
+    publishedAt: 2025-01-27
+    durationMinutes: 63
+    done: true

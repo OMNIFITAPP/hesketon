@@ -177,4 +177,17 @@
     "nameEn": "Grant Owen",
     "title": "יוצר תוכן ומנחה"
   }
+,
+  {
+    "id": "jensen-huang",
+    "nameHe": "ג'נסן הואנג",
+    "nameEn": "Jensen Huang",
+    "title": "מנכ״ל NVIDIA ומייסד"
+  },
+  {
+    "id": "cleo-abram",
+    "nameHe": "קלאו אברם",
+    "nameEn": "Cleo Abram",
+    "title": "יוצרת ומנחת תוכן"
+  }
 ]

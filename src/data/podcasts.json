@@ -80,4 +80,11 @@
     "hostId": "grant-owen",
     "description": "שיחות על עסקים, פרודוקטיביות וטכנולוגיה."
   }
+,
+  {
+    "id": "huge-conversations",
+    "name": "Huge Conversations",
+    "hostId": "cleo-abram",
+    "description": "שיחות אופטימיות על טכנולוגיה והעתיד — עם קלאו אברם."
+  }
 ]
