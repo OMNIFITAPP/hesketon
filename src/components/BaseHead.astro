@@ -32,6 +32,13 @@ const ogImage = new URL(image ?? '/og-default.svg', siteUrl);
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content={Astro.generator} />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<!-- Home-screen / PWA icons: "Add to Home Screen" saves the הסכתון mark -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/manifest.webmanifest" />
+<meta name="theme-color" content="#1a1722" />
+<meta name="apple-mobile-web-app-title" content="הסכתון" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
 <link rel="canonical" href={canonical.href} />
 
 <!-- Fonts -->
