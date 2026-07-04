@@ -62,34 +62,34 @@ function doc({ width, height, body, dark = false }) {
   }
   .frame{position:absolute;inset:40px;border:2px solid ${t.line};border-radius:36px;pointer-events:none}
   .head{display:flex;align-items:center;justify-content:space-between;gap:20px;z-index:2}
-  .brand{font-family:'Rubik';font-weight:900;font-size:40px;color:${t.accent};letter-spacing:-.5px}
+  .brand{font-family:'Rubik','Heebo',system-ui,sans-serif;font-weight:900;font-size:40px;color:${t.accent};letter-spacing:-.5px}
   .brand .dot{color:${t.ink}}
-  .kicker{font-family:'Rubik';font-weight:700;font-size:26px;color:${t.muted};
+  .kicker{font-family:'Rubik','Heebo',system-ui,sans-serif;font-weight:700;font-size:26px;color:${t.muted};
     background:${t.accentSoft};color:${t.accent};padding:10px 22px;border-radius:999px}
   .main{flex:1;display:flex;flex-direction:column;justify-content:center;z-index:2}
   .foot{display:flex;align-items:center;justify-content:space-between;gap:20px;z-index:2}
   .src{font-size:26px;color:${t.muted};font-weight:500}
   .src b{color:${t.ink};font-weight:700}
-  .handle{font-family:'Rubik';font-weight:700;font-size:26px;color:${t.muted}}
+  .handle{font-family:'Rubik','Heebo',system-ui,sans-serif;font-weight:700;font-size:26px;color:${t.muted}}
   .wave{display:flex;align-items:flex-end;gap:7px;height:54px;width:300px;opacity:.9}
   .wave span{flex:1;background:${t.accent};border-radius:6px;min-height:8px}
   /* ---- cover ---- */
-  .eyebrow{font-family:'Rubik';font-weight:700;font-size:30px;color:${t.accent};margin-bottom:28px}
-  .title{font-family:'Rubik';font-weight:900;font-size:84px;line-height:1.08;letter-spacing:-1px}
+  .eyebrow{font-family:'Rubik','Heebo',system-ui,sans-serif;font-weight:700;font-size:30px;color:${t.accent};margin-bottom:28px}
+  .title{font-family:'Rubik','Heebo',system-ui,sans-serif;font-weight:900;font-size:84px;line-height:1.08;letter-spacing:-1px}
   .sub{font-size:36px;line-height:1.5;color:${t.inkSoft};margin-top:36px;font-weight:400}
   /* ---- quote ---- */
-  .qmark{font-family:'Rubik';font-weight:900;font-size:200px;line-height:.6;color:${t.accent};opacity:.25;height:120px}
-  .quote{font-family:'Rubik';font-weight:700;font-size:66px;line-height:1.32}
+  .qmark{font-family:'Rubik','Heebo',system-ui,sans-serif;font-weight:900;font-size:200px;line-height:.6;color:${t.accent};opacity:.25;height:120px}
+  .quote{font-family:'Rubik','Heebo',system-ui,sans-serif;font-weight:700;font-size:66px;line-height:1.32}
   .cite{margin-top:48px;font-size:36px;font-weight:700;color:${t.accent}}
   .cite::before{content:'— '}
   /* ---- bullet / takeaway ---- */
-  .idx{font-family:'Rubik';font-weight:900;font-size:120px;color:${t.accentSoft};line-height:1;margin-bottom:8px}
-  .ttl{font-family:'Rubik';font-weight:900;font-size:60px;line-height:1.18;margin-bottom:30px}
+  .idx{font-family:'Rubik','Heebo',system-ui,sans-serif;font-weight:900;font-size:120px;color:${t.accentSoft};line-height:1;margin-bottom:8px}
+  .ttl{font-family:'Rubik','Heebo',system-ui,sans-serif;font-weight:900;font-size:60px;line-height:1.18;margin-bottom:30px}
   .bd{font-size:44px;line-height:1.55;color:${t.inkSoft};font-weight:400}
   .bullet{font-size:50px;line-height:1.5;font-weight:500}
   /* ---- cta ---- */
-  .cta-ttl{font-family:'Rubik';font-weight:900;font-size:76px;line-height:1.12;margin-bottom:32px}
-  .cta-pill{display:inline-block;font-family:'Rubik';font-weight:700;font-size:38px;
+  .cta-ttl{font-family:'Rubik','Heebo',system-ui,sans-serif;font-weight:900;font-size:76px;line-height:1.12;margin-bottom:32px}
+  .cta-pill{display:inline-block;font-family:'Rubik','Heebo',system-ui,sans-serif;font-weight:700;font-size:38px;
     background:${t.accent};color:#fff;padding:26px 52px;border-radius:999px;margin-top:20px}
   .cta-sub{font-size:34px;color:${t.muted};margin-top:36px;font-weight:500}
 </style></head><body>

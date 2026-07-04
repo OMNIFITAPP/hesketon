@@ -56,20 +56,32 @@ export async function renderSlides(slides, outDir, prefix) {
       // Render at 2× so Hebrew text is crisp (1× smears letters at this size);
       // Instagram happily downscales the larger PNG.
       await page.setViewport({ width: s.width, height: s.height, deviceScaleFactor: 2 });
-      await page.setContent(s.html, { waitUntil: 'load', timeout: 60000 });
-      // Inject the bundled fonts (local base64 → no network), then wait until
-      // they're parsed and ready before shooting so Hebrew RTL renders right.
-      await page.addStyleTag({ content: FONT_CSS });
-      // Explicitly load each weight, then wait for the font set — addStyleTag
-      // alone can resolve before the @font-face rules are actually usable.
+      // Embed the fonts INSIDE the document before it parses. Injecting them
+      // after load (addStyleTag) raced in CI: Chrome painted the big text with
+      // a serif fallback and the screenshots shipped off-brand.
+      const html = s.html.replace('<head>', `<head><style>${FONT_CSS}</style>`);
+      await page.setContent(html, { waitUntil: 'load', timeout: 60000 });
+      // Load every weight with actual Hebrew+Latin sample text, then wait.
       await page.evaluate(async () => {
         const faces = [
           '400 100px Heebo', '500 100px Heebo', '700 100px Heebo',
           '500 100px Rubik', '700 100px Rubik', '900 100px Rubik',
         ];
-        await Promise.all(faces.map((f) => document.fonts.load(f).catch(() => {})));
+        await Promise.all(faces.map((f) => document.fonts.load(f, 'אבג ABC').catch(() => {})));
         if (document.fonts && document.fonts.ready) await document.fonts.ready;
       });
+      // Hard gate: verify every face actually resolves Hebrew glyphs.
+      // Better to fail the run than to silently publish a fallback font.
+      const fontsOk = await page.evaluate(() => {
+        const specs = [
+          '400 32px Heebo', '500 32px Heebo', '700 32px Heebo',
+          '500 32px Rubik', '700 32px Rubik', '900 32px Rubik',
+        ];
+        return specs.every((f) => document.fonts.check(f, 'אבג'));
+      });
+      if (!fontsOk) {
+        throw new Error('Hebrew webfonts failed to load in the render browser — refusing to render with a fallback font.');
+      }
       // Settle one more frame so the freshly-applied fonts are painted.
       await new Promise((r) => setTimeout(r, 250));
 
