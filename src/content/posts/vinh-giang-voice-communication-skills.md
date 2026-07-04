@@ -17,7 +17,9 @@ source:
   episode: וינה ג'יאנג — למה קוטעים אותך, ואיך להשתמש בקול שלך
   host: ג'יי שטי
   guest: וינה ג'יאנג
+  youtubeUrl: https://www.youtube.com/watch?v=ru44DngJYoA
   publishedAt: 2025-05-19
+  durationMinutes: 104
 ---
 
 <blockquote class="pull--lead">
