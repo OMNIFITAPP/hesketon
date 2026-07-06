@@ -23,8 +23,9 @@ export const SITE = {
    * empty, no verification meta tag is emitted.
    */
   googleSiteVerification: '',
-  /** Optional social links shown in the footer. Leave a value empty to hide it. */
+  /** Optional social links shown in the header + footer. Leave empty to hide. */
   social: {
+    instagram: 'https://www.instagram.com/hesketon/',
     twitter: '', // e.g. 'https://x.com/hesketon'
     youtube: '',
     email: '',

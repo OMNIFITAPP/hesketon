@@ -185,9 +185,20 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: color-mix(in srgb, var(--bg) 86%, transparent);
-  backdrop-filter: saturate(1.5) blur(10px);
   border-bottom: 1px solid var(--line);
+}
+/* Background + blur live on a pseudo-element, NOT on .site-header itself:
+   a backdrop-filter (like filter/transform) turns an element into the
+   containing block for its position:fixed descendants, which would trap the
+   mobile-nav overlay inside the header bar instead of filling the viewport. */
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  -webkit-backdrop-filter: saturate(1.5) blur(10px);
+  backdrop-filter: saturate(1.5) blur(10px);
 }
 .site-header__inner {
   display: flex;
@@ -231,6 +242,19 @@ a:hover {
 .nav a:hover,
 .nav a[aria-current='page'] {
   color: var(--accent-ink);
+}
+/* Instagram link in the header nav — icon-only on desktop. */
+.nav__ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ink-soft);
+}
+.nav__ig:hover {
+  color: var(--accent-ink);
+}
+.nav__ig-label {
+  display: none; /* revealed in the mobile overlay only */
 }
 
 /* ---------- Mobile nav (hamburger → full-screen overlay) ---------- */
@@ -295,8 +319,9 @@ a:hover {
   .nav-burger {
     display: inline-flex;
   }
-  /* The nav becomes a full-screen overlay, revealed by the burger. */
-  .nav {
+  /* Only the HEADER nav (#site-nav) becomes the overlay — the footer also
+     uses .nav, and must keep its normal flex row (incl. the Instagram icon). */
+  #site-nav {
     position: fixed;
     inset: 0;
     z-index: 40;
@@ -314,22 +339,34 @@ a:hover {
     transition: opacity var(--speed) ease, transform var(--speed) ease,
       visibility 0s linear var(--speed);
   }
-  .site-header[data-open] .nav {
+  .site-header[data-open] #site-nav {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
     transition: opacity var(--speed) ease, transform var(--speed) ease, visibility 0s;
   }
-  .nav a {
+  #site-nav a {
     font-family: var(--font-display);
     font-weight: 700;
     font-size: 1.75rem;
     color: var(--ink);
     padding-block: 0.55rem;
   }
-  .nav a[aria-current='page'] {
+  #site-nav a[aria-current='page'] {
     color: var(--accent-ink);
+  }
+  /* Instagram reads as a full menu item in the overlay: icon + label. */
+  #site-nav .nav__ig {
+    margin-top: 0.6rem;
+    gap: 0.7rem;
+  }
+  #site-nav .nav__ig svg {
+    width: 28px;
+    height: 28px;
+  }
+  #site-nav .nav__ig-label {
+    display: inline;
   }
 }
 
