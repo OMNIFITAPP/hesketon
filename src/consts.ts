@@ -16,6 +16,13 @@ export const SITE = {
   /** Open Graph locale. */
   locale: 'he_IL',
   author: 'הסכתון',
+  /**
+   * Google Search Console verification token. Paste ONLY the content value
+   * from the "HTML tag" verification method (Search Console → Settings →
+   * Ownership verification → HTML tag → the `content="..."` string). While
+   * empty, no verification meta tag is emitted.
+   */
+  googleSiteVerification: '',
   /** Optional social links shown in the footer. Leave a value empty to hide it. */
   social: {
     twitter: '', // e.g. 'https://x.com/hesketon'

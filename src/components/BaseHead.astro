@@ -31,6 +31,11 @@ const ogImage = new URL(image ?? '/og-default.svg', siteUrl);
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content={Astro.generator} />
+{
+  SITE.googleSiteVerification && (
+    <meta name="google-site-verification" content={SITE.googleSiteVerification} />
+  )
+}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <!-- Home-screen / PWA icons: "Add to Home Screen" saves the הסכתון mark -->
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
