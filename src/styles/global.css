@@ -796,6 +796,137 @@ a.chip:hover {
   flex-wrap: wrap;
 }
 
+/* ---------- Read-next ("הבא בשבילכם") — end-of-post recommendations ---------- */
+.readnext {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+.readnext .eyebrow {
+  margin-bottom: 1rem;
+}
+/* The big, single, low-friction "next" — one obvious tap target. */
+.readnext__hero {
+  display: block;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line));
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--speed) ease, border-color var(--speed) ease;
+}
+.readnext__hero:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+}
+.readnext__media {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--accent-soft);
+}
+.readnext__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 400ms ease;
+}
+.readnext__hero:hover .readnext__media img {
+  transform: scale(1.03);
+}
+.readnext__body {
+  display: block;
+  padding: 1.25rem 1.4rem 1.4rem;
+}
+.readnext__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.7rem;
+}
+.readnext__title {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+.readnext__hero:hover .readnext__title {
+  color: var(--accent-ink);
+}
+.readnext__desc {
+  display: block;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 0.85rem;
+}
+.readnext__cta {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--accent-ink);
+}
+/* Two compact alternatives for readers who'd rather pick. */
+.readnext__more {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+  margin-top: 0.9rem;
+}
+.readnext__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.9rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: border-color var(--speed) ease, transform var(--speed) ease;
+}
+.readnext__item:hover {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+  transform: translateY(-2px);
+}
+.readnext__item-cat {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.72rem;
+  color: var(--accent-ink);
+}
+.readnext__item-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.readnext__item:hover .readnext__item-title {
+  color: var(--accent-ink);
+}
+.readnext__all {
+  margin: 1.4rem 0 0;
+}
+.readnext__all a {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 560px) {
+  .readnext__more {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Source attribution box ---------- */
 .source-box {
   margin: 2.6rem 0 1rem;

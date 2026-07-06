@@ -17,6 +17,47 @@ export async function getPublishedPosts(): Promise<CollectionEntry<'posts'>[]> {
   return posts.sort((a, b) => postDate(b) - postDate(a));
 }
 
+/**
+ * "הבא בשבילכם" — the most relevant other posts to read after this one.
+ * Scored at build time from the frontmatter we already have (no server, no JS):
+ *   same guest (5) > same podcast (4) > same category (3) > shared tags (+1 each).
+ * Ties break by newest episode. Always returns something (falls back to newest),
+ * so the end-of-post recommendation is never empty.
+ */
+export async function getRelatedPosts(
+  current: CollectionEntry<'posts'>,
+  limit = 3,
+): Promise<CollectionEntry<'posts'>[]> {
+  const posts = (await getPublishedPosts()).filter((p) => p.id !== current.id);
+  const c = current.data;
+  const cs = c.source;
+  const cTags = new Set(c.tags ?? []);
+
+  const sameGuest = (s?: typeof cs) =>
+    !!cs &&
+    !!s &&
+    ((!!cs.guestId && cs.guestId === s.guestId) || (!!cs.guest && cs.guest === s.guest));
+  const samePodcast = (s?: typeof cs) =>
+    !!cs &&
+    !!s &&
+    ((!!cs.podcastId && cs.podcastId === s.podcastId) ||
+      (!!cs.podcast && cs.podcast === s.podcast));
+
+  return posts
+    .map((p) => {
+      const s = p.data;
+      let score = 0;
+      if (sameGuest(s.source)) score += 5;
+      if (samePodcast(s.source)) score += 4;
+      if (s.category === c.category) score += 3;
+      for (const t of s.tags ?? []) if (cTags.has(t)) score += 1;
+      return { post: p, score, date: postDate(p) };
+    })
+    .sort((a, b) => b.score - a.score || b.date - a.date)
+    .slice(0, limit)
+    .map((x) => x.post);
+}
+
 /** Posts where a given person appears as guest or host (by canonical id or name). */
 export function postsForPerson(
   person: Person,

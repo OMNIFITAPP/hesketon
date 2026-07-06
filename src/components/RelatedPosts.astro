@@ -1,0 +1,69 @@
+---
+import Compression from './Compression.astro';
+import { categoryByName, youtubeThumb } from '../consts';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  posts: CollectionEntry<'posts'>[];
+}
+const { posts } = Astro.props;
+const [hero, ...more] = posts;
+
+const heroCat = hero ? categoryByName(hero.data.category) : undefined;
+const heroThumb = hero ? youtubeThumb(hero.data.source?.youtubeUrl) : undefined;
+const heroThumbHq = hero ? youtubeThumb(hero.data.source?.youtubeUrl, 'hq') : undefined;
+---
+
+{
+  hero && (
+    <section class="wrap wrap--reading readnext" aria-label="פרקים נוספים לקריאה">
+      <p class="eyebrow">הבא בשבילכם</p>
+
+      <a class="readnext__hero" href={`/posts/${hero.id}`}>
+        {heroThumb && (
+          <span class="readnext__media">
+            <img
+              src={heroThumb}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              width="640"
+              height="360"
+              onerror={`this.onerror=null;this.src='${heroThumbHq}'`}
+            />
+          </span>
+        )}
+        <span class="readnext__body">
+          <span class="readnext__row">
+            {heroCat && <span class="chip">{heroCat.name}</span>}
+            <Compression
+              audioMinutes={hero.data.source?.durationMinutes}
+              readMinutes={hero.data.readingTime}
+            />
+          </span>
+          <span class="readnext__title">{hero.data.title}</span>
+          <span class="readnext__desc">{hero.data.description}</span>
+          <span class="readnext__cta">לקריאה ←</span>
+        </span>
+      </a>
+
+      {more.length > 0 && (
+        <div class="readnext__more">
+          {more.map((p) => {
+            const c = categoryByName(p.data.category);
+            return (
+              <a class="readnext__item" href={`/posts/${p.id}`}>
+                {c && <span class="readnext__item-cat">{c.name}</span>}
+                <span class="readnext__item-title">{p.data.title}</span>
+              </a>
+            );
+          })}
+        </div>
+      )}
+
+      <p class="readnext__all">
+        <a href="/posts">לכל הפרקים ←</a>
+      </p>
+    </section>
+  )
+}
