@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPublishedPosts } from '../utils';
+
+// Where the reader lands after subscribing (Newsletter.astro redirects here).
+// Kept on-brand so Buttondown's generic page never appears in the flow.
+const posts = await getPublishedPosts();
+const featured = posts.find((p) => p.data.featured) ?? posts[0];
+
+// A celebratory take on the signature waveform.
+const bars = [40, 70, 55, 90, 65, 100, 75, 95, 60, 85, 50, 78, 92, 58, 80, 45, 68, 88, 52, 72];
+---
+
+<BaseLayout
+  title="נרשמתם! ברוכים הבאים להסכתון"
+  description="ההרשמה לניוזלטר של הסכתון נקלטה — נשאר רק לאשר במייל."
+>
+  <section class="thanks wrap reveal">
+    <div class="thanks__card">
+      <div class="thanks__bars" aria-hidden="true">
+        {bars.map((h) => <span style={`height:${h}%`} />)}
+      </div>
+
+      <p class="eyebrow">הניוזלטר של הסכתון</p>
+      <h1>אתם בפנים.</h1>
+      <p class="thanks__lead">
+        ההרשמה נקלטה — נשאר צעד אחד קטן: שלחנו לכם מייל אישור,
+        <strong>לחצו על הקישור שבו</strong> כדי להשלים את ההרשמה.
+      </p>
+      <p class="thanks__note muted">
+        לא רואים את המייל? הציצו בתיקיית הספאם או הקידומים. בלי ספאם מאיתנו — גיליון מזוקק,
+        ואפשר לבטל בכל רגע.
+      </p>
+
+      <div class="thanks__cta">
+        <a class="btn" href="/posts">בינתיים, לכל הפרקים</a>
+        {featured && (
+          <a class="btn btn--ghost" href={`/posts/${featured.id}`}>או ישר למומלץ שלנו</a>
+        )}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .thanks {
+    display: flex;
+    justify-content: center;
+    padding-block: 4.5rem 3rem;
+  }
+  .thanks__card {
+    max-width: 34rem;
+    text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 2.6rem 2.2rem 2.4rem;
+  }
+  .thanks__bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 4px;
+    height: 56px;
+    margin-bottom: 1.6rem;
+  }
+  .thanks__bars span {
+    width: 5px;
+    background: linear-gradient(var(--accent), color-mix(in srgb, var(--accent) 45%, transparent));
+    border-radius: 3px;
+    opacity: 0.9;
+  }
+  .thanks h1 {
+    margin-bottom: 0.6rem;
+  }
+  .thanks__lead {
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    margin-bottom: 0.8rem;
+  }
+  .thanks__note {
+    font-size: 0.9rem;
+    margin-bottom: 1.8rem;
+  }
+  .thanks__cta {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .thanks__bars span {
+      animation: pulse 1.6s ease-in-out infinite alternate;
+    }
+    .thanks__bars span:nth-child(odd) {
+      animation-delay: 0.35s;
+    }
+    .thanks__bars span:nth-child(3n) {
+      animation-delay: 0.7s;
+    }
+    @keyframes pulse {
+      from {
+        transform: scaleY(0.55);
+      }
+      to {
+        transform: scaleY(1);
+      }
+    }
+  }
+  @media (max-width: 560px) {
+    .thanks {
+      padding-block: 2.5rem 2rem;
+    }
+    .thanks__card {
+      padding: 2rem 1.4rem;
+    }
+  }
+</style>

@@ -3,7 +3,6 @@ import { NEWSLETTER, newsletterAction } from '../consts';
 // Renders only once a Buttondown username is set in consts.ts.
 const action = newsletterAction();
 const enabled = action.length > 0;
-const profile = `https://buttondown.com/${NEWSLETTER.buttondownUsername}`;
 ---
 
 {
@@ -13,13 +12,7 @@ const profile = `https://buttondown.com/${NEWSLETTER.buttondownUsername}`;
         <p class="newsletter__heading">{NEWSLETTER.heading}</p>
         <p class="newsletter__subtext">{NEWSLETTER.subtext}</p>
       </div>
-      <form
-        class="newsletter__form"
-        action={action}
-        method="post"
-        target="popupwindow"
-        onsubmit={`window.open('${profile}', 'popupwindow')`}
-      >
+      <form class="newsletter__form" action={action} method="post" data-newsletter>
         <input
           class="newsletter__input"
           type="email"
@@ -36,6 +29,34 @@ const profile = `https://buttondown.com/${NEWSLETTER.buttondownUsername}`;
     </aside>
   )
 }
+
+<script>
+  // Subscribe in the background, then land the reader on our own /thanks page
+  // — Buttondown keeps storing the addresses, but its generic page never shows.
+  // No-JS fallback: the form still POSTs to Buttondown directly.
+  document.querySelectorAll<HTMLFormElement>('form[data-newsletter]').forEach((form) => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'רק רגע…';
+      }
+      const body = new URLSearchParams();
+      new FormData(form).forEach((v, k) => body.append(k, String(v)));
+      // no-cors: the response is opaque, but the subscription goes through;
+      // browser-side type=email+required already validated the address.
+      fetch(form.action, { method: 'POST', body, mode: 'no-cors' })
+        .then(() => {
+          window.location.href = '/thanks';
+        })
+        .catch(() => {
+          // Network hiccup — fall back to the native POST (Buttondown page).
+          form.submit();
+        });
+    });
+  });
+</script>
 
 <style>
   .newsletter {
