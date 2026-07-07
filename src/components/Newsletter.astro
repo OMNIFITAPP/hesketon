@@ -2,7 +2,9 @@
 import { NEWSLETTER, newsletterAction } from '../consts';
 // Renders only once a Buttondown username is set in consts.ts.
 const action = newsletterAction();
-const enabled = action.length > 0;
+// Hide on the post-signup page — offering signup right after signing up is silly.
+const onThanks = (Astro.url.pathname.replace(/\/$/, '') || '/') === '/thanks';
+const enabled = action.length > 0 && !onThanks;
 ---
 
 {
@@ -12,7 +14,7 @@ const enabled = action.length > 0;
         <p class="newsletter__heading">{NEWSLETTER.heading}</p>
         <p class="newsletter__subtext">{NEWSLETTER.subtext}</p>
       </div>
-      <form class="newsletter__form" action={action} method="post" data-newsletter>
+      <form class="newsletter__form" action={action} method="post">
         <input
           class="newsletter__input"
           type="email"
@@ -30,33 +32,10 @@ const enabled = action.length > 0;
   )
 }
 
-<script>
-  // Subscribe in the background, then land the reader on our own /thanks page
-  // — Buttondown keeps storing the addresses, but its generic page never shows.
-  // No-JS fallback: the form still POSTs to Buttondown directly.
-  document.querySelectorAll<HTMLFormElement>('form[data-newsletter]').forEach((form) => {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
-      if (btn) {
-        btn.disabled = true;
-        btn.textContent = 'רק רגע…';
-      }
-      const body = new URLSearchParams();
-      new FormData(form).forEach((v, k) => body.append(k, String(v)));
-      // no-cors: the response is opaque, but the subscription goes through;
-      // browser-side type=email+required already validated the address.
-      fetch(form.action, { method: 'POST', body, mode: 'no-cors' })
-        .then(() => {
-          window.location.href = '/thanks';
-        })
-        .catch(() => {
-          // Network hiccup — fall back to the native POST (Buttondown page).
-          form.submit();
-        });
-    });
-  });
-</script>
+<!-- NOTE: a silent background POST to Buttondown does NOT work — the endpoint
+     returns 400 with a Cloudflare Turnstile challenge that only a real browser
+     page can solve (verified 2026-07-07). Until we swap in a collector that
+     supports a custom redirect, the form must POST natively to Buttondown. -->
 
 <style>
   .newsletter {
