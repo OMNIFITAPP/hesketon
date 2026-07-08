@@ -33,25 +33,33 @@ export const SITE = {
 } as const;
 
 // ──────────────────────────────────────────────────────────────
-//  Newsletter (Buttondown). To turn the signup form on:
-//   1. Create a free list at buttondown.com.
-//   2. Put your username below (Settings → your handle in the URL).
-//   3. The form appears automatically in the footer + under each post.
-//  While `buttondownUsername` is empty, the form stays hidden.
+//  Newsletter — interim collector until the list justifies a real engine.
+//
+//  Addresses land as rows in a Google Sheet, via a silent POST to a
+//  Google Form (form: "רשימת דיוור (ניוזלטר) הסכתון"). Google Forms has no
+//  bot-challenge on formResponse, so a background submit works — unlike
+//  Buttondown, whose embed endpoint answers with a Cloudflare Turnstile
+//  page and silently drops non-browser posts (verified 2026-07-07).
+//
+//  `buttondownUsername` is kept dormant for the eventual engine switch.
+//  Empty `formAction` → the signup form stays hidden.
 // ──────────────────────────────────────────────────────────────
 export const NEWSLETTER = {
-  /** Your Buttondown handle, e.g. 'hesketon'. Empty → form hidden. */
+  /** Google Form submit endpoint (…/formResponse). Empty → form hidden. */
+  formAction:
+    'https://docs.google.com/forms/d/e/1FAIpQLSfMJMCXFStaUXaxj4f2AcD3XYPe9d0p9Htp1Ze08bU2jhorlA/formResponse',
+  /** The form's email question field id (entry.N). */
+  emailField: 'entry.645048832',
+  /** Dormant Buttondown handle — the "real engine" candidate for later. */
   buttondownUsername: 'hesketon',
   heading: 'הפודקאסטים הכי טובים, מזוקקים לתיבה שלך',
   subtext: 'גיליון שבועי. בלי ספאם, אפשר לבטל בכל רגע.',
   cta: 'הרשמה',
 } as const;
 
-/** Buttondown embed-subscribe endpoint, or '' when no username is set. */
+/** The signup form's POST target, or '' when the newsletter is off. */
 export function newsletterAction(): string {
-  return NEWSLETTER.buttondownUsername
-    ? `https://buttondown.com/api/emails/embed-subscribe/${NEWSLETTER.buttondownUsername}`
-    : '';
+  return NEWSLETTER.formAction;
 }
 
 // ──────────────────────────────────────────────────────────────

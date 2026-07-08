@@ -14,16 +14,15 @@ const enabled = action.length > 0 && !onThanks;
         <p class="newsletter__heading">{NEWSLETTER.heading}</p>
         <p class="newsletter__subtext">{NEWSLETTER.subtext}</p>
       </div>
-      <form class="newsletter__form" action={action} method="post">
+      <form class="newsletter__form" action={action} method="post" data-newsletter>
         <input
           class="newsletter__input"
           type="email"
-          name="email"
+          name={NEWSLETTER.emailField}
           required
           placeholder="כתובת אימייל"
           aria-label="כתובת אימייל"
         />
-        <input type="hidden" name="embed" value="1" />
         <button class="newsletter__btn" type="submit">
           {NEWSLETTER.cta}
         </button>
@@ -32,10 +31,31 @@ const enabled = action.length > 0 && !onThanks;
   )
 }
 
-<!-- NOTE: a silent background POST to Buttondown does NOT work — the endpoint
-     returns 400 with a Cloudflare Turnstile challenge that only a real browser
-     page can solve (verified 2026-07-07). Until we swap in a collector that
-     supports a custom redirect, the form must POST natively to Buttondown. -->
+<script>
+  // Silent submit to the Google Form collector, then land on our /thanks page.
+  // Google's formResponse accepts cross-origin no-cors posts (no bot challenge
+  // — unlike Buttondown's Turnstile). No-JS fallback: native POST, which shows
+  // Google's own confirmation page but still records the address.
+  document.querySelectorAll<HTMLFormElement>('form[data-newsletter]').forEach((form) => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'רק רגע…';
+      }
+      const body = new URLSearchParams();
+      new FormData(form).forEach((v, k) => body.append(k, String(v)));
+      fetch(form.action, { method: 'POST', body, mode: 'no-cors' })
+        .then(() => {
+          window.location.href = '/thanks';
+        })
+        .catch(() => {
+          form.submit(); // network hiccup — fall back to the native POST
+        });
+    });
+  });
+</script>
 
 <style>
   .newsletter {
