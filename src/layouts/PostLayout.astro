@@ -6,6 +6,7 @@ import Share from '../components/Share.astro';
 import References from '../components/References.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
+import LikeButton from '../components/LikeButton.astro';
 import { SITE, categoryByName, tagToSlug, youtubeThumb, personById, personByName, podcastById, podcastByName } from '../consts';
 import { getRelatedPosts } from '../utils';
 import type { CollectionEntry } from 'astro:content';
@@ -169,6 +170,8 @@ const jsonLd = {
       }
 
       {d.references && d.references.length > 0 && <References items={d.references} />}
+
+      <LikeButton slug={post.id} />
 
       <Share title={d.title} url={url} />
     </div>

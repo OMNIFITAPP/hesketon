@@ -1,0 +1,206 @@
+---
+// Post "like" — a moment of brand delight, not a public counter (yet).
+// Click: the heart bursts open into a dancing mini-waveform (the brand's
+// signature), then closes back into a filled heart. Inspired by X's
+// SpaceX heart→rocket easter egg.
+//
+// State is per-reader (localStorage); each like/unlike fires an Umami event
+// so per-post resonance shows up in the analytics dashboard. A public count
+// needs a backend — deferred until the numbers flatter us.
+interface Props {
+  slug: string;
+}
+const { slug } = Astro.props;
+---
+
+<div class="like" data-like-root data-slug={slug}>
+  <button class="like__btn" type="button" aria-pressed="false" aria-label="אהבתי את התקציר">
+    <svg class="like__heart" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+      <path
+        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+      ></path>
+    </svg>
+    <span class="like__wave" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </span>
+  </button>
+  <span class="like__label">אהבתם את התקציר?</span>
+</div>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-like-root]');
+  if (root) {
+    const btn = root.querySelector<HTMLButtonElement>('.like__btn')!;
+    const label = root.querySelector<HTMLElement>('.like__label')!;
+    const slug = root.dataset.slug || location.pathname;
+    const KEY = `hsk-like:${slug}`;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const setLiked = (liked: boolean) => {
+      btn.classList.toggle('is-liked', liked);
+      btn.setAttribute('aria-pressed', String(liked));
+      label.textContent = liked ? 'נקלט. תודה!' : 'אהבתם את התקציר?';
+    };
+
+    setLiked(!!localStorage.getItem(KEY));
+
+    let busy = false;
+    btn.addEventListener('click', () => {
+      if (busy) return;
+      const liked = !!localStorage.getItem(KEY);
+
+      if (liked) {
+        localStorage.removeItem(KEY);
+        setLiked(false);
+        (window as any).umami?.track?.('unlike', { slug });
+        return;
+      }
+
+      localStorage.setItem(KEY, '1');
+      (window as any).umami?.track?.('like', { slug });
+
+      if (reduceMotion) {
+        setLiked(true);
+        return;
+      }
+      // heart → waveform burst → heart (filled)
+      busy = true;
+      btn.classList.add('is-bursting');
+      setTimeout(() => {
+        btn.classList.remove('is-bursting');
+        setLiked(true);
+        busy = false;
+      }, 750);
+    });
+  }
+</script>
+
+<style>
+  .like {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin: 2.4rem 0 0;
+  }
+  .like__btn {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color var(--speed) ease, transform var(--speed) ease;
+  }
+  .like__btn:hover {
+    border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+    transform: translateY(-1px);
+  }
+  .like__btn:active {
+    transform: scale(0.94);
+  }
+  .like__heart {
+    fill: none;
+    stroke: var(--ink-soft);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 160ms ease, opacity 160ms ease, fill 200ms ease, stroke 200ms ease;
+  }
+  .is-liked .like__heart {
+    fill: var(--accent);
+    stroke: var(--accent);
+    animation: like-pop 320ms cubic-bezier(0.2, 1.6, 0.4, 1);
+  }
+  @keyframes like-pop {
+    from {
+      transform: scale(0);
+    }
+    60% {
+      transform: scale(1.25);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  /* the burst: heart collapses, waveform dances in its place */
+  .is-bursting .like__heart {
+    transform: scale(0);
+    opacity: 0;
+  }
+  .like__wave {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    pointer-events: none;
+  }
+  .like__wave span {
+    width: 3px;
+    height: 16px;
+    border-radius: 2px;
+    background: var(--accent);
+    transform: scaleY(0);
+  }
+  .is-bursting .like__wave span {
+    animation: like-dance 560ms ease-in-out both;
+  }
+  .is-bursting .like__wave span:nth-child(1) {
+    animation-delay: 60ms;
+    --peak: 0.55;
+  }
+  .is-bursting .like__wave span:nth-child(2) {
+    animation-delay: 120ms;
+    --peak: 1;
+  }
+  .is-bursting .like__wave span:nth-child(3) {
+    animation-delay: 30ms;
+    --peak: 0.8;
+  }
+  .is-bursting .like__wave span:nth-child(4) {
+    animation-delay: 150ms;
+    --peak: 1;
+  }
+  .is-bursting .like__wave span:nth-child(5) {
+    animation-delay: 90ms;
+    --peak: 0.6;
+  }
+  @keyframes like-dance {
+    0% {
+      transform: scaleY(0);
+    }
+    35% {
+      transform: scaleY(var(--peak, 1));
+    }
+    60% {
+      transform: scaleY(calc(var(--peak, 1) * 0.45));
+    }
+    80% {
+      transform: scaleY(calc(var(--peak, 1) * 0.85));
+    }
+    100% {
+      transform: scaleY(0);
+    }
+  }
+  .like__label {
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+  .is-liked ~ .like__label {
+    color: var(--accent-ink);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .like__btn,
+    .like__heart {
+      transition: none;
+    }
+    .is-liked .like__heart {
+      animation: none;
+    }
+  }
+</style>
