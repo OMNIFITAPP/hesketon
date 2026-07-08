@@ -399,6 +399,25 @@ a:hover {
   gap: 0.8rem;
   flex-wrap: wrap;
 }
+/* Hero signup — the newsletter form as the hero's primary action. */
+.hero__signup {
+  max-width: 27rem;
+}
+.hero__form .nl-form__input {
+  background: var(--surface);
+}
+.hero__signup-note {
+  margin: 0.6rem 0 0;
+  font-size: 0.88rem;
+}
+.hero__signup-note a {
+  color: var(--accent-ink);
+  text-decoration: none;
+  font-weight: 500;
+}
+.hero__signup-note a:hover {
+  text-decoration: underline;
+}
 /* Ambient waveform panel on the hero */
 .hero__viz {
   background: var(--surface);

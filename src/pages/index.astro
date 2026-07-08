@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import Featured from '../components/Featured.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
 import { CATEGORIES, SITE } from '../consts';
 import { getPublishedPosts } from '../utils';
 
@@ -26,7 +27,6 @@ const jsonLd = {
 };
 
 const posts = await getPublishedPosts();
-const newest = posts[0];
 
 // Hand-picked spotlight: the newest post flagged `featured: true` in its
 // frontmatter. Manually controlled — flip the flag to swap it, no schedule.
@@ -54,9 +54,11 @@ const heroBars = [
           האזנה של שעות לא תמיד מסתדרת עם החיים. אנחנו לוקחים את הפרקים הכי טובים ומזקקים מהם את
           העיקר: הרעיונות, התובנות והשורה התחתונה.
         </p>
-        <div class="hero__cta">
-          {newest && <a class="btn" href={`/posts/${newest.id}`}>קראו את האחרון</a>}
-          <a class="btn btn--ghost" href="/posts">כל הפרקים</a>
+        <div class="hero__signup">
+          <NewsletterForm class="hero__form" />
+          <p class="hero__signup-note muted">
+            גיליון מזוקק לתיבה. בלי ספאם, ביטול בכל רגע. <a href="/posts">או פשוט תתחילו לקרוא ←</a>
+          </p>
         </div>
       </div>
 

@@ -1,0 +1,117 @@
+---
+import { newsletterAction } from '../consts';
+import NewsletterForm from './NewsletterForm.astro';
+
+// A polite take on the Podcast-Notes scroll popup: a small dismissible card
+// that slides up from the corner after real scroll depth — never a modal that
+// covers content (Google penalizes intrusive interstitials on mobile).
+// Suppressed for subscribers (/thanks sets hsk-nl-done) and for 14 days after
+// a dismissal (hsk-nl-dismissed). Hidden entirely on /thanks.
+const onThanks = (Astro.url.pathname.replace(/\/$/, '') || '/') === '/thanks';
+const enabled = newsletterAction().length > 0 && !onThanks;
+---
+
+{
+  enabled && (
+    <aside class="nl-slidein" id="nl-slidein" hidden aria-label="הרשמה לניוזלטר">
+      <button class="nl-slidein__close" type="button" aria-label="סגירה">
+        ×
+      </button>
+      <p class="nl-slidein__heading">אהבתם? יש עוד.</p>
+      <p class="nl-slidein__sub">התקצירים הכי טובים, ישר לתיבה. בלי ספאם.</p>
+      <NewsletterForm class="nl-slidein__form" />
+    </aside>
+  )
+}
+
+<script>
+  const el = document.getElementById('nl-slidein');
+  if (el) {
+    const DAY = 24 * 60 * 60 * 1000;
+    const done = localStorage.getItem('hsk-nl-done');
+    const dismissedAt = Number(localStorage.getItem('hsk-nl-dismissed') || 0);
+    const suppressed = done || Date.now() - dismissedAt < 14 * DAY;
+
+    if (!suppressed) {
+      let shown = false;
+      const maybeShow = () => {
+        if (shown) return;
+        const doc = document.documentElement;
+        const scrollable = doc.scrollHeight - window.innerHeight;
+        // Fire at 55% scroll depth; on short pages that can't scroll, never.
+        if (scrollable > 300 && window.scrollY / scrollable > 0.55) {
+          shown = true;
+          el.hidden = false;
+          requestAnimationFrame(() => el.classList.add('nl-slidein--in'));
+          window.removeEventListener('scroll', maybeShow);
+        }
+      };
+      window.addEventListener('scroll', maybeShow, { passive: true });
+    }
+
+    el.querySelector('.nl-slidein__close')?.addEventListener('click', () => {
+      localStorage.setItem('hsk-nl-dismissed', String(Date.now()));
+      el.classList.remove('nl-slidein--in');
+      setTimeout(() => (el.hidden = true), 250);
+    });
+  }
+</script>
+
+<style>
+  .nl-slidein {
+    position: fixed;
+    bottom: 1rem;
+    inset-inline-start: 1rem;
+    z-index: 60;
+    width: min(21.5rem, calc(100vw - 2rem));
+    padding: 1.15rem 1.2rem 1.2rem;
+    background: var(--surface);
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+    border-radius: var(--radius);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.18);
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 250ms ease, transform 250ms ease;
+  }
+  .nl-slidein--in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .nl-slidein__close {
+    position: absolute;
+    top: 0.4rem;
+    inset-inline-end: 0.55rem;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font-size: 1.35rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+  .nl-slidein__close:hover {
+    color: var(--ink);
+  }
+  .nl-slidein__heading {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.1rem;
+    margin: 0 0 0.2rem;
+    color: var(--ink);
+  }
+  .nl-slidein__sub {
+    margin: 0 0 0.8rem;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+  .nl-slidein :global(.nl-form) {
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .nl-slidein {
+      transition: none;
+      transform: none;
+    }
+  }
+</style>

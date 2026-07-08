@@ -4,6 +4,7 @@ import { SITE } from '../consts';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import NewsletterSlideIn from '../components/NewsletterSlideIn.astro';
 
 interface Props {
   title?: string;
@@ -27,5 +28,6 @@ interface Props {
       <slot />
     </main>
     <Footer />
+    <NewsletterSlideIn />
   </body>
 </html>

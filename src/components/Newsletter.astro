@@ -1,10 +1,11 @@
 ---
 import { NEWSLETTER, newsletterAction } from '../consts';
-// Renders only once a Buttondown username is set in consts.ts.
-const action = newsletterAction();
-// Hide on the post-signup page — offering signup right after signing up is silly.
+import NewsletterForm from './NewsletterForm.astro';
+
+// The footer signup box. Renders only when the collector is configured.
+// Hidden on the post-signup page — offering signup right after signing up is silly.
 const onThanks = (Astro.url.pathname.replace(/\/$/, '') || '/') === '/thanks';
-const enabled = action.length > 0 && !onThanks;
+const enabled = newsletterAction().length > 0 && !onThanks;
 ---
 
 {
@@ -14,48 +15,10 @@ const enabled = action.length > 0 && !onThanks;
         <p class="newsletter__heading">{NEWSLETTER.heading}</p>
         <p class="newsletter__subtext">{NEWSLETTER.subtext}</p>
       </div>
-      <form class="newsletter__form" action={action} method="post" data-newsletter>
-        <input
-          class="newsletter__input"
-          type="email"
-          name={NEWSLETTER.emailField}
-          required
-          placeholder="כתובת אימייל"
-          aria-label="כתובת אימייל"
-        />
-        <button class="newsletter__btn" type="submit">
-          {NEWSLETTER.cta}
-        </button>
-      </form>
+      <NewsletterForm class="newsletter__form" />
     </aside>
   )
 }
-
-<script>
-  // Silent submit to the Google Form collector, then land on our /thanks page.
-  // Google's formResponse accepts cross-origin no-cors posts (no bot challenge
-  // — unlike Buttondown's Turnstile). No-JS fallback: native POST, which shows
-  // Google's own confirmation page but still records the address.
-  document.querySelectorAll<HTMLFormElement>('form[data-newsletter]').forEach((form) => {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
-      if (btn) {
-        btn.disabled = true;
-        btn.textContent = 'רק רגע…';
-      }
-      const body = new URLSearchParams();
-      new FormData(form).forEach((v, k) => body.append(k, String(v)));
-      fetch(form.action, { method: 'POST', body, mode: 'no-cors' })
-        .then(() => {
-          window.location.href = '/thanks';
-        })
-        .catch(() => {
-          form.submit(); // network hiccup — fall back to the native POST
-        });
-    });
-  });
-</script>
 
 <style>
   .newsletter {
@@ -82,39 +45,9 @@ const enabled = action.length > 0 && !onThanks;
     font-size: 0.9rem;
     color: var(--muted, #6b6577);
   }
-  .newsletter__form {
-    display: flex;
-    gap: 0.5rem;
+  .newsletter :global(.newsletter__form) {
     flex: 1 1 280px;
     max-width: 420px;
-  }
-  .newsletter__input {
-    flex: 1;
-    padding: 0.7rem 0.9rem;
-    border: 1px solid var(--line, #d9d3c5);
-    border-radius: 10px;
-    background: var(--bg, #faf8f3);
-    font: inherit;
-    color: var(--ink, #1a1722);
-  }
-  .newsletter__input:focus-visible {
-    outline: 2px solid var(--accent-ink, #a61e4d);
-    outline-offset: 1px;
-  }
-  .newsletter__btn {
-    padding: 0.7rem 1.3rem;
-    border: none;
-    border-radius: 10px;
-    background: var(--accent-ink, #a61e4d);
-    color: #fff;
-    font: inherit;
-    font-weight: 600;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: filter 0.15s ease;
-  }
-  .newsletter__btn:hover {
-    filter: brightness(1.1);
   }
   @media (max-width: 560px) {
     .newsletter {
@@ -122,19 +55,9 @@ const enabled = action.length > 0 && !onThanks;
       align-items: stretch;
       padding: 1.3rem 1.3rem 1.4rem;
     }
-    /* Stack input over button; flex:none so the form doesn't grow vertically. */
-    .newsletter__form {
+    .newsletter :global(.newsletter__form) {
       max-width: none;
       flex: none;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-    .newsletter__input {
-      flex: none;
-    }
-    .newsletter__btn {
-      width: 100%;
-      padding: 0.8rem;
     }
   }
 </style>
