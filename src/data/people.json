@@ -208,5 +208,23 @@
     "nameHe": "עידו פורטל",
     "nameEn": "Ido Portal",
     "title": "מורה לתנועה, מייסד Movement Culture"
+  },
+  {
+    "id": "nischa-shah",
+    "nameHe": "נישה שאה",
+    "nameEn": "Nischa Shah",
+    "title": "בנקאית השקעות לשעבר ומחנכת פיננסית"
+  },
+  {
+    "id": "cesar-millan",
+    "nameHe": "סזאר מיאן",
+    "nameEn": "Cesar Millan",
+    "title": "מומחה להתנהגות כלבים"
+  },
+  {
+    "id": "rupert-lowe",
+    "nameHe": "רופרט לואו",
+    "nameEn": "Rupert Lowe",
+    "title": "חבר הפרלמנט הבריטי, מייסד Restore Britain"
   }
 ]
