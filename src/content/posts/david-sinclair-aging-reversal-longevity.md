@@ -11,7 +11,6 @@ tags:
   - סירטואינים
   - מדע
 draft: false
-featured: true
 readingTime: 10
 source:
   podcast: The Diary of a CEO
