@@ -278,7 +278,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-07-10T20:06:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "מה שאתם צריכים זה כדור טניס, חבל ופריזבי. אתם צריכים חבר." 🎾
 
@@ -317,6 +317,9 @@ items:
         https://hesketon.co.il/social/2026-07-10_carousel-v2-kelly/kelly-starrett-wellness-movement-play-06-s06.png
       - >-
         https://hesketon.co.il/social/2026-07-10_carousel-v2-kelly/kelly-starrett-wellness-movement-play-07-99-cta.png
+    publishedAt: '2026-07-10T20:08:02.246Z'
+    mediaId: '18141825205509185'
+    permalink: https://www.instagram.com/p/DaoA1v-FF0I/
   - id: 2026-07-10_myth-v2-nischa
     slug: nischa-shah-money-financial-freedom
     platform: instagram
