@@ -107,6 +107,10 @@ export async function publishCarousel(imageUrls, caption) {
     children: children.join(','),
     caption: caption || '',
   });
+  // Carousel containers process asynchronously; publishing before the parent
+  // reaches FINISHED intermittently fails with Graph error 9007
+  // ("Media ID is not available") — seen live on 2026-07-10.
+  await waitForContainer(parent);
   const mediaId = await publishContainer(parent);
   return { mediaId, permalink: await permalink(mediaId) };
 }
