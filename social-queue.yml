@@ -243,7 +243,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-07-10T19:36:00.000Z'
-    status: approved
+    status: published
     caption: >-
       הכלב לא מקשיב למילים שלכם. הוא מקשיב למה שאתם משדרים. 🐕
 
@@ -269,6 +269,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-07-10_quote-v2-cesar/cesar-millan-calm-energy-dog-leadership-01-quote-v2.png
+    publishedAt: '2026-07-10T19:37:09.904Z'
+    mediaId: '18094941818338951'
+    permalink: https://www.instagram.com/p/Dan9TMXH8p_/
   - id: 2026-07-10_carousel-v2-kelly
     slug: kelly-starrett-wellness-movement-play
     platform: instagram
