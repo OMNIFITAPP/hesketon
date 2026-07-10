@@ -83,6 +83,8 @@ export function parsePost(file) {
     podcast: fm.source?.podcast || '',
     host: fm.source?.host || '',
     youtubeUrl: fm.source?.youtubeUrl || '',
+    durationMinutes: fm.source?.durationMinutes || 0,
+    readingTime: fm.readingTime || 0,
     url: `/posts/${slug}/`,
     lead: extractLead(content),
     tldr: extractTldr(content),

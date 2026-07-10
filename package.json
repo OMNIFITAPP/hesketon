@@ -13,6 +13,7 @@
     "new-post": "node scripts/generate.mjs",
     "new-post:dry": "node scripts/generate.mjs --dry-run",
     "check:refs": "node scripts/check-references.mjs",
+    "share": "node scripts/share-kit.mjs",
     "social": "node scripts/social.mjs",
     "social:dry": "node scripts/social.mjs --dry-run",
     "social:publish": "node scripts/publish-social.mjs",
@@ -31,6 +32,7 @@
     "js-yaml": "^4.2.0",
     "pagefind": "^1.5.2",
     "puppeteer": "^24.10.0",
+    "qrcode": "^1.5.4",
     "youtube-transcript": "^1.3.1"
   }
 }

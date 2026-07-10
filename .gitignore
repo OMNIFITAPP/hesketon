@@ -30,3 +30,7 @@ inbox/**/*.srt
 # Local-only social render previews (the real, deployable assets live in
 # public/social/ and ARE tracked so the Meta API can fetch them by URL).
 .social-preview/
+
+# Share-kit output (story PNG + caption per post) — ephemeral, sent by hand
+# via WhatsApp/AirDrop; regenerate any time with `npm run share <slug>`.
+share-kit/

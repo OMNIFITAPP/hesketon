@@ -222,4 +222,60 @@ export function buildStory(post) {
   return [storySlide(post, inner)];
 }
 
+/**
+ * Share-kit story (9:16) — for READERS/friends who repost to their own
+ * story, so no "קישור בביו": the exact URL + a scannable QR live on the
+ * image itself. Content is inset extra from top/bottom so Instagram's UI
+ * overlays (avatar, reply bar) don't cover anything.
+ */
+export function buildShareStory(post, { qrSvg = '', url = 'hesketon.co.il' } = {}) {
+  // Dark story palette (matches doc()'s dark theme).
+  const t = { surface: '#1e1b28', ink: '#edeaf2', muted: '#9893a6', line: '#2d2a38', accent: '#f06595' };
+
+  const q = post.lead;
+  const len = (q?.text || '').length;
+  const size = len <= 90 ? 74 : len <= 150 ? 64 : len <= 220 ? 56 : 48;
+
+  // Brand compression stat: "2:38:00 ⟵ 11 דק׳"
+  const dm = post.durationMinutes, rt = post.readingTime;
+  const stat = dm && rt
+    ? `${Math.floor(dm / 60)}:${String(dm % 60).padStart(2, '0')}:00 האזנה ⟵ ${rt} דק׳ קריאה`
+    : '';
+
+  const inner = `
+    <style>
+      .share-src{margin-top:44px;font-size:30px;color:${t.muted};font-weight:500}
+      .share-src b{color:${t.ink};font-weight:700}
+      .share-card{margin-top:88px;display:flex;align-items:center;gap:40px;
+        background:${t.surface};border:2px solid ${t.line};border-radius:32px;padding:40px 44px}
+      .share-qr{flex:none;width:210px;height:210px;background:#fff;border-radius:20px;padding:20px}
+      .share-qr svg{width:100%;height:100%;display:block}
+      .share-txt{display:flex;flex-direction:column;gap:14px;min-width:0}
+      .share-lbl{font-size:30px;color:${t.muted};font-weight:500}
+      .share-url{font-family:'Rubik','Heebo',sans-serif;font-weight:900;font-size:46px;color:${t.accent};direction:ltr;text-align:right}
+      .share-stat{font-size:26px;color:${t.muted};font-weight:500;direction:rtl}
+    </style>
+    <div class="qmark">”</div>
+    <div class="quote" style="font-size:${size}px">${esc(q.text)}</div>
+    ${q.cite ? `<div class="cite">${esc(q.cite)}</div>` : ''}
+    ${post.podcast ? `<div class="share-src">מתוך «<b>${esc(post.podcast)}</b>»</div>` : ''}
+    <div class="share-card">
+      <div class="share-qr">${qrSvg}</div>
+      <div class="share-txt">
+        <div class="share-lbl">התקציר המלא באתר</div>
+        <div class="share-url">${esc(url)}</div>
+        ${stat ? `<div class="share-stat">${stat}</div>` : ''}
+      </div>
+    </div>`;
+
+  // Custom slide (not storySlide): extra top/bottom spacers keep everything
+  // inside Instagram's story safe zone (~250px is covered top & bottom).
+  const body = `<div style="height:100px"></div>
+    ${header(post.category)}
+    <div class="main">${inner}</div>
+    <div class="foot" style="justify-content:center">${waveform()}</div>
+    <div style="height:130px"></div>`;
+  return [{ name: 'story-share', html: doc({ ...STORY, body, dark: true }), ...STORY }];
+}
+
 export { BRAND, FEED, STORY };
