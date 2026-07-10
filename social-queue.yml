@@ -172,7 +172,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-07-02T19:00:00.000Z'
-    status: pending_review
+    status: hold
     caption: |-
       45%–70% ממקרי הדמנציה ניתנים למניעה. 🧠
 
@@ -212,7 +212,7 @@ items:
     format: story
     kicker: ''
     scheduledFor: '2026-07-02T20:00:00.000Z'
-    status: pending_review
+    status: hold
     caption: |-
       70% ממקרי הדמנציה ניתנים למניעה. 🧠
 
@@ -237,3 +237,116 @@ items:
       - >-
         https://hesketon.co.il/social/2026-06-28_thu-lessons-story/tommy-wood-future-proof-brain-01-story.png
     permalink: ''
+  - id: 2026-07-10_quote-v2-cesar
+    slug: cesar-millan-calm-energy-dog-leadership
+    platform: instagram
+    format: quote
+    kicker: ציטוט
+    scheduledFor: '2026-07-10T14:10:00.000Z'
+    status: approved
+    caption: >-
+      הכלב לא מקשיב למילים שלכם. הוא מקשיב למה שאתם משדרים. 🐕
+
+
+      סיזאר מילאן — "לוחש הכלבים" — התארח אצל פרופ' אנדרו הוברמן לשיחה של שעתיים וחצי על אנרגיה
+      רגועה, מנהיגות, ולמה קבלת פנים נרגשת דווקא מזיקה לכלב שלכם.
+
+
+      זה פרק על כלבים שהוא בעצם פרק על בני אדם.
+
+
+      התקציר המלא — 11 דקות קריאה במקום 2:38 שעות — באתר. קישור בביו. 🔗
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#סיזארמילאן'
+      - '#הוברמן'
+      - '#כלבים'
+      - '#אילוףכלבים'
+      - '#אנרגיהרגועה'
+      - '#מיינדסט'
+      - '#פסיכולוגיה'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-07-10_quote-v2-cesar/cesar-millan-calm-energy-dog-leadership-01-quote-v2.png
+  - id: 2026-07-10_carousel-v2-kelly
+    slug: kelly-starrett-wellness-movement-play
+    platform: instagram
+    format: carousel
+    kicker: תקציר מזוקק
+    scheduledFor: '2026-07-10T14:40:00.000Z'
+    status: approved
+    caption: >-
+      "מה שאתם צריכים זה כדור טניס, חבל ופריזבי. אתם צריכים חבר." 🎾
+
+
+      ד״ר קלי סטארט — מומחה התנועה שעבד עם אולימפיונים ולוחמי יחידות מובחרות — יושב עם ריץ' רול
+      לשיחה חדה על תעשיית ה־wellness שאיבדה את הצפון.
+
+
+      בקרוסלה: המסננת שחותכת כל טרנד בריאות, למה עמידות חשובה משלמות, ואיך 15 דקות של משחק משנות
+      אימון שלם.
+
+
+      שמרו לעצמכם 💾 והתקציר המלא באתר — קישור בביו.
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#קליסטארט'
+      - '#ריץרול'
+      - '#בריאותוכושר'
+      - '#תנועה'
+      - '#אימונים'
+      - '#wellness'
+      - '#עמידות'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-07-10_carousel-v2-kelly/kelly-starrett-wellness-movement-play-01-01-cover.png
+      - >-
+        https://hesketon.co.il/social/2026-07-10_carousel-v2-kelly/kelly-starrett-wellness-movement-play-02-s02.png
+      - >-
+        https://hesketon.co.il/social/2026-07-10_carousel-v2-kelly/kelly-starrett-wellness-movement-play-03-s03.png
+      - >-
+        https://hesketon.co.il/social/2026-07-10_carousel-v2-kelly/kelly-starrett-wellness-movement-play-04-s04.png
+      - >-
+        https://hesketon.co.il/social/2026-07-10_carousel-v2-kelly/kelly-starrett-wellness-movement-play-05-s05.png
+      - >-
+        https://hesketon.co.il/social/2026-07-10_carousel-v2-kelly/kelly-starrett-wellness-movement-play-06-s06.png
+      - >-
+        https://hesketon.co.il/social/2026-07-10_carousel-v2-kelly/kelly-starrett-wellness-movement-play-07-99-cta.png
+  - id: 2026-07-10_myth-v2-nischa
+    slug: nischa-shah-money-financial-freedom
+    platform: instagram
+    format: carousel
+    kicker: מיתוס ↔ מציאות
+    scheduledFor: '2026-07-10T15:10:00.000Z'
+    status: approved
+    caption: >-
+      פורמט חדש: מיתוס ↔ מציאות 💭
+
+
+      בכל פעם — אמונה נפוצה אחת, מול מה שהמומחים באמת אמרו בפרק.
+
+
+      הפעם: נישה שאה, בנקאית השקעות לשעבר, מפרקת אצל ג'יי שטי את המיתוס הכי יקר שיש — שחופש כלכלי
+      מתחיל מלהרוויח יותר.
+
+
+      מסכימים? מתנגדים? ספרו לנו בתגובות 👇
+
+      התקציר המלא באתר — קישור בביו.
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#כסף'
+      - '#חופשכלכלי'
+      - '#חינוךפיננסי'
+      - '#נישהשאה'
+      - '#ג׳יישטי'
+      - '#השקעות'
+      - '#הרגלים'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-07-10_myth-v2-nischa/nischa-shah-money-financial-freedom-01-01-myth.png
+      - >-
+        https://hesketon.co.il/social/2026-07-10_myth-v2-nischa/nischa-shah-money-financial-freedom-02-02-reality.png
