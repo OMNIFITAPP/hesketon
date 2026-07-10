@@ -326,7 +326,7 @@ items:
     format: carousel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-07-10T20:36:00.000Z'
-    status: approved
+    status: failed
     caption: >-
       פורמט חדש: מיתוס ↔ מציאות 💭
 
@@ -356,3 +356,4 @@ items:
         https://hesketon.co.il/social/2026-07-10_myth-v2-nischa/nischa-shah-money-financial-freedom-01-01-myth.png
       - >-
         https://hesketon.co.il/social/2026-07-10_myth-v2-nischa/nischa-shah-money-financial-freedom-02-02-reality.png
+    error: 'Graph API 400: Media ID is not available (code 9007)'
