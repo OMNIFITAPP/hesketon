@@ -69,7 +69,7 @@ function docV2({ width, height, body }) {
     display:flex;flex-direction:column;padding:64px 72px 52px;position:relative;overflow:hidden}
   .frame{position:absolute;inset:22px;border:1.5px solid ${T.line};border-radius:38px;pointer-events:none}
   .head{display:flex;align-items:center;gap:22px;z-index:2}
-  .head .logo{font-family:'Rubik','Heebo',sans-serif;font-weight:900;font-size:52px;color:${T.ink};letter-spacing:-1px}
+  .head .logo{font-family:'Rubik','Heebo',sans-serif;font-weight:900;font-size:52px;color:${T.ink};letter-spacing:-1px;text-shadow:0 2px 0 rgba(19,19,33,.24),0 5px 13px rgba(19,19,33,.13);-webkit-text-stroke:1px ${T.ink}}
   .main{flex:1;display:flex;z-index:2;min-height:0}
   .accent{color:${T.raspberry}}
   /* ── quote post ── */
@@ -94,7 +94,7 @@ function docV2({ width, height, body }) {
   /* ── carousel ── */
   .kick{font-family:'Rubik','Heebo',sans-serif;font-weight:700;font-size:30px;color:${T.raspberry}}
   .kick::before{content:'— '}
-  .poster{font-family:'Rubik','Heebo',sans-serif;font-weight:900;letter-spacing:-1.5px;line-height:1.14}
+  .poster{font-family:'Rubik','Heebo',sans-serif;font-weight:900;letter-spacing:-1.5px;line-height:1.14;text-shadow:0 2px 0 rgba(0,0,0,.09),0 6px 18px rgba(0,0,0,.07)}
   .divider{display:flex;align-items:center;margin:42px auto;width:46%}
   .divider .ln{flex:1;height:2.5px;background:${T.raspberry};opacity:.8}
   .divider .dot{width:13px;height:13px;border-radius:50%;background:${T.raspberry}}
