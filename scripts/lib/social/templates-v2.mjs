@@ -77,8 +77,8 @@ function docV2({ width, height, body }) {
     padding:60px 64px 52px;display:flex;flex-direction:column}
   .qmarks{font-family:'Rubik','Heebo',sans-serif;font-weight:900;font-size:170px;line-height:.55;
     color:${T.pink};height:100px}
-  .qtext{font-weight:800;font-size:44px;line-height:1.9;letter-spacing:.2px;color:${T.ink}}
-  .qcite{margin-top:34px;font-size:34px;font-weight:700;color:${T.ink}}
+  .qtext{font-family:'NotoHeb','Heebo',sans-serif;font-weight:700;font-size:46px;line-height:1.85;letter-spacing:.2px;color:${T.ink}}
+  .qcite{font-family:'NotoHeb','Heebo',sans-serif;margin-top:34px;font-size:34px;font-weight:700;color:${T.ink}}
   .qcite::before{content:'— ';color:${T.pink}}
   .portrait{display:flex;align-items:flex-end;justify-content:center}
   .portrait img{max-width:100%;max-height:100%;object-fit:contain}
@@ -98,7 +98,7 @@ function docV2({ width, height, body }) {
   .divider{display:flex;align-items:center;margin:42px auto;width:46%}
   .divider .ln{flex:1;height:2.5px;background:${T.raspberry};opacity:.8}
   .divider .dot{width:13px;height:13px;border-radius:50%;background:${T.raspberry}}
-  .bodytxt{font-size:40px;line-height:1.85;color:${T.ink};font-weight:500}
+  .bodytxt{font-family:'NotoHeb','Heebo',sans-serif;font-size:40px;line-height:1.85;color:${T.ink};font-weight:600}
   .pgn{position:absolute;bottom:52px;right:80px;font-size:26px;color:${T.inkSoft};font-weight:500;z-index:3}
   .rule{position:absolute;bottom:66px;left:80px;right:340px;height:2px;background:${T.line};z-index:1}
   .rule::after{content:'';position:absolute;left:-1px;top:-5px;width:12px;height:12px;border-radius:50%;background:${T.raspberry};opacity:.85}

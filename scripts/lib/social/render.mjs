@@ -23,12 +23,21 @@ const FONT_FACES = [
   ['Rubik', 700, 'Rubik-700.woff2'],
   ['Rubik', 800, 'Rubik-800.woff2'],
   ['Rubik', 900, 'Rubik-900.woff2'],
+  // NotoHeb = Noto Sans Hebrew SemiCondensed (wdth 75) — the account's body
+  // text look. Latin face first (base: digits/punctuation), Hebrew face
+  // second with a unicode-range so Hebrew glyphs win.
+  ['NotoHeb', 600, 'NotoHeb-600-la.woff'],
+  ['NotoHeb', 600, 'NotoHeb-600-he.woff', 'U+0590-05FF, U+FB1D-FB4F'],
+  ['NotoHeb', 700, 'NotoHeb-700-la.woff'],
+  ['NotoHeb', 700, 'NotoHeb-700-he.woff', 'U+0590-05FF, U+FB1D-FB4F'],
 ];
 
 function buildFontCss() {
-  return FONT_FACES.map(([family, weight, file]) => {
+  return FONT_FACES.map(([family, weight, file, range]) => {
     const b64 = fs.readFileSync(path.join(FONTS_DIR, file)).toString('base64');
-    return `@font-face{font-family:'${family}';font-style:normal;font-weight:${weight};font-display:swap;src:url(data:font/woff2;base64,${b64}) format('woff2');}`;
+    const fmt = file.endsWith('.woff2') ? 'woff2' : 'woff';
+    const ur = range ? `unicode-range:${range};` : '';
+    return `@font-face{font-family:'${family}';font-style:normal;font-weight:${weight};font-display:swap;src:url(data:font/${fmt};base64,${b64}) format('${fmt}');${ur}}`;
   }).join('\n');
 }
 
@@ -67,6 +76,7 @@ export async function renderSlides(slides, outDir, prefix) {
         const faces = [
           '400 100px Heebo', '500 100px Heebo', '700 100px Heebo',
           '500 100px Rubik', '700 100px Rubik', '800 100px Rubik', '900 100px Rubik',
+          '600 100px NotoHeb', '700 100px NotoHeb',
         ];
         await Promise.all(faces.map((f) => document.fonts.load(f, 'אבג ABC').catch(() => {})));
         if (document.fonts && document.fonts.ready) await document.fonts.ready;
@@ -77,6 +87,7 @@ export async function renderSlides(slides, outDir, prefix) {
         const specs = [
           '400 32px Heebo', '500 32px Heebo', '700 32px Heebo',
           '500 32px Rubik', '700 32px Rubik', '800 32px Rubik', '900 32px Rubik',
+          '600 32px NotoHeb', '700 32px NotoHeb',
         ];
         return specs.every((f) => document.fonts.check(f, 'אבג'));
       });
