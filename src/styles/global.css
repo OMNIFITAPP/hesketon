@@ -716,8 +716,23 @@ a.chip:hover {
   font-size: 1.22rem;
   color: var(--ink-soft);
 }
+/* Section divider: full-width hairline + short accent segment at the
+   reading-start edge (RTL-aware). Marks chapter breaks without shouting. */
 .prose h2 {
   margin-top: 2.3em;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.prose h2::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  inset-inline-start: 0;
+  width: 7rem;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
 }
 .prose h3 {
   margin-top: 1.8em;
