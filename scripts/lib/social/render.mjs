@@ -21,6 +21,7 @@ const FONT_FACES = [
   ['Heebo', 700, 'Heebo-700.woff2'],
   ['Rubik', 500, 'Rubik-500.woff2'],
   ['Rubik', 700, 'Rubik-700.woff2'],
+  ['Rubik', 800, 'Rubik-800.woff2'],
   ['Rubik', 900, 'Rubik-900.woff2'],
 ];
 
@@ -65,7 +66,7 @@ export async function renderSlides(slides, outDir, prefix) {
       await page.evaluate(async () => {
         const faces = [
           '400 100px Heebo', '500 100px Heebo', '700 100px Heebo',
-          '500 100px Rubik', '700 100px Rubik', '900 100px Rubik',
+          '500 100px Rubik', '700 100px Rubik', '800 100px Rubik', '900 100px Rubik',
         ];
         await Promise.all(faces.map((f) => document.fonts.load(f, 'אבג ABC').catch(() => {})));
         if (document.fonts && document.fonts.ready) await document.fonts.ready;
@@ -75,7 +76,7 @@ export async function renderSlides(slides, outDir, prefix) {
       const fontsOk = await page.evaluate(() => {
         const specs = [
           '400 32px Heebo', '500 32px Heebo', '700 32px Heebo',
-          '500 32px Rubik', '700 32px Rubik', '900 32px Rubik',
+          '500 32px Rubik', '700 32px Rubik', '800 32px Rubik', '900 32px Rubik',
         ];
         return specs.every((f) => document.fonts.check(f, 'אבג'));
       });
