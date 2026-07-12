@@ -4,7 +4,7 @@ description: "רובנו נושמים דרך הפה, רדוד ומהר — ומ�
 pubDate: 2026-07-12
 category: "בריאות וכושר"
 tags: ["נשימה", "נשימה דרך האף", "סבילות CO2", "שינה", "חרדה"]
-draft: true
+draft: false
 references:
   - authors: "James Nestor"
     year: 2020

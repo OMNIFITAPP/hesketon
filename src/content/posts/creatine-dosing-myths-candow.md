@@ -4,8 +4,16 @@ description: "לא תוסף לשריר אלא רשת ביטחון אנרגטית
 pubDate: 2026-07-12
 category: "בריאות וכושר"
 tags: ["קריאטין", "תוספי תזונה", "אריכות ימים", "אימוני כוח", "בריאות המוח"]
-draft: true
+draft: false
 references:
+  - authors: "Harris RC, Söderlund K, Hultman E"
+    year: 1992
+    title: "העלאת רמות הקריאטין בשריר באמצעות תוסף — מחקר היסוד על מינון הקריאטין"
+    source: "Clinical Science"
+  - authors: "van der Merwe J, ואחרים"
+    year: 2009
+    title: "השפעת תוסף קריאטין על רמות טסטוסטרון ו-DHT בשחקני רוגבי"
+    source: "Clinical Journal of Sport Medicine"
   - authors: "Gordji-Nejad A, ואחרים"
     year: 2024
     title: "מנה בודדת של קריאטין משפרת ביצועים קוגניטיביים תחת חוסר שינה"
