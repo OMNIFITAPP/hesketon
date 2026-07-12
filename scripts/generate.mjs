@@ -126,6 +126,7 @@ const REPORT_FILE = path.join(ROOT, '.generation-report.md');
 function postReportSection({ post, report, qa, held, file }) {
   const lines = [`### ${post.title || file}`, ''];
   lines.push(`- קובץ: \`${file}\` · קטגוריה: ${post.category || '—'}`);
+  if (report?.thesis) lines.push(`- 🎯 תזה: ${report.thesis}`);
   if (report?.analyst) lines.push(`- 🧠 אנליסט: תיק פרק עם ${report.analyst.ideas} רעיונות מדורגים`);
   if (report?.quotes)
     lines.push(`- 💬 ציטוטים: ${report.quotes.checked} נבדקו, ${report.quotes.corrections} תוקנו`);
@@ -135,7 +136,7 @@ function postReportSection({ post, report, qa, held, file }) {
       lines.push(`  - 🚩 לבדיקה ידנית: "${f.he}" — ${f.flag}`);
     }
   }
-  const passes = [report?.editor && 'עריכת לשון', report?.proof && 'הגהה'].filter(Boolean);
+  const passes = [report?.critic && 'עורך ראשי', report?.editor && 'עריכת לשון', report?.proof && 'הגהה'].filter(Boolean);
   if (passes.length) lines.push(`- ✍️ ${passes.join(' + ')} הוחלו`);
   lines.push('', '**שער איכות:**', qaSection(qa));
   if (held) lines.push('', '> ⚠️ נשמר עם `draft: true` בגלל כשלי איכות — תקנו ושנו ל-false לפני מיזוג.');
@@ -240,8 +241,9 @@ function writePost(post, item, hold = false) {
 
   const category = normalizeCategory(post.category, item.meta.categoryHint);
   const body = (post.bodyMarkdown || '').trim();
-  const readingTime =
-    Number(post.readingTimeMin) || Math.max(1, Math.round(body.split(/\s+/).length / 180));
+  // Always computed from the final body — a model-guessed value is a template,
+  // not data (2026-07 review, point 22).
+  const readingTime = Math.max(1, Math.round(body.split(/\s+/).length / 180));
 
   const source = clean({
     podcast: item.meta.podcast,

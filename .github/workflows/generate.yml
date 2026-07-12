@@ -47,6 +47,9 @@ jobs:
           # Claims verification vs. the brief's evidence (on by default).
           CLAIM_GROUNDING: ${{ vars.CLAIM_GROUNDING }}
           CLAIM_MODEL: ${{ vars.CLAIM_MODEL }}
+          # Adversarial chief-editor pass (on by default). CRITIC_PASS=false to skip.
+          CRITIC_PASS: ${{ vars.CRITIC_PASS }}
+          CRITIC_MODEL: ${{ vars.CRITIC_MODEL }}
           # Hebrew copy-editor pass (on by default). Set EDITOR_PASS=false to skip.
           EDITOR_PASS: ${{ vars.EDITOR_PASS }}
           EDITOR_MODEL: ${{ vars.EDITOR_MODEL }}

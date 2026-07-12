@@ -23,6 +23,9 @@ const BANNED_PHRASES = [
   'בואו נצלול',
   'מסע מרתק',
   'צוללים לעומק',
+  // Attribution escape hatch — banned by the 2026-07 review (point 18):
+  // it hides an unresolved "who said this" instead of resolving it.
+  'בשיחה עלה',
 ];
 
 /**
@@ -45,8 +48,12 @@ export function runQA({ post, categories, transcript = '' }) {
     failures.push('האמ;לק מופיע לפני הציטוט הפותח — סדר האנטומיה הפוך');
 
   const h2s = (visible.match(/^## /gm) || []).length;
-  if (h2s < 3) failures.push(`רק ${h2s} כותרות משנה (## ) — הדיג'סט דורש 4-6`);
-  else if (h2s > 7) warnings.push(`${h2s} כותרות משנה — יותר מהמבנה המקובל (4-6)`);
+  if (h2s < 3) failures.push(`רק ${h2s} כותרות משנה (## ) — הדיג'סט דורש לפחות 3`);
+  else if (h2s > 7) warnings.push(`${h2s} כותרות משנה — יותר מהמבנה המקובל (3-6)`);
+
+  // ── Thesis: the mandatory pre-writing step (2026-07 review, point 3) ──
+  if (!post.thesis || !String(post.thesis).trim())
+    warnings.push('הכותב לא החזיר תזה (שדה thesis) — לבדוק שהפוסט הוא מהלך אחד ולא אוסף פרקים');
   if (!/מה לוקחים מזה/.test(visible)) failures.push('חסר קטע "מה לוקחים מזה"');
   if (/^# /m.test(visible)) failures.push('יש H1 בגוף הפוסט (הכותרת הראשית נשמרת בנפרד)');
 

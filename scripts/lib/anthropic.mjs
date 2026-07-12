@@ -1,6 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { buildSystemPrompt, buildUserPrompt } from './prompt.mjs';
 import { editHebrew, proofHebrew, validateEdit } from './editor.mjs';
+import { chiefEdit, validateChiefEdit } from './critic.mjs';
 import { groundQuotes, appendQuoteAudit } from './quotes.mjs';
 import { analyzeTranscript, briefForWriter } from './analyst.mjs';
 import { groundClaims } from './claims.mjs';
@@ -15,12 +16,15 @@ const DEFAULT_MODEL = 'claude-sonnet-5';
 /**
  * Turn a transcript into a structured Hebrew post via the full pipeline:
  *
- *   ① analyst (deep read → episode brief)      ANALYST_PASS=false to skip
+ *   ① analyst (deep read → brief + thesis)     ANALYST_PASS=false to skip
  *   ② writer (post built from the brief)
  *   ③ quote grounding (verbatim fidelity)      QUOTE_GROUNDING=false to skip
- *   ④ claims verification (factual fidelity)   CLAIM_GROUNDING=false to skip
- *   ⑤ line editor (Hebrew fluency)             EDITOR_PASS=false to skip
- *   ⑥ proofreader (final grammar pass)         PROOF_PASS=false to skip
+ *   ④ claims verification (factual fidelity,   CLAIM_GROUNDING=false to skip
+ *      incl. title/description/tldr/headings)
+ *   ⑤ chief editor (adversarial content read:  CRITIC_PASS=false to skip
+ *      repetition, empty depth, inflation, padding)
+ *   ⑥ line editor (Hebrew fluency)             EDITOR_PASS=false to skip
+ *   ⑦ proofreader (final grammar pass)         PROOF_PASS=false to skip
  *
  * @returns {Promise<{ post: object, report: object }>}
  */
@@ -39,7 +43,7 @@ export async function generatePost({ transcript, meta, categories, model }) {
     text = text.slice(0, MAX_TRANSCRIPT_CHARS);
   }
 
-  const report = { analyst: null, quotes: null, claims: null, editor: false, proof: false };
+  const report = { analyst: null, thesis: null, quotes: null, claims: null, critic: false, editor: false, proof: false };
 
   // ── ① Analyst: deep read of the FULL transcript → structured episode brief.
   let brief = null;
@@ -47,7 +51,9 @@ export async function generatePost({ transcript, meta, categories, model }) {
     try {
       brief = await analyzeTranscript({ transcript: text, meta, model });
       report.analyst = { ideas: brief.keyIdeas.length };
+      report.thesis = brief.thesis || null;
       console.log(`  ↳ אנליסט: תיק פרק עם ${brief.keyIdeas.length} רעיונות מדורגים`);
+      if (brief.thesis) console.log(`  ↳ תזה: ${brief.thesis}`);
     } catch (err) {
       console.warn(`  ⚠️  דילוג על שלב האנליסט: ${err.message}`);
     }
@@ -88,6 +94,8 @@ export async function generatePost({ transcript, meta, categories, model }) {
   }
 
   const post = parseModelJson(out);
+  // The writer's (possibly sharpened) thesis wins over the analyst's proposal.
+  if (post.thesis) report.thesis = post.thesis;
 
   // ── ③ Quote-fidelity pass: every quote is a faithful, complete translation.
   let quotePairs = [];
@@ -112,8 +120,17 @@ export async function generatePost({ transcript, meta, categories, model }) {
     post.claims.length
   ) {
     try {
-      const res = await groundClaims({ body: post.bodyMarkdown, claims: post.claims, brief, model });
+      const res = await groundClaims({
+        body: post.bodyMarkdown,
+        title: post.title || '',
+        description: post.description || '',
+        claims: post.claims,
+        brief,
+        model,
+      });
       post.bodyMarkdown = res.body;
+      if (res.title) post.title = res.title;
+      if (res.description) post.description = res.description;
       report.claims = { checked: res.checked, corrections: res.corrections, flagged: res.flagged };
       const flaggedNote = res.flagged.length ? `, ${res.flagged.length} לבדיקה ידנית` : '';
       console.log(`  ↳ אימות עובדתי: ${res.checked} טענות נבדקו, ${res.corrections} תוקנו${flaggedNote}`);
@@ -122,7 +139,30 @@ export async function generatePost({ transcript, meta, categories, model }) {
     }
   }
 
-  // ── ⑤ Editor pass: polish the Hebrew of the body (cheap; skips the transcript).
+  // ── ⑤ Chief editor: the adversarial content read. Runs BEFORE the language
+  //    passes — no point polishing a paragraph that's about to be deleted.
+  if (process.env.CRITIC_PASS !== 'false' && post.bodyMarkdown) {
+    try {
+      const rewritten = await chiefEdit({
+        body: post.bodyMarkdown,
+        thesis: post.thesis || brief?.thesis,
+        briefSummary: brief?.overview,
+        model,
+      });
+      if (validateChiefEdit(post.bodyMarkdown, rewritten)) {
+        const cut = post.bodyMarkdown.length - rewritten.length;
+        post.bodyMarkdown = rewritten;
+        report.critic = true;
+        console.log(`  ↳ עורך ראשי: הוחל ✓${cut > 0 ? ` (קוצר ב-${cut.toLocaleString('en-US')} תווים)` : ''}`);
+      } else {
+        console.warn('  ⚠️  שכתוב העורך הראשי נדחה (לא עבר ולידציה) — נשמרת הטיוטה');
+      }
+    } catch (err) {
+      console.warn(`  ⚠️  דילוג על העורך הראשי: ${err.message}`);
+    }
+  }
+
+  // ── ⑥ Editor pass: polish the Hebrew of the body (cheap; skips the transcript).
   //    Falls back to the original draft if the edit fails its guardrails.
   if (process.env.EDITOR_PASS !== 'false' && post.bodyMarkdown) {
     try {
@@ -139,7 +179,7 @@ export async function generatePost({ transcript, meta, categories, model }) {
     }
   }
 
-  // ── ⑥ Proofreader: minimal final grammar/typo pass, same guardrails.
+  // ── ⑦ Proofreader: minimal final grammar/typo pass, same guardrails.
   if (process.env.PROOF_PASS !== 'false' && post.bodyMarkdown) {
     try {
       const proofed = await proofHebrew({ body: post.bodyMarkdown, model });
