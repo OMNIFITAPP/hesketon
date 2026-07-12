@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import NewsletterForm from '../../components/NewsletterForm.astro';
+import products from '../../data/products.json';
+
+export function getStaticPaths() {
+  return products.map((p) => ({ params: { id: p.id }, props: { product: p } }));
+}
+
+const { product } = Astro.props;
+const isLive = product.status === 'live' && product.buyUrl;
+---
+
+<BaseLayout title={product.title} description={product.subtitle}>
+  <section class="section wrap product">
+    <div class="product__grid">
+      <div class="product__coverwrap">
+        <div class="bookcover bookcover--page">
+          <span class="bookcover__brand">הסכתון</span>
+          <span class="bookcover__title">{product.title}</span>
+        </div>
+      </div>
+
+      <div class="product__info">
+        {!isLive && <span class="chip product__status">בקרוב</span>}
+        <h1 class="product__title">{product.title}</h1>
+        <p class="product__sub">{product.subtitle}</p>
+        <p class="product__desc">{product.description}</p>
+
+        {
+          product.highlights?.length > 0 && (
+            <ul class="product__highlights">
+              {product.highlights.map((h) => (
+                <li>{h}</li>
+              ))}
+            </ul>
+          )
+        }
+
+        {
+          isLive ? (
+            <p class="product__buy">
+              {product.priceNis && <span class="product__price">₪{product.priceNis}</span>}
+              <a class="btn" href={product.buyUrl} target="_blank" rel="noopener noreferrer">
+                לרכישה
+              </a>
+            </p>
+          ) : (
+            <div class="product__waitlist" data-product-waitlist={product.id}>
+              <p class="product__waitlist-title">רוצים לדעת כשהספר יוצא?</p>
+              <p class="product__waitlist-sub muted">
+                השאירו אימייל — נעדכן אתכם ראשונים (ותקבלו גם את הגיליון השבועי).
+              </p>
+              <NewsletterForm />
+            </div>
+          )
+        }
+      </div>
+    </div>
+
+    <p class="product__back">
+      <a class="btn btn--ghost" href="/products">→ לכל המוצרים</a>
+    </p>
+  </section>
+</BaseLayout>
+
+<script>
+  // Tag the signup with which product drew the interest (cookieless analytics).
+  // The shared NewsletterForm handles the actual submit + redirect.
+  const box = document.querySelector<HTMLElement>('[data-product-waitlist]');
+  const form = box?.querySelector<HTMLFormElement>('form[data-newsletter]');
+  form?.addEventListener('submit', () => {
+    (window as any).umami?.track('waitlist', { product: box!.dataset.productWaitlist });
+  });
+</script>
+
+<style>
+  .product__grid {
+    display: grid;
+    grid-template-columns: minmax(16rem, 24rem) 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  @media (max-width: 760px) {
+    .product__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .product__coverwrap :global(.bookcover--page) {
+    aspect-ratio: 3 / 4;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    justify-content: flex-end;
+  }
+  .product__coverwrap :global(.bookcover--page .bookcover__title) {
+    font-size: 1.7rem;
+  }
+  .product__status {
+    font-family: var(--font-mono);
+  }
+  .product__title {
+    margin: 0.6rem 0 0.4rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    line-height: 1.25;
+  }
+  .product__sub {
+    margin: 0 0 1rem;
+    color: var(--ink-soft);
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  .product__desc {
+    margin: 0 0 1.2rem;
+    line-height: 1.85;
+  }
+  .product__highlights {
+    margin: 0 0 1.6rem;
+    padding: 0 1.2rem 0 0;
+  }
+  .product__highlights li {
+    margin-bottom: 0.35rem;
+  }
+  .product__highlights li::marker {
+    color: var(--accent);
+  }
+  .product__price {
+    font-family: var(--font-mono);
+    font-size: 1.3rem;
+    margin-inline-end: 1rem;
+  }
+  .product__waitlist {
+    background: var(--accent-soft);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.4rem 1.4rem;
+    max-width: 30rem;
+  }
+  .product__waitlist-title {
+    margin: 0 0 0.15rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+  .product__waitlist-sub {
+    margin: 0 0 0.9rem;
+    font-size: 0.92rem;
+  }
+  .product__back {
+    margin-top: 2.5rem;
+  }
+</style>

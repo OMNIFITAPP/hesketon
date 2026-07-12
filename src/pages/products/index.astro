@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import products from '../../data/products.json';
+
+// The product shelf. Products in `waitlist` status show a "coming soon"
+// treatment and funnel interest into the mailing list; `live` products link
+// to an external checkout (buyUrl) — the static site never handles payment.
+const ebooks = products.filter((p) => p.type === 'ebook');
+---
+
+<BaseLayout
+  title="מוצרים"
+  description="ספרים דיגיטליים של הסכתון — תובנות מזוקקות מהפודקאסטים הטובים בעולם, בעברית."
+>
+  <section class="section wrap">
+    <div class="page-title">
+      <h1>המדף של הסכתון</h1>
+      <p class="muted">
+        את מה שאנחנו מזקקים כל שבוע בבלוג, אנחנו אוספים גם לספרים דיגיטליים ממוקדים — בעברית, עם
+        קרדיט מלא למקורות.
+      </p>
+    </div>
+
+    <div class="shelf">
+      {
+        ebooks.map((p) => (
+          <article class="product-card">
+            <a class="product-card__coverlink" href={`/products/${p.id}`} aria-hidden="true" tabindex="-1">
+              <div class="bookcover" data-product={p.id}>
+                <span class="bookcover__brand">הסכתון</span>
+                <span class="bookcover__title">{p.title}</span>
+              </div>
+            </a>
+            <div class="product-card__body">
+              {p.status === 'waitlist' && <span class="chip product-card__status">בקרוב</span>}
+              <h2 class="product-card__title">
+                <a href={`/products/${p.id}`}>{p.title}</a>
+              </h2>
+              <p class="product-card__sub">{p.subtitle}</p>
+              <a class="btn btn--ghost" href={`/products/${p.id}`}>
+                {p.status === 'live' ? 'לפרטים ולרכישה' : 'ספרו לי כשזה יוצא'}
+              </a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    <p class="shelf__note muted">
+      הספרים בהכנה. השאירו אימייל בעמוד של ספר שמעניין אתכם — ותהיו הראשונים לדעת (וגם תקבלו את
+      הגיליון השבועי שלנו).
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .shelf {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform var(--speed) ease, box-shadow var(--speed) ease;
+  }
+  .product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--ink) 8%, transparent);
+  }
+  .product-card__coverlink {
+    display: block;
+    text-decoration: none;
+  }
+  .product-card__body {
+    padding: 1.1rem 1.25rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    align-items: flex-start;
+  }
+  .product-card__status {
+    font-family: var(--font-mono);
+  }
+  .product-card__title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+  .product-card__title a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .product-card__title a:hover {
+    color: var(--accent-ink);
+  }
+  .product-card__sub {
+    margin: 0 0 0.4rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+  .shelf__note {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+  }
+</style>
+
