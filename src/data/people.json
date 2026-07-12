@@ -238,5 +238,17 @@
     "nameHe": "ג'יימס נסטור",
     "nameEn": "James Nestor",
     "title": "עיתונאי ומחבר רב-המכר \"Breath\""
+  },
+  {
+    "id": "stuart-mcgill",
+    "nameHe": "פרופ' סטיוארט מקגיל",
+    "nameEn": "Stuart McGill",
+    "title": "פרופ' לביומכניקה של עמוד השדרה, מחבר \"Back Mechanic\""
+  },
+  {
+    "id": "peter-attia",
+    "nameHe": "ד\"ר פיטר אטיה",
+    "nameEn": "Peter Attia",
+    "title": "רופא ומחבר \"Outlive\", מנחה The Drive"
   }
 ]

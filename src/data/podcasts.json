@@ -87,5 +87,11 @@
     "id": "triggernometry",
     "name": "Triggernometry",
     "description": "שיחות על פוליטיקה, חברה ורעיונות — עם קונסטנטין קיסין ופרנסיס פוסטר."
+  },
+  {
+    "id": "the-peter-attia-drive",
+    "name": "The Peter Attia Drive",
+    "hostId": "peter-attia",
+    "description": "שיחות עומק על אריכות ימים, רפואה ובריאות — עם ד\"ר פיטר אטיה."
   }
 ]
