@@ -34,3 +34,4 @@ inbox/**/*.srt
 # Share-kit output (story PNG + caption per post) — ephemeral, sent by hand
 # via WhatsApp/AirDrop; regenerate any time with `npm run share <slug>`.
 share-kit/
+.generation-report.md

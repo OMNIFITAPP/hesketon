@@ -13,8 +13,9 @@
 // ============================================================
 
 import Anthropic from '@anthropic-ai/sdk';
+import { supportsTemperature } from './llm-utils.mjs';
 
-const DEFAULT_MODEL = 'claude-sonnet-4-6';
+const DEFAULT_MODEL = 'claude-sonnet-5';
 
 function buildSystemPrompt() {
   return `אתה בודק נאמנות תרגום של ציטוטים מאנגלית לעברית עבור בלוג עברי.
@@ -49,7 +50,7 @@ export async function groundQuotes({ body, quotes, model }) {
     system: buildSystemPrompt(),
     messages: [{ role: 'user', content: JSON.stringify(pairs, null, 2) }],
   };
-  if (!/opus-4-8/.test(chosenModel)) params.temperature = 0.2;
+  if (supportsTemperature(chosenModel)) params.temperature = 0.2;
 
   const message = await client.messages.create(params);
   let raw = message.content.filter((b) => b.type === 'text').map((b) => b.text).join('').trim();

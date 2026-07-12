@@ -8,6 +8,7 @@
 // ============================================================
 
 import Anthropic from '@anthropic-ai/sdk';
+import { supportsTemperature } from '../llm-utils.mjs';
 
 const DEFAULT_MODEL = 'claude-sonnet-4-6';
 
@@ -86,7 +87,7 @@ export async function generateCaption({ post, format = 'carousel', model, offlin
     system,
     messages: [{ role: 'user', content: 'החומר:\n' + JSON.stringify(material, null, 2) }],
   };
-  if (!/opus-4-8/.test(chosen)) params.temperature = 0.8;
+  if (supportsTemperature(chosen)) params.temperature = 0.8;
 
   try {
     const msg = await client.messages.create(params);

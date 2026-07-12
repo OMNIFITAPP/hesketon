@@ -14,6 +14,7 @@
 // ============================================================
 
 import Anthropic from '@anthropic-ai/sdk';
+import { supportsTemperature } from './llm-utils.mjs';
 
 const DEFAULT_EDITOR_MODEL = 'claude-sonnet-4-6';
 
@@ -120,8 +121,7 @@ export async function editHebrew({ body, model }) {
     system: buildEditorSystemPrompt(),
     messages: [{ role: 'user', content: body }],
   };
-  // Some models (e.g. opus-4-8) reject `temperature`; only send it where supported.
-  if (!/opus-4-8/.test(chosenModel)) params.temperature = 0.3; // low: fidelity over creativity
+  if (supportsTemperature(chosenModel)) params.temperature = 0.3; // low: fidelity over creativity
 
   const message = await client.messages.create(params);
 
@@ -135,6 +135,52 @@ export async function editHebrew({ body, model }) {
   const fence = out.match(/```(?:markdown)?\s*([\s\S]*?)```/i);
   if (fence) out = fence[1].trim();
 
+  return out;
+}
+
+// ── Proofreader — a second, minimal pass after the line editor. ──
+//    The editor rewrites for flow; this pass ONLY catches residual grammar,
+//    agreement, punctuation and typo slips (including ones the editor itself
+//    introduced). Deliberately narrow: change as little as possible.
+//    Toggle with PROOF_PASS=false; pick a model with PROOF_MODEL.
+
+export function buildProofSystemPrompt() {
+  return `אתה מגיה עברית. תקבל פוסט ב-Markdown שכבר עבר עריכת לשון, ותחזיר אותו אחרי הגהה אחרונה בלבד.
+
+תקן אך ורק:
+- שגיאות דקדוק: התאמת מין/מספר, יידוע, מילות יחס שגויות, זמני פועל.
+- טעויות הקלדה, אותיות כפולות, מילים חסרות או כפולות.
+- פיסוק עברי שגוי (פסיק חסר/מיותר, נקודה חסרה, מרכאות לא סגורות).
+- רווחים כפולים או חסרים.
+
+אסור בהחלט:
+- לנסח מחדש משפטים תקינים, לשנות סגנון, לקצר או להרחיב.
+- לגעת בציטוטים (בתוך <blockquote>, אחרי "> ", בתוך מרכאות), במספרים, בשמות, בתגי HTML, במבנה או בהערות <!-- -->.
+
+אם אין מה לתקן — החזר את הטקסט כפי שהוא. החזר אך ורק את ה-Markdown המלא, בלי הערות ובלי גדרות קוד.`;
+}
+
+/** Run the final proofread on a body. Returns the proofed Markdown (string). */
+export async function proofHebrew({ body, model }) {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) throw new Error('ANTHROPIC_API_KEY is not set.');
+
+  const client = new Anthropic({ apiKey });
+  const chosenModel =
+    model || process.env.PROOF_MODEL || process.env.EDITOR_MODEL || process.env.CLAUDE_MODEL || DEFAULT_EDITOR_MODEL;
+
+  const params = {
+    model: chosenModel,
+    max_tokens: 8000,
+    system: buildProofSystemPrompt(),
+    messages: [{ role: 'user', content: body }],
+  };
+  if (supportsTemperature(chosenModel)) params.temperature = 0.1;
+
+  const message = await client.messages.create(params);
+  let out = message.content.filter((b) => b.type === 'text').map((b) => b.text).join('').trim();
+  const fence = out.match(/```(?:markdown)?\s*([\s\S]*?)```/i);
+  if (fence) out = fence[1].trim();
   return out;
 }
 

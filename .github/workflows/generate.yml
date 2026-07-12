@@ -41,9 +41,18 @@ jobs:
           CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           APIFY_ACTOR: ${{ vars.APIFY_ACTOR }}
+          # Analyst pass — deep read → episode brief (on by default).
+          ANALYST_PASS: ${{ vars.ANALYST_PASS }}
+          ANALYST_MODEL: ${{ vars.ANALYST_MODEL }}
+          # Claims verification vs. the brief's evidence (on by default).
+          CLAIM_GROUNDING: ${{ vars.CLAIM_GROUNDING }}
+          CLAIM_MODEL: ${{ vars.CLAIM_MODEL }}
           # Hebrew copy-editor pass (on by default). Set EDITOR_PASS=false to skip.
           EDITOR_PASS: ${{ vars.EDITOR_PASS }}
           EDITOR_MODEL: ${{ vars.EDITOR_MODEL }}
+          # Final proofread pass (on by default). Set PROOF_PASS=false to skip.
+          PROOF_PASS: ${{ vars.PROOF_PASS }}
+          PROOF_MODEL: ${{ vars.PROOF_MODEL }}
           # Quote-fidelity pass (on by default). QUOTE_AUDIT=false hides the source trail.
           QUOTE_GROUNDING: ${{ vars.QUOTE_GROUNDING }}
           QUOTE_AUDIT: ${{ vars.QUOTE_AUDIT }}
@@ -54,16 +63,17 @@ jobs:
         continue-on-error: true
         run: node scripts/check-references.mjs
 
+      # The generator writes a per-post control report (analyst/fidelity/QA)
+      # to .generation-report.md (gitignored) — it becomes the PR body.
+      - name: Ensure a PR body exists
+        run: test -f .generation-report.md || echo "נוצרו טיוטות חדשות אוטומטית." > .generation-report.md
+
       - name: Open a Pull Request with the new drafts
         uses: peter-evans/create-pull-request@v6
         with:
           branch: auto/new-drafts
           title: "תוכן חדש: טיוטות לבדיקה 🎙️"
           commit-message: "content: add AI-generated drafts"
-          body: |
-            נוצרו טיוטות חדשות אוטומטית.
-
-            לפרסום: עברו על כל טיוטה, ערכו אם צריך, שנו `draft: false`, ומזגו את ה-PR.
-            המיזוג ל-main יפעיל את ה-deploy והאתר יתעדכן לבד.
+          body-path: .generation-report.md
           labels: content, automated
           delete-branch: true

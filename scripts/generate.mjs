@@ -23,6 +23,7 @@ import matter from 'gray-matter';
 import yaml from 'js-yaml';
 import { generatePost } from './lib/anthropic.mjs';
 import { resolveTranscript } from './lib/transcript.mjs';
+import { runQA, qaSection } from './lib/qa.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -70,6 +71,7 @@ async function main() {
 
   console.log(`נמצאו ${items.length} פריטים לעיבוד.\n`);
   let created = 0;
+  const reportSections = [];
 
   for (const item of items) {
     try {
@@ -87,9 +89,22 @@ async function main() {
         if (item.meta.publishedAt) console.log(`  ↳ תאריך הפרק: ${item.meta.publishedAt}`);
       }
 
-      const post = DRY ? stubPost(item, transcript) : await generatePost({ transcript, meta: item.meta, categories });
-      const file = writePost(post, item);
+      const { post, report } = DRY
+        ? { post: stubPost(item, transcript), report: null }
+        : await generatePost({ transcript, meta: item.meta, categories });
+
+      // QA gate — mechanical checks, no API cost. Failures hold the post
+      // back as draft:true so a merge can't accidentally publish it.
+      const qa = DRY ? { failures: [], warnings: [] } : runQA({ post, categories, transcript });
+      const held = qa.failures.length > 0;
+      if (held) log.warn(`שער האיכות מצא ${qa.failures.length} כשלים — הפוסט נשמר כטיוטה (draft: true)`);
+
+      const file = writePost(post, item, held);
       console.log(`  ↳ טיוטה: ${path.relative(ROOT, file)}\n`);
+
+      reportSections.push(
+        postReportSection({ post, report, qa, held, file: path.relative(ROOT, file) }),
+      );
 
       if (!KEEP && !DRY) item.markDone();
       created++;
@@ -100,6 +115,46 @@ async function main() {
 
   console.log(`✅ נוצרו ${created} טיוטות ב-src/content/posts/.`);
   console.log('   הריצו `npm run dev` לתצוגה מקדימה, ערכו לפי הצורך, ואז שנו `draft: false` כדי לפרסם.\n');
+
+  writeRunReport(reportSections);
+}
+
+// ---------- run report (becomes the PR body via generate.yml) ----------
+
+const REPORT_FILE = path.join(ROOT, '.generation-report.md');
+
+function postReportSection({ post, report, qa, held, file }) {
+  const lines = [`### ${post.title || file}`, ''];
+  lines.push(`- קובץ: \`${file}\` · קטגוריה: ${post.category || '—'}`);
+  if (report?.analyst) lines.push(`- 🧠 אנליסט: תיק פרק עם ${report.analyst.ideas} רעיונות מדורגים`);
+  if (report?.quotes)
+    lines.push(`- 💬 ציטוטים: ${report.quotes.checked} נבדקו, ${report.quotes.corrections} תוקנו`);
+  if (report?.claims) {
+    lines.push(`- 🔍 אימות עובדתי: ${report.claims.checked} טענות נבדקו, ${report.claims.corrections} תוקנו`);
+    for (const f of report.claims.flagged || []) {
+      lines.push(`  - 🚩 לבדיקה ידנית: "${f.he}" — ${f.flag}`);
+    }
+  }
+  const passes = [report?.editor && 'עריכת לשון', report?.proof && 'הגהה'].filter(Boolean);
+  if (passes.length) lines.push(`- ✍️ ${passes.join(' + ')} הוחלו`);
+  lines.push('', '**שער איכות:**', qaSection(qa));
+  if (held) lines.push('', '> ⚠️ נשמר עם `draft: true` בגלל כשלי איכות — תקנו ושנו ל-false לפני מיזוג.');
+  lines.push('');
+  return lines.join('\n');
+}
+
+function writeRunReport(sections) {
+  const header = [
+    'נוצרו טיוטות חדשות אוטומטית. סיכום הבקרה לכל פוסט למטה.',
+    '',
+    'לפרסום: עברו על כל טיוטה (ועל דגלי ה-🚩 אם יש), ערכו אם צריך, ומזגו. המיזוג ל-main מפעיל את ה-deploy.',
+    '',
+    '---',
+    '',
+  ].join('\n');
+  const body = sections.length ? sections.join('\n---\n\n') : '_לא נוצרו טיוטות בריצה הזו._';
+  fs.writeFileSync(REPORT_FILE, header + body + '\n', 'utf8');
+  console.log(`📋 דו"ח ריצה: ${path.relative(ROOT, REPORT_FILE)}`);
 }
 
 // ---------- sources ----------
@@ -155,6 +210,9 @@ function pickMeta(d = {}) {
     guest: d.guest,
     youtubeUrl: d.youtubeUrl,
     categoryHint: d.categoryHint,
+    // Optional human curation: why this episode, what matters to the audience.
+    // Steers the analyst's ranking and the writer's emphasis.
+    curatorNotes: d.curatorNotes,
     publishedAt: d.publishedAt,
     durationMinutes: d.durationMinutes,
   };
@@ -176,7 +234,7 @@ async function fetchUploadDate(url) {
 
 // ---------- writing ----------
 
-function writePost(post, item) {
+function writePost(post, item, hold = false) {
   const slug = sanitizeSlug(post.slug, `post-${Date.now()}`);
   const file = uniquePath(POSTS, slug);
 
@@ -201,9 +259,10 @@ function writePost(post, item) {
     pubDate: new Date().toISOString().slice(0, 10),
     category,
     tags: Array.isArray(post.tags) ? post.tags : [],
-    // Publish-ready: the Pull Request is the review gate (merge = publish).
-    // Set this to true manually for any post you want to hold back.
-    draft: false,
+    // Publish-ready: the Pull Request is the review gate (merge = publish) —
+    // unless the QA gate found failures, in which case the post is held back
+    // as a draft until a human fixes it and flips this to false.
+    draft: hold,
     readingTime,
     source: Object.keys(source).length ? source : undefined,
   });
