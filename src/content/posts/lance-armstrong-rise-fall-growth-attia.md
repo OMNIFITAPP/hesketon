@@ -4,7 +4,7 @@ description: "שיחה כנה עד כאב עם לאנס ארמסטרונג: על
 pubDate: 2026-07-13
 category: "פסיכולוגיה ומיינדסט"
 tags: ["לאנס ארמסטרונג", "פיטר אטיה", "חוסן נפשי", "טראומה", "רכיבת אופניים"]
-draft: true
+draft: false
 readingTime: 11
 source:
   podcast: "The Peter Attia Drive"

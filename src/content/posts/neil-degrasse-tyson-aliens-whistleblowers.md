@@ -4,7 +4,7 @@ description: "הכותרת מבטיחה שהחושפים צדקו לגבי חי�
 pubDate: 2026-07-13
 category: "מדע וטכנולוגיה"
 tags: ["ניל דגראס טייסון", "חייזרים", "UAP", "קוסמולוגיה", "סטיבן ברטלט"]
-draft: true
+draft: false
 readingTime: 11
 references:
   - authors: "Neil deGrasse Tyson"

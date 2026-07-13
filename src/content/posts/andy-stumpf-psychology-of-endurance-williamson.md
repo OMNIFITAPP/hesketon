@@ -4,7 +4,7 @@ description: "הכותרת מבטיחה תחזית מלחמה, אבל אנדי �
 pubDate: 2026-07-13
 category: "פסיכולוגיה ומיינדסט"
 tags: ["אנדי סטאמפ", "כריס וויליאמסון", "חוסן נפשי", "מוטיבציה", "כישלון"]
-draft: true
+draft: false
 readingTime: 12
 references:
   - authors: "כריס וויליאמסון"
