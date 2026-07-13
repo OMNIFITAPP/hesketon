@@ -93,5 +93,11 @@
     "name": "The Peter Attia Drive",
     "hostId": "peter-attia",
     "description": "שיחות עומק על אריכות ימים, רפואה ובריאות — עם ד\"ר פיטר אטיה."
+  },
+  {
+    "id": "the-tim-ferriss-show",
+    "name": "The Tim Ferriss Show",
+    "hostId": "tim-ferriss",
+    "description": "שיחות ארוכות עם מבצעים מובילים — על עסקים, מדע, יצירה וחיים — עם טים פריס."
   }
 ]
