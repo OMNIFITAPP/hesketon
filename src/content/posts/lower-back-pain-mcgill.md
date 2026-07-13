@@ -4,7 +4,7 @@ description: "כאב גב אינו קללה מסתורית שצריך ללמוד
 pubDate: 2026-07-12
 category: "בריאות וכושר"
 tags: ["כאב גב", "עמוד השדרה", "ביומכניקה", "אימוני יציבות", "פציעות"]
-draft: true
+draft: false
 references:
   - authors: "Stuart McGill"
     title: "Back Mechanic — מדריך להערכה עצמית וטיפול בכאב גב"

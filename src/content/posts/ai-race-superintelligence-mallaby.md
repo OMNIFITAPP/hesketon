@@ -4,7 +4,7 @@ description: "אוטופיה של שפע או טרמינייטור? הסופר �
 pubDate: 2026-07-12
 category: "מדע וטכנולוגיה"
 tags: ["בינה מלאכותית", "על-אינטליגנציה", "גיאופוליטיקה", "סין", "עתיד העבודה"]
-draft: true
+draft: false
 references:
   - authors: "Sebastian Mallaby"
     title: "The Infinity Machine — דמיס הסביס, DeepMind והמרוץ לעל-אינטליגנציה"
