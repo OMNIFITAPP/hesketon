@@ -21,7 +21,8 @@ source:
   guest: "פרופ' סטיוארט מקגיל"
   guestId: "stuart-mcgill"
   youtubeUrl: "https://www.youtube.com/watch?v=Z1_sb1auiV8"
-  durationMinutes: 145
+  publishedAt: 2024-01-29
+  durationMinutes: 165
 ---
 
 <blockquote class="pull--lead">

@@ -18,7 +18,8 @@ source:
   guest: "סבסטיאן מלבי"
   guestId: "sebastian-mallaby"
   youtubeUrl: "https://www.youtube.com/watch?v=-UetKKxKqKU"
-  durationMinutes: 90
+  publishedAt: 2026-06-17
+  durationMinutes: 100
 ---
 
 <blockquote class="pull--lead">
