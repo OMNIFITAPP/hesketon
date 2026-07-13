@@ -101,11 +101,16 @@ export async function generatePost({ transcript, meta, categories, model }) {
   let quotePairs = [];
   if (process.env.QUOTE_GROUNDING !== 'false' && post.bodyMarkdown && Array.isArray(post.quotes)) {
     try {
-      const grounded = await groundQuotes({ body: post.bodyMarkdown, quotes: post.quotes, model });
+      const grounded = await groundQuotes({ body: post.bodyMarkdown, quotes: post.quotes, transcript: text, model });
       post.bodyMarkdown = grounded.body;
       quotePairs = grounded.pairs;
-      report.quotes = { checked: grounded.pairs.length, corrections: grounded.corrections };
+      const unanchored = grounded.unanchored || [];
+      report.quotes = { checked: grounded.pairs.length, corrections: grounded.corrections, unanchored: unanchored.length };
       console.log(`  ↳ נאמנות ציטוטים: ${grounded.corrections} תוקנו מתוך ${grounded.pairs.length}`);
+      if (unanchored.length) {
+        console.warn(`  ⚠️  ${unanchored.length} ציטוטים לא אומתו מול התמליל (מקור אנגלי כנראה שוחזר מהזיכרון) — דורש תיקון ידני מול המקור:`);
+        for (const u of unanchored) console.warn(`       • "${u.he.slice(0, 60)}…"`);
+      }
     } catch (err) {
       console.warn(`  ⚠️  דילוג על נאמנות ציטוטים: ${err.message}`);
     }
