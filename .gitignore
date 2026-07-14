@@ -35,3 +35,10 @@ inbox/**/*.srt
 # via WhatsApp/AirDrop; regenerate any time with `npm run share <slug>`.
 share-kit/
 .generation-report.md
+
+# User review notes — never part of the site build
+reviews/
+**/*סקירה*
+**/* copy.*
+**/*-copy.*
+**/*:classic*
