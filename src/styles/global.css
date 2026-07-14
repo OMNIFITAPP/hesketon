@@ -11,6 +11,12 @@
   --accent-ink: #a61e4d;   /* darker: text/links/hover on light */
   --accent-soft: #fbe0ea;  /* pale wash: chips, waveform bg */
 
+  /* Gold — reserved EXCLUSIVELY for classics ("חובת האזנה").
+     Never use it elsewhere; its scarcity is what makes the canon readable. */
+  --gold: #c9920e;
+  --gold-ink: #8f6606;
+  --gold-soft: #f8eed3;
+
   /* Surfaces (light) */
   --bg: #faf8f3;
   --surface: #ffffff;
@@ -38,6 +44,9 @@
     --accent: #f06595;
     --accent-ink: #ffa8c5;
     --accent-soft: #2c1a24;
+    --gold: #e3b64a;
+    --gold-ink: #f0d086;
+    --gold-soft: #2b2312;
     --bg: #15131c;
     --surface: #1e1b28;
     --ink: #edeaf2;
@@ -644,6 +653,92 @@ a.chip:hover {
   }
 }
 
+/* ---------- Random pick ("לא יודעים מה לקרוא?") ---------- */
+.pick__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.1rem;
+}
+.pick__chips {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+.pick-chip {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 0.24rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color var(--speed) ease, border-color var(--speed) ease,
+    background var(--speed) ease;
+}
+.pick-chip:hover {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+  color: var(--accent-ink);
+}
+.pick-chip[aria-pressed='true'] {
+  color: var(--accent-ink);
+  background: var(--accent-soft);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+}
+/* the classics chip carries the gold, like the posts it filters */
+.pick-chip--classic[aria-pressed='true'] {
+  color: var(--gold-ink);
+  background: var(--gold-soft);
+  border-color: color-mix(in srgb, var(--gold) 55%, var(--line));
+}
+.pick__roll {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--accent-ink);
+  background: transparent;
+  border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  padding: 0.5rem 1.15rem;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--speed) ease, transform var(--speed) ease;
+}
+.pick__roll:hover {
+  background: var(--accent-soft);
+}
+.pick__roll:active {
+  transform: scale(0.96);
+}
+/* swap animation — quick dip out, new content pops back */
+.pick__card {
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+.pick__card.is-rolling {
+  opacity: 0;
+  transform: translateY(10px) scale(0.99);
+}
+/* gold state when the rolled post is a classic */
+.featured--classic {
+  border-color: color-mix(in srgb, var(--gold) 45%, var(--line));
+}
+.featured--classic:hover {
+  border-color: color-mix(in srgb, var(--gold) 75%, var(--line));
+}
+.featured--classic .wave span {
+  background: var(--gold);
+}
+@media (prefers-reduced-motion: reduce) {
+  .pick__card {
+    transition: none;
+  }
+}
+
 /* ---------- YouTube thumbnails ---------- */
 .card__media {
   margin: -1.4rem -1.45rem 0; /* full-bleed to the card edges (cancels card padding) */
@@ -844,6 +939,42 @@ a.chip:hover {
   border-radius: 4px;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+}
+
+/* Classic ("חובת האזנה") — the gold canon marker */
+.classic-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.72rem;
+  color: var(--gold-ink);
+  background: var(--gold-soft);
+  border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent);
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+/* the signature wave turns gold on classics */
+.card--classic .wave span,
+.post-header--classic .wave span,
+.classic-tag .wave span {
+  background: var(--gold);
+}
+.classic-tag .wave {
+  height: 11px;
+  gap: 1.5px;
+}
+.classic-tag .wave span {
+  width: 2px;
+}
+.card--classic {
+  border-color: color-mix(in srgb, var(--gold) 40%, var(--line));
+}
+.card--classic:hover {
+  border-color: color-mix(in srgb, var(--gold) 70%, var(--line));
 }
 
 /* Premium / companion content marker */
@@ -1070,6 +1201,11 @@ a.chip:hover {
 }
 
 /* ---------- Misc ---------- */
+/* An element's display rule (flex/grid/block) silently overrides the UA's
+   [hidden]{display:none} — this guard keeps the hidden attribute honest. */
+[hidden] {
+  display: none !important;
+}
 .page-title {
   padding-block: 2.75rem 1.5rem;
 }

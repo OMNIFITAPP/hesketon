@@ -1,0 +1,244 @@
+---
+// "לא יודעים מה לקרוא?" — the featured block, upgraded to a random picker.
+// Server renders the hand-picked (featured:true) post as real crawlable HTML;
+// the dice button re-rolls the card client-side from an inlined post index.
+// Filter chips: all / classics (gold) / categories. Filter choice persists in
+// localStorage; every roll fires an Umami event so we can see usage.
+import FormattedDate from './FormattedDate.astro';
+import ClassicTag from './ClassicTag.astro';
+import { CATEGORIES, categoryByName, youtubeThumb } from '../consts';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  posts: CollectionEntry<'posts'>[];
+  initial: CollectionEntry<'posts'>;
+}
+const { posts, initial } = Astro.props;
+
+const dateFmt = new Intl.DateTimeFormat('he', { day: 'numeric', month: 'long', year: 'numeric' });
+const fmtAudio = (min: number) => {
+  const h = Math.floor(min / 60);
+  const m = min % 60;
+  return h ? `${h}:${String(m).padStart(2, '0')}:00` : `${m}:00`;
+};
+
+// Compact index for client-side rolling (only what the card renders).
+const index = posts.map((p) => {
+  const d = p.data;
+  const cat = categoryByName(d.category);
+  const date = d.source?.publishedAt ?? d.pubDate;
+  return {
+    slug: p.id,
+    title: d.title,
+    desc: d.description,
+    cat: d.category,
+    catSlug: cat?.slug ?? '',
+    thumb: youtubeThumb(d.source?.youtubeUrl) ?? '',
+    thumbHq: youtubeThumb(d.source?.youtubeUrl, 'hq') ?? '',
+    audio: d.source?.durationMinutes ?? 0,
+    read: d.readingTime ?? 0,
+    date: dateFmt.format(date),
+    podcast: d.source?.podcast ?? '',
+    classic: !!d.classic,
+  };
+});
+const indexJson = JSON.stringify(index).replace(/</g, '\\u003c');
+
+// Chips: only filters that can actually return something.
+const classicsCount = index.filter((p) => p.classic).length;
+const catChips = CATEGORIES.filter((c) => index.some((p) => p.cat === c.name));
+
+// Initial (server-rendered) card = the hand-picked featured post.
+const d = initial.data;
+const cat = categoryByName(d.category);
+const audio = d.source?.durationMinutes;
+const thumb = youtubeThumb(d.source?.youtubeUrl);
+const thumbHq = youtubeThumb(d.source?.youtubeUrl, 'hq');
+const episodeDate = d.source?.publishedAt ?? d.pubDate;
+const href = `/posts/${initial.id}`;
+---
+
+<section class="section wrap" style="padding-bottom:0" data-pick>
+  <div class="pick__bar">
+    <p class="eyebrow" style="margin:0">לא יודעים מה לקרוא?</p>
+    <div class="pick__chips" data-pick-chips hidden>
+      <button class="pick-chip" type="button" data-filter="all" aria-pressed="true">הכול</button>
+      {classicsCount > 0 && (
+        <button class="pick-chip pick-chip--classic" type="button" data-filter="classic" aria-pressed="false">
+          קלאסיקות
+        </button>
+      )}
+      {catChips.map((c) => (
+        <button class="pick-chip" type="button" data-filter={`cat:${c.name}`} aria-pressed="false">
+          {c.name}
+        </button>
+      ))}
+      <button class="pick__roll" type="button" data-pick-roll>🎲 הגרילו לי פרק</button>
+    </div>
+  </div>
+
+  <article class:list={['featured', 'pick__card', d.classic && 'featured--classic']} data-pick-card>
+    <a
+      class="featured__media"
+      href={href}
+      aria-hidden="true"
+      tabindex="-1"
+      data-pk="media"
+      hidden={!thumb}
+    >
+      <img
+        src={thumb}
+        alt=""
+        loading="lazy"
+        decoding="async"
+        width="640"
+        height="360"
+        data-pk="img"
+        onerror="this.onerror=null;if(this.dataset.hq)this.src=this.dataset.hq"
+        data-hq={thumbHq}
+      />
+    </a>
+    <div class="featured__body">
+      <div class="featured__top">
+        <span class="card__chips">
+          <a class="chip" href={cat ? `/categories/${cat.slug}` : '#'} data-pk="cat">{cat?.name ?? d.category}</a>
+          <ClassicTag class="pick__classic" hidden={!d.classic} />
+        </span>
+        <span
+          class="compress"
+          role="img"
+          data-pk="comp"
+          hidden={!(audio && d.readingTime)}
+        >
+          <span class="wave" aria-hidden="true">
+            <span style="height:40%"></span><span style="height:72%"></span><span style="height:100%"
+            ></span><span style="height:52%"></span><span style="height:84%"></span><span style="height:44%"></span>
+          </span>
+          <span data-pk="audio">{audio ? fmtAudio(audio) : ''}</span>
+          <span class="arrow">⟶</span>
+          <span data-pk="read">{d.readingTime ?? ''}′</span>
+        </span>
+      </div>
+      <h2 class="featured__title"><a href={href} data-pk="title">{d.title}</a></h2>
+      <p class="featured__desc" data-pk="desc">{d.description}</p>
+      <div class="featured__meta">
+        <time data-pk="date">{dateFmt.format(episodeDate)}</time>
+        <span class="dot" data-pk="podcast" hidden={!d.source?.podcast}>מתוך «{d.source?.podcast}»</span>
+      </div>
+    </div>
+  </article>
+</section>
+
+<script type="application/json" id="pick-index" set:html={indexJson} />
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-pick]');
+  const indexEl = document.getElementById('pick-index');
+  if (root && indexEl) {
+    type P = {
+      slug: string; title: string; desc: string; cat: string; catSlug: string;
+      thumb: string; thumbHq: string; audio: number; read: number;
+      date: string; podcast: string; classic: boolean;
+    };
+    const posts: P[] = JSON.parse(indexEl.textContent || '[]');
+    const card = root.querySelector<HTMLElement>('[data-pick-card]')!;
+    const chipsWrap = root.querySelector<HTMLElement>('[data-pick-chips]')!;
+    const rollBtn = root.querySelector<HTMLButtonElement>('[data-pick-roll]')!;
+    const q = (k: string) => root.querySelector<HTMLElement>(`[data-pk="${k}"]`)!;
+
+    chipsWrap.hidden = false; // chips + dice only make sense with JS
+
+    let filter = localStorage.getItem('hsk-pick-filter') || 'all';
+    let current = ''; // slug currently shown (initial is the featured post)
+
+    const pool = () =>
+      posts.filter((p) =>
+        filter === 'all' ? true : filter === 'classic' ? p.classic : p.cat === filter.slice(4),
+      );
+
+    const applyChips = () => {
+      chipsWrap.querySelectorAll<HTMLButtonElement>('.pick-chip').forEach((b) => {
+        b.setAttribute('aria-pressed', String(b.dataset.filter === filter));
+      });
+    };
+    // restore a saved filter only if it still exists as a chip
+    if (![...chipsWrap.querySelectorAll<HTMLElement>('.pick-chip')].some((b) => b.dataset.filter === filter)) {
+      filter = 'all';
+    }
+    applyChips();
+
+    const fmtAudio = (min: number) => {
+      const h = Math.floor(min / 60);
+      const m = min % 60;
+      return h ? `${h}:${String(m).padStart(2, '0')}:00` : `${m}:00`;
+    };
+
+    const render = (p: P) => {
+      const href = `/posts/${p.slug}`;
+      const media = q('media') as HTMLAnchorElement;
+      const img = q('img') as HTMLImageElement;
+      if (p.thumb) {
+        media.hidden = false;
+        media.href = href;
+        img.dataset.hq = p.thumbHq;
+        img.src = p.thumb;
+      } else {
+        media.hidden = true;
+      }
+      const cat = q('cat') as HTMLAnchorElement;
+      cat.textContent = p.cat;
+      cat.href = p.catSlug ? `/categories/${p.catSlug}` : '#';
+      const comp = q('comp');
+      if (p.audio && p.read) {
+        comp.hidden = false;
+        q('audio').textContent = fmtAudio(p.audio);
+        q('read').textContent = `${p.read}′`;
+      } else {
+        comp.hidden = true;
+      }
+      const title = q('title') as HTMLAnchorElement;
+      title.textContent = p.title;
+      title.href = href;
+      q('desc').textContent = p.desc;
+      q('date').textContent = p.date;
+      const pod = q('podcast');
+      pod.hidden = !p.podcast;
+      pod.textContent = p.podcast ? `מתוך «${p.podcast}»` : '';
+      const tag = root.querySelector<HTMLElement>('.pick__classic')!;
+      tag.hidden = !p.classic;
+      card.classList.toggle('featured--classic', p.classic);
+      current = p.slug;
+    };
+
+    const roll = () => {
+      const candidates = pool().filter((p) => p.slug !== current);
+      const list = candidates.length ? candidates : pool();
+      if (!list.length) return;
+      const next = list[Math.floor(Math.random() * list.length)];
+      card.classList.add('is-rolling');
+      setTimeout(() => {
+        render(next);
+        card.classList.remove('is-rolling');
+      }, 190);
+      rollBtn.textContent = '🎲 עוד אחד';
+      (window as any).umami?.track?.('random-pick', { filter });
+    };
+
+    rollBtn.addEventListener('click', roll);
+    chipsWrap.querySelectorAll<HTMLButtonElement>('.pick-chip').forEach((b) =>
+      b.addEventListener('click', () => {
+        filter = b.dataset.filter || 'all';
+        localStorage.setItem('hsk-pick-filter', filter);
+        applyChips();
+        roll(); // picking a filter immediately delivers a pick — no second tap
+      }),
+    );
+  }
+</script>
+
+<style is:global>
+  /* when a rolled post has no thumbnail, let the body take the full card */
+  .featured:has(.featured__media[hidden]) {
+    grid-template-columns: 1fr;
+  }
+</style>

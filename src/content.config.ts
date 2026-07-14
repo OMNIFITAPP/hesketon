@@ -25,6 +25,12 @@ const posts = defineCollection({
     inNewsletter: z.boolean().default(false),
     /** Show in the homepage hero rotation? */
     featured: z.boolean().default(false),
+    /**
+     * Canon marker — "חובת האזנה". Orthogonal to category (a classic Musk
+     * episode is still tech). Drives the gold treatment, /classics and the
+     * random-picker chip. Curated by hand; never auto-set.
+     */
+    classic: z.boolean().default(false),
     /** Marks companion/deep-dive pieces as premium (for future paid access). */
     premium: z.boolean().default(false),
     /** 2–4 pointers to the depth we left out — the premium "hook", not the hidden core. */

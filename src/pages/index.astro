@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
-import Featured from '../components/Featured.astro';
+import RandomPick from '../components/RandomPick.astro';
 import NewsletterForm from '../components/NewsletterForm.astro';
 import { CATEGORIES, SITE } from '../consts';
 import { getPublishedPosts } from '../utils';
@@ -28,11 +28,11 @@ const jsonLd = {
 
 const posts = await getPublishedPosts();
 
-// Hand-picked spotlight: the newest post flagged `featured: true` in its
-// frontmatter. Manually controlled — flip the flag to swap it, no schedule.
-// It's pulled out of the "הכי חדש" grid below so it never shows twice.
-const featured = posts.find((p) => p.data.featured);
-const rest = featured ? posts.filter((p) => p.id !== featured.id) : posts;
+// The random-pick block opens on the hand-picked `featured: true` post (real
+// crawlable HTML), then the dice re-rolls it client-side from the full index.
+// The initial pick is pulled out of the "הכי חדש" grid so it never shows twice.
+const featured = posts.find((p) => p.data.featured) ?? posts[0];
+const rest = posts.filter((p) => p.id !== featured.id);
 const latest = rest.slice(0, 9);
 
 // Ambient waveform for the hero panel.
@@ -72,7 +72,7 @@ const heroBars = [
     </div>
   </section>
 
-  {featured && <Featured post={featured} />}
+  <RandomPick posts={posts} initial={featured} />
 
   <section class="section wrap">
     {

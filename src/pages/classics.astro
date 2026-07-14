@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+import { getPublishedPosts } from '../utils';
+
+// The canon — every post flagged `classic: true`. Evergreen SEO asset:
+// people search for these episodes years after they aired.
+const posts = await getPublishedPosts();
+const classics = posts.filter((p) => p.data.classic);
+---
+
+<BaseLayout
+  title="חובת האזנה — הקלאסיקות"
+  description="הפרקים שמגדירים את המדיום: קלאסיקות הפודקאסטים שחייבים להכיר — מזוקקות לעברית, בכמה דקות קריאה."
+>
+  <section class="page-title wrap">
+    <p class="eyebrow">הקאנון</p>
+    <h1>חובת האזנה<span style="color:var(--gold)">.</span></h1>
+    <p class="lead" style="max-width:38rem;color:var(--ink-soft);font-size:1.15rem">
+      יש פרקים שהם רגעים מכוננים של המדיום — שיחות שאנשים חוזרים אליהן שנים אחרי שיצאו.
+      אלה הקלאסיקות: מזוקקות לעברית, מסומנות בזהב, שוות כל דקה.
+    </p>
+  </section>
+
+  <section class="section wrap" style="padding-top:1rem">
+    {
+      classics.length > 0 ? (
+        <div class="post-grid">
+          {classics.map((post) => (
+            <PostCard post={post} />
+          ))}
+        </div>
+      ) : (
+        <div class="classics-empty">
+          <p style="font-family:var(--font-display);font-weight:700;font-size:1.2rem;margin-bottom:.4rem">
+            הקלאסיקות הראשונות בדרך.
+          </p>
+          <p class="muted" style="max-width:34rem">
+            אנחנו מזקקים עכשיו את פרקי החובה הראשונים. בינתיים —
+            <a href="/posts">כל הפרקים כאן</a>, והחדשים מגיעים ישר לניוזלטר.
+          </p>
+        </div>
+      )
+    }
+  </section>
+</BaseLayout>
+
+<style>
+  .classics-empty {
+    border: 1px dashed color-mix(in srgb, var(--gold) 50%, var(--line));
+    border-radius: var(--radius);
+    padding: 2rem 1.8rem;
+    background: color-mix(in srgb, var(--gold-soft) 40%, transparent);
+  }
+</style>

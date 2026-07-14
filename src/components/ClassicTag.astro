@@ -1,0 +1,16 @@
+---
+// The gold canon marker — "חובת האזנה". Gold is reserved for classics only.
+interface Props {
+  class?: string;
+  hidden?: boolean;
+}
+const { class: cls, hidden } = Astro.props;
+---
+
+<span class:list={['classic-tag', cls]} hidden={hidden}>
+  <span class="wave" aria-hidden="true">
+    <span style="height:55%"></span><span style="height:95%"></span><span style="height:65%"
+    ></span><span style="height:100%"></span><span style="height:70%"></span>
+  </span>
+  קלאסיקה
+</span>

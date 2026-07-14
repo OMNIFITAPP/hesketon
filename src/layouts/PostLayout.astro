@@ -6,6 +6,7 @@ import Share from '../components/Share.astro';
 import References from '../components/References.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
+import ClassicTag from '../components/ClassicTag.astro';
 import LikeButton from '../components/LikeButton.astro';
 import { SITE, categoryByName, tagToSlug, youtubeThumb, personById, personByName, podcastById, podcastByName } from '../consts';
 import { getRelatedPosts } from '../utils';
@@ -56,8 +57,9 @@ const jsonLd = {
   <ReadingProgress />
 
   <article>
-    <header class="post-header wrap wrap--reading">
+    <header class:list={['post-header', 'wrap', 'wrap--reading', d.classic && 'post-header--classic']}>
       {cat && <a class="chip" href={`/categories/${cat.slug}`}>{cat.name}</a>}
+      {d.classic && <ClassicTag />}
       {d.premium && <span class="premium-tag">✦ פרימיום</span>}
       <h1>{d.title}</h1>
       <div class="post-meta">

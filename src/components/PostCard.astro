@@ -1,6 +1,7 @@
 ---
 import FormattedDate from './FormattedDate.astro';
 import Compression from './Compression.astro';
+import ClassicTag from './ClassicTag.astro';
 import { categoryByName, youtubeThumb } from '../consts';
 import type { CollectionEntry } from 'astro:content';
 
@@ -19,7 +20,7 @@ const isEpisodeDate = !!d.source?.publishedAt;
 ---
 
 <article
-  class="card"
+  class:list={['card', d.classic && 'card--classic']}
   data-category={d.category}
   data-date={episodeDate.toISOString()}
   data-guest={d.source?.guest}
@@ -43,6 +44,7 @@ const isEpisodeDate = !!d.source?.publishedAt;
   <div class="card__top">
     <span class="card__chips">
       {cat && <a class="chip" href={`/categories/${cat.slug}`}>{cat.name}</a>}
+      {d.classic && <ClassicTag />}
       {d.premium && <span class="premium-tag">✦ פרימיום</span>}
     </span>
     <Compression audioMinutes={audio} readMinutes={d.readingTime} />
