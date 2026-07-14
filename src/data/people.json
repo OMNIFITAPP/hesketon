@@ -322,5 +322,17 @@
     "nameHe": "מתיו ווקר",
     "nameEn": "Matthew Walker",
     "title": "פרופ' לנוירומדע ופסיכולוגיה, מחבר \"Why We Sleep\""
+  },
+  {
+    "id": "rick-rubin",
+    "nameHe": "ריק רובין",
+    "nameEn": "Rick Rubin",
+    "title": "מפיק מוזיקלי אגדי, מחבר \"The Creative Act\""
+  },
+  {
+    "id": "kendrick-lamar",
+    "nameHe": "קנדריק לאמאר",
+    "nameEn": "Kendrick Lamar",
+    "title": "ראפר וזוכה פוליצר, מהאמנים המשפיעים בדורו"
   }
 ]
