@@ -99,5 +99,11 @@
     "name": "The Tim Ferriss Show",
     "hostId": "tim-ferriss",
     "description": "שיחות ארוכות עם מבצעים מובילים — על עסקים, מדע, יצירה וחיים — עם טים פריס."
+  },
+  {
+    "id": "the-iced-coffee-hour",
+    "name": "The Iced Coffee Hour",
+    "hostId": "graham-stephan",
+    "description": "שיחות על כסף, השקעות ויזמות — עם גרהם סטפן וג'ק סלבי."
   }
 ]

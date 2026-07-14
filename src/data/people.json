@@ -298,5 +298,17 @@
     "nameHe": "קווין אולירי",
     "nameEn": "Kevin O'Leary",
     "title": "משקיע ויזם, כוכב \"Shark Tank\" (\"מר וונדרפול\")"
+  },
+  {
+    "id": "graham-stephan",
+    "nameHe": "גרהם סטפן",
+    "nameEn": "Graham Stephan",
+    "title": "יוצר תוכן פיננסי, מנחה The Iced Coffee Hour"
+  },
+  {
+    "id": "chris-camillo",
+    "nameHe": "כריס קמילו",
+    "nameEn": "Chris Camillo",
+    "title": "משקיע, חלוץ שיטת ה\"ארביטראז' החברתי\""
   }
 ]
