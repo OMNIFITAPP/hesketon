@@ -5,6 +5,7 @@ pubDate: 2026-07-14
 category: "פסיכולוגיה ומיינדסט"
 tags: ["קנדריק לאמאר", "ריק רובין", "יצירתיות", "תהליך יצירתי", "מוזיקה"]
 draft: false
+classic: true
 readingTime: 9
 source:
   podcast: "GQ"
