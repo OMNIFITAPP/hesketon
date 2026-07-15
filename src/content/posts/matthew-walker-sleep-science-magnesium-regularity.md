@@ -4,7 +4,7 @@ description: "חוקר השינה מתיו ווקר עם מחקרים חדשים
 pubDate: 2026-07-14
 category: "בריאות וכושר"
 tags: ["מתיו ווקר", "שינה", "מגנזיום", "מלטונין", "בריאות"]
-draft: true
+draft: false
 readingTime: 12
 references:
   - authors: "Matthew Walker"

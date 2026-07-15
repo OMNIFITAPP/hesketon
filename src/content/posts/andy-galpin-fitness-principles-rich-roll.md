@@ -4,7 +4,7 @@ description: "פרופ' אנדי גלפין מסביר למה רוב האנשי�
 pubDate: 2026-07-14
 category: "בריאות וכושר"
 tags: ["אנדי גלפין", "ריץ' רול", "אימון", "כושר", "פיזיולוגיה של המאמץ"]
-draft: true
+draft: false
 readingTime: 11
 source:
   podcast: "The Rich Roll Podcast"

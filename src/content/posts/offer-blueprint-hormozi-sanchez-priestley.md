@@ -4,7 +4,7 @@ description: "שלושה מהיזמים המשפיעים באינטרנט מפר
 pubDate: 2026-07-14
 category: "עסקים וקריירה"
 tags: ["אלכס הורמוזי", "קודי סאנצ'ז", "דניאל פריסטלי", "יזמות", "תמחור"]
-draft: true
+draft: false
 readingTime: 13
 source:
   podcast: "The Diary of a CEO"

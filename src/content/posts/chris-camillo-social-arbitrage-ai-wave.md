@@ -4,7 +4,7 @@ description: "כריס קמילו, חלוץ ה'ארביטראז' החברתי', 
 pubDate: 2026-07-14
 category: "כסף והשקעות"
 tags: ["כריס קמילו", "השקעות", "בינה מלאכותית", "ארביטראז' חברתי", "פסיכולוגיה של שוק"]
-draft: true
+draft: false
 readingTime: 12
 source:
   podcast: "The Iced Coffee Hour"

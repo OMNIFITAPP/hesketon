@@ -4,7 +4,7 @@ description: "מורגן האוזל, מחבר 'הפסיכולוגיה של הכ�
 pubDate: 2026-07-14
 category: "כסף והשקעות"
 tags: ["מורגן האוזל", "אנדרו הוברמן", "פסיכולוגיה של כסף", "חופש כלכלי", "אושר"]
-draft: true
+draft: false
 readingTime: 12
 references:
   - authors: "Morgan Housel"

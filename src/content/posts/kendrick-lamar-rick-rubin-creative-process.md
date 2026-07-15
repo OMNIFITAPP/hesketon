@@ -4,7 +4,7 @@ description: "בשיחה נדירה עם המפיק ריק רובין, קנדר�
 pubDate: 2026-07-14
 category: "פסיכולוגיה ומיינדסט"
 tags: ["קנדריק לאמאר", "ריק רובין", "יצירתיות", "תהליך יצירתי", "מוזיקה"]
-draft: true
+draft: false
 readingTime: 9
 source:
   podcast: "GQ"

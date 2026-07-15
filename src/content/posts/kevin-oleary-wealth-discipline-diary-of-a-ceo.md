@@ -4,7 +4,7 @@ description: "קווין אולירי מ-Shark Tank חושף את שיטת הה�
 pubDate: 2026-07-14
 category: "כסף והשקעות"
 tags: ["קווין אולירי", "השקעות", "חופש כלכלי", "משמעת", "יזמות"]
-draft: true
+draft: false
 readingTime: 12
 source:
   podcast: "The Diary of a CEO"
