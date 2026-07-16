@@ -60,13 +60,13 @@ function buildAnalystSystemPrompt() {
     }
   ],
   "candidateQuotes": [
-    { "en": "verbatim English quote", "speaker": "מי אמר", "why": "למה הוא חזק כציטוט פותח/גוף" }
+    { "en": "verbatim English quote", "speaker": "מי אמר", "impact": "מה הופך אותו לזכיר / איך הוא מגלם את התזה", "selfContained": true }
   ],
   "context": "רקע שהכותב צריך לתת לקורא הישראלי (מי האורח, מה הפודקאסט, מונחים)"
 }
 
 - keyIdeas: בין 10 ל-18 רעיונות, ממוינים מהחשוב לפחות חשוב (importance מ-5 ל-1).
-- candidateQuotes: 4-6 מובאות.
+- candidateQuotes: 4-6 מובאות, מדורגות לפי אימפקט ביחס לתזה (מה זכיר, מה מגלם את הטענה — לא "נשמע ציטוטי"). סמן selfContained=false לכל מובאה שאינה מובנת בלי המשפט שלפניה (מושא/כינוי מחוץ למרכאות); הכותב יעדיף self-contained וינסח את השאר כפרוזה.
 - id ייחודי לכל רעיון (I1, I2, ...).`;
 }
 
