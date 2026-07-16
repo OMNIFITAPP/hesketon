@@ -28,6 +28,11 @@ const BANNED_PHRASES = [
   'בשיחה עלה',
 ];
 
+// Foreign terms transliterated into Hebrew letters instead of translated.
+// A warning (not a failure) — flags for human review; grows over time. The v3
+// writer prompt prevents these at generation; this is the backstop for repeats.
+const TRANSLITERATION_DENYLIST = ['ווארבלס', 'וורבלס', 'סטרסור'];
+
 /**
  * @param {{ post: object, categories: {name:string}[], transcript?: string }} args
  * @returns {{ failures: string[], warnings: string[] }}
@@ -76,6 +81,13 @@ export function runQA({ post, categories, transcript = '' }) {
   // ── Style: AI tells ──
   for (const phrase of BANNED_PHRASES) {
     if (visible.includes(phrase)) warnings.push(`ביטוי אסור מסגנון הבית: "${phrase}"`);
+  }
+
+  // ── Transliterations written in Hebrew letters (strip niqqud first, so a
+  //    vowelized form like "הוֶוארבלס" still matches the bare "ווארבלס"). ──
+  const denuded = visible.replace(/[֑-ׇ]/g, '');
+  for (const t of TRANSLITERATION_DENYLIST) {
+    if (denuded.includes(t)) warnings.push(`תעתיק לועזי (עדיף מונח עברי): "${t}"`);
   }
 
   // ── <mark> discipline: sparse, and never inside the tldr box ──
