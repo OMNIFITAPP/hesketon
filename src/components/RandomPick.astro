@@ -7,6 +7,7 @@
 import FormattedDate from './FormattedDate.astro';
 import ClassicTag from './ClassicTag.astro';
 import { CATEGORIES, categoryByName, youtubeThumb } from '../consts';
+import { bestThumb } from '../lib/thumbs';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -23,25 +24,30 @@ const fmtAudio = (min: number) => {
 };
 
 // Compact index for client-side rolling (only what the card renders).
-const index = posts.map((p) => {
-  const d = p.data;
-  const cat = categoryByName(d.category);
-  const date = d.source?.publishedAt ?? d.pubDate;
-  return {
-    slug: p.id,
-    title: d.title,
-    desc: d.description,
-    cat: d.category,
-    catSlug: cat?.slug ?? '',
-    thumb: youtubeThumb(d.source?.youtubeUrl) ?? '',
-    thumbHq: youtubeThumb(d.source?.youtubeUrl, 'hq') ?? '',
-    audio: d.source?.durationMinutes ?? 0,
-    read: d.readingTime ?? 0,
-    date: dateFmt.format(date),
-    podcast: d.source?.podcast ?? '',
-    classic: !!d.classic,
-  };
-});
+// thumb is build-time resolved so a re-roll never lands on a 404 (older
+// videos have no maxresdefault); bestThumb caches per id, so this is one
+// HEAD per unique video across the whole build.
+const index = await Promise.all(
+  posts.map(async (p) => {
+    const d = p.data;
+    const cat = categoryByName(d.category);
+    const date = d.source?.publishedAt ?? d.pubDate;
+    return {
+      slug: p.id,
+      title: d.title,
+      desc: d.description,
+      cat: d.category,
+      catSlug: cat?.slug ?? '',
+      thumb: (await bestThumb(d.source?.youtubeUrl)) ?? '',
+      thumbHq: youtubeThumb(d.source?.youtubeUrl, 'hq') ?? '',
+      audio: d.source?.durationMinutes ?? 0,
+      read: d.readingTime ?? 0,
+      date: dateFmt.format(date),
+      podcast: d.source?.podcast ?? '',
+      classic: !!d.classic,
+    };
+  }),
+);
 const indexJson = JSON.stringify(index).replace(/</g, '\\u003c');
 
 // Chips: only filters that can actually return something.
@@ -52,7 +58,7 @@ const catChips = CATEGORIES.filter((c) => index.some((p) => p.cat === c.name));
 const d = initial.data;
 const cat = categoryByName(d.category);
 const audio = d.source?.durationMinutes;
-const thumb = youtubeThumb(d.source?.youtubeUrl);
+const thumb = await bestThumb(d.source?.youtubeUrl);
 const thumbHq = youtubeThumb(d.source?.youtubeUrl, 'hq');
 const episodeDate = d.source?.publishedAt ?? d.pubDate;
 const href = `/posts/${initial.id}`;
