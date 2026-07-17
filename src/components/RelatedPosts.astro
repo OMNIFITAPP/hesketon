@@ -1,6 +1,7 @@
 ---
 import Compression from './Compression.astro';
 import { categoryByName, youtubeThumb } from '../consts';
+import { bestThumb } from '../lib/thumbs';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -10,7 +11,8 @@ const { posts } = Astro.props;
 const [hero, ...more] = posts;
 
 const heroCat = hero ? categoryByName(hero.data.category) : undefined;
-const heroThumb = hero ? youtubeThumb(hero.data.source?.youtubeUrl) : undefined;
+// Build-time resolved (older videos 404 on maxresdefault); onerror is a backstop.
+const heroThumb = hero ? await bestThumb(hero.data.source?.youtubeUrl) : undefined;
 const heroThumbHq = hero ? youtubeThumb(hero.data.source?.youtubeUrl, 'hq') : undefined;
 ---
 

@@ -3,6 +3,7 @@ import FormattedDate from './FormattedDate.astro';
 import Compression from './Compression.astro';
 import ClassicTag from './ClassicTag.astro';
 import { categoryByName, youtubeThumb } from '../consts';
+import { bestThumb } from '../lib/thumbs';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -12,7 +13,9 @@ const { post } = Astro.props;
 const d = post.data;
 const cat = categoryByName(d.category);
 const audio = d.source?.durationMinutes;
-const thumb = youtubeThumb(d.source?.youtubeUrl);
+// Resolved at build time so the card's src is a URL that actually exists
+// (older videos have no maxresdefault); the onerror below is a last resort.
+const thumb = await bestThumb(d.source?.youtubeUrl);
 const thumbHq = youtubeThumb(d.source?.youtubeUrl, 'hq');
 // Prefer the episode's own publish date over when we posted the summary.
 const episodeDate = d.source?.publishedAt ?? d.pubDate;
