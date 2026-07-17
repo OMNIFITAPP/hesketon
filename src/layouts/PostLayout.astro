@@ -9,6 +9,7 @@ import RelatedPosts from '../components/RelatedPosts.astro';
 import ClassicTag from '../components/ClassicTag.astro';
 import LikeButton from '../components/LikeButton.astro';
 import { SITE, categoryByName, tagToSlug, youtubeThumb, personById, personByName, podcastById, podcastByName } from '../consts';
+import { bestThumb } from '../lib/thumbs';
 import { getRelatedPosts } from '../utils';
 import type { CollectionEntry } from 'astro:content';
 
@@ -26,7 +27,9 @@ const episodeDate = d.source?.publishedAt ?? d.pubDate;
 const isEpisodeDate = !!d.source?.publishedAt;
 const siteUrl = Astro.site ?? new URL(SITE.url);
 const url = new URL(`/posts/${post.id}`, siteUrl).href;
-const thumb = youtubeThumb(d.source?.youtubeUrl);
+// Probed at build time: og:image and JSON-LD are read by crawlers that never
+// run the onerror fallback below, so they need a URL that actually resolves.
+const thumb = await bestThumb(d.source?.youtubeUrl);
 const thumbHq = youtubeThumb(d.source?.youtubeUrl, 'hq');
 
 const jsonLd = {
