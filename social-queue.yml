@@ -366,7 +366,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-07-19T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "כל דבר שאי פעם עשיתי בחיי — לא רציתי לעשות אותו." 🔥
 
@@ -410,7 +410,9 @@ items:
         https://hesketon.co.il/social/2026-07-19_carousel-david-goggins-huberman-i/david-goggins-huberman-inner-strength-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-07-19_carousel-david-goggins-huberman-i/david-goggins-huberman-inner-strength-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Da-9btWFolR/
+    publishedAt: '2026-07-19T18:00:51.602Z'
+    mediaId: '18452486830188162'
   - id: 2026-07-20_quote-matthew-walker-sleep-sci
     slug: matthew-walker-sleep-science-magnesium-regularity
     platform: instagram
