@@ -10,8 +10,12 @@ references:
     year: 2020
     title: "Breath: The New Science of a Lost Art"
     source: "ספר (Riverhead Books)"
-  - title: "מחקר פרמינגהם (Framingham Heart Study) — תפקוד ריאות כמנבא תוחלת חיים"
-    source: "מחקר אורך רב-שנים"
+    url: "https://www.penguinrandomhouse.com/books/547761/breath-by-james-nestor/"
+  - authors: "Kannel WB, Hubert H, Lew EA"
+    year: 1983
+    title: "מחקר פרמינגהם — הקיבולת החיונית של הריאות כמנבא תחלואת לב וכלי דם"
+    source: "American Heart Journal 105(2):311–315"
+    url: "https://doi.org/10.1016/0002-8703(83)90532-x"
 source:
   podcast: "The Rich Roll Podcast"
   podcastId: "the-rich-roll-podcast"

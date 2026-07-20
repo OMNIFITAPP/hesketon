@@ -9,6 +9,7 @@ references:
   - authors: "Stuart McGill"
     title: "Back Mechanic — מדריך להערכה עצמית וטיפול בכאב גב"
     source: "ספר (Backfit Pro)"
+    url: "https://www.backfitpro.com/books/back-mechanic-the-mcgill-method-to-fix-back-pain/"
   - authors: "W.H. Kirkaldy-Willis"
     title: "Managing Low Back Pain — תיאור מפל חוסר-היציבות בעמוד השדרה"
     source: "ספר"
