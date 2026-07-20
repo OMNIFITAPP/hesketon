@@ -419,7 +419,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-07-20T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אם רמת המגנזיום שלך כבר תקינה — כל מה שאתה עושה זה לייצר שתן יקר." 💊
 
@@ -444,7 +444,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-07-20_quote-matthew-walker-sleep-sci/matthew-walker-sleep-science-magnesium-regularity-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DbBofqpjRjS/
+    publishedAt: '2026-07-20T18:55:35.481Z'
+    mediaId: '17980593879048518'
   - id: 2026-07-21_lessons-ido-portal-movement-mind
     slug: ido-portal-movement-mind-body-huberman
     platform: instagram
