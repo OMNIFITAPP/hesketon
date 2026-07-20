@@ -349,7 +349,7 @@
   },
   {
     "id": "bob-lazar",
-    "nameHe": "בוב לזאר",
+    "nameHe": "בוב לזר",
     "nameEn": "Bob Lazar",
     "title": "פיזיקאי שטוען כי עבד על הנדסה לאחור של חלליות ב-S4 (אזור 51)"
   },
@@ -358,5 +358,29 @@
     "nameHe": "ג'רמי קורבל",
     "nameEn": "Jeremy Corbell",
     "title": "יוצר סרטים תיעודיים וחוקר תופעת ה-UFO"
+  },
+  {
+    "id": "ray-dalio",
+    "nameHe": "ריי דליו",
+    "nameEn": "Ray Dalio",
+    "title": "מייסד ברידג'ווטר, משקיע מאקרו"
+  },
+  {
+    "id": "sam-parr",
+    "nameHe": "סם פאר",
+    "nameEn": "Sam Parr",
+    "title": "יזם ומנחה פודקאסט"
+  },
+  {
+    "id": "shaan-puri",
+    "nameHe": "שון פורי",
+    "nameEn": "Shaan Puri",
+    "title": "יזם ומנחה פודקאסט"
+  },
+  {
+    "id": "mrbeast",
+    "nameHe": "MrBeast",
+    "nameEn": "MrBeast",
+    "title": "יוצר תוכן ויזם"
   }
 ]
