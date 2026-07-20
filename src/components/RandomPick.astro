@@ -1,7 +1,11 @@
 ---
 // "לא יודעים מה לקרוא?" — the featured block, upgraded to a random picker.
 // Server renders the hand-picked (featured:true) post as real crawlable HTML;
-// the dice button re-rolls the card client-side from an inlined post index.
+// with JS, an inline script swaps it pre-paint for the "ghost card" — the
+// dormant hesketon mascot (בועת ההסכת) — so nothing shows until the reader
+// asks. Any chip / the dice / the ghost itself rolls: the mascot dances
+// (1.5s first roll, 0.6s after, none under reduced-motion), then a random
+// card is revealed from the inlined post index.
 // Filter chips: all / classics (gold) / categories. Filter choice persists in
 // localStorage; every roll fires an Umami event so we can see usage.
 import FormattedDate from './FormattedDate.astro';
@@ -83,6 +87,28 @@ const href = `/posts/${initial.id}`;
     </div>
   </div>
 
+  <button class="pick__ghost" type="button" data-pick-ghost hidden>
+    <svg class="hsk" viewBox="0 0 110 96" width="150" height="131" aria-hidden="true">
+      <g class="hsk__body">
+        <rect x="22" y="12" width="66" height="68" rx="26" fill="var(--accent)"></rect>
+        <circle cx="36" cy="52" r="4.5" fill="#fff" opacity=".22"></circle>
+        <circle cx="74" cy="52" r="4.5" fill="#fff" opacity=".22"></circle>
+        <g class="hsk__eye">
+          <circle cx="43" cy="40" r="3.5" fill="#1a1722"></circle>
+          <circle cx="44.3" cy="38.8" r="1.1" fill="#fff"></circle>
+        </g>
+        <g class="hsk__eye hsk__eye--b">
+          <circle cx="67" cy="40" r="3.5" fill="#1a1722"></circle>
+          <circle cx="68.3" cy="38.8" r="1.1" fill="#fff"></circle>
+        </g>
+        <rect class="hsk__mbar" style="animation-delay:-0.1s" x="48" y="51" width="3.5" height="10" rx="1.75" fill="#1a1722"></rect>
+        <rect class="hsk__mbar" style="animation-delay:-0.35s" x="53.5" y="48" width="3.5" height="16" rx="1.75" fill="#1a1722"></rect>
+        <rect class="hsk__mbar" style="animation-delay:-0.6s" x="59" y="52" width="3.5" height="9" rx="1.75" fill="#1a1722"></rect>
+      </g>
+    </svg>
+    <span class="pick__ghost-hint" data-ghost-hint>בחרו קטגוריה או הגרילו 🎲</span>
+  </button>
+
   <article class:list={['featured', 'pick__card', d.classic && 'featured--classic']} data-pick-card>
     <a
       class="featured__media"
@@ -135,6 +161,20 @@ const href = `/posts/${initial.id}`;
   </article>
 </section>
 
+<!-- runs during parse, before this region paints: crawlers and no-JS readers
+     keep the server-rendered featured card, everyone else starts at the ghost -->
+<script is:inline>
+  {
+    const s = document.querySelector('[data-pick]');
+    const c = s && s.querySelector('[data-pick-card]');
+    const g = s && s.querySelector('[data-pick-ghost]');
+    if (c && g) {
+      c.hidden = true;
+      g.hidden = false;
+    }
+  }
+</script>
+
 <script type="application/json" id="pick-index" set:html={indexJson} />
 
 <script>
@@ -148,14 +188,19 @@ const href = `/posts/${initial.id}`;
     };
     const posts: P[] = JSON.parse(indexEl.textContent || '[]');
     const card = root.querySelector<HTMLElement>('[data-pick-card]')!;
+    const ghost = root.querySelector<HTMLButtonElement>('[data-pick-ghost]')!;
+    const hint = root.querySelector<HTMLElement>('[data-ghost-hint]')!;
     const chipsWrap = root.querySelector<HTMLElement>('[data-pick-chips]')!;
     const rollBtn = root.querySelector<HTMLButtonElement>('[data-pick-roll]')!;
     const q = (k: string) => root.querySelector<HTMLElement>(`[data-pk="${k}"]`)!;
 
     chipsWrap.hidden = false; // chips + dice only make sense with JS
 
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
     let filter = localStorage.getItem('hsk-pick-filter') || 'all';
     let current = ''; // slug currently shown (initial is the featured post)
+    let rolled = false; // first roll earns the full mascot dance
+    let timer = 0;
 
     const pool = () =>
       posts.filter((p) =>
@@ -221,16 +266,30 @@ const href = `/posts/${initial.id}`;
       const list = candidates.length ? candidates : pool();
       if (!list.length) return;
       const next = list[Math.floor(Math.random() * list.length)];
-      card.classList.add('is-rolling');
-      setTimeout(() => {
+      const delay = reduced ? 0 : rolled ? 600 : 1500;
+      rolled = true;
+      card.hidden = true;
+      ghost.hidden = false;
+      ghost.disabled = true;
+      ghost.classList.add('is-rolling');
+      hint.textContent = 'ההסכתון בוחר לכם פרק…';
+      clearTimeout(timer);
+      timer = window.setTimeout(() => {
         render(next);
-        card.classList.remove('is-rolling');
-      }, 190);
+        ghost.classList.remove('is-rolling');
+        ghost.disabled = false;
+        ghost.hidden = true;
+        card.hidden = false;
+        card.classList.remove('is-revealing');
+        void card.offsetWidth; // restart the reveal animation on every roll
+        card.classList.add('is-revealing');
+      }, delay);
       rollBtn.textContent = '🎲 עוד אחד';
       (window as any).umami?.track?.('random-pick', { filter });
     };
 
     rollBtn.addEventListener('click', roll);
+    ghost.addEventListener('click', roll);
     chipsWrap.querySelectorAll<HTMLButtonElement>('.pick-chip').forEach((b) =>
       b.addEventListener('click', () => {
         filter = b.dataset.filter || 'all';
