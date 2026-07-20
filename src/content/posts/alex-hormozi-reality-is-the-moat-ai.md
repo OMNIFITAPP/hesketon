@@ -15,6 +15,8 @@ source:
   guest: "אלכס הורמוזי"
   guestId: "alex-hormozi"
   youtubeUrl: "https://www.youtube.com/watch?v=HwmwyBgzj8c"
+  publishedAt: 2026-07-20
+  durationMinutes: 143
 ---
 
 <blockquote class="pull--lead">
