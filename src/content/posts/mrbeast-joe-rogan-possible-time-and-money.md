@@ -6,6 +6,12 @@ category: "עסקים וקריירה"
 tags: ["MrBeast", "ג'ו רוגן", "יוצרי תוכן", "יוטיוב", "יזמות"]
 draft: false
 readingTime: 12
+references:
+  - authors: "Sadhu S, Kysia K, Onyango L, Zinnes C, Lord S, Monnard A, Rojas Arellano I"
+    year: 2020
+    title: "NORC Final Report: Assessing Progress in Reducing Child Labor in Cocoa Production in Cocoa Growing Areas of Côte d'Ivoire and Ghana"
+    source: "NORC at the University of Chicago — עבור U.S. Department of Labor, סבב הסקר 2018/19"
+    url: "https://www.norc.org/content/dam/norc-org/pdfs/NORC%202020%20Cocoa%20Report_English.pdf"
 source:
   podcast: "The Joe Rogan Experience"
   podcastId: "joe-rogan-experience"
@@ -121,6 +127,8 @@ source:
 ## מה שהוא באמת בא לומר: הקקאו
 
 לקראת סוף הפרק דונלדסון מעלה את הנושא שבשבילו, לדבריו, הוא רצה את הבמה. כשהקים חברת שוקולד, הוא אומר, לא היה לו מושג עד כמה המצב חמור: לפי הנתונים שהוצגו בפרק, בין 1.5 ל-1.8 מיליון ילדים מועסקים בעבודת ילדים בלתי חוקית בחוות קקאו במערב אפריקה — בעיקר בחוף השנהב ובגאנה, שמהן מגיע רוב הקקאו בעולם. לפי מה שהוא מוסר, מדובר בכ-46% מכוח העבודה.
+
+כדאי להצמיד לזה את המקור הציבורי המוכר בתחום, שהמספרים בו קרובים אך אינם זהים: דוח NORC של אוניברסיטת שיקגו, שנערך עבור משרד העבודה האמריקאי וסיכם את סבב הסקר של 2018/19, מנה כ-1.56 מיליון ילדים בעבודת ילדים בייצור קקאו בשתי המדינות יחד.<sup><a class="cite" href="#ref-1">1</a></sup> כלומר הטווח שדונלדסון נוקב חופף לנתון המפורסם, אך אינו מצוטט ממנו.
 
 מה שהדהים אותו לא היה רק הממצא, אלא האדישות. כשפנה למפיצים ולגורמי הרכש הגדולים ושאל אם הוא יכול לשלם פרמיה ולוודא שילדים אינם עובדים בחוות שלו — התשובה הייתה שאפשרות כזו פשוט אינה קיימת. ולא רק שאינה קיימת, אלא שאיש לא חשב שהיא צריכה להתקיים:
 
