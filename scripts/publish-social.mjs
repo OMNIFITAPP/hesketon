@@ -53,7 +53,9 @@ async function publishItem(item) {
     case 'story':
       return adapter.publishStory(item.assets[0]);
     case 'reel':
-      return adapter.publishReel(item.assets[0], caption);
+      // item.cover is optional; the adapter omits cover_url when it's absent
+      // and lets Instagram pick a frame.
+      return adapter.publishReel(item.assets[0], caption, { coverUrl: item.cover });
     default:
       throw new Error(`Unknown format "${item.format}"`);
   }

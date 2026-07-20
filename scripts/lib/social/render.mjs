@@ -48,6 +48,9 @@ export async function renderSlides(slides, outDir, prefix) {
 
   const browser = await puppeteer.launch({
     headless: 'new',
+    // Tall reel frames (2160×3840) occasionally exceeded the default CDP
+    // deadline on screenshot capture; give it room rather than fail a batch.
+    protocolTimeout: 300000,
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--font-render-hinting=none'],
   });
 
