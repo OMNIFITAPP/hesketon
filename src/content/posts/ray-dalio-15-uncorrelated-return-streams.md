@@ -4,7 +4,7 @@ description: "דליו על גביע הקודש של ההשקעות: 15 מקור
 pubDate: 2026-07-20
 category: "כסף והשקעות"
 tags: ["ריי דליו", "פיזור השקעות", "ניהול סיכונים", "בועות", "השקעות"]
-draft: true
+draft: false
 readingTime: 8
 source:
   podcast: "My First Million"

@@ -4,7 +4,7 @@ description: "הורמוזי אצל סטיבן בארטלט: השאלה האחת
 pubDate: 2026-07-20
 category: "עסקים וקריירה"
 tags: ["אלכס הורמוזי", "בינה מלאכותית", "יזמות", "שיווק", "מיתוג"]
-draft: true
+draft: false
 readingTime: 9
 source:
   podcast: "The Diary of a CEO"
