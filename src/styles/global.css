@@ -715,13 +715,90 @@ a.chip:hover {
 .pick__roll:active {
   transform: scale(0.96);
 }
-/* swap animation — quick dip out, new content pops back */
-.pick__card {
-  transition: opacity 180ms ease, transform 180ms ease;
+/* the rolled card pops in after the mascot's dance */
+.pick__card.is-revealing {
+  animation: pick-reveal 260ms ease;
 }
-.pick__card.is-rolling {
-  opacity: 0;
-  transform: translateY(10px) scale(0.99);
+@keyframes pick-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.99);
+  }
+}
+/* ghost card — the dormant mascot stage shown until (and while) rolling */
+.pick__ghost {
+  width: 100%;
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+  background: var(--surface);
+  border: 1.5px dashed color-mix(in srgb, var(--accent) 38%, var(--line));
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color var(--speed) ease, transform var(--speed) ease;
+}
+.pick__ghost:hover {
+  border-color: color-mix(in srgb, var(--accent) 60%, var(--line));
+  transform: translateY(-2px);
+}
+.pick__ghost:disabled {
+  cursor: default;
+  transform: none;
+}
+.pick__ghost-hint {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--muted);
+}
+/* בועת ההסכת — idle: breathing, blinking, humming; rolling: the dance.
+   Facial features stay #1a1722 on both themes: they sit on the accent body. */
+.hsk__body {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: hsk-breathe 2.8s ease-in-out infinite alternate;
+}
+.hsk__eye {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hsk-blink 4.2s infinite;
+}
+.hsk__eye--b {
+  animation-delay: 0.1s;
+}
+.hsk__mbar {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hsk-hum 1.8s ease-in-out infinite alternate;
+}
+.is-rolling .hsk__body {
+  animation: hsk-wiggle 0.34s ease-in-out infinite;
+}
+.is-rolling .hsk__mbar {
+  animation: hsk-eq 0.3s ease-in-out infinite alternate;
+}
+@keyframes hsk-breathe {
+  from { transform: scale(1); }
+  to { transform: scale(1.035); }
+}
+@keyframes hsk-blink {
+  0%, 91%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.08); }
+}
+@keyframes hsk-hum {
+  from { transform: scaleY(0.9); }
+  to { transform: scaleY(1.06); }
+}
+@keyframes hsk-wiggle {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+@keyframes hsk-eq {
+  from { transform: scaleY(0.45); }
+  to { transform: scaleY(1.12); }
 }
 /* gold state when the rolled post is a classic */
 .featured--classic {
@@ -734,8 +811,24 @@ a.chip:hover {
   background: var(--gold);
 }
 @media (prefers-reduced-motion: reduce) {
-  .pick__card {
-    transition: none;
+  .pick__card.is-revealing {
+    animation: none;
+  }
+  .pick__ghost,
+  .pick__ghost:hover {
+    transform: none;
+  }
+  .hsk__body,
+  .hsk__eye,
+  .hsk__mbar,
+  .is-rolling .hsk__body,
+  .is-rolling .hsk__mbar {
+    animation: none;
+  }
+}
+@media (max-width: 760px) {
+  .pick__ghost {
+    min-height: 280px;
   }
 }
 
