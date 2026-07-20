@@ -15,6 +15,8 @@ source:
   guest: "ריי דליו"
   guestId: "ray-dalio"
   youtubeUrl: "https://www.youtube.com/watch?v=UprafhdeZVc"
+  publishedAt: 2026-07-17
+  durationMinutes: 61
 ---
 
 <blockquote class="pull--lead">

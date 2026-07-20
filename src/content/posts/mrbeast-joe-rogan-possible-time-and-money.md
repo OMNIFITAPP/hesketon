@@ -21,6 +21,8 @@ source:
   guest: "MrBeast"
   guestId: "mrbeast"
   youtubeUrl: "https://www.youtube.com/watch?v=rTKu9wxEFFo"
+  publishedAt: 2026-07-16
+  durationMinutes: 169
 ---
 
 <blockquote class="pull--lead">
