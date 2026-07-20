@@ -105,5 +105,11 @@
     "name": "The Iced Coffee Hour",
     "hostId": "graham-stephan",
     "description": "שיחות על כסף, השקעות ויזמות — עם גרהם סטפן וג'ק סלבי."
+  },
+  {
+    "id": "my-first-million",
+    "name": "My First Million",
+    "hostId": "sam-parr",
+    "description": "שיחות על רעיונות עסקיים, יזמות והשקעות — עם סם פאר ושון פורי."
   }
 ]
