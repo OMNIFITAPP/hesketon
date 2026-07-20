@@ -6,15 +6,6 @@ category: "כסף והשקעות"
 tags: ["מורגן האוזל", "אנדרו הוברמן", "פסיכולוגיה של כסף", "חופש כלכלי", "אושר"]
 draft: false
 readingTime: 12
-references:
-  - authors: "Morgan Housel"
-    year: 2020
-    title: "The Psychology of Money"
-    source: "ספר (Harriman House)"
-  - authors: "Karl Pillemer"
-    year: 2011
-    title: "30 Lessons for Living"
-    source: "ספר — ראיונות עם מאות בני מאה"
 source:
   podcast: "Huberman Lab"
   podcastId: "huberman-lab"

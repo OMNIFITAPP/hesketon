@@ -7,14 +7,11 @@ tags: ["ניל דה-גראס טייסון", "חייזרים", "UAP", "קוסמו
 draft: false
 readingTime: 11
 references:
-  - authors: "Neil deGrasse Tyson"
-    year: 2025
-    title: "Take Me to Your Leader: Perspectives on Your First Alien Encounter"
-    source: "ספר"
-  - title: "תסמונת קסלר (Kessler Syndrome) — סף התנגשויות שרשרת בפסולת חלל"
-    source: "דונלד קסלר, 1978"
-  - title: "פרס נובל 1998 — התפשטות מואצת של היקום (אנרגיה אפלה)"
-    source: "פיזיקה"
+  - authors: "Kessler DJ, Cour-Palais BG"
+    year: 1978
+    title: "תסמונת קסלר — תדירות התנגשויות של לוויינים מלאכותיים ויצירת חגורת פסולת"
+    source: "Journal of Geophysical Research: Space Physics 83(A6):2637–2646"
+    url: "https://doi.org/10.1029/JA083iA06p02637"
 source:
   podcast: "The Diary of a CEO"
   podcastId: "diary-of-a-ceo"

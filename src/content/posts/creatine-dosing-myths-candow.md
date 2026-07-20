@@ -9,22 +9,27 @@ references:
   - authors: "Harris RC, Söderlund K, Hultman E"
     year: 1992
     title: "העלאת רמות הקריאטין בשריר באמצעות תוסף — מחקר היסוד על מינון הקריאטין"
-    source: "Clinical Science"
-  - authors: "van der Merwe J, ואחרים"
+    source: "Clinical Science 83(3):367–374"
+    url: "https://doi.org/10.1042/cs0830367"
+  - authors: "van der Merwe J, Brooks NE, Myburgh KH"
     year: 2009
     title: "השפעת תוסף קריאטין על רמות טסטוסטרון ו-DHT בשחקני רוגבי"
-    source: "Clinical Journal of Sport Medicine"
+    source: "Clinical Journal of Sport Medicine 19(5):399–404"
+    url: "https://doi.org/10.1097/JSM.0b013e3181b8b52f"
   - authors: "Gordji-Nejad A, ואחרים"
     year: 2024
     title: "מנה בודדת של קריאטין משפרת ביצועים קוגניטיביים תחת חוסר שינה"
-    source: "Scientific Reports"
+    source: "Scientific Reports 14:4937"
+    url: "https://doi.org/10.1038/s41598-024-54249-9"
   - authors: "Lyoo IK, Renshaw PF, ואחרים"
     year: 2012
     title: "תוספת קריאטין מונוהידרט לשיפור התגובה ל-SSRI בנשים עם דיכאון מז'ורי"
-    source: "American Journal of Psychiatry"
+    source: "American Journal of Psychiatry 169(9):937–945"
+    url: "https://doi.org/10.1176/appi.ajp.2012.12010009"
   - year: 2025
     title: "מחקר ראשוני על קריאטין מונוהידרט בחולי אלצהיימר"
-    source: "Journal of Psychiatry and Brain Science"
+    source: "Alzheimer's & Dementia: Translational Research & Clinical Interventions"
+    url: "https://doi.org/10.1002/trc2.70101"
 source:
   podcast: "The Diary of a CEO"
   podcastId: "diary-of-a-ceo"
