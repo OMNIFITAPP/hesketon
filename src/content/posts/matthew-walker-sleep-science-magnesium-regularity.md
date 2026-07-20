@@ -7,11 +7,6 @@ tags: ["מתיו ווקר", "שינה", "מגנזיום", "מלטונין", "ב�
 draft: false
 readingTime: 12
 references:
-  - authors: "Matthew Walker"
-    year: 2017
-    title: "Why We Sleep"
-    source: "ספר (Scribner)"
-    url: "https://www.simonandschuster.com/books/Why-We-Sleep/Matthew-Walker/9781501144325"
   - authors: "Windred DP, Burns AC, Lane JM, ואחרים"
     year: 2024
     title: "סדירות שינה מנבאת תמותה טוב יותר ממשך שינה — UK Biobank, מדגם 60,977"

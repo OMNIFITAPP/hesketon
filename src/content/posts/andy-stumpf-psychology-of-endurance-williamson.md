@@ -6,14 +6,6 @@ category: "פסיכולוגיה ומיינדסט"
 tags: ["אנדי סטאמפ", "כריס וויליאמסון", "חוסן נפשי", "מוטיבציה", "כישלון"]
 draft: false
 readingTime: 12
-references:
-  - authors: "כריס וויליאמסון"
-    title: "The Curse of Psychological Strength (מסה שהוקראה בפרק)"
-    source: "Modern Wisdom"
-  - authors: "Dave Grossman"
-    year: 1995
-    title: "On Killing"
-    source: "ספר (מבוסס בין היתר על נתוני ס.ל.א. מרשל — שמהימנותם הוטלה בספק בדיעבד)"
 source:
   podcast: "Modern Wisdom"
   podcastId: "modern-wisdom"

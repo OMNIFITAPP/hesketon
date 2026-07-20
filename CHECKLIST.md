@@ -25,7 +25,8 @@
 - [ ] `npm run check:reviews` — ירוק (אין פריטי סקירה פתוחים בפוסטים מפורסמים).
 - [ ] `npm run check:units` — אין מיילים/פאונדים/רגליים. הקורא הישראלי לא חושב ביחידות אימפריאליות, וזה חל גם בתוך ציטוט.
 - [ ] `npm run check-names` — שמות מול ויקיפדיה.
-- [ ] `npm run check:refs` — אזכור מחקר ⇐ בלוק references מאומת.
+- [ ] `npm run check:refs` — אזכור מחקר ⇐ בלוק references, **ולכל רשומה `url`**. אזכור מחקר מחייב לינק. תפיסת-שווא ("מחקר של X" שאינו מחקר)? הצהר: `<!-- refs-keep: <נימוק> -->`.
+- [ ] `npm run check:refs:verify` — מאמת מול doi.org שהלינק מצביע על **המאמר הנכון** (כתב עת + שנה), לא רק שהוא נפתח. הרץ לפני פרסום של פוסט עם הפניות חדשות.
 - [ ] `npm run build` — ירוק.
 - [ ] ידני: `category` מאחת מ-6 הקטגוריות; `guestId`/`podcastId` קיימים ב-people.json/podcasts.json; `youtubeUrl` נכון; פרימיום? `premium: true` + 2–4 premiumHooks.
 

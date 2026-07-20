@@ -6,11 +6,6 @@ category: "בריאות וכושר"
 tags: ["נשימה", "נשימה דרך האף", "סבילות CO2", "שינה", "חרדה"]
 draft: false
 references:
-  - authors: "James Nestor"
-    year: 2020
-    title: "Breath: The New Science of a Lost Art"
-    source: "ספר (Riverhead Books)"
-    url: "https://www.penguinrandomhouse.com/books/547761/breath-by-james-nestor/"
   - authors: "Kannel WB, Hubert H, Lew EA"
     year: 1983
     title: "מחקר פרמינגהם — הקיבולת החיונית של הריאות כמנבא תחלואת לב וכלי דם"

@@ -25,7 +25,8 @@
     "social:dry": "node scripts/social.mjs --dry-run",
     "social:publish": "node scripts/publish-social.mjs",
     "social:publish:dry": "node scripts/publish-social.mjs --dry-run",
-    "postbuild": "pagefind --site dist"
+    "postbuild": "pagefind --site dist",
+    "check:refs:verify": "node scripts/check-references.mjs --verify"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.18",
