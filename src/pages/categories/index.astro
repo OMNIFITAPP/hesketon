@@ -18,7 +18,7 @@ const countFor = (name: string) => posts.filter((p) => p.data.category === name)
         CATEGORIES.map((c) => (
           <article class="card">
             <h2 class="card__title">
-              <a href={`/categories/${c.slug}`}>{c.name}</a>
+              <a href={`/categories/${c.slug}/`}>{c.name}</a>
             </h2>
             <p class="card__desc">{c.description}</p>
             <div class="card__meta">{countFor(c.name)} פרקים</div>

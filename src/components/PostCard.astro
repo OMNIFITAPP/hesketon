@@ -46,13 +46,13 @@ const isEpisodeDate = !!d.source?.publishedAt;
   }
   <div class="card__top">
     <span class="card__chips">
-      {cat && <a class="chip" href={`/categories/${cat.slug}`}>{cat.name}</a>}
+      {cat && <a class="chip" href={`/categories/${cat.slug}/`}>{cat.name}</a>}
       {d.classic && <ClassicTag />}
       {d.premium && <span class="premium-tag">✦ פרימיום</span>}
     </span>
     <Compression audioMinutes={audio} readMinutes={d.readingTime} />
   </div>
-  <h2 class="card__title"><a href={`/posts/${post.id}`}>{d.title}</a></h2>
+  <h2 class="card__title"><a href={`/posts/${post.id}/`}>{d.title}</a></h2>
   <p class="card__desc">{d.description}</p>
   <div class="card__meta">
     <FormattedDate date={episodeDate} title={isEpisodeDate ? 'תאריך פרסום הפרק' : undefined} />

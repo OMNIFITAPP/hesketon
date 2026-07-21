@@ -21,7 +21,7 @@ const heroThumbHq = hero ? youtubeThumb(hero.data.source?.youtubeUrl, 'hq') : un
     <section class="wrap wrap--reading readnext" aria-label="פרקים נוספים לקריאה">
       <p class="eyebrow">הבא בשבילכם</p>
 
-      <a class="readnext__hero" href={`/posts/${hero.id}`}>
+      <a class="readnext__hero" href={`/posts/${hero.id}/`}>
         {heroThumb && (
           <span class="readnext__media">
             <img
@@ -54,7 +54,7 @@ const heroThumbHq = hero ? youtubeThumb(hero.data.source?.youtubeUrl, 'hq') : un
           {more.map((p) => {
             const c = categoryByName(p.data.category);
             return (
-              <a class="readnext__item" href={`/posts/${p.id}`}>
+              <a class="readnext__item" href={`/posts/${p.id}/`}>
                 {c && <span class="readnext__item-cat">{c.name}</span>}
                 <span class="readnext__item-title">{p.data.title}</span>
               </a>
@@ -64,7 +64,7 @@ const heroThumbHq = hero ? youtubeThumb(hero.data.source?.youtubeUrl, 'hq') : un
       )}
 
       <p class="readnext__all">
-        <a href="/posts">לכל הפרקים ←</a>
+        <a href="/posts/">לכל הפרקים ←</a>
       </p>
     </section>
   )

@@ -57,7 +57,7 @@ const heroBars = [
         <div class="hero__signup">
           <NewsletterForm class="hero__form" />
           <p class="hero__signup-note muted">
-            גיליון מזוקק לתיבה. בלי ספאם, ביטול בכל רגע. <a href="/posts">או פשוט תתחילו לקרוא ←</a>
+            גיליון מזוקק לתיבה. בלי ספאם, ביטול בכל רגע. <a href="/posts/">או פשוט תתחילו לקרוא ←</a>
           </p>
         </div>
       </div>
@@ -90,7 +90,7 @@ const heroBars = [
           </div>
           {posts.length > latest.length && (
             <p style="margin-top:2rem">
-              <a class="btn btn--ghost" href="/posts">לכל הפרקים</a>
+              <a class="btn btn--ghost" href="/posts/">לכל הפרקים</a>
             </p>
           )}
         </>
@@ -101,7 +101,7 @@ const heroBars = [
   <section class="section wrap" style="padding-top:0">
     <h2 style="margin-bottom:1.25rem">לפי נושא</h2>
     <div class="tag-list">
-      {CATEGORIES.map((c) => <a class="chip" href={`/categories/${c.slug}`}>{c.name}</a>)}
+      {CATEGORIES.map((c) => <a class="chip" href={`/categories/${c.slug}/`}>{c.name}</a>)}
     </div>
   </section>
 </BaseLayout>

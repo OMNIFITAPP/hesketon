@@ -25,7 +25,7 @@ const ebooks = products.filter((p) => p.type === 'ebook');
       {
         ebooks.map((p) => (
           <article class="product-card">
-            <a class="product-card__coverlink" href={`/products/${p.id}`} aria-hidden="true" tabindex="-1">
+            <a class="product-card__coverlink" href={`/products/${p.id}/`} aria-hidden="true" tabindex="-1">
               <div class="bookcover" data-product={p.id}>
                 <span class="bookcover__brand">הסכתון</span>
                 <span class="bookcover__title">{p.title}</span>
@@ -34,10 +34,10 @@ const ebooks = products.filter((p) => p.type === 'ebook');
             <div class="product-card__body">
               {p.status === 'waitlist' && <span class="chip product-card__status">בקרוב</span>}
               <h2 class="product-card__title">
-                <a href={`/products/${p.id}`}>{p.title}</a>
+                <a href={`/products/${p.id}/`}>{p.title}</a>
               </h2>
               <p class="product-card__sub">{p.subtitle}</p>
-              <a class="btn btn--ghost" href={`/products/${p.id}`}>
+              <a class="btn btn--ghost" href={`/products/${p.id}/`}>
                 {p.status === 'live' ? 'לפרטים ולרכישה' : 'ספרו לי כשזה יוצא'}
               </a>
             </div>

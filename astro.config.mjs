@@ -6,7 +6,11 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   // Your live domain. Drives canonical URLs, the sitemap, and the RSS feed.
   site: 'https://hesketon.co.il',
-  trailingSlash: 'ignore',
+  // 'always' matches how GitHub Pages actually serves `format: 'directory'`
+  // (it 301s /page → /page/). Declaring it keeps dev honest and stops us
+  // re-introducing slash-less internal links, which Search Console reports
+  // as "Page with redirect".
+  trailingSlash: 'always',
   integrations: [sitemap()],
   build: {
     // Pretty URLs: /posts/my-slug/ instead of /posts/my-slug.html

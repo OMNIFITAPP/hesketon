@@ -3,9 +3,12 @@ import { getCollection } from 'astro:content';
 import { SITE } from '../consts';
 import Wave from './Wave.astro';
 
+// Links carry a trailing slash (canonical form); compare on the stripped path.
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
-const isActive = (href: string) =>
-  href === '/' ? path === '/' : path === href || path.startsWith(href + '/');
+const isActive = (href: string) => {
+  const h = href.replace(/\/$/, '') || '/';
+  return h === '/' ? path === '/' : path === h || path.startsWith(h + '/');
+};
 
 // The classics link earns its nav slot only once the canon has content.
 const hasClassics =
@@ -16,12 +19,12 @@ const hasClassics =
   ).length > 0;
 
 const links = [
-  { href: '/posts', label: 'כל הפרקים' },
-  ...(hasClassics ? [{ href: '/classics', label: 'קלאסיקות' }] : []),
-  { href: '/categories', label: 'קטגוריות' },
-  { href: '/products', label: 'מוצרים' },
-  { href: '/search', label: 'חיפוש' },
-  { href: '/about', label: 'אודות' },
+  { href: '/posts/', label: 'כל הפרקים' },
+  ...(hasClassics ? [{ href: '/classics/', label: 'קלאסיקות' }] : []),
+  { href: '/categories/', label: 'קטגוריות' },
+  { href: '/products/', label: 'מוצרים' },
+  { href: '/search/', label: 'חיפוש' },
+  { href: '/about/', label: 'אודות' },
 ];
 ---
 
