@@ -68,16 +68,26 @@ export async function makeAudioBed(duration, outWav) {
  * @param {number}   o.crossfade   crossfade seconds between scenes
  * @param {string}   o.outMp4
  * @param {string}   [o.coverJpg]  also write a grid cover from the first frame
+ * @param {boolean}  [o.silent]    emit a silent track instead of the synth bed.
+ *   Use this whenever a licensed Instagram track is attached at publish time —
+ *   the platform's audio replaces ours, and shipping silence means a failed
+ *   attach can't fall back to an unwanted bed.
  * @returns {Promise<{file:string, duration:number, cover?:string}>}
  */
-export async function makeReel({ sceneFiles, durations, crossfade = 0.5, outMp4, coverJpg }) {
+export async function makeReel({ sceneFiles, durations, crossfade = 0.5, outMp4, coverJpg, silent = false }) {
   if (sceneFiles.length !== durations.length) throw new Error('scenes/durations length mismatch');
   const n = sceneFiles.length;
   const total = durations.reduce((a, b) => a + b, 0) - crossfade * (n - 1);
 
   fs.mkdirSync(path.dirname(outMp4), { recursive: true });
   const tmpWav = path.join(path.dirname(outMp4), '.bed.wav');
-  await makeAudioBed(total, tmpWav);
+  if (silent) {
+    // A real (silent) track, not a missing one — some players and pipelines
+    // behave badly with an audio-less MP4.
+    await ff(['-f', 'lavfi', '-i', `anullsrc=r=48000:cl=stereo`, '-t', total.toFixed(2), tmpWav]);
+  } else {
+    await makeAudioBed(total, tmpWav);
+  }
 
   // Inputs: each still looped for its own duration, at the target fps.
   const inputs = [];

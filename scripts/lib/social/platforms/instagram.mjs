@@ -115,9 +115,25 @@ export async function publishCarousel(imageUrls, caption) {
   return { mediaId, permalink: await permalink(mediaId) };
 }
 
-export async function publishReel(videoUrl, caption, { coverUrl } = {}) {
+/**
+ * @param {object} [opts]
+ * @param {string} [opts.coverUrl]
+ * @param {object} [opts.audio]  Instagram licensed audio to attach:
+ *   { audioId, audioVolume = 100, videoVolume = 0 }. Only audio cleared
+ *   for third-party use works here — discover ids with scripts/ig-audio.mjs.
+ *   Docs: /docs/instagram-platform/content-publishing/audio-api/
+ */
+export async function publishReel(videoUrl, caption, { coverUrl, audio } = {}) {
   const fields = { media_type: 'REELS', video_url: videoUrl, caption: caption || '' };
   if (coverUrl) fields.cover_url = coverUrl;
+  if (audio?.audioId) {
+    // Graph expects this as a JSON-encoded object on the form body.
+    fields.audio_configuration = JSON.stringify({
+      audio_id: String(audio.audioId),
+      audio_volume: audio.audioVolume ?? 100,
+      video_volume: audio.videoVolume ?? 0,
+    });
+  }
   const id = await createContainer(fields);
   await waitForContainer(id);
   const mediaId = await publishContainer(id);

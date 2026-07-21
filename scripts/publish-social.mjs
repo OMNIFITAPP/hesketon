@@ -54,8 +54,13 @@ async function publishItem(item) {
       return adapter.publishStory(item.assets[0]);
     case 'reel':
       // item.cover is optional; the adapter omits cover_url when it's absent
-      // and lets Instagram pick a frame.
-      return adapter.publishReel(item.assets[0], caption, { coverUrl: item.cover });
+      // and lets Instagram pick a frame. item.audio attaches a licensed
+      // Instagram track (see scripts/ig-audio.mjs) — the video itself is
+      // rendered silent, so audio_volume/video_volume default accordingly.
+      return adapter.publishReel(item.assets[0], caption, {
+        coverUrl: item.cover,
+        audio: item.audio,
+      });
     default:
       throw new Error(`Unknown format "${item.format}"`);
   }
