@@ -786,8 +786,8 @@ items:
     platform: instagram
     format: reel
     kicker: ריל
-    scheduledFor: '2026-07-21T10:00:00.000Z'
-    status: published
+    scheduledFor: '2026-07-28T10:00:00.000Z'
+    status: hold
     caption: >-
       "שבועיים בלי רשתות חברתיות יעשו לאנשים רבים מה שעשר שנות טיפול עושות." 📵
 
@@ -811,9 +811,10 @@ items:
         https://hesketon.co.il/social/2026-07-21_reel-tim-ferriss-stuck-brain-/tim-ferriss-stuck-brain-fuel-decisions-reel.mp4
     cover: >-
       https://hesketon.co.il/social/2026-07-21_reel-tim-ferriss-stuck-brain-/tim-ferriss-stuck-brain-fuel-decisions-cover.jpg
-    permalink: https://www.instagram.com/reel/DbDaSTjATDW/
-    publishedAt: '2026-07-21T11:30:19.145Z'
-    mediaId: '18079051361287765'
+    audio:
+      audioId: '692868096200013'
+      audioVolume: 100
+      videoVolume: 0
   - id: 2026-07-22_reel-tommy-wood-future-proof-
     slug: tommy-wood-future-proof-brain
     platform: instagram
@@ -845,6 +846,10 @@ items:
     cover: >-
       https://hesketon.co.il/social/2026-07-22_reel-tommy-wood-future-proof-/tommy-wood-future-proof-brain-cover.jpg
     permalink: ''
+    audio:
+      audioId: '1301427616977145'
+      audioVolume: 100
+      videoVolume: 0
   - id: 2026-07-23_reel-andy-stumpf-psychology-o
     slug: andy-stumpf-psychology-of-endurance-williamson
     platform: instagram
@@ -876,6 +881,10 @@ items:
     cover: >-
       https://hesketon.co.il/social/2026-07-23_reel-andy-stumpf-psychology-o/andy-stumpf-psychology-of-endurance-williamson-cover.jpg
     permalink: ''
+    audio:
+      audioId: '974432747187721'
+      audioVolume: 100
+      videoVolume: 0
   - id: 2026-07-24_reel-tony-robbins-ai-future-o
     slug: tony-robbins-ai-future-of-work-meaning
     platform: instagram
@@ -905,6 +914,10 @@ items:
     cover: >-
       https://hesketon.co.il/social/2026-07-24_reel-tony-robbins-ai-future-o/tony-robbins-ai-future-of-work-meaning-cover.jpg
     permalink: ''
+    audio:
+      audioId: '627735556288874'
+      audioVolume: 100
+      videoVolume: 0
   - id: 2026-07-25_reel-vinh-giang-voice-communi
     slug: vinh-giang-voice-communication-skills
     platform: instagram
@@ -936,6 +949,10 @@ items:
     cover: >-
       https://hesketon.co.il/social/2026-07-25_reel-vinh-giang-voice-communi/vinh-giang-voice-communication-skills-cover.jpg
     permalink: ''
+    audio:
+      audioId: '872667339759392'
+      audioVolume: 100
+      videoVolume: 0
   - id: 2026-07-26_reel-kevin-oleary-wealth-disc
     slug: kevin-oleary-wealth-discipline-diary-of-a-ceo
     platform: instagram
@@ -967,6 +984,10 @@ items:
     cover: >-
       https://hesketon.co.il/social/2026-07-26_reel-kevin-oleary-wealth-disc/kevin-oleary-wealth-discipline-diary-of-a-ceo-cover.jpg
     permalink: ''
+    audio:
+      audioId: '1621000558910293'
+      audioVolume: 100
+      videoVolume: 0
   - id: 2026-07-27_reel-andy-galpin-fitness-prin
     slug: andy-galpin-fitness-principles-rich-roll
     platform: instagram
@@ -998,3 +1019,7 @@ items:
     cover: >-
       https://hesketon.co.il/social/2026-07-27_reel-andy-galpin-fitness-prin/andy-galpin-fitness-principles-rich-roll-cover.jpg
     permalink: ''
+    audio:
+      audioId: '9513789255356881'
+      audioVolume: 100
+      videoVolume: 0
