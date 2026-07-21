@@ -31,27 +31,39 @@ if (!userId || !token) {
   process.exit(1);
 }
 
-const url = new URL(`${GRAPH}/ig_audio`);
-url.searchParams.set('audio_type', audioType);
-url.searchParams.set('user_id', userId);
-if (query) url.searchParams.set('search_query', query);
-url.searchParams.set('access_token', token);
+// Several moods in one run: pass them semicolon-separated. Each search is a
+// separate Graph call, but one workflow run beats one dispatch per mood.
+const queries = query.includes(';') ? query.split(';').map((q) => q.trim()).filter(Boolean) : [query];
 
-const res = await fetch(url);
-const json = await res.json().catch(() => ({}));
+async function search(q) {
+  const url = new URL(`${GRAPH}/ig_audio`);
+  url.searchParams.set('audio_type', audioType);
+  url.searchParams.set('user_id', userId);
+  if (q) url.searchParams.set('search_query', q);
+  url.searchParams.set('access_token', token);
 
-if (!res.ok || json.error) {
-  const e = json.error || {};
-  console.error(`\n❌ Graph API ${res.status}: ${e.message || res.statusText} (code ${e.code ?? '?'}, subcode ${e.error_subcode ?? '-'})`);
-  console.error('\nRaw response:');
-  console.error(JSON.stringify(json, null, 2).slice(0, 2000));
-  process.exit(2);
+  const res = await fetch(url);
+  const json = await res.json().catch(() => ({}));
+  if (!res.ok || json.error) {
+    const e = json.error || {};
+    console.error(`❌ "${q}" → Graph API ${res.status}: ${e.message || res.statusText} (code ${e.code ?? '?'})`);
+    return null;
+  }
+  return json;
 }
+
+for (const q of queries) {
+  const json = await search(q);
+  if (json) report(q, json);
+}
+process.exit(0);
+
+function report(q, json) {
 
 // The response nests results under `audio` (not `data`), and uses
 // audio_id / display_artist / duration_in_ms.
 const items = Array.isArray(json.audio) ? json.audio : Array.isArray(json.data) ? json.data : [];
-console.log(`\n🎵 audio_type=${audioType}${query ? ` search="${query}"` : ' (trending)'} → ${items.length} results\n`);
+console.log(`\n🎵 ${q ? `search="${q}"` : 'trending'} → ${items.length} results\n`);
 
 for (const a of items) {
   const ms = a.duration_in_ms ?? a.duration_ms;
@@ -67,3 +79,4 @@ if (!items.length) {
   console.log('\nRaw:', JSON.stringify(json).slice(0, 800));
 }
 console.log('');
+}
