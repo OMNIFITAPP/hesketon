@@ -35,6 +35,7 @@ const REJECTED_TERMS = [
   ['מעריכית', 'מכפילה את עצמה / אקספוננציאלית'],
   ['חוד החנית', 'חזית הטכנולוגיה'],
   ['מסגור', 'הטיעון / הזווית'],
+  ['ממסגר', 'מגדיר / מתאר'],   // נטייה שחמקה מהכלל שמבוסס שם-עצם
   ['תרגומית', null], // מונח פנימי — לא אמור להופיע בפוסט
 ];
 
@@ -77,7 +78,11 @@ const warnings = []; // מדווחים בלבד
 
 for (const file of readdirSync(POSTS_DIR).filter((f) => f.endsWith('.md'))) {
   const { fm, body } = splitPost(readFileSync(join(POSTS_DIR, file), 'utf8'));
-  if (/^draft:\s*true/m.test(fm)) continue; // טיוטות פטורות
+  // טיוטות **אינן** פטורות. השערים האחרים מדלגות עליהן, וזה בדיוק הפוך מהנדרש:
+  // טיוטה היא הרגע היחיד שבו תיקון עוד זול. שלוש הטיוטות של יולי 2026 מעולם
+  // לא נבדקו בשער עד שהורצו ידנית עם דגל זמני, ונמצאו בהן 17 ממצאים.
+  const isDraft = /^draft:\s*true/m.test(fm);
+  const tag = isDraft ? '[טיוטה] ' : '';
   if (/<!--\s*style-keep:/.test(body)) continue;
 
   // בלי בלוק אימות הציטוטים ובלי HTML — רק פרוזה שהקורא רואה.
@@ -89,7 +94,7 @@ for (const file of readdirSync(POSTS_DIR).filter((f) => f.endsWith('.md'))) {
   if (paragraphs.length >= 5) {
     const ratio = dashes / paragraphs.length;
     if (ratio > DASH_PER_PARAGRAPH) {
-      warnings.push({ file, ratio, dashes, paragraphs: paragraphs.length });
+      warnings.push({ file: tag + file, ratio, dashes, paragraphs: paragraphs.length });
     }
   }
 
@@ -97,7 +102,7 @@ for (const file of readdirSync(POSTS_DIR).filter((f) => f.endsWith('.md'))) {
   for (const g of TERM_GROUPS) {
     const used = g.words.filter((w) => new RegExp(`(^|[^א-ת])${w}([^א-ת]|$)`).test(prose));
     if (used.length > 1) {
-      failures.push(`${file} — סחף מינוח (${g.name}): ${used.join(' / ')}. בחר אחת.`);
+      failures.push(`${tag}${file} — סחף מינוח (${g.name}): ${used.join(' / ')}. בחר אחת.`);
     }
   }
 
@@ -105,7 +110,7 @@ for (const file of readdirSync(POSTS_DIR).filter((f) => f.endsWith('.md'))) {
   for (const [term, replacement] of REJECTED_TERMS) {
     if (new RegExp(`(^|[^א-ת])${term}([^א-ת]|$)`).test(prose)) {
       failures.push(
-        `${file} — "${term}" נפסל במבחן המפגש` + (replacement ? ` → ${replacement}` : '') + '.',
+        `${tag}${file} — "${term}" נפסל במבחן המפגש` + (replacement ? ` → ${replacement}` : '') + '.',
       );
     }
   }
@@ -113,7 +118,7 @@ for (const file of readdirSync(POSTS_DIR).filter((f) => f.endsWith('.md'))) {
   // ── 4: צורות שאינן קיימות
   for (const [form, fix] of FORBIDDEN_FORMS) {
     if (new RegExp(`(^|[^א-ת])${form}([^א-ת]|$)`).test(prose)) {
-      failures.push(`${file} — הצורה "${form}" אינה קיימת בעברית → ${fix}. (SYSTEM_PROMPT חוק 21)`);
+      failures.push(`${tag}${file} — הצורה "${form}" אינה קיימת בעברית → ${fix}. (SYSTEM_PROMPT חוק 21)`);
     }
   }
 
@@ -134,7 +139,7 @@ for (const file of readdirSync(POSTS_DIR).filter((f) => f.endsWith('.md'))) {
     // אזהרה ולא כשל: כשהאפוזיציה *באמת* שקילות ("100 מיליון שנה — 5% מציר
     // הזמן") השימוש תקין, וזה כשליש עד מחצית מהממצאים. ההבחנה בין שקילות
     // אמיתית לשני מדדים שונים היא סמנטית ואינה ניתנת לזיהוי מכני אמין.
-    appositions.push(`${file} — "…${sentence.trim().slice(0, 85)}…"`);
+    appositions.push(`${tag}${file} — "…${sentence.trim().slice(0, 85)}…"`);
   }
 }
 
