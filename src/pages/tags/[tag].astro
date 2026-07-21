@@ -23,7 +23,10 @@ const { tag } = Astro.props;
 const posts = (await getPublishedPosts()).filter((p) => (p.data.tags ?? []).includes(tag));
 ---
 
-<BaseLayout title={`#${tag}`} description={`כל התקצירים בתגית ${tag}.`}>
+<!-- noindex: 200+ tag pages, most listing a single post. They're navigation,
+     not destinations — indexing them buries the actual articles under thin
+     pages and burns a new domain's small crawl budget. Still crawlable. -->
+<BaseLayout title={`#${tag}`} description={`כל התקצירים בתגית ${tag}.`} noindex>
   <section class="section wrap">
     <div class="page-title">
       <p class="eyebrow">תגית</p>

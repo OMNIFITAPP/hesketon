@@ -10,6 +10,8 @@ interface Props {
   publishedTime?: string;
   modifiedTime?: string;
   jsonLd?: object;
+  /** Keep out of the index (still crawled, so link equity flows through). */
+  noindex?: boolean;
 }
 
 const {
@@ -20,6 +22,7 @@ const {
   publishedTime,
   modifiedTime,
   jsonLd,
+  noindex = false,
 } = Astro.props;
 
 const siteUrl = Astro.site ?? new URL(SITE.url);
@@ -45,6 +48,7 @@ const ogImage = new URL(image ?? '/og-default.svg', siteUrl);
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="mobile-web-app-capable" content="yes" />
 <link rel="canonical" href={canonical.href} />
+{noindex && <meta name="robots" content="noindex, follow" />}
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
