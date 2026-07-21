@@ -48,13 +48,18 @@ if (!res.ok || json.error) {
   process.exit(2);
 }
 
-const items = Array.isArray(json.data) ? json.data : [];
+// The response nests results under `audio` (not `data`), and uses
+// audio_id / display_artist / duration_in_ms.
+const items = Array.isArray(json.audio) ? json.audio : Array.isArray(json.data) ? json.data : [];
 console.log(`\n🎵 audio_type=${audioType}${query ? ` search="${query}"` : ' (trending)'} → ${items.length} results\n`);
 
 for (const a of items) {
-  const dur = a.duration_ms ? `${(a.duration_ms / 1000).toFixed(0)}s` : '?';
-  console.log(`  id=${a.id}`);
-  console.log(`     ${a.title || a.display_name || '(untitled)'} — ${a.artist_name || a.owner_username || '?'}  [${dur}]`);
+  const ms = a.duration_in_ms ?? a.duration_ms;
+  const dur = ms ? `${(ms / 1000).toFixed(0)}s` : '?';
+  const ads = a.is_ads_eligible ? 'ads-ok' : 'organic-only';
+  console.log(`  ${a.audio_id || a.id}  [${dur}] [${ads}]`);
+  console.log(`     ${a.title || '(untitled)'} — ${a.display_artist || a.ig_username || '?'}`);
+  if (a.on_platform_audio_preview_link) console.log(`     ▶ ${a.on_platform_audio_preview_link}`);
 }
 
 if (!items.length) {
