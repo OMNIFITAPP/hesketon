@@ -820,7 +820,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-07-22T10:00:00.000Z'
-    status: approved
+    status: hold
     caption: >-
       רוב מה שקובע איך המוח שלכם יזדקן — לא נמצא בגנים. 🧠
 
@@ -851,7 +851,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-07-23T10:00:00.000Z'
-    status: approved
+    status: hold
     caption: >-
       "השריר שנכשל באימון הלוחמים אינו מתחת לצוואר. הוא בין האוזניים." 🧠
 
@@ -882,7 +882,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-07-24T10:00:00.000Z'
-    status: approved
+    status: hold
     caption: |-
       "אנשים לא יוחלפו על ידי AI. הם יוחלפו על ידי מישהו שיודע להשתמש ב-AI." 🤖
 
@@ -911,7 +911,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-07-25T10:00:00.000Z'
-    status: approved
+    status: hold
     caption: >-
       "הקול שלך הוא כלי נגינה. אל תמות עם כל המוזיקה תקועה בפנים." 🎙️
 
@@ -942,7 +942,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-07-26T10:00:00.000Z'
-    status: approved
+    status: hold
     caption: >-
       "בניית עושר מסתכמת במילה אחת: משמעת." 💰
 
@@ -973,7 +973,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-07-27T10:00:00.000Z'
-    status: approved
+    status: hold
     caption: >-
       "תוכנית תמיד מנצחת היעדר תוכנית — גם אם היא לא התוכנית הכי טובה." 🏋️
 
