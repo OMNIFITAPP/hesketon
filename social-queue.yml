@@ -453,7 +453,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-07-21T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       החיים לא נועדו כדי שפשוט נחיה אותם. הם נועדו לתרגול. 🤸
 
@@ -486,7 +486,9 @@ items:
         https://hesketon.co.il/social/2026-07-21_lessons-ido-portal-movement-mind/ido-portal-movement-mind-body-huberman-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-07-21_lessons-ido-portal-movement-mind/ido-portal-movement-mind-body-huberman-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DbEF4weEtKn/
+    publishedAt: '2026-07-21T17:50:55.009Z'
+    mediaId: '17936850534294655'
   - id: 2026-07-22_carousel-morgan-housel-psychology
     slug: morgan-housel-psychology-of-money-huberman
     platform: instagram
