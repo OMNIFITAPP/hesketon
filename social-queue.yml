@@ -787,7 +787,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-07-21T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "שבועיים בלי רשתות חברתיות יעשו לאנשים רבים מה שעשר שנות טיפול עושות." 📵
 
@@ -811,7 +811,9 @@ items:
         https://hesketon.co.il/social/2026-07-21_reel-tim-ferriss-stuck-brain-/tim-ferriss-stuck-brain-fuel-decisions-reel.mp4
     cover: >-
       https://hesketon.co.il/social/2026-07-21_reel-tim-ferriss-stuck-brain-/tim-ferriss-stuck-brain-fuel-decisions-cover.jpg
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DbDaSTjATDW/
+    publishedAt: '2026-07-21T11:30:19.145Z'
+    mediaId: '18079051361287765'
   - id: 2026-07-22_reel-tommy-wood-future-proof-
     slug: tommy-wood-future-proof-brain
     platform: instagram
