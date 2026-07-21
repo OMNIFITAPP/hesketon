@@ -26,7 +26,7 @@ const podcastEntity = podcastById(d.source?.podcastId) ?? podcastByName(d.source
 const episodeDate = d.source?.publishedAt ?? d.pubDate;
 const isEpisodeDate = !!d.source?.publishedAt;
 const siteUrl = Astro.site ?? new URL(SITE.url);
-const url = new URL(`/posts/${post.id}`, siteUrl).href;
+const url = new URL(`/posts/${post.id}/`, siteUrl).href;
 // Probed at build time: og:image and JSON-LD are read by crawlers that never
 // run the onerror fallback below, so they need a URL that actually resolves.
 const thumb = await bestThumb(d.source?.youtubeUrl);
@@ -61,7 +61,7 @@ const jsonLd = {
 
   <article>
     <header class:list={['post-header', 'wrap', 'wrap--reading', d.classic && 'post-header--classic']}>
-      {cat && <a class="chip" href={`/categories/${cat.slug}`}>{cat.name}</a>}
+      {cat && <a class="chip" href={`/categories/${cat.slug}/`}>{cat.name}</a>}
       {d.classic && <ClassicTag />}
       {d.premium && <span class="premium-tag">✦ פרימיום</span>}
       <h1>{d.title}</h1>
@@ -131,7 +131,7 @@ const jsonLd = {
                 {' '}
                 מתוך הפודקאסט{' '}
                 {podcastEntity ? (
-                  <a href={`/podcasts/${podcastEntity.id}`}><strong>{d.source.podcast}</strong></a>
+                  <a href={`/podcasts/${podcastEntity.id}/`}><strong>{d.source.podcast}</strong></a>
                 ) : (
                   <strong>{d.source.podcast}</strong>
                 )}
@@ -139,7 +139,7 @@ const jsonLd = {
             ) : null}
             {d.source.guest ? (
               guestPerson ? (
-                <> עם <a href={`/people/${guestPerson.id}`}>{d.source.guest}</a></>
+                <> עם <a href={`/people/${guestPerson.id}/`}>{d.source.guest}</a></>
               ) : (
                 <> עם {d.source.guest}</>
               )
@@ -165,7 +165,7 @@ const jsonLd = {
           <ul class="tag-list" style="margin-top:1.5rem">
             {d.tags.map((t) => (
               <li>
-                <a class="tag" href={`/tags/${tagToSlug(t)}`}>
+                <a class="tag" href={`/tags/${tagToSlug(t)}/`}>
                   #{t}
                 </a>
               </li>
