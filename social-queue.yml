@@ -495,7 +495,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-07-22T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "עבור הרבה אנשים, כסף הוא נכס פיננסי — וגם התחייבות פסיכולוגית." 💭
 
@@ -538,7 +538,9 @@ items:
         https://hesketon.co.il/social/2026-07-22_carousel-morgan-housel-psychology/morgan-housel-psychology-of-money-huberman-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-07-22_carousel-morgan-housel-psychology/morgan-housel-psychology-of-money-huberman-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DbGsKF4AdY4/
+    publishedAt: '2026-07-22T18:03:54.859Z'
+    mediaId: '18122163511818277'
   - id: 2026-07-23_quote-jefferson-fisher-communi
     slug: jefferson-fisher-communication-conflict-assertiveness
     platform: instagram
