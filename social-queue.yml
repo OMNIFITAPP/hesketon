@@ -823,7 +823,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-07-22T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       רוב מה שקובע איך המוח שלכם יזדקן — לא נמצא בגנים. 🧠
 
@@ -847,11 +847,13 @@ items:
         https://hesketon.co.il/social/2026-07-22_reel-tommy-wood-future-proof-/tommy-wood-future-proof-brain-reel.mp4
     cover: >-
       https://hesketon.co.il/social/2026-07-22_reel-tommy-wood-future-proof-/tommy-wood-future-proof-brain-cover.jpg
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DbGAf_HEXhg/
     audio:
       audioId: '1301427616977145'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-07-22T11:42:39.506Z'
+    mediaId: '18091512554626288'
   - id: 2026-07-23_reel-andy-stumpf-psychology-o
     slug: andy-stumpf-psychology-of-endurance-williamson
     platform: instagram
