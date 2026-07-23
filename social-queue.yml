@@ -862,7 +862,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-07-23T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "השריר שנכשל באימון הלוחמים אינו מתחת לצוואר. הוא בין האוזניים." 🧠
 
@@ -886,11 +886,13 @@ items:
         https://hesketon.co.il/social/2026-07-23_reel-andy-stumpf-psychology-o/andy-stumpf-psychology-of-endurance-williamson-reel.mp4
     cover: >-
       https://hesketon.co.il/social/2026-07-23_reel-andy-stumpf-psychology-o/andy-stumpf-psychology-of-endurance-williamson-cover.jpg
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DbIkSsXExSc/
     audio:
       audioId: '974432747187721'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-07-23T11:33:53.912Z'
+    mediaId: '18168530572435694'
   - id: 2026-07-24_reel-tony-robbins-ai-future-o
     slug: tony-robbins-ai-future-of-work-meaning
     platform: instagram
