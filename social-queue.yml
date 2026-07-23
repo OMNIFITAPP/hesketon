@@ -547,7 +547,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-07-23T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "השיחה שאתה נמנע ממנה היא התוצאה שאתה בוחר." 🗣️
 
@@ -572,7 +572,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-07-23_quote-jefferson-fisher-communi/jefferson-fisher-communication-conflict-assertiveness-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DbJRaSegVt1/
+    publishedAt: '2026-07-23T18:07:47.295Z'
+    mediaId: '18098970896359987'
   - id: 2026-07-24_carousel-david-sinclair-aging-rev
     slug: david-sinclair-aging-reversal-longevity
     platform: instagram
