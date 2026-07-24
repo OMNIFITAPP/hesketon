@@ -4,7 +4,7 @@ description: "בלנקפיין אצל 'My First Million': למה הוא סוחר
 pubDate: 2026-07-20
 category: "כסף והשקעות"
 tags: ["לויד בלנקפיין", "גולדמן זאקס", "השקעות", "ניהול סיכונים", "וורן באפט"]
-draft: true
+draft: false
 readingTime: 9
 source:
   podcast: "My First Million"

@@ -4,7 +4,7 @@ description: "יאמפולסקי אצל סטיבן בארטלט: למה הפער
 pubDate: 2026-07-20
 category: "מדע וטכנולוגיה"
 tags: ["רומאן יאמפולסקי", "בינה מלאכותית", "בטיחות AI", "עתיד העבודה", "סיכון קיומי"]
-draft: true
+draft: false
 classic: true
 readingTime: 11
 source:

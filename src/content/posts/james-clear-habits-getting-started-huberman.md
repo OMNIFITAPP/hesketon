@@ -4,7 +4,7 @@ description: "מחבר \"הרגלים אטומיים\" אצל אנדרו הוב�
 pubDate: 2026-07-20
 category: "פסיכולוגיה ומיינדסט"
 tags: ["ג'יימס קליר", "הרגלים אטומיים", "אנדרו הוברמן", "הרגלים", "מוטיבציה"]
-draft: true
+draft: false
 readingTime: 10
 source:
   podcast: "Huberman Lab"
