@@ -14,8 +14,12 @@ on:
         type: boolean
         default: false
   schedule:
-    # Every hour, on the hour. Items publish at their scheduledFor time.
-    - cron: "0 * * * *"
+    # Every 15 minutes. GitHub's scheduler is best-effort and drops or delays
+    # ticks under load — observed 2–4h gaps on an hourly cron, which pushed a
+    # 20:00 post to 21:00+. More ticks means the first one after an item is due
+    # comes sooner. Items still publish only at/after their scheduledFor.
+    # (Public repo, so Actions minutes are free.)
+    - cron: "*/15 * * * *"
 
 permissions:
   contents: write

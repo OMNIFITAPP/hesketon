@@ -1,0 +1,36 @@
+name: IG — search audio catalogue
+
+# Read-only probe. Lists the Instagram audio that Meta has cleared for
+# third-party (API) use, so we can attach real licensed music to Reels
+# instead of baking a track into the file. Publishes nothing.
+
+on:
+  workflow_dispatch:
+    inputs:
+      query:
+        description: "Search query (leave empty for trending)"
+        type: string
+        required: false
+      audio_type:
+        description: "Audio type"
+        type: choice
+        options:
+          - music
+          - original_audio
+        default: music
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Search audio
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: node scripts/ig-audio.mjs --type=${{ inputs.audio_type }} "${{ inputs.query }}"

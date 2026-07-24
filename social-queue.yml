@@ -453,7 +453,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-07-21T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       החיים לא נועדו כדי שפשוט נחיה אותם. הם נועדו לתרגול. 🤸
 
@@ -486,14 +486,16 @@ items:
         https://hesketon.co.il/social/2026-07-21_lessons-ido-portal-movement-mind/ido-portal-movement-mind-body-huberman-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-07-21_lessons-ido-portal-movement-mind/ido-portal-movement-mind-body-huberman-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DbEF4weEtKn/
+    publishedAt: '2026-07-21T17:50:55.009Z'
+    mediaId: '17936850534294655'
   - id: 2026-07-22_carousel-morgan-housel-psychology
     slug: morgan-housel-psychology-of-money-huberman
     platform: instagram
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-07-22T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "עבור הרבה אנשים, כסף הוא נכס פיננסי — וגם התחייבות פסיכולוגית." 💭
 
@@ -536,14 +538,16 @@ items:
         https://hesketon.co.il/social/2026-07-22_carousel-morgan-housel-psychology/morgan-housel-psychology-of-money-huberman-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-07-22_carousel-morgan-housel-psychology/morgan-housel-psychology-of-money-huberman-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DbGsKF4AdY4/
+    publishedAt: '2026-07-22T18:03:54.859Z'
+    mediaId: '18122163511818277'
   - id: 2026-07-23_quote-jefferson-fisher-communi
     slug: jefferson-fisher-communication-conflict-assertiveness
     platform: instagram
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-07-23T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "השיחה שאתה נמנע ממנה היא התוצאה שאתה בוחר." 🗣️
 
@@ -568,7 +572,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-07-23_quote-jefferson-fisher-communi/jefferson-fisher-communication-conflict-assertiveness-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DbJRaSegVt1/
+    publishedAt: '2026-07-23T18:07:47.295Z'
+    mediaId: '18098970896359987'
   - id: 2026-07-24_carousel-david-sinclair-aging-rev
     slug: david-sinclair-aging-reversal-longevity
     platform: instagram
@@ -781,3 +787,251 @@ items:
       - >-
         https://hesketon.co.il/social/2026-07-28_lessons-fat-loss-formula-dr-mike/fat-loss-formula-dr-mike-israetel-05-99-cta.png
     permalink: ''
+  - id: 2026-07-21_reel-tim-ferriss-stuck-brain-
+    slug: tim-ferriss-stuck-brain-fuel-decisions
+    platform: instagram
+    format: reel
+    kicker: ריל
+    scheduledFor: '2026-07-28T10:00:00.000Z'
+    status: approved
+    caption: >-
+      "שבועיים בלי רשתות חברתיות יעשו לאנשים רבים מה שעשר שנות טיפול עושות." 📵
+
+
+      טים פריס אצל ג'יי שטי — על מה באמת מוציא אנשים מתקיעות, ולמה ההתערבות הכי פשוטה היא גם החזקה
+      ביותר.
+
+
+      שמרו לעצמכם 💾 והתקציר המלא באתר. קישור בביו.
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#טיםפריס'
+      - '#רשתותחברתיות'
+      - '#מיינדסט'
+      - '#פרודוקטיביות'
+      - '#בריאותנפשית'
+      - '#הרגלים'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-07-21_reel-tim-ferriss-stuck-brain-/tim-ferriss-stuck-brain-fuel-decisions-reel.mp4
+    cover: >-
+      https://hesketon.co.il/social/2026-07-21_reel-tim-ferriss-stuck-brain-/tim-ferriss-stuck-brain-fuel-decisions-cover.jpg
+    audio:
+      audioId: '692868096200013'
+      audioVolume: 100
+      videoVolume: 0
+  - id: 2026-07-22_reel-tommy-wood-future-proof-
+    slug: tommy-wood-future-proof-brain
+    platform: instagram
+    format: reel
+    kicker: ריל
+    scheduledFor: '2026-07-22T10:00:00.000Z'
+    status: published
+    caption: >-
+      רוב מה שקובע איך המוח שלכם יזדקן — לא נמצא בגנים. 🧠
+
+
+      ד"ר טומי ווד אצל ג'ו רוגן, על "מרווח": הפער בין מה שאתם צריכים ביום-יום לבין מה שאתם באמת
+      מסוגלים לו — ולמה הוא מגן עליכם בהמשך.
+
+
+      התקציר המלא באתר. קישור בביו 🔗
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#בריאותהמוח'
+      - '#טומיווד'
+      - '#דמנציה'
+      - '#אריכותחיים'
+      - '#בריאות'
+      - '#מדע'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-07-22_reel-tommy-wood-future-proof-/tommy-wood-future-proof-brain-reel.mp4
+    cover: >-
+      https://hesketon.co.il/social/2026-07-22_reel-tommy-wood-future-proof-/tommy-wood-future-proof-brain-cover.jpg
+    permalink: https://www.instagram.com/reel/DbGAf_HEXhg/
+    audio:
+      audioId: '1301427616977145'
+      audioVolume: 100
+      videoVolume: 0
+    publishedAt: '2026-07-22T11:42:39.506Z'
+    mediaId: '18091512554626288'
+  - id: 2026-07-23_reel-andy-stumpf-psychology-o
+    slug: andy-stumpf-psychology-of-endurance-williamson
+    platform: instagram
+    format: reel
+    kicker: ריל
+    scheduledFor: '2026-07-23T10:00:00.000Z'
+    status: published
+    caption: >-
+      "השריר שנכשל באימון הלוחמים אינו מתחת לצוואר. הוא בין האוזניים." 🧠
+
+
+      אנדי סטאמפ — לוחם SEAL לשעבר — אצל Modern Wisdom, על מה שבאמת שובר אנשים באימונים הקשים בעולם,
+      ומה מחזיק אותם.
+
+
+      שמרו 💾 והתקציר המלא באתר. קישור בביו.
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#אנדיסטאמפ'
+      - '#מיינדסט'
+      - '#חוסן'
+      - '#סיבולת'
+      - '#פסיכולוגיה'
+      - '#משמעת'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-07-23_reel-andy-stumpf-psychology-o/andy-stumpf-psychology-of-endurance-williamson-reel.mp4
+    cover: >-
+      https://hesketon.co.il/social/2026-07-23_reel-andy-stumpf-psychology-o/andy-stumpf-psychology-of-endurance-williamson-cover.jpg
+    permalink: https://www.instagram.com/reel/DbIkSsXExSc/
+    audio:
+      audioId: '974432747187721'
+      audioVolume: 100
+      videoVolume: 0
+    publishedAt: '2026-07-23T11:33:53.912Z'
+    mediaId: '18168530572435694'
+  - id: 2026-07-24_reel-tony-robbins-ai-future-o
+    slug: tony-robbins-ai-future-of-work-meaning
+    platform: instagram
+    format: reel
+    kicker: ריל
+    scheduledFor: '2026-07-24T10:00:00.000Z'
+    status: published
+    caption: |-
+      "אנשים לא יוחלפו על ידי AI. הם יוחלפו על ידי מישהו שיודע להשתמש ב-AI." 🤖
+
+      טוני רובינס אצל סטיבן בארטלט — על עתיד העבודה, ומה כדאי לעשות עכשיו כדי להישאר רלוונטיים.
+
+      מסכימים? ספרו לנו בתגובות 👇
+      התקציר המלא באתר. קישור בביו.
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#טונירובינס'
+      - '#בינהמלאכותית'
+      - '#עתידהעבודה'
+      - '#קריירה'
+      - '#טכנולוגיה'
+      - '#מיינדסט'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-07-24_reel-tony-robbins-ai-future-o/tony-robbins-ai-future-of-work-meaning-reel.mp4
+    cover: >-
+      https://hesketon.co.il/social/2026-07-24_reel-tony-robbins-ai-future-o/tony-robbins-ai-future-of-work-meaning-cover.jpg
+    permalink: https://www.instagram.com/reel/DbLH2XMFX8u/
+    audio:
+      audioId: '627735556288874'
+      audioVolume: 100
+      videoVolume: 0
+    publishedAt: '2026-07-24T11:23:04.992Z'
+    mediaId: '18067989902478003'
+  - id: 2026-07-25_reel-vinh-giang-voice-communi
+    slug: vinh-giang-voice-communication-skills
+    platform: instagram
+    format: reel
+    kicker: ריל
+    scheduledFor: '2026-07-25T10:00:00.000Z'
+    status: approved
+    caption: >-
+      "הקול שלך הוא כלי נגינה. אל תמות עם כל המוזיקה תקועה בפנים." 🎙️
+
+
+      וין ג'יאנג אצל ג'יי שטי — על למה רובנו משתמשים בחלק קטן מהיכולת הקולית שלנו, ואיך זה משנה את
+      הדרך שבה אנשים שומעים אתכם.
+
+
+      התקציר המלא באתר. קישור בביו 🔗
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#תקשורת'
+      - '#ויןגיאנג'
+      - '#דיבורבפומבי'
+      - '#קול'
+      - '#ביטחוןעצמי'
+      - '#מיינדסט'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-07-25_reel-vinh-giang-voice-communi/vinh-giang-voice-communication-skills-reel.mp4
+    cover: >-
+      https://hesketon.co.il/social/2026-07-25_reel-vinh-giang-voice-communi/vinh-giang-voice-communication-skills-cover.jpg
+    permalink: ''
+    audio:
+      audioId: '872667339759392'
+      audioVolume: 100
+      videoVolume: 0
+  - id: 2026-07-26_reel-kevin-oleary-wealth-disc
+    slug: kevin-oleary-wealth-discipline-diary-of-a-ceo
+    platform: instagram
+    format: reel
+    kicker: ריל
+    scheduledFor: '2026-07-26T10:00:00.000Z'
+    status: approved
+    caption: >-
+      "בניית עושר מסתכמת במילה אחת: משמעת." 💰
+
+
+      קווין אולירי — מ-Shark Tank — אצל סטיבן בארטלט, על ההרגלים הכספיים שהוא מייחס להם את ההבדל בין
+      מי שצובר הון למי שלא.
+
+
+      שמרו לעצמכם 💾 והתקציר המלא באתר. קישור בביו.
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#קוויןאולירי'
+      - '#כסף'
+      - '#השקעות'
+      - '#משמעת'
+      - '#חינוךפיננסי'
+      - '#עסקים'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-07-26_reel-kevin-oleary-wealth-disc/kevin-oleary-wealth-discipline-diary-of-a-ceo-reel.mp4
+    cover: >-
+      https://hesketon.co.il/social/2026-07-26_reel-kevin-oleary-wealth-disc/kevin-oleary-wealth-discipline-diary-of-a-ceo-cover.jpg
+    permalink: ''
+    audio:
+      audioId: '1621000558910293'
+      audioVolume: 100
+      videoVolume: 0
+  - id: 2026-07-27_reel-andy-galpin-fitness-prin
+    slug: andy-galpin-fitness-principles-rich-roll
+    platform: instagram
+    format: reel
+    kicker: ריל
+    scheduledFor: '2026-07-27T10:00:00.000Z'
+    status: approved
+    caption: >-
+      "תוכנית תמיד מנצחת היעדר תוכנית — גם אם היא לא התוכנית הכי טובה." 🏋️
+
+
+      ד"ר אנדי גלפין אצל ריץ' רול, על העקרונות שקובעים אם אימון עובד — ולמה עקביות מנצחת
+      אופטימיזציה.
+
+
+      התקציר המלא באתר. קישור בביו 🔗
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#אנדיגלפין'
+      - '#כושר'
+      - '#אימונים'
+      - '#בריאותוכושר'
+      - '#ריצרול'
+      - '#עקביות'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-07-27_reel-andy-galpin-fitness-prin/andy-galpin-fitness-principles-rich-roll-reel.mp4
+    cover: >-
+      https://hesketon.co.il/social/2026-07-27_reel-andy-galpin-fitness-prin/andy-galpin-fitness-principles-rich-roll-cover.jpg
+    permalink: ''
+    audio:
+      audioId: '9513789255356881'
+      audioVolume: 100
+      videoVolume: 0
