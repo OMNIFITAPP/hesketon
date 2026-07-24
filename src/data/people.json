@@ -400,5 +400,29 @@
     "nameHe": "לויד בלנקפיין",
     "nameEn": "Lloyd Blankfein",
     "title": "יו\"ר בכיר ומנכ\"ל לשעבר של גולדמן זאקס"
+  },
+  {
+    "id": "demis-hassabis",
+    "nameHe": "דמיס הסביס",
+    "nameEn": "Demis Hassabis",
+    "title": "מייסד ומנכ\"ל Google DeepMind, חתן פרס נובל לכימיה"
+  },
+  {
+    "id": "hannah-fry",
+    "nameHe": "האנה פריי",
+    "nameEn": "Hannah Fry",
+    "title": "מתמטיקאית ומנחת פודקאסט"
+  },
+  {
+    "id": "michael-saylor",
+    "nameHe": "מייקל ג'יי. סיילור",
+    "nameEn": "Michael Saylor",
+    "title": "יו\"ר MicroStrategy, משקיע ביטקוין"
+  },
+  {
+    "id": "lex-fridman",
+    "nameHe": "לקס פרידמן",
+    "nameEn": "Lex Fridman",
+    "title": "חוקר בינה מלאכותית ומנחה פודקאסט"
   }
 ]
