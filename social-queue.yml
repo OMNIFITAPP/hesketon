@@ -901,7 +901,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-07-24T10:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "אנשים לא יוחלפו על ידי AI. הם יוחלפו על ידי מישהו שיודע להשתמש ב-AI." 🤖
 
@@ -923,11 +923,13 @@ items:
         https://hesketon.co.il/social/2026-07-24_reel-tony-robbins-ai-future-o/tony-robbins-ai-future-of-work-meaning-reel.mp4
     cover: >-
       https://hesketon.co.il/social/2026-07-24_reel-tony-robbins-ai-future-o/tony-robbins-ai-future-of-work-meaning-cover.jpg
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DbLH2XMFX8u/
     audio:
       audioId: '627735556288874'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-07-24T11:23:04.992Z'
+    mediaId: '18067989902478003'
   - id: 2026-07-25_reel-vinh-giang-voice-communi
     slug: vinh-giang-voice-communication-skills
     platform: instagram
