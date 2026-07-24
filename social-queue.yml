@@ -581,7 +581,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-07-24T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "כשאני רואה אדם זקן, אני לא חושב 'שברירי'. אני חושב — הנה מישהו שצריך איפוס." ⏳
 
@@ -624,7 +624,9 @@ items:
         https://hesketon.co.il/social/2026-07-24_carousel-david-sinclair-aging-rev/david-sinclair-aging-reversal-longevity-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-07-24_carousel-david-sinclair-aging-rev/david-sinclair-aging-reversal-longevity-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DbL0NV2FyNj/
+    publishedAt: '2026-07-24T17:50:22.201Z'
+    mediaId: '18095185937346094'
   - id: 2026-07-25_lessons-breathing-right-nestor
     slug: breathing-right-nestor
     platform: instagram
