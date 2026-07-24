@@ -382,5 +382,23 @@
     "nameHe": "MrBeast",
     "nameEn": "MrBeast",
     "title": "יוצר תוכן ויזם"
+  },
+  {
+    "id": "roman-yampolskiy",
+    "nameHe": "רומאן יאמפולסקי",
+    "nameEn": "Roman Yampolskiy",
+    "title": "חוקר בטיחות בינה מלאכותית, אוניברסיטת לואיוויל"
+  },
+  {
+    "id": "james-clear",
+    "nameHe": "ג'יימס קליר",
+    "nameEn": "James Clear",
+    "title": "מחבר \"הרגלים אטומיים\""
+  },
+  {
+    "id": "lloyd-blankfein",
+    "nameHe": "לויד בלנקפיין",
+    "nameEn": "Lloyd Blankfein",
+    "title": "יו\"ר בכיר ומנכ\"ל לשעבר של גולדמן זאקס"
   }
 ]
