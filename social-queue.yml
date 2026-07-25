@@ -938,7 +938,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-07-25T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "הקול שלך הוא כלי נגינה. אל תמות עם כל המוזיקה תקועה בפנים." 🎙️
 
@@ -962,11 +962,13 @@ items:
         https://hesketon.co.il/social/2026-07-25_reel-vinh-giang-voice-communi/vinh-giang-voice-communication-skills-reel.mp4
     cover: >-
       https://hesketon.co.il/social/2026-07-25_reel-vinh-giang-voice-communi/vinh-giang-voice-communication-skills-cover.jpg
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DbNk8s2Dzkn/
     audio:
       audioId: '872667339759392'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-07-25T10:15:58.250Z'
+    mediaId: '17942664966269477'
   - id: 2026-07-26_reel-kevin-oleary-wealth-disc
     slug: kevin-oleary-wealth-discipline-diary-of-a-ceo
     platform: instagram
