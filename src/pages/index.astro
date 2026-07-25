@@ -6,24 +6,46 @@ import NewsletterForm from '../components/NewsletterForm.astro';
 import { CATEGORIES, SITE } from '../consts';
 import { getPublishedPosts } from '../utils';
 
-// Brand-anchoring structured data: tells Google that this domain IS "הסכתון"
-// (helps the brand-name query resolve to us) and exposes the site search.
+// Brand-anchoring structured data. "הסכתון" is a coined word that looks like an
+// inflection of "הסכת", so Google defaults to the dictionary sense. We publish
+// BOTH a WebSite and an Organization node (same @id) that explicitly declare
+// "הסכתון" as a named entity, list its social profiles (sameAs), and point the
+// logo — the strongest on-page signal that this is a brand, not a word.
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: SITE.title,
-  alternateName: SITE.titleEn,
-  url: SITE.url,
-  description: SITE.description,
-  inLanguage: 'he-IL',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: `${SITE.url}/search?q={search_term_string}`,
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE.url}/#website`,
+      name: SITE.title,
+      alternateName: [SITE.titleEn, 'הסכתון — תקצירי פודקאסטים'],
+      url: SITE.url,
+      description: SITE.description,
+      inLanguage: 'he-IL',
+      publisher: { '@id': `${SITE.url}/#org` },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${SITE.url}/search?q={search_term_string}`,
+        },
+        'query-input': 'required name=search_term_string',
+      },
     },
-    'query-input': 'required name=search_term_string',
-  },
+    {
+      '@type': 'Organization',
+      '@id': `${SITE.url}/#org`,
+      name: SITE.title,
+      alternateName: SITE.titleEn,
+      url: SITE.url,
+      description: SITE.description,
+      logo: `${SITE.url}/favicon.svg`,
+      sameAs: [
+        SITE.social.instagram,
+        'https://x.com/hesketon',
+      ].filter(Boolean),
+    },
+  ],
 };
 
 const posts = await getPublishedPosts();
@@ -47,7 +69,7 @@ const heroBars = [
       <div>
         <p class="eyebrow">תקצירים חכמים · בעברית</p>
         <h1>
-          כל מה שחשוב מהפודקאסטים הכי טובים בעולם.
+          הסכתון — כל מה שחשוב מהפודקאסטים הכי טובים בעולם.
           <span class="hl">בעברית, בכמה דקות.</span>
         </h1>
         <p class="lead">
