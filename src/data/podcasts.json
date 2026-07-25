@@ -111,5 +111,17 @@
     "name": "My First Million",
     "hostId": "sam-parr",
     "description": "שיחות על רעיונות עסקיים, יזמות והשקעות — עם סם פאר ושון פורי."
+  },
+  {
+    "id": "google-deepmind-podcast",
+    "name": "Google DeepMind: The Podcast",
+    "hostId": "hannah-fry",
+    "description": "שיחות על בינה מלאכותית, מדע והעתיד — עם פרופ' האנה פריי."
+  },
+  {
+    "id": "lex-fridman-podcast",
+    "name": "Lex Fridman Podcast",
+    "hostId": "lex-fridman",
+    "description": "שיחות ארוכות על בינה מלאכותית, מדע, היסטוריה וכוח — עם לקס פרידמן."
   }
 ]
