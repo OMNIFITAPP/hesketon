@@ -633,7 +633,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-07-25T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       את רוב האנרגיה שלכם אתם לא מקבלים מאוכל ומשתייה. אתם מקבלים אותה מהנשימה. 🌬️
 
@@ -666,7 +666,9 @@ items:
         https://hesketon.co.il/social/2026-07-25_lessons-breathing-right-nestor/breathing-right-nestor-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-07-25_lessons-breathing-right-nestor/breathing-right-nestor-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DbOX2SSluvg/
+    publishedAt: '2026-07-25T17:40:17.972Z'
+    mediaId: '18013441403728267'
   - id: 2026-07-26_quote-naval-ravikant-44-harsh-
     slug: naval-ravikant-44-harsh-truths-modern-wisdom
     platform: instagram
