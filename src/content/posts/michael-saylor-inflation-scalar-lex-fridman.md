@@ -4,7 +4,7 @@ description: "סיילור טוען שהכלכלנים מודדים תופעה �
 pubDate: 2026-07-24
 category: "כסף והשקעות"
 tags: ["מייקל סיילור", "לקס פרידמן", "ביטקוין", "אינפלציה", "כלכלה"]
-draft: true
+draft: false
 readingTime: 9
 source:
   podcast: "Lex Fridman Podcast"

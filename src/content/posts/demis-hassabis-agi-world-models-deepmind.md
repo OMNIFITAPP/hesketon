@@ -4,7 +4,7 @@ description: "מנכ\"ל Google DeepMind אצל האנה פריי: למה \"אי
 pubDate: 2026-07-24
 category: "מדע וטכנולוגיה"
 tags: ["דמיס הסביס", "בינה מלאכותית", "AGI", "DeepMind", "מודלי עולם"]
-draft: true
+draft: false
 classic: true
 readingTime: 10
 source:

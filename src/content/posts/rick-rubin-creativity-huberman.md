@@ -4,7 +4,7 @@ description: "המפיק שעבד עם ג'וני קאש וג'יי-זי מסבי�
 pubDate: 2026-07-24
 category: "פסיכולוגיה ומיינדסט"
 tags: ["ריק רובין", "אנדרו הוברמן", "יצירתיות", "אמנות", "הרגלים"]
-draft: true
+draft: false
 readingTime: 9
 source:
   podcast: "Huberman Lab"
