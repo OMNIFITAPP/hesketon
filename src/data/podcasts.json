@@ -123,5 +123,10 @@
     "name": "Lex Fridman Podcast",
     "hostId": "lex-fridman",
     "description": "שיחות ארוכות על בינה מלאכותית, מדע, היסטוריה וכוח — עם לקס פרידמן."
+  },
+  {
+    "id": "open-residency",
+    "name": "Open Residency",
+    "description": "פודקאסט ארוך למפעילי ובוני עסקים — על תוכן, שיווק וצמיחה."
   }
 ]
