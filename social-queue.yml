@@ -675,7 +675,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-07-26T17:00:00.000Z'
-    status: approved
+    status: failed
     caption: >-
       "לא לרצות משהו שווה ערך לכך שכבר יש לך אותו." 🧘
 
@@ -701,6 +701,7 @@ items:
       - >-
         https://hesketon.co.il/social/2026-07-26_quote-naval-ravikant-44-harsh-/naval-ravikant-44-harsh-truths-modern-wisdom-01-quote.png
     permalink: ''
+    error: 'Graph API 400: Media ID is not available (code 9007)'
   - id: 2026-07-27_carousel-andrew-huberman-cortisol
     slug: andrew-huberman-cortisol-habits-focus
     platform: instagram
