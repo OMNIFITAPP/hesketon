@@ -4,7 +4,7 @@ description: "דליו אצל סטיבן בארטלט על דעיכת ארה\"ב
 pubDate: 2026-07-25
 category: "כסף והשקעות"
 tags: ["ריי דליו", "כלכלה", "גיאופוליטיקה", "השקעות", "גמישות"]
-draft: true
+draft: false
 readingTime: 9
 source:
   podcast: "The Diary of a CEO"

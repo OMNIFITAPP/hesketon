@@ -4,7 +4,7 @@ description: "הוברמן מספר איך הגיע ממוסד סגור לפרו
 pubDate: 2026-07-25
 category: "פסיכולוגיה ומיינדסט"
 tags: ["אנדרו הוברמן", "ריץ' רול", "נוירופלסטיות", "מיקוד", "דופמין"]
-draft: true
+draft: false
 classic: true
 readingTime: 10
 source:

@@ -4,7 +4,7 @@ description: "יוצר התוכן קיין קלאוויי מפרק את שיטת
 pubDate: 2026-07-25
 category: "עסקים וקריירה"
 tags: ["קיין קלאוויי", "יצירת תוכן", "שיווק", "יוטיוב", "וידאו קצר"]
-draft: true
+draft: false
 readingTime: 9
 source:
   podcast: "Open Residency"
