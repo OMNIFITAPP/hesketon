@@ -633,7 +633,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-07-25T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       את רוב האנרגיה שלכם אתם לא מקבלים מאוכל ומשתייה. אתם מקבלים אותה מהנשימה. 🌬️
 
@@ -666,14 +666,16 @@ items:
         https://hesketon.co.il/social/2026-07-25_lessons-breathing-right-nestor/breathing-right-nestor-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-07-25_lessons-breathing-right-nestor/breathing-right-nestor-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DbOX2SSluvg/
+    publishedAt: '2026-07-25T17:40:17.972Z'
+    mediaId: '18013441403728267'
   - id: 2026-07-26_quote-naval-ravikant-44-harsh-
     slug: naval-ravikant-44-harsh-truths-modern-wisdom
     platform: instagram
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-07-26T17:00:00.000Z'
-    status: approved
+    status: failed
     caption: >-
       "לא לרצות משהו שווה ערך לכך שכבר יש לך אותו." 🧘
 
@@ -699,6 +701,7 @@ items:
       - >-
         https://hesketon.co.il/social/2026-07-26_quote-naval-ravikant-44-harsh-/naval-ravikant-44-harsh-truths-modern-wisdom-01-quote.png
     permalink: ''
+    error: 'Graph API 400: Media ID is not available (code 9007)'
   - id: 2026-07-27_carousel-andrew-huberman-cortisol
     slug: andrew-huberman-cortisol-habits-focus
     platform: instagram
@@ -975,7 +978,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-07-26T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "בניית עושר מסתכמת במילה אחת: משמעת." 💰
 
@@ -999,11 +1002,13 @@ items:
         https://hesketon.co.il/social/2026-07-26_reel-kevin-oleary-wealth-disc/kevin-oleary-wealth-discipline-diary-of-a-ceo-reel.mp4
     cover: >-
       https://hesketon.co.il/social/2026-07-26_reel-kevin-oleary-wealth-disc/kevin-oleary-wealth-discipline-diary-of-a-ceo-cover.jpg
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DbQPHyrlKSH/
     audio:
       audioId: '1621000558910293'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-07-26T11:02:55.504Z'
+    mediaId: '18046322933798824'
   - id: 2026-07-27_reel-andy-galpin-fitness-prin
     slug: andy-galpin-fitness-principles-rich-roll
     platform: instagram
