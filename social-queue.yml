@@ -1015,7 +1015,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-07-27T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "תוכנית תמיד מנצחת היעדר תוכנית — גם אם היא לא התוכנית הכי טובה." 🏋️
 
@@ -1039,8 +1039,10 @@ items:
         https://hesketon.co.il/social/2026-07-27_reel-andy-galpin-fitness-prin/andy-galpin-fitness-principles-rich-roll-reel.mp4
     cover: >-
       https://hesketon.co.il/social/2026-07-27_reel-andy-galpin-fitness-prin/andy-galpin-fitness-principles-rich-roll-cover.jpg
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DbS73Nogiw-/
     audio:
       audioId: '9513789255356881'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-07-27T12:12:27.792Z'
+    mediaId: '18150245272510288'
