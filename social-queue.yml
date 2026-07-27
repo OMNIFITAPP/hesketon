@@ -708,7 +708,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-07-27T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אתה אמור להרגיש קצת לחוץ בבוקר. זה נורמלי. זה בריא." ☀️
 
@@ -751,7 +751,9 @@ items:
         https://hesketon.co.il/social/2026-07-27_carousel-andrew-huberman-cortisol/andrew-huberman-cortisol-habits-focus-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-07-27_carousel-andrew-huberman-cortisol/andrew-huberman-cortisol-habits-focus-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DbTduH1knLJ/
+    publishedAt: '2026-07-27T17:07:53.560Z'
+    mediaId: '18477281620103644'
   - id: 2026-07-28_lessons-fat-loss-formula-dr-mike
     slug: fat-loss-formula-dr-mike-israetel
     platform: instagram
