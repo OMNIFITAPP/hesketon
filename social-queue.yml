@@ -760,7 +760,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-07-28T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אם אתה יורד במשקל בלי לספור קלוריות והגוף שלך נראה טוב — אל תתחיל לספור. מה שאתה עושה עובד."
       ⚖️
@@ -793,7 +793,9 @@ items:
         https://hesketon.co.il/social/2026-07-28_lessons-fat-loss-formula-dr-mike/fat-loss-formula-dr-mike-israetel-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-07-28_lessons-fat-loss-formula-dr-mike/fat-loss-formula-dr-mike-israetel-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DbWD2cUkgxy/
+    publishedAt: '2026-07-28T17:19:25.471Z'
+    mediaId: '18097672676204375'
   - id: 2026-07-21_reel-tim-ferriss-stuck-brain-
     slug: tim-ferriss-stuck-brain-fuel-decisions
     platform: instagram
