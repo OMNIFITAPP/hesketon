@@ -800,7 +800,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-07-28T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "שבועיים בלי רשתות חברתיות יעשו לאנשים רבים מה שעשר שנות טיפול עושות." 📵
 
@@ -828,6 +828,9 @@ items:
       audioId: '692868096200013'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-07-28T11:51:29.045Z'
+    mediaId: '18079596032307001'
+    permalink: https://www.instagram.com/reel/DbVePWHjs_A/
   - id: 2026-07-22_reel-tommy-wood-future-proof-
     slug: tommy-wood-future-proof-brain
     platform: instagram
