@@ -151,6 +151,57 @@ export async function makeReel({ sceneFiles, durations, crossfade = 0.5, outMp4,
   return out;
 }
 
+/**
+ * Encode a frame sequence (from frames.mjs) into a finished reel.
+ * Frames already carry all the motion, so there is no zoompan and no
+ * xfade here — scene changes are hard cuts baked into the frames.
+ *
+ * Audio is a real silent track: a licensed Instagram song is attached at
+ * publish time via audio_configuration, and shipping silence means a
+ * failed attach can never fall back to something unwanted.
+ *
+ * @param {object} o
+ * @param {string} o.pattern  printf pattern, e.g. /tmp/x/f%05d.jpg
+ * @param {number} o.fps
+ * @param {number} o.duration seconds
+ * @param {string} o.outMp4
+ * @param {number} [o.width=1080]
+ * @param {number} [o.height=1920]
+ * @param {string} [o.coverJpg]
+ * @param {number} [o.coverAt=1.6] seconds — frame to lift the cover from
+ */
+export async function encodeFrames({ pattern, fps, duration, outMp4, width = 1080, height = 1920, coverJpg, coverAt = 1.6 }) {
+  fs.mkdirSync(path.dirname(outMp4), { recursive: true });
+  const silentWav = path.join(path.dirname(outMp4), '.silent.wav');
+  await ff(['-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo', '-t', duration.toFixed(3), silentWav]);
+
+  await ff([
+    '-framerate', String(fps), '-i', pattern,
+    '-i', silentWav,
+    // lanczos downscale from the 2× capture keeps Hebrew edges clean.
+    // out_range=tv matters: the source frames are JPEG (full range), and
+    // without it ffmpeg tags the result yuvj420p, which some players
+    // re-expand — brand pink drifts and the dark ground crushes.
+    '-vf', `scale=${width}:${height}:flags=lanczos:in_range=pc:out_range=tv,format=yuv420p`,
+    '-c:v', 'libx264', '-profile:v', 'high', '-preset', 'medium', '-crf', '16',
+    '-pix_fmt', 'yuv420p', '-color_range', 'tv',
+    '-r', String(fps),
+    '-c:a', 'aac', '-b:a', '128k', '-ar', '48000', '-ac', '2',
+    '-movflags', '+faststart',
+    '-t', duration.toFixed(3),
+    outMp4,
+  ]);
+
+  fs.rmSync(silentWav, { force: true });
+
+  const out = { file: outMp4, duration };
+  if (coverJpg) {
+    await ff(['-i', outMp4, '-ss', String(coverAt), '-frames:v', '1', '-q:v', '2', coverJpg]);
+    out.cover = coverJpg;
+  }
+  return out;
+}
+
 /** ffprobe summary — used to verify what we actually produced. */
 export async function probe(file) {
   const { stdout } = await run('ffprobe', [

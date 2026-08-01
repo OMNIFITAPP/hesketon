@@ -36,6 +36,11 @@ function buildFontCss() {
 
 const FONT_CSS = buildFontCss();
 
+/** The same @font-face block, for other renderers (reels) to embed. */
+export function fontCss() {
+  return FONT_CSS;
+}
+
 /**
  * Render an array of slides ({ name, html, width, height }) to PNGs.
  * @param {object[]} slides

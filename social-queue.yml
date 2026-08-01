@@ -675,7 +675,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-07-26T17:00:00.000Z'
-    status: failed
+    status: hold
     caption: >-
       "לא לרצות משהו שווה ערך לכך שכבר יש לך אותו." 🧘
 
@@ -702,6 +702,9 @@ items:
         https://hesketon.co.il/social/2026-07-26_quote-naval-ravikant-44-harsh-/naval-ravikant-44-harsh-truths-modern-wisdom-01-quote.png
     permalink: ''
     error: 'Graph API 400: Media ID is not available (code 9007)'
+    note: >-
+      superseded by 2026-08-02 requeue (original failed: Graph 9007, publishImage was missing the
+      container wait)
   - id: 2026-07-27_carousel-andrew-huberman-cortisol
     slug: andrew-huberman-cortisol-habits-focus
     platform: instagram
@@ -1053,3 +1056,525 @@ items:
       videoVolume: 0
     publishedAt: '2026-07-27T12:12:27.792Z'
     mediaId: '18150245272510288'
+  - id: 2026-08-02_quote-naval-ravikant-44-hars
+    slug: naval-ravikant-44-harsh-truths-modern-wisdom
+    platform: instagram
+    format: quote
+    kicker: ציטוט
+    scheduledFor: '2026-08-02T17:00:00.000Z'
+    status: approved
+    caption: >-
+      "לא לרצות משהו שווה ערך לכך שכבר יש לך אותו." 🧘
+
+
+      נאבל רביקאנט אצל Modern Wisdom, בשיחה על 44 אמיתות על החיים — על סיפוק, שאפתנות, וההבדל בין
+      להשיג לבין לרצות.
+
+
+      לפעמים הדרך הקצרה לשלווה היא פשוט להפסיק לרדוף.
+
+
+      התקציר המלא בבלוג. קישור בביו 🔗
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#נאבלרביקאנט'
+      - '#מיינדסט'
+      - '#פילוסופיה'
+      - '#שלווה'
+      - '#חוכמתחיים'
+      - '#פסיכולוגיה'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-07-26_quote-naval-ravikant-44-harsh-/naval-ravikant-44-harsh-truths-modern-wisdom-01-quote.png
+    permalink: ''
+  - id: 2026-08-03_carousel-sam-altman-agi-compute
+    slug: sam-altman-agi-compute-human-agency
+    platform: instagram
+    format: carousel
+    kicker: תקציר מזוקק
+    scheduledFor: '2026-08-03T17:00:00.000Z'
+    status: approved
+    caption: >-
+      סם אלטמן על מה שבאמת משתנה כשהמחשוב מפסיק להיות המחסום. 🤖
+
+
+      מנכ"ל OpenAI על AGI, על מה שנשאר אנושי, ועל השאלה שהוא חוזר אליה: מה קורה לתחושת המסוגלות
+      שלנו.
+
+
+      החליקו את הקרוסלה, שמרו 💾 — התקציר המלא באתר. קישור בביו.
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#סםאלטמן'
+      - '#OpenAI'
+      - '#בינהמלאכותית'
+      - '#AGI'
+      - '#טכנולוגיה'
+      - '#עתיד'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-08-03_carousel-sam-altman-agi-compute/sam-altman-agi-compute-human-agency-01-01-cover.png
+      - >-
+        https://hesketon.co.il/social/2026-08-03_carousel-sam-altman-agi-compute/sam-altman-agi-compute-human-agency-02-b01.png
+      - >-
+        https://hesketon.co.il/social/2026-08-03_carousel-sam-altman-agi-compute/sam-altman-agi-compute-human-agency-03-b02.png
+      - >-
+        https://hesketon.co.il/social/2026-08-03_carousel-sam-altman-agi-compute/sam-altman-agi-compute-human-agency-04-b03.png
+      - >-
+        https://hesketon.co.il/social/2026-08-03_carousel-sam-altman-agi-compute/sam-altman-agi-compute-human-agency-05-b04.png
+      - >-
+        https://hesketon.co.il/social/2026-08-03_carousel-sam-altman-agi-compute/sam-altman-agi-compute-human-agency-06-t01.png
+      - >-
+        https://hesketon.co.il/social/2026-08-03_carousel-sam-altman-agi-compute/sam-altman-agi-compute-human-agency-07-t02.png
+      - >-
+        https://hesketon.co.il/social/2026-08-03_carousel-sam-altman-agi-compute/sam-altman-agi-compute-human-agency-08-t03.png
+      - >-
+        https://hesketon.co.il/social/2026-08-03_carousel-sam-altman-agi-compute/sam-altman-agi-compute-human-agency-09-t04.png
+      - >-
+        https://hesketon.co.il/social/2026-08-03_carousel-sam-altman-agi-compute/sam-altman-agi-compute-human-agency-10-99-cta.png
+    permalink: ''
+  - id: 2026-08-04_lessons-andrew-huberman-peptid
+    slug: andrew-huberman-peptides-training-tim-ferriss
+    platform: instagram
+    format: lessons
+    kicker: 3 דברים שלמדנו
+    scheduledFor: '2026-08-04T17:00:00.000Z'
+    status: approved
+    caption: |-
+      פפטידים, אימון והתאוששות — בלי הרעש. 💪
+
+      פרופ' אנדרו הוברמן אצל טים פריס, על מה שבאמת יש לו בסיס ומה עדיין בגדר ניסוי.
+
+      3 דברים שלמדנו, בקרוסלה 👇
+
+      שמרו לעצמכם, והתקציר המלא באתר. קישור בביו.
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#הוברמן'
+      - '#טיםפריס'
+      - '#פפטידים'
+      - '#אימון'
+      - '#בריאות'
+      - '#התאוששות'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-08-04_lessons-andrew-huberman-peptid/andrew-huberman-peptides-training-tim-ferriss-01-01-cover.png
+      - >-
+        https://hesketon.co.il/social/2026-08-04_lessons-andrew-huberman-peptid/andrew-huberman-peptides-training-tim-ferriss-02-t01.png
+      - >-
+        https://hesketon.co.il/social/2026-08-04_lessons-andrew-huberman-peptid/andrew-huberman-peptides-training-tim-ferriss-03-t02.png
+      - >-
+        https://hesketon.co.il/social/2026-08-04_lessons-andrew-huberman-peptid/andrew-huberman-peptides-training-tim-ferriss-04-t03.png
+      - >-
+        https://hesketon.co.il/social/2026-08-04_lessons-andrew-huberman-peptid/andrew-huberman-peptides-training-tim-ferriss-05-99-cta.png
+    permalink: ''
+  - id: 2026-08-05_quote-michael-saylor-inflati
+    slug: michael-saylor-inflation-scalar-lex-fridman
+    platform: instagram
+    format: quote
+    kicker: ציטוט
+    scheduledFor: '2026-08-05T17:00:00.000Z'
+    status: approved
+    caption: >-
+      מייקל סיילור על אינפלציה — ולמה הוא חושב שאנחנו מודדים אותה לא נכון. 📉
+
+
+      בשיחה עם לקס פרידמן, על כסף, זמן, ועל מה שקורה לחיסכון כשהמדד שאתם סומכים עליו הוא לא המדד
+      הנכון.
+
+
+      התקציר המלא באתר. קישור בביו 🔗
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#מייקלסיילור'
+      - '#לקספרידמן'
+      - '#אינפלציה'
+      - '#כסף'
+      - '#השקעות'
+      - '#כלכלה'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-08-05_quote-michael-saylor-inflati/michael-saylor-inflation-scalar-lex-fridman-01-quote.png
+    permalink: ''
+  - id: 2026-08-06_carousel-seth-godin-this-is-str
+    slug: seth-godin-this-is-strategy-tim-ferriss
+    platform: instagram
+    format: carousel
+    kicker: תקציר מזוקק
+    scheduledFor: '2026-08-06T17:00:00.000Z'
+    status: approved
+    caption: >-
+      סת' גודין: אסטרטגיה היא לא תוכנית. 🎯
+
+
+      אצל טים פריס, גודין מפרק מחדש מילה שכולם משתמשים בה ומעטים מגדירים — ומסביר למה רוב מה שאנחנו
+      קוראים לו אסטרטגיה הוא בעצם טקטיקה.
+
+
+      החליקו, שמרו 💾 — התקציר המלא באתר. קישור בביו.
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#סתגודין'
+      - '#טיםפריס'
+      - '#אסטרטגיה'
+      - '#עסקים'
+      - '#שיווק'
+      - '#קריירה'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-08-06_carousel-seth-godin-this-is-str/seth-godin-this-is-strategy-tim-ferriss-01-01-cover.png
+      - >-
+        https://hesketon.co.il/social/2026-08-06_carousel-seth-godin-this-is-str/seth-godin-this-is-strategy-tim-ferriss-02-b01.png
+      - >-
+        https://hesketon.co.il/social/2026-08-06_carousel-seth-godin-this-is-str/seth-godin-this-is-strategy-tim-ferriss-03-b02.png
+      - >-
+        https://hesketon.co.il/social/2026-08-06_carousel-seth-godin-this-is-str/seth-godin-this-is-strategy-tim-ferriss-04-b03.png
+      - >-
+        https://hesketon.co.il/social/2026-08-06_carousel-seth-godin-this-is-str/seth-godin-this-is-strategy-tim-ferriss-05-b04.png
+      - >-
+        https://hesketon.co.il/social/2026-08-06_carousel-seth-godin-this-is-str/seth-godin-this-is-strategy-tim-ferriss-06-t01.png
+      - >-
+        https://hesketon.co.il/social/2026-08-06_carousel-seth-godin-this-is-str/seth-godin-this-is-strategy-tim-ferriss-07-t02.png
+      - >-
+        https://hesketon.co.il/social/2026-08-06_carousel-seth-godin-this-is-str/seth-godin-this-is-strategy-tim-ferriss-08-t03.png
+      - >-
+        https://hesketon.co.il/social/2026-08-06_carousel-seth-godin-this-is-str/seth-godin-this-is-strategy-tim-ferriss-09-t04.png
+      - >-
+        https://hesketon.co.il/social/2026-08-06_carousel-seth-godin-this-is-str/seth-godin-this-is-strategy-tim-ferriss-10-99-cta.png
+    permalink: ''
+  - id: 2026-08-07_lessons-lower-back-pain-mcgill
+    slug: lower-back-pain-mcgill
+    platform: instagram
+    format: lessons
+    kicker: 3 דברים שלמדנו
+    scheduledFor: '2026-08-07T17:00:00.000Z'
+    status: approved
+    caption: >-
+      "אין דבר כזה כאב גב 'לא-ספציפי'. תמיד יש מנגנון." 🦴
+
+
+      פרופ' סטיוארט מקגיל אצל פיטר אטיה — אחד החוקרים הגדולים בעולם של עמוד השדרה, על מה שבאמת גורם
+      לכאב גב ומה עושים איתו.
+
+
+      3 דברים שלמדנו, בקרוסלה 👇
+
+
+      שמרו לעצמכם, והתקציר המלא באתר. קישור בביו.
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#מקגיל'
+      - '#כאבגב'
+      - '#פיטראטיה'
+      - '#בריאות'
+      - '#עמודשדרה'
+      - '#אימון'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-08-07_lessons-lower-back-pain-mcgill/lower-back-pain-mcgill-01-01-cover.png
+      - >-
+        https://hesketon.co.il/social/2026-08-07_lessons-lower-back-pain-mcgill/lower-back-pain-mcgill-02-t01.png
+      - >-
+        https://hesketon.co.il/social/2026-08-07_lessons-lower-back-pain-mcgill/lower-back-pain-mcgill-03-t02.png
+      - >-
+        https://hesketon.co.il/social/2026-08-07_lessons-lower-back-pain-mcgill/lower-back-pain-mcgill-04-t03.png
+      - >-
+        https://hesketon.co.il/social/2026-08-07_lessons-lower-back-pain-mcgill/lower-back-pain-mcgill-05-99-cta.png
+    permalink: ''
+  - id: 2026-08-08_quote-neil-degrasse-tyson-al
+    slug: neil-degrasse-tyson-aliens-whistleblowers
+    platform: instagram
+    format: quote
+    kicker: ציטוט
+    scheduledFor: '2026-08-08T17:00:00.000Z'
+    status: approved
+    caption: |-
+      "אם אתם טוענים שיש לכם חייזר בסככה שבחצר — פשוט תוציאו אותו החוצה." 👽
+
+      ניל דה-גראס טייסון אצל סטיבן בארטלט, על עדויות, על ראיות, ועל ההבדל ביניהן.
+
+      שיעור בחשיבה ביקורתית שמתחפש לשיחה על חייזרים.
+
+      התקציר המלא באתר. קישור בביו 🔗
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#נילדהגראסטייסון'
+      - '#חייזרים'
+      - '#מדע'
+      - '#חשיבהביקורתית'
+      - '#אסטרונומיה'
+      - '#יופו'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-08-08_quote-neil-degrasse-tyson-al/neil-degrasse-tyson-aliens-whistleblowers-01-quote.png
+    permalink: ''
+  - id: 2026-08-02_reelv2-mrbeast-joe-rogan-poss
+    slug: mrbeast-joe-rogan-possible-time-and-money
+    platform: instagram
+    format: reel
+    kicker: ריל
+    scheduledFor: '2026-08-02T10:00:00.000Z'
+    status: approved
+    caption: >-
+      "כמעט הכול אפשרי, אם אתם מוכנים להשקיע את הזמן ואת הכסף." 🎯
+
+
+      מיסטרביסט אצל ג'ו רוגן — על הכלל שהוא כופה על הצוות: אסור לומר "בלתי אפשרי" לפני שתמחרתם את זה
+      בזמן ובכסף.
+
+
+      ההתנגדות היחידה שמותרת היא "לא שווה את זה".
+
+
+      התקציר המלא באתר. קישור בביו 🔗
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#מיסטרביסט'
+      - '#גורוגן'
+      - '#יצירתתוכן'
+      - '#יזמות'
+      - '#מיינדסט'
+      - '#עסקים'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-08-02_reelv2-mrbeast-joe-rogan-poss/mrbeast-joe-rogan-possible-time-and-money-reel.mp4
+    cover: >-
+      https://hesketon.co.il/social/2026-08-02_reelv2-mrbeast-joe-rogan-poss/mrbeast-joe-rogan-possible-time-and-money-cover.jpg
+    audio:
+      audioId: '1621000558910293'
+      audioVolume: 100
+      videoVolume: 0
+    permalink: ''
+  - id: 2026-08-03_reelv2-james-clear-habits-get
+    slug: james-clear-habits-getting-started-huberman
+    platform: instagram
+    format: reel
+    kicker: ריל
+    scheduledFor: '2026-08-03T10:00:00.000Z'
+    status: approved
+    caption: >-
+      "המשקל הכבד ביותר בחדר הכושר הוא דלת הכניסה." 🚪
+
+
+      ג'יימס קליר — מחבר "הרגלים אטומיים" — אצל אנדרו הוברמן, על למה כמעט כל בעיית הרגלים היא בעצם
+      בעיה של התחלה.
+
+
+      ביום רע: עשו את הגרסה הקצרה. רק אל תרשמו אפס.
+
+
+      התקציר המלא באתר. קישור בביו 🔗
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#גיימסקליר'
+      - '#הרגליםאטומיים'
+      - '#הוברמן'
+      - '#הרגלים'
+      - '#מיינדסט'
+      - '#משמעת'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-08-03_reelv2-james-clear-habits-get/james-clear-habits-getting-started-huberman-reel.mp4
+    cover: >-
+      https://hesketon.co.il/social/2026-08-03_reelv2-james-clear-habits-get/james-clear-habits-getting-started-huberman-cover.jpg
+    audio:
+      audioId: '9513789255356881'
+      audioVolume: 100
+      videoVolume: 0
+    permalink: ''
+  - id: 2026-08-04_reelv2-demis-hassabis-agi-wor
+    slug: demis-hassabis-agi-world-models-deepmind
+    platform: instagram
+    format: reel
+    kicker: ריל
+    scheduledFor: '2026-08-04T10:00:00.000Z'
+    status: approved
+    caption: >-
+      אותם מודלים זוכים במדליית זהב באולימפיאדת המתמטיקה — ונכשלים בתרגיל לוגי פשוט. 🤖
+
+
+      דמיס הסביס, מנכ"ל Google DeepMind, על מה שבאמת מפריד את ה-AI של היום מבינה כללית: לא היכולת,
+      אלא העקביות.
+
+
+      וגם: למה הזיה היא בעצם כישלון בסירוב.
+
+
+      התקציר המלא באתר. קישור בביו 🔗
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#דמיסהסביס'
+      - '#דיפמיינד'
+      - '#בינהמלאכותית'
+      - '#AGI'
+      - '#טכנולוגיה'
+      - '#מדע'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-08-04_reelv2-demis-hassabis-agi-wor/demis-hassabis-agi-world-models-deepmind-reel.mp4
+    cover: >-
+      https://hesketon.co.il/social/2026-08-04_reelv2-demis-hassabis-agi-wor/demis-hassabis-agi-world-models-deepmind-cover.jpg
+    audio:
+      audioId: '627735556288874'
+      audioVolume: 100
+      videoVolume: 0
+    permalink: ''
+  - id: 2026-08-05_reelv2-rick-rubin-creativity-
+    slug: rick-rubin-creativity-huberman
+    platform: instagram
+    format: reel
+    kicker: ריל
+    scheduledFor: '2026-08-05T10:00:00.000Z'
+    status: approved
+    caption: >-
+      "איזו מהשתיים אתם אוהבים יותר?" — לפי ריק רובין, זו רוב היצירתיות. 🎛️
+
+
+      המפיק שמאחורי חלק מהאלבומים הגדולים בהיסטוריה, אצל אנדרו הוברמן: יצירה לא מתחילה ברעיון אלא
+      בהבחנה.
+
+
+      והשאלה "איך זה יתפקד ברשתות"? זה עיסוק אחר לגמרי.
+
+
+      התקציר המלא באתר. קישור בביו 🔗
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#ריקרובין'
+      - '#הוברמן'
+      - '#יצירתיות'
+      - '#מוזיקה'
+      - '#אמנות'
+      - '#מיינדסט'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-08-05_reelv2-rick-rubin-creativity-/rick-rubin-creativity-huberman-reel.mp4
+    cover: >-
+      https://hesketon.co.il/social/2026-08-05_reelv2-rick-rubin-creativity-/rick-rubin-creativity-huberman-cover.jpg
+    audio:
+      audioId: '692868096200013'
+      audioVolume: 100
+      videoVolume: 0
+    permalink: ''
+  - id: 2026-08-06_reelv2-andrew-huberman-neurop
+    slug: andrew-huberman-neuroplasticity-focus-rich-roll
+    platform: instagram
+    format: reel
+    kicker: ריל
+    scheduledFor: '2026-08-06T10:00:00.000Z'
+    status: approved
+    caption: >-
+      נוירופלסטיות מופעלת על ידי מיקוד עז — אבל מתרחשת בזמן שינה עמוקה. 🧠
+
+
+      פרופ' אנדרו הוברמן אצל ריץ' רול, על איך המוח באמת משתנה אחרי גיל 25 — ולמה התסיסה והבלבול
+      בהתחלה הם השער, לא הכישלון.
+
+
+      שמרו לעצמכם 💾 והתקציר המלא באתר. קישור בביו.
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#הוברמן'
+      - '#נוירופלסטיות'
+      - '#ריצרול'
+      - '#מוח'
+      - '#למידה'
+      - '#מיקוד'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-08-06_reelv2-andrew-huberman-neurop/andrew-huberman-neuroplasticity-focus-rich-roll-reel.mp4
+    cover: >-
+      https://hesketon.co.il/social/2026-08-06_reelv2-andrew-huberman-neurop/andrew-huberman-neuroplasticity-focus-rich-roll-cover.jpg
+    audio:
+      audioId: '1301427616977145'
+      audioVolume: 100
+      videoVolume: 0
+    permalink: ''
+  - id: 2026-08-07_reelv2-ray-dalio-decline-smar
+    slug: ray-dalio-decline-smart-rabbit-bartlett
+    platform: instagram
+    format: reel
+    kicker: ריל
+    scheduledFor: '2026-08-07T10:00:00.000Z'
+    status: approved
+    caption: >-
+      "לארנב חכם יש שלוש מחילות." 🐇
+
+
+      ריי דליו אצל סטיבן בארטלט — קודר לגבי בריטניה ולגבי ארה"ב, אבל השאלה שהוא חוזר אליה היא לא "מה
+      יקרה" אלא "איך אתם כפרט מתמודדים".
+
+
+      ומה מנבא אושר בכל המחקרים? לא הכנסה — קהילה.
+
+
+      התקציר המלא באתר. קישור בביו 🔗
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#רייידליו'
+      - '#כסף'
+      - '#השקעות'
+      - '#כלכלה'
+      - '#גיאופוליטיקה'
+      - '#אושר'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-08-07_reelv2-ray-dalio-decline-smar/ray-dalio-decline-smart-rabbit-bartlett-reel.mp4
+    cover: >-
+      https://hesketon.co.il/social/2026-08-07_reelv2-ray-dalio-decline-smar/ray-dalio-decline-smart-rabbit-bartlett-cover.jpg
+    audio:
+      audioId: '974432747187721'
+      audioVolume: 100
+      videoVolume: 0
+    permalink: ''
+  - id: 2026-08-08_reelv2-creatine-dosing-myths-
+    slug: creatine-dosing-myths-candow
+    platform: instagram
+    format: reel
+    kicker: ריל
+    scheduledFor: '2026-08-08T10:00:00.000Z'
+    status: approved
+    caption: >-
+      "מוח בריא כנראה לא זקוק לקריאטין בכלל. אבל מוח בלחץ — כן." 💊
+
+
+      ד"ר דארן קנדו אצל סטיבן בארטלט, מפרק את המיתוסים סביב קריאטין: כליות, מים, שיער — ומה המחקר
+      באמת מראה.
+
+
+      ואין מינון אחד נכון. יש סולם.
+
+
+      התקציר המלא באתר. קישור בביו 🔗
+    hashtags:
+      - '#הסכתון'
+      - '#פודקאסט'
+      - '#קריאטין'
+      - '#תוספים'
+      - '#בריאות'
+      - '#כושר'
+      - '#מדע'
+      - '#תזונה'
+    assets:
+      - >-
+        https://hesketon.co.il/social/2026-08-08_reelv2-creatine-dosing-myths-/creatine-dosing-myths-candow-reel.mp4
+    cover: >-
+      https://hesketon.co.il/social/2026-08-08_reelv2-creatine-dosing-myths-/creatine-dosing-myths-candow-cover.jpg
+    audio:
+      audioId: '872667339759392'
+      audioVolume: 100
+      videoVolume: 0
+    permalink: ''
