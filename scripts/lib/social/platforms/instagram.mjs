@@ -91,6 +91,11 @@ async function permalink(mediaId) {
 
 export async function publishImage(imageUrl, caption) {
   const id = await createContainer({ image_url: imageUrl, caption: caption || '' });
+  // Single-image containers process asynchronously too. This wait was added to
+  // the carousel path after the 2026-07-10 failure but not here, and on
+  // 2026-07-26 the Naval quote died the same way (9007, "Media ID is not
+  // available") and never retried.
+  await waitForContainer(id);
   const mediaId = await publishContainer(id);
   return { mediaId, permalink: await permalink(mediaId) };
 }
@@ -145,7 +150,7 @@ export async function publishStory(mediaUrl, { isVideo = false } = {}) {
     ? { media_type: 'STORIES', video_url: mediaUrl }
     : { media_type: 'STORIES', image_url: mediaUrl };
   const id = await createContainer(fields);
-  if (isVideo) await waitForContainer(id);
+  await waitForContainer(id);   // images race here too, not just video
   const mediaId = await publishContainer(id);
   return { mediaId, permalink: await permalink(mediaId) };
 }
