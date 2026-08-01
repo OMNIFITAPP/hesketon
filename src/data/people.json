@@ -436,5 +436,17 @@
     "nameHe": "סת גודין",
     "nameEn": "Seth Godin",
     "title": "מחבר ואיש שיווק"
+  },
+  {
+    "id": "sam-altman",
+    "nameHe": "סם אלטמן",
+    "nameEn": "Sam Altman",
+    "title": "מנכ\"ל OpenAI"
+  },
+  {
+    "id": "patrick-oshaughnessy",
+    "nameHe": "פטריק אושונסי",
+    "nameEn": "Patrick O'Shaughnessy",
+    "title": "משקיע ומנחה פודקאסט"
   }
 ]

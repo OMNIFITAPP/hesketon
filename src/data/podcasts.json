@@ -128,5 +128,11 @@
     "id": "open-residency",
     "name": "Open Residency",
     "description": "פודקאסט ארוך למפעילי ובוני עסקים — על תוכן, שיווק וצמיחה."
+  },
+  {
+    "id": "invest-like-the-best",
+    "name": "Invest Like the Best",
+    "hostId": "patrick-oshaughnessy",
+    "description": "שיחות עם משקיעים, מייסדים ובוני עסקים על מה שמניע ביצועים — עם פטריק אושונסי."
   }
 ]
