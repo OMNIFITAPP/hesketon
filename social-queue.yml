@@ -1321,7 +1321,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-02T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "כמעט הכול אפשרי, אם אתם מוכנים להשקיע את הזמן ואת הכסף." 🎯
 
@@ -1352,7 +1352,9 @@ items:
       audioId: '1621000558910293'
       audioVolume: 100
       videoVolume: 0
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DbiQdgwDCFG/
+    publishedAt: '2026-08-02T11:00:54.342Z'
+    mediaId: '17951879400016296'
   - id: 2026-08-03_reelv2-james-clear-habits-get
     slug: james-clear-habits-getting-started-huberman
     platform: instagram
