@@ -1096,7 +1096,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-08-03T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       סם אלטמן על מה שבאמת משתנה כשהמחשוב מפסיק להיות המחסום. 🤖
 
@@ -1136,7 +1136,9 @@ items:
         https://hesketon.co.il/social/2026-08-03_carousel-sam-altman-agi-compute/sam-altman-agi-compute-human-agency-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-08-03_carousel-sam-altman-agi-compute/sam-altman-agi-compute-human-agency-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Dbllt4LIGhX/
+    publishedAt: '2026-08-03T18:04:01.665Z'
+    mediaId: '18075497534352521'
   - id: 2026-08-04_lessons-andrew-huberman-peptid
     slug: andrew-huberman-peptides-training-tim-ferriss
     platform: instagram
