@@ -1363,7 +1363,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-03T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "המשקל הכבד ביותר בחדר הכושר הוא דלת הכניסה." 🚪
 
@@ -1394,7 +1394,9 @@ items:
       audioId: '9513789255356881'
       audioVolume: 100
       videoVolume: 0
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DbkyHslk9a9/
+    publishedAt: '2026-08-03T10:33:32.768Z'
+    mediaId: '17928984783383110'
   - id: 2026-08-04_reelv2-demis-hassabis-agi-wor
     slug: demis-hassabis-agi-world-models-deepmind
     platform: instagram
