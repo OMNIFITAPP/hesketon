@@ -29,6 +29,61 @@ const T = {
 
 export const REEL = { width: 1080, height: 1920 };
 
+/**
+ * Motion constants, shared by the timeline maths and the in-page renderer so
+ * the two can never drift apart.
+ *   stagger  gap between consecutive word reveals
+ *   maskDur  how long one word takes to slide in
+ *   typeRate seconds per character while typing
+ *   readRate characters per second a viewer can comfortably read on screen
+ */
+export const MOTION = {
+  stagger: 0.035,
+  maskDur: 0.34,
+  typeRate: 0.048,
+  readRate: 13,
+  minHold: 1.6,
+  tail: 0.3,
+};
+
+/** The text a scene actually puts on screen — what the viewer must read. */
+export function sceneText(scene, post) {
+  if (scene.type === 'stat') return `${scene.value} ${scene.text}`;
+  if (scene.type === 'cta') return ctaText(scene, post);
+  return scene.text || '';
+}
+
+export function ctaText(scene, post) {
+  if (scene.text) return scene.text;
+  const rt = Number(post?.readingTime) || 0;
+  return rt ? `הפרק המלא — בתקציר של ${rt} דקות.` : 'הפרק המלא — בתקציר קצר אחד.';
+}
+
+/**
+ * Give every scene the time it actually needs: however long the reveal takes,
+ * PLUS time to read what was revealed. A fixed template ran the opening and
+ * closing scenes past the viewer before they could finish the line.
+ *
+ * @returns {object[]} scenes with in/out set, plus a `total`
+ */
+export function layoutTimeline(scenes, post, opts = {}) {
+  const m = { ...MOTION, ...opts };
+  let t = 0;
+  const out = scenes.map((s) => {
+    const text = sceneText(s, post);
+    const words = text.trim().split(/\s+/).filter(Boolean).length || 1;
+    const reveal = s.type === 'type'
+      ? text.length * m.typeRate
+      : 0.06 + (words - 1) * m.stagger + m.maskDur;
+    const read = Math.max(m.minHold, text.length / m.readRate);
+    const dur = reveal + read + m.tail;
+    const scene = { ...s, in: +t.toFixed(3), out: +(t + dur).toFixed(3) };
+    t += dur;
+    return scene;
+  });
+  return { scenes: out, total: +t.toFixed(3) };
+}
+
 function esc(s) {
   return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
@@ -102,7 +157,8 @@ export function buildReelHtml(post, sb, fontCss) {
     let inner = '';
 
     if (s.type === 'type') {
-      inner = `<p class="line type-line"><span class="typed" data-text="${esc(s.text)}"></span><span class="tcaret"></span></p>`;
+      const typeDur = (s.text || '').length * MOTION.typeRate;
+      inner = `<p class="line type-line"><span class="typed" data-text="${esc(s.text)}" data-dur="${typeDur.toFixed(3)}"></span><span class="tcaret"></span></p>`;
     } else if (s.type === 'stat') {
       inner = `<p class="stat"><span class="mw pop"><b>${esc(s.value)}</b></span></p>
                <p class="line sub">${words(s.text)}</p>`;
@@ -111,12 +167,10 @@ export function buildReelHtml(post, sb, fontCss) {
     } else if (s.type === 'pop') {
       inner = `<p class="line">${wordsWithPop(s.text, s.key)}</p>`;
     } else if (s.type === 'cta') {
-      // Derived here, not passed in: reading time comes from the post's own
+      // Derived, not passed in: reading time comes from the post's own
       // frontmatter, and an omitted `text` previously rendered "undefined"
       // straight into a finished reel.
-      const rt = Number(post.readingTime) || 0;
-      const ctaText = s.text || (rt ? `הפרק המלא — בתקציר של ${rt} דקות.` : 'הפרק המלא — בתקציר קצר אחד.');
-      inner = `<p class="line cta-ttl">${words(ctaText)}</p>
+      inner = `<p class="line cta-ttl">${words(ctaText(s, post))}</p>
                <p class="cta-pill"><span class="mw"><b>קישור בביו</b></span></p>
                <p class="cta-url"><span class="mw"><b>hesketon.co.il</b></span></p>`;
     } else {
@@ -193,6 +247,9 @@ body.invert .seg b i{background:${T.invInk}}
 .mw{display:inline-block;overflow:hidden;vertical-align:bottom;
   padding:.06em .04em .2em;margin:-.06em -.04em -.2em}
 .mw b{display:inline-block;font-weight:inherit;will-change:transform}
+/* the popped word swells, so it needs real air around it — without this the
+   scaled box touches its neighbours */
+.mw.pop{margin-inline:.12em}
 
 /* marker sweep: a real element, not ::before, so render(t) can drive it */
 .mark{position:relative;display:inline-block;padding:0 .14em}
@@ -275,7 +332,7 @@ ${scenesHtml}
       var typed = active.querySelector('.typed');
       if (typed){
         var txt = typed.dataset.text;
-        var dur = 1.05;
+        var dur = parseFloat(typed.dataset.dur) || 1.05;   // scales with length
         var n = Math.floor(clamp(local / dur) * txt.length);
         typed.textContent = txt.slice(0, n);
         var caret = active.querySelector('.tcaret');
@@ -286,7 +343,7 @@ ${scenesHtml}
         }
       }
 
-      setMasks(active, local - 0.06, 0.055, 0.42);
+      setMasks(active, local - 0.06, ${MOTION.stagger}, ${MOTION.maskDur});
 
       // marker sweep
       var bg = active.querySelector('.mark-bg');
@@ -307,9 +364,13 @@ ${scenesHtml}
         var mix = c0.map(function(c, idx){ return Math.round(c + (c1[idx] - c) * e); });
         pop.style.color = 'rgb(' + mix.join(',') + ')';
         // pop is the .mw itself, so the clip box scales with the glyphs and
-        // nothing is shaved off the leading edge
-        pop.style.transform = 'scale(' + (1 + 0.11 * e).toFixed(4) + ')';
-        pop.style.transformOrigin = 'center right';
+        // nothing is shaved off the leading edge.
+        // Origin is CENTRE, not right: a right origin grows the word leftward
+        // only, and in RTL that is straight into the next word — "הדופק:" ran
+        // over "אם". Centre splits the growth, the scale is gentler, and .pop
+        // carries its own inline margin so the swollen box still keeps clear.
+        pop.style.transform = 'scale(' + (1 + 0.06 * e).toFixed(4) + ')';
+        pop.style.transformOrigin = 'center center';
       }
     }
   };
