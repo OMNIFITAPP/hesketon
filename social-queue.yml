@@ -1405,7 +1405,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-04T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       אותם מודלים זוכים במדליית זהב באולימפיאדת המתמטיקה — ונכשלים בתרגיל לוגי פשוט. 🤖
 
@@ -1436,7 +1436,9 @@ items:
       audioId: '627735556288874'
       audioVolume: 100
       videoVolume: 0
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DbndyCjAqoU/
+    publishedAt: '2026-08-04T11:33:31.627Z'
+    mediaId: '17970862374066695'
   - id: 2026-08-05_reelv2-rick-rubin-creativity-
     slug: rick-rubin-creativity-huberman
     platform: instagram
