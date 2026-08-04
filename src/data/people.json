@@ -448,5 +448,17 @@
     "nameHe": "פטריק אושונסי",
     "nameEn": "Patrick O'Shaughnessy",
     "title": "משקיע ומנחה פודקאסט"
+  },
+  {
+    "id": "brian-cox",
+    "nameHe": "בריאן קוקס",
+    "nameEn": "Brian Cox",
+    "title": "פרופ' לפיזיקת חלקיקים"
+  },
+  {
+    "id": "dwayne-johnson",
+    "nameHe": "דוויין ג'ונסון",
+    "nameEn": "Dwayne Johnson",
+    "title": "שחקן, מתאבק ויזם"
   }
 ]

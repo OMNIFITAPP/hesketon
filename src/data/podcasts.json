@@ -134,5 +134,11 @@
     "name": "Invest Like the Best",
     "hostId": "patrick-oshaughnessy",
     "description": "שיחות עם משקיעים, מייסדים ובוני עסקים על מה שמניע ביצועים — עם פטריק אושונסי."
+  },
+  {
+    "id": "startalk",
+    "name": "StarTalk",
+    "hostId": "neil-degrasse-tyson",
+    "description": "מדע, חלל ותרבות בשיחות עם מדענים ואורחים — עם ניל דה-גראס טייסון."
   }
 ]
