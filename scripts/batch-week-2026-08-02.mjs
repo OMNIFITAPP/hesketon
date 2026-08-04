@@ -23,7 +23,7 @@ import { loadPublishedPosts } from './lib/social/parse-post.mjs';
 import { loadQueue, saveQueue } from './lib/social/select.mjs';
 import { fontCss, renderSlides } from './lib/social/render.mjs';
 import { buildCarousel, buildQuoteCard, buildLessonsCarousel } from './lib/social/templates.mjs';
-import { buildReelHtml, REEL } from './lib/social/reel-v2.mjs';
+import { buildReelHtml, layoutTimeline, REEL } from './lib/social/reel-v2.mjs';
 import { renderFrames } from './lib/social/frames.mjs';
 import { verifyReel } from './lib/social/verify-reel.mjs';
 import { encodeFrames, probe } from './lib/social/video.mjs';
@@ -40,162 +40,13 @@ const need = (s) => { if (!bySlug[s]) throw new Error(`missing post: ${s}`); ret
 const at = (day, hhmmZ) => `2026-08-${String(day).padStart(2, '0')}T${hhmmZ}:00.000Z`;
 const cleanTag = (t) => '#' + String(t).replace(/[\s'"׳״’‘`.]+/g, '');
 
-// Shared 18.4s shape. Every reel uses it, so the feed has a recognisable rhythm.
-const timeline = (sc) => {
-  const marks = [[0, 1.5], [1.5, 5.2], [5.2, 8.3], [8.3, 11.6], [11.6, 14.4], [14.4, 16.1], [16.1, 18.4]];
-  return sc.map((s, i) => ({ ...s, in: marks[i][0], out: marks[i][1] }));
-};
+// Durations are derived per scene from how much there is to read — a fixed
+// template ran the opening and closing lines past the viewer too fast.
 
 // ── 7 reels ─────────────────────────────────────────────────
 // Lines are trimmed from each post's אמ;לק / takeaways for screen; the
 // meaning is never restated. `key` marks the word that carries the beat.
-const REELS = [
-  {
-    day: 2, slug: 'mrbeast-joe-rogan-possible-time-and-money', kicker: 'אמ;לק',
-    scenes: [
-      { type: 'type', text: 'מתי מותר להגיד "בלתי אפשרי"?', bare: true, progress: false },
-      { type: 'line', text: 'כמעט הכול אפשרי, אם אתם מוכנים להשקיע את הזמן ואת הכסף.' },
-      { type: 'mark', text: 'אסור לומר בלתי אפשרי לפני שתמחרו את זה בזמן ובכסף.', key: 'שתמחרו' },
-      { type: 'pop', text: 'מבחן הדופק: אם הדופק עולה כשאתם מספרים על רעיון — הוא טוב.', key: 'הדופק' },
-      { type: 'line', text: 'יוצרים רבים נעצרים בדיוק כשהם מתחילים להרוויח.' },
-      { type: 'line', text: 'ההתנגדות היחידה שמותרת: לא שווה את זה.', invert: true },
-      { type: 'cta' },
-    ],
-    caption: `"כמעט הכול אפשרי, אם אתם מוכנים להשקיע את הזמן ואת הכסף." 🎯
-
-מיסטרביסט אצל ג'ו רוגן — על הכלל שהוא כופה על הצוות: אסור לומר "בלתי אפשרי" לפני שתמחרתם את זה בזמן ובכסף.
-
-ההתנגדות היחידה שמותרת היא "לא שווה את זה".
-
-התקציר המלא באתר. קישור בביו 🔗`,
-    hashtags: ['הסכתון', 'פודקאסט', 'מיסטרביסט', 'גורוגן', 'יצירתתוכן', 'יזמות', 'מיינדסט', 'עסקים'],
-    audioId: '1621000558910293',
-  },
-  {
-    day: 3, slug: 'james-clear-habits-getting-started-huberman', kicker: 'אמ;לק',
-    scenes: [
-      { type: 'type', text: 'מה הכי כבד בחדר הכושר?', bare: true, progress: false },
-      { type: 'line', text: 'המשקל הכבד ביותר בחדר הכושר הוא דלת הכניסה.' },
-      { type: 'mark', text: 'כמעט כל בעיית הרגלים מסתכמת באמנות ההתחלה.', key: 'ההתחלה' },
-      { type: 'pop', text: 'ארבעת החוקים: ברור, מושך, קל ומספק.', key: 'ברור' },
-      { type: 'line', text: 'ביום רע עשו את הגרסה הקצרה. אל תרשמו אפס.' },
-      { type: 'line', text: 'אל תשאלו מה אני רוצה להשיג — אלא מי אני רוצה להיות.', invert: true },
-      { type: 'cta' },
-    ],
-    caption: `"המשקל הכבד ביותר בחדר הכושר הוא דלת הכניסה." 🚪
-
-ג'יימס קליר — מחבר "הרגלים אטומיים" — אצל אנדרו הוברמן, על למה כמעט כל בעיית הרגלים היא בעצם בעיה של התחלה.
-
-ביום רע: עשו את הגרסה הקצרה. רק אל תרשמו אפס.
-
-התקציר המלא באתר. קישור בביו 🔗`,
-    hashtags: ['הסכתון', 'פודקאסט', 'גיימסקליר', 'הרגליםאטומיים', 'הוברמן', 'הרגלים', 'מיינדסט', 'משמעת'],
-    audioId: '9513789255356881',
-  },
-  {
-    day: 4, slug: 'demis-hassabis-agi-world-models-deepmind', kicker: 'אמ;לק',
-    scenes: [
-      { type: 'type', text: 'מה מפריד AI מבינה כללית?', bare: true, progress: false },
-      { type: 'line', text: 'אותם מודלים זוכים במדליית זהב — ונכשלים בתרגיל לוגי פשוט.' },
-      { type: 'mark', text: 'חוסר העקביות, לא חוסר היכולת, הוא מה שמפריד.', key: 'העקביות' },
-      { type: 'pop', text: 'הזיות נובעות מכך שהמודל עונה כשהיה צריך לסרב.', key: 'לסרב' },
-      { type: 'line', text: 'המהפכה התעשייתית לקחה מאה שנה. זו תהיה גדולה פי עשרה.' },
-      { type: 'line', text: 'אין קיר בסקיילינג — אבל גם אין הכפלה בכל גרסה.', invert: true },
-      { type: 'cta' },
-    ],
-    caption: `אותם מודלים זוכים במדליית זהב באולימפיאדת המתמטיקה — ונכשלים בתרגיל לוגי פשוט. 🤖
-
-דמיס הסביס, מנכ"ל Google DeepMind, על מה שבאמת מפריד את ה-AI של היום מבינה כללית: לא היכולת, אלא העקביות.
-
-וגם: למה הזיה היא בעצם כישלון בסירוב.
-
-התקציר המלא באתר. קישור בביו 🔗`,
-    hashtags: ['הסכתון', 'פודקאסט', 'דמיסהסביס', 'דיפמיינד', 'בינהמלאכותית', 'AGI', 'טכנולוגיה', 'מדע'],
-    audioId: '627735556288874',
-  },
-  {
-    day: 5, slug: 'rick-rubin-creativity-huberman', kicker: 'אמ;לק',
-    scenes: [
-      { type: 'type', text: 'איך יודעים אם משהו טוב?', bare: true, progress: false },
-      { type: 'line', text: 'איזו מהשתיים אתם אוהבים יותר? זו רוב היצירתיות.' },
-      { type: 'mark', text: 'יצירה לא מתחילה ברעיון אלא בהבחנה.', key: 'בהבחנה' },
-      { type: 'pop', text: 'במקום להסביר מה לא עובד — הציעו משהו שאפשר לנסות.', key: 'לנסות' },
-      { type: 'line', text: 'ספק עצמי אינו אויב אלא בקרה.' },
-      { type: 'line', text: 'אספו בלי מטרה. זה מה שממלא את המאגר.', invert: true },
-      { type: 'cta' },
-    ],
-    caption: `"איזו מהשתיים אתם אוהבים יותר?" — לפי ריק רובין, זו רוב היצירתיות. 🎛️
-
-המפיק שמאחורי חלק מהאלבומים הגדולים בהיסטוריה, אצל אנדרו הוברמן: יצירה לא מתחילה ברעיון אלא בהבחנה.
-
-והשאלה "איך זה יתפקד ברשתות"? זה עיסוק אחר לגמרי.
-
-התקציר המלא באתר. קישור בביו 🔗`,
-    hashtags: ['הסכתון', 'פודקאסט', 'ריקרובין', 'הוברמן', 'יצירתיות', 'מוזיקה', 'אמנות', 'מיינדסט'],
-    audioId: '692868096200013',
-  },
-  {
-    day: 6, slug: 'andrew-huberman-neuroplasticity-focus-rich-roll', kicker: 'אמ;לק',
-    scenes: [
-      { type: 'type', text: 'מתי המוח באמת משתנה?', bare: true, progress: false },
-      { type: 'line', text: 'נוירופלסטיות מופעלת במיקוד עז — אבל מתרחשת בשינה עמוקה.' },
-      { type: 'mark', text: 'מיקוד משחרר אצטילכולין שמסמן את הנוירונים לשינוי.', key: 'אצטילכולין' },
-      { type: 'pop', text: 'התסיסה בהתחלה אינה כישלון — היא השער שחייבים לעבור.', key: 'השער' },
-      { type: 'line', text: 'דופמין אינו פרס על היעד. הוא משתחרר בכל אבן-דרך.' },
-      { type: 'line', text: 'מיקוד מסמן. מנוחה משנה.', invert: true },
-      { type: 'cta' },
-    ],
-    caption: `נוירופלסטיות מופעלת על ידי מיקוד עז — אבל מתרחשת בזמן שינה עמוקה. 🧠
-
-פרופ' אנדרו הוברמן אצל ריץ' רול, על איך המוח באמת משתנה אחרי גיל 25 — ולמה התסיסה והבלבול בהתחלה הם השער, לא הכישלון.
-
-שמרו לעצמכם 💾 והתקציר המלא באתר. קישור בביו.`,
-    hashtags: ['הסכתון', 'פודקאסט', 'הוברמן', 'נוירופלסטיות', 'ריצרול', 'מוח', 'למידה', 'מיקוד'],
-    audioId: '1301427616977145',
-  },
-  {
-    day: 7, slug: 'ray-dalio-decline-smart-rabbit-bartlett', kicker: 'אמ;לק',
-    scenes: [
-      { type: 'type', text: 'כמה מחילות יש לארנב חכם?', bare: true, progress: false },
-      { type: 'line', text: 'לארנב חכם יש שלוש מחילות.' },
-      { type: 'mark', text: 'שמרו על גמישות — נכס נעול עלול לקרקע אתכם.', key: 'גמישות' },
-      { type: 'pop', text: 'להמלצה על ארה"ב ליזמות אין קשר למסים — אלא לתרבות.', key: 'לתרבות' },
-      { type: 'line', text: 'מעבר לרמה בסיסית, אין קשר בין כסף לרווחה.' },
-      { type: 'line', text: 'מה שמנבא אושר בכל המחקרים? קהילה.', invert: true },
-      { type: 'cta' },
-    ],
-    caption: `"לארנב חכם יש שלוש מחילות." 🐇
-
-ריי דליו אצל סטיבן בארטלט — קודר לגבי בריטניה ולגבי ארה"ב, אבל השאלה שהוא חוזר אליה היא לא "מה יקרה" אלא "איך אתם כפרט מתמודדים".
-
-ומה מנבא אושר בכל המחקרים? לא הכנסה — קהילה.
-
-התקציר המלא באתר. קישור בביו 🔗`,
-    hashtags: ['הסכתון', 'פודקאסט', 'רייידליו', 'כסף', 'השקעות', 'כלכלה', 'גיאופוליטיקה', 'אושר'],
-    audioId: '974432747187721',
-  },
-  {
-    day: 8, slug: 'creatine-dosing-myths-candow', kicker: 'אמ;לק',
-    scenes: [
-      { type: 'type', text: 'כמה קריאטין באמת צריך?', bare: true, progress: false },
-      { type: 'stat', value: '3–5', text: 'גרם ליום לשריר — אבל אין מינון אחד נכון.' },
-      { type: 'mark', text: 'החששות סביב כליות, מים ושיער אינם נתמכים היטב במחקר.', key: 'במחקר' },
-      { type: 'pop', text: 'למוח בדחק — מינון גבוה יותר. ככל שהלחץ גדול, המינון עולה.', key: 'בדחק' },
-      { type: 'line', text: 'לעצם — רק בשילוב אימון.' },
-      { type: 'line', text: 'מוח בריא כנראה לא זקוק לקריאטין בכלל.', invert: true },
-      { type: 'cta' },
-    ],
-    caption: `"מוח בריא כנראה לא זקוק לקריאטין בכלל. אבל מוח בלחץ — כן." 💊
-
-ד"ר דארן קנדו אצל סטיבן בארטלט, מפרק את המיתוסים סביב קריאטין: כליות, מים, שיער — ומה המחקר באמת מראה.
-
-ואין מינון אחד נכון. יש סולם.
-
-התקציר המלא באתר. קישור בביו 🔗`,
-    hashtags: ['הסכתון', 'פודקאסט', 'קריאטין', 'תוספים', 'בריאות', 'כושר', 'מדע', 'תזונה'],
-    audioId: '872667339759392',
-  },
-];
+import { REELS } from './week-storyboards.mjs';
 
 // ── 7 feed posts ────────────────────────────────────────────
 const POSTS = [
@@ -286,7 +137,8 @@ if (only === 'all' || only === 'reels') {
   for (const r of REELS) {
     const post = need(r.slug);
     const id = `2026-08-${String(r.day).padStart(2, '0')}_reelv2-${r.slug.slice(0, 22)}`;
-    const sb = { total: 18.4, kicker: r.kicker, scenes: timeline(r.scenes) };
+    const tl = layoutTimeline(r.scenes, post);
+    const sb = { total: tl.total, kicker: r.kicker, scenes: tl.scenes };
     const html = buildReelHtml(post, sb, css);
 
     const { samples, violations } = await verifyReel(html, {
@@ -322,7 +174,8 @@ if (only === 'all' || only === 'reels') {
       audio: { audioId: r.audioId, audioVolume: 100, videoVolume: 0 },
       permalink: '',
     });
-    console.log(`🎬 ${id} · ${info.duration}s · ${info.sizeMB}MB · gate ${samples} clean`);
+    const beats = sb.scenes.map((x) => (x.out - x.in).toFixed(1)).join('/');
+    console.log(`🎬 ${id} · ${info.duration}s [${beats}] · ${info.sizeMB}MB · gate ${samples} clean`);
   }
 }
 
