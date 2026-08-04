@@ -1145,7 +1145,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-08-04T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       פפטידים, אימון והתאוששות — בלי הרעש. 💪
 
@@ -1174,7 +1174,9 @@ items:
         https://hesketon.co.il/social/2026-08-04_lessons-andrew-huberman-peptid/andrew-huberman-peptides-training-tim-ferriss-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-08-04_lessons-andrew-huberman-peptid/andrew-huberman-peptides-training-tim-ferriss-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DboFnnDHdvP/
+    publishedAt: '2026-08-04T17:21:16.872Z'
+    mediaId: '18094924205374509'
   - id: 2026-08-05_quote-michael-saylor-inflati
     slug: michael-saylor-inflation-scalar-lex-fridman
     platform: instagram
