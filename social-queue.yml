@@ -1447,7 +1447,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-05T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "איזו מהשתיים אתם אוהבים יותר?" — לפי ריק רובין, זו רוב היצירתיות. 🎛️
 
@@ -1478,7 +1478,9 @@ items:
       audioId: '1274816823458500'
       audioVolume: 100
       videoVolume: 0
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dbp5txvCPC5/
+    publishedAt: '2026-08-05T10:16:11.695Z'
+    mediaId: '18090117983559235'
   - id: 2026-08-06_reelv2-andrew-huberman-neurop
     slug: andrew-huberman-neuroplasticity-focus-rich-roll
     platform: instagram
