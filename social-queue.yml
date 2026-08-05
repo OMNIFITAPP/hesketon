@@ -1183,7 +1183,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-08-05T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מייקל סיילור על אינפלציה — ולמה הוא חושב שאנחנו מודדים אותה לא נכון. 📉
 
@@ -1205,7 +1205,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-05_quote-michael-saylor-inflati/michael-saylor-inflation-scalar-lex-fridman-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Dbqu6saHQbA/
+    publishedAt: '2026-08-05T18:00:36.589Z'
+    mediaId: '18112540129988997'
   - id: 2026-08-06_carousel-seth-godin-this-is-str
     slug: seth-godin-this-is-strategy-tim-ferriss
     platform: instagram
