@@ -1489,7 +1489,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-06T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       נוירופלסטיות מופעלת על ידי מיקוד עז — אבל מתרחשת בזמן שינה עמוקה. 🧠
 
@@ -1517,7 +1517,9 @@ items:
       audioId: '1164507397875809'
       audioVolume: 100
       videoVolume: 0
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DbsoEi-FNzQ/
+    publishedAt: '2026-08-06T11:39:55.533Z'
+    mediaId: '18047493245803205'
   - id: 2026-08-07_reelv2-ray-dalio-decline-smar
     slug: ray-dalio-decline-smart-rabbit-bartlett
     platform: instagram
