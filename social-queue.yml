@@ -1528,7 +1528,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-07T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "לארנב חכם יש שלוש מחילות." 🐇
 
@@ -1559,7 +1559,9 @@ items:
       audioId: '329870317688702'
       audioVolume: 100
       videoVolume: 0
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DbvHdCHFRd8/
+    publishedAt: '2026-08-07T10:52:20.387Z'
+    mediaId: '17908367010459639'
   - id: 2026-08-08_reelv2-creatine-dosing-myths-
     slug: creatine-dosing-myths-candow
     platform: instagram
