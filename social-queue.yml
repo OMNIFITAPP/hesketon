@@ -1263,7 +1263,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-08-07T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אין דבר כזה כאב גב 'לא-ספציפי'. תמיד יש מנגנון." 🦴
 
@@ -1296,7 +1296,9 @@ items:
         https://hesketon.co.il/social/2026-08-07_lessons-lower-back-pain-mcgill/lower-back-pain-mcgill-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-08-07_lessons-lower-back-pain-mcgill/lower-back-pain-mcgill-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Dbv1Sh7m6X5/
+    publishedAt: '2026-08-07T17:32:33.086Z'
+    mediaId: '18125559958684330'
   - id: 2026-08-08_quote-neil-degrasse-tyson-al
     slug: neil-degrasse-tyson-aliens-whistleblowers
     platform: instagram
