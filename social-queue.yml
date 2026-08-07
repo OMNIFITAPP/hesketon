@@ -1214,7 +1214,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-08-06T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       סת' גודין: אסטרטגיה היא לא תוכנית. 🎯
 
@@ -1254,7 +1254,9 @@ items:
         https://hesketon.co.il/social/2026-08-06_carousel-seth-godin-this-is-str/seth-godin-this-is-strategy-tim-ferriss-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-08-06_carousel-seth-godin-this-is-str/seth-godin-this-is-strategy-tim-ferriss-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DbuBHyYk4Go/
+    publishedAt: '2026-08-07T00:37:20.948Z'
+    mediaId: '18137890858582472'
   - id: 2026-08-07_lessons-lower-back-pain-mcgill
     slug: lower-back-pain-mcgill
     platform: instagram
