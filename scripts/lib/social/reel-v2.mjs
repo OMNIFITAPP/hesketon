@@ -162,6 +162,8 @@ export function buildReelHtml(post, sb, fontCss) {
     } else if (s.type === 'stat') {
       inner = `<p class="stat"><span class="mw pop"><b>${esc(s.value)}</b></span></p>
                <p class="line sub">${words(s.text)}</p>`;
+    } else if (s.type === 'myth') {
+      inner = `<p class="line myth">${words(s.text)}</p>`;
     } else if (s.type === 'mark') {
       inner = `<p class="line">${wordsWithMark(s.text, s.key)}</p>`;
     } else if (s.type === 'pop') {
@@ -177,7 +179,8 @@ export function buildReelHtml(post, sb, fontCss) {
       inner = `<p class="line">${words(s.text)}</p>`;
     }
 
-    return `<section class="${cls}" data-in="${s.in}" data-out="${s.out}" data-i="${i}">
+    const kick = s.kicker ? ` data-kicker="${esc(s.kicker)}"` : '';
+    return `<section class="${cls}" data-in="${s.in}" data-out="${s.out}" data-i="${i}"${kick}>
       <div class="body">${inner}</div>
     </section>`;
   }).join('\n');
@@ -237,6 +240,9 @@ body.invert .seg b i{background:${T.invInk}}
    Budget the pop into the type size, not the other way round. */
 .stat{font-family:'Rubik',sans-serif;font-weight:900;font-size:148px;line-height:1.05;margin-bottom:26px}
 .type-line{font-size:80px}
+/* the strike is accent, not ink: it should read as "this is wrong", not as
+   an underline that happens to sit high */
+.myth .mw b{text-decoration-color:${T.accent};text-decoration-thickness:.07em;text-decoration-skip-ink:none}
 .cta-ttl{font-size:78px;margin-bottom:44px}
 .cta-pill{display:inline-block;font-family:'Rubik',sans-serif;font-weight:700;font-size:42px;
   background:${T.accent};color:#fff;padding:28px 56px;border-radius:99px}
@@ -275,6 +281,7 @@ ${scenesHtml}
 <script>
 (function(){
   var TOTAL = ${total};
+  var DEFAULT_KICKER = ${JSON.stringify(sb.kicker || 'אמ;לק')};
   var scenes = [].slice.call(document.querySelectorAll('.scene'));
   var body = document.body;
   var chrome = document.querySelector('.chrome');
@@ -320,6 +327,26 @@ ${scenesHtml}
       foot.style.display = chromeOn ? 'flex' : 'none';
       seg.style.display = chromeOn ? 'flex' : 'none';
       body.classList.toggle('invert', isInv);
+
+      // per-scene label — the myth/reality format needs the pill to change
+      // between scenes, not once for the whole reel
+      var pill = document.querySelector('.pill');
+      if (pill) pill.textContent = active.dataset.kicker || DEFAULT_KICKER;
+
+      // strike the false claim once it has landed. Stepped on/off, so the
+      // rule never renders at a partial, muddy weight.
+      var myth = active.querySelector('.myth');
+      if (myth){
+        // Applied to each WORD, not the paragraph: every word sits in its own
+        // overflow:hidden mask, so a decoration on the parent gets clipped at
+        // the word boundaries and renders as hyphens between words.
+        var mwb = myth.querySelectorAll('.mw b');
+        var landed = 0.06 + Math.max(0, mwb.length - 1) * ${MOTION.stagger} + ${MOTION.maskDur};
+        var on = local > landed + 0.45;
+        for (var si = 0; si < mwb.length; si++){
+          mwb[si].style.textDecorationLine = on ? 'line-through' : 'none';
+        }
+      }
 
       // segmented progress: each beat fills across its own span
       for (var k = 0; k < segBars.length; k++){
