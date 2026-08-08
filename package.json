@@ -27,7 +27,9 @@
     "social:publish:dry": "node scripts/publish-social.mjs --dry-run",
     "postbuild": "pagefind --site dist",
     "check:refs:verify": "node scripts/check-references.mjs --verify",
-    "check:style": "node scripts/check-style.mjs"
+    "check:style": "node scripts/check-style.mjs",
+    "check:dupes": "node scripts/check-dupes.mjs",
+    "covered": "node scripts/check-dupes.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.18",
