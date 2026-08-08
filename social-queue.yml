@@ -1305,7 +1305,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-08-08T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "אם אתם טוענים שיש לכם חייזר בסככה שבחצר — פשוט תוציאו אותו החוצה." 👽
 
@@ -1326,7 +1326,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-08_quote-neil-degrasse-tyson-al/neil-degrasse-tyson-aliens-whistleblowers-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DbyWbdCAXeT/
+    publishedAt: '2026-08-08T17:00:34.849Z'
+    mediaId: '18111119141001943'
   - id: 2026-08-02_reelv2-mrbeast-joe-rogan-poss
     slug: mrbeast-joe-rogan-possible-time-and-money
     platform: instagram
