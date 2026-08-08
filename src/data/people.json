@@ -460,5 +460,17 @@
     "nameHe": "דוויין ג'ונסון",
     "nameEn": "Dwayne Johnson",
     "title": "שחקן, מתאבק ויזם"
+  },
+  {
+    "id": "annie-jacobsen",
+    "nameHe": "אנני ג'ייקובסן",
+    "nameEn": "Annie Jacobsen",
+    "title": "עיתונאית חוקרת וסופרת בתחום הביטחון"
+  },
+  {
+    "id": "matthew-mcconaughey",
+    "nameHe": "מת'יו מקונהיי",
+    "nameEn": "Matthew McConaughey",
+    "title": "שחקן וסופר"
   }
 ]
