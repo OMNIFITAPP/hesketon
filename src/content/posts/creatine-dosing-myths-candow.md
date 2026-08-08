@@ -34,7 +34,7 @@ source:
   podcast: "The Diary of a CEO"
   podcastId: "diary-of-a-ceo"
   episode: "Anti-Aging Expert: Creatine Is The Fat Loss Secret Doctors Don’t Tell You - Dr. Darren Candow"
-  host: "סטיבן בארטלט"
+  host: "סטיבן ברטלט"
   hostId: "steven-bartlett"
   guest: "ד\"ר דארן קנדו"
   guestId: "darren-candow"
