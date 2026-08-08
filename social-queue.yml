@@ -1570,7 +1570,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-08T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "מוח בריא כנראה לא זקוק לקריאטין בכלל. אבל מוח בלחץ — כן." 💊
 
@@ -1601,7 +1601,9 @@ items:
       audioId: '816696039610874'
       audioVolume: 100
       videoVolume: 0
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dbxow5YlP0V/
+    publishedAt: '2026-08-08T10:21:56.557Z'
+    mediaId: '18574993483065995'
   - id: 2026-08-09_myth-matthew-walker-sleep-sci
     slug: matthew-walker-sleep-science-magnesium-regularity
     platform: instagram
