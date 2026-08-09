@@ -1890,7 +1890,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-09T10:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "כל דבר שאי פעם עשיתי בחיי — לא רציתי לעשות אותו." 🔥
 
@@ -1911,13 +1911,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-09_reelv2-david-goggins-huberman/david-goggins-huberman-inner-strength-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Db0M5gZClJX/
     cover: >-
       https://hesketon.co.il/social/2026-08-09_reelv2-david-goggins-huberman/david-goggins-huberman-inner-strength-cover.jpg
     audio:
       audioId: '859319581616251'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-09T10:16:11.046Z'
+    mediaId: '17933675355358612'
   - id: 2026-08-10_reelv2-morgan-housel-psycholo
     slug: morgan-housel-psychology-of-money-huberman
     platform: instagram
