@@ -1612,7 +1612,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-09T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 💊
 
@@ -1642,13 +1642,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-09_myth-matthew-walker-sleep-sci/matthew-walker-sleep-science-magnesium-regularity-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DbzwhxzE8hJ/
     cover: >-
       https://hesketon.co.il/social/2026-08-09_myth-matthew-walker-sleep-sci/matthew-walker-sleep-science-magnesium-regularity-cover.jpg
     audio:
       audioId: '1392368834824673'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-09T06:08:10.120Z'
+    mediaId: '18062762030727804'
   - id: 2026-08-10_myth-fat-loss-formula-dr-mike
     slug: fat-loss-formula-dr-mike-israetel
     platform: instagram
