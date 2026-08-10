@@ -32,6 +32,8 @@ const posts = readdirSync(DIR)
       title: (fm.match(/^title: ['"]?(.+?)['"]?$/m)?.[1] ?? f).replace(/\\"/g, '"'),
       guest: pick('guest'),
       host: pick('host'),
+      guestId: pick('guestId'),
+      hostId: pick('hostId'),
       heads: [...raw.matchAll(/^## (.+)$/gm)].map((m) => m[1]),
       // ציטוטי המקור, כפי שנרשמו בעקבות המקורות
       sources: [...raw.matchAll(/⇐\s*"?(.{30,})/g)].map((m) => norm(m[1]).slice(0, 70)),
@@ -43,9 +45,28 @@ const who = process.argv[2];
 
 /* ── מצב א׳: דוח על אדם, לפני כתיבה ────────────────────────── */
 if (who) {
-  const mine = posts.filter((p) => p.guest === who || p.host === who);
+  // התאמה רופפת בכוונה: איות קרוב ("רביקנט" מול "רביקאנט"), שם פרטי בלבד,
+  // או המזהה באנגלית — כולם צריכים למצוא. תשובת "שדה פתוח" שגויה היא בדיוק
+  // התקלה שהשער הזה אמור למנוע.
+  const loose = (s) =>
+    (s ?? '').toLowerCase().replace(/["'\\]/g, '').replace(/[אהוי]/g, '').replace(/\s+/g, ' ').trim();
+  const q = loose(who);
+  const hit = (p) =>
+    [p.guest, p.host, p.guestId, p.hostId].filter(Boolean).some((v) => {
+      const l = loose(v);
+      return l === q || l.includes(q) || q.includes(l);
+    });
+
+  const mine = posts.filter(hit);
   if (!mine.length) {
-    console.log(`\n  אין עדיין פוסטים עם "${who}" — שדה פתוח.\n`);
+    console.log(`\n  אין עדיין פוסטים עם "${who}" — שדה פתוח.`);
+    const names = [...new Set(posts.flatMap((p) => [p.guest, p.host].filter(Boolean)))];
+    // רק התאמה משמעותית: מילה שלמה שחולקת 3 תווים ראשונים
+    const words = (s) => loose(s).split(' ').filter((w) => w.length >= 3);
+    const qw = words(who);
+    const near = names.filter((n) => words(n).some((w) => qw.some((x) => w.slice(0, 3) === x.slice(0, 3))));
+    if (near.length) console.log(`  (אולי התכוונת: ${near.slice(0, 4).join(' · ')})`);
+    console.log('');
     process.exit(0);
   }
   console.log(`\n  ${who} — ${mine.length} פוסטים כבר באתר:\n`);
