@@ -1928,7 +1928,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-10T10:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "עבור הרבה אנשים, כסף הוא נכס פיננסי — והתחייבות פסיכולוגית." 💭
 
@@ -1949,13 +1949,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-10_reelv2-morgan-housel-psycholo/morgan-housel-psychology-of-money-huberman-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Db22lWfFDVP/
     cover: >-
       https://hesketon.co.il/social/2026-08-10_reelv2-morgan-housel-psycholo/morgan-housel-psychology-of-money-huberman-cover.jpg
     audio:
       audioId: '1982627311976080'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-10T10:58:55.374Z'
+    mediaId: '18142466281563949'
   - id: 2026-08-11_reelv2-breathing-right-nestor
     slug: breathing-right-nestor
     platform: instagram
