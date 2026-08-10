@@ -1657,7 +1657,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-10T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות ⚖️
 
@@ -1685,13 +1685,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-10_myth-fat-loss-formula-dr-mike/fat-loss-formula-dr-mike-israetel-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Db2VOsmjyc3/
     cover: >-
       https://hesketon.co.il/social/2026-08-10_myth-fat-loss-formula-dr-mike/fat-loss-formula-dr-mike-israetel-cover.jpg
     audio:
       audioId: '523270413537344'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-10T06:07:38.103Z'
+    mediaId: '17969781768128797'
   - id: 2026-08-11_myth-lower-back-pain-mcgill
     slug: lower-back-pain-mcgill
     platform: instagram
