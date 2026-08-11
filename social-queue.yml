@@ -1966,7 +1966,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-11T10:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "את רוב האנרגיה שלכם אתם לא מקבלים מאוכל ומשתייה. אתם מקבלים אותה מהנשימה." 🌬️
 
@@ -1987,13 +1987,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-11_reelv2-breathing-right-nestor/breathing-right-nestor-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Db5YiU0jCxj/
     cover: >-
       https://hesketon.co.il/social/2026-08-11_reelv2-breathing-right-nestor/breathing-right-nestor-cover.jpg
     audio:
       audioId: '587460186676938'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-11T10:33:58.759Z'
+    mediaId: '18137652550606264'
   - id: 2026-08-12_reelv2-alex-hormozi-reality-i
     slug: alex-hormozi-reality-is-the-moat-ai
     platform: instagram
