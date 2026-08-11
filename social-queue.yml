@@ -1700,7 +1700,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-11T06:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       מיתוס ↔ מציאות 🦴
 
@@ -1723,13 +1723,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-11_myth-lower-back-pain-mcgill/lower-back-pain-mcgill-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Db49FydjRKO/
     cover: >-
       https://hesketon.co.il/social/2026-08-11_myth-lower-back-pain-mcgill/lower-back-pain-mcgill-cover.jpg
     audio:
       audioId: '1232530197323594'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-11T06:34:11.799Z'
+    mediaId: '17990771187008697'
   - id: 2026-08-12_myth-andy-galpin-diet-supplem
     slug: andy-galpin-diet-supplements-recovery
     platform: instagram
