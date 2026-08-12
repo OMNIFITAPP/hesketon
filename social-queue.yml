@@ -2004,7 +2004,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-12T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "המציאות היא החפיר." 🏰
 
@@ -2029,13 +2029,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-12_reelv2-alex-hormozi-reality-i/alex-hormozi-reality-is-the-moat-ai-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Db77nBiE-9N/
     cover: >-
       https://hesketon.co.il/social/2026-08-12_reelv2-alex-hormozi-reality-i/alex-hormozi-reality-is-the-moat-ai-cover.jpg
     audio:
       audioId: '3953116884963967'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-12T10:19:00.093Z'
+    mediaId: '18465362761112057'
   - id: 2026-08-13_reelv2-ido-portal-movement-mi
     slug: ido-portal-movement-mind-body-huberman
     platform: instagram
