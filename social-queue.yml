@@ -2271,7 +2271,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-08-12T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "כל מה שזז יהיה רובוטי יום אחד — וזה יקרה בקרוב." 🤖
 
@@ -2290,7 +2290,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-12_quote-jensen-huang-nvidia-vi/jensen-huang-nvidia-vision-future-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Db8uES0mqec/
+    publishedAt: '2026-08-12T17:39:32.337Z'
+    mediaId: '17928842247141973'
   - id: 2026-08-13_carousel-lloyd-blankfein-goldma
     slug: lloyd-blankfein-goldman-risk-reputation
     platform: instagram
