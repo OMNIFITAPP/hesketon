@@ -18,7 +18,7 @@ source:
   episode: 'The Man Who Owns 4% Of All Bitcoin — Michael Saylor'
   host: סטיבן ברטלט
   hostId: steven-bartlett
-  guest: מייקל סיילור
+  guest: "מייקל ג'יי. סיילור"
   guestId: michael-saylor
   youtubeUrl: https://www.youtube.com/watch?v=1aGpJQ8BMLI
   publishedAt: 2026-08-06T00:00:00.000Z
@@ -216,6 +216,8 @@ source:
 
 התשואות והמסקנה
   ⇐ "it's just the S&P 500 in the form of an ETF. So that has returned 15% over the past 6 years… if you want the conventional best idea to preserve your wealth without taking on individual corporate risk and individual real estate risk, I just buy the S&P index and wait." · "It's not an awful idea to buy gold. Gold is up 12% a year for the past six years. So whereas the S&P is up 15, gold's up 12, the NASDAQ's up 18, Bitcoin is up 33. So generally if you look at the world and you say where do you want to save your money, you want to buy a capital asset — gold's a winner, S&P's a winner, diversified tech stocks are a winner, Bitcoin is a winner."
+
+⚠️ הערת חפיפה: קיים באתר פוסט נוסף על סיילור (לקס פרידמן, "האינפלציה אינה מספר אחד") שכיסה את מדידת האינפלציה, הגדרת סל המחירים, ההבחנה בין כסף למטבע לרכוש, ואנרגיה דיגיטלית. שחיקת המטבע מופיעה בשני הפוסטים, אבל דרך טיעונים ונתונים נפרדים לגמרי — אפס חפיפה בציטוטים, מאומת ב-`npm run check:dupes`.
 
 ⚠️ הערות לעורך:
 1. סיילור נוקב במספרים מהזיכרון בשיחה חיה (תשואות שש-שנתיות, שווי הקרקע). הפוסט מוסר אותם במפורש כ"לדבריו" ואינו מציג אותם כנתון מאומת. אין להפוך אותם לכיתוב או לגרפיקה בלי אימות עצמאי.
