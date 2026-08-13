@@ -2046,7 +2046,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-13T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "החיים לא נועדו לכך שפשוט נחיה אותם; הם נועדו לתרגול." 🤸
 
@@ -2071,13 +2071,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-13_reelv2-ido-portal-movement-mi/ido-portal-movement-mind-body-huberman-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Db-jSbbiduS/
     cover: >-
       https://hesketon.co.il/social/2026-08-13_reelv2-ido-portal-movement-mi/ido-portal-movement-mind-body-huberman-cover.jpg
     audio:
       audioId: '3413024339027173'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-13T10:44:05.574Z'
+    mediaId: '17993924844008723'
   - id: 2026-08-14_reelv2-roman-yampolskiy-ai-sa
     slug: roman-yampolskiy-ai-safety-uncontrollable
     platform: instagram
