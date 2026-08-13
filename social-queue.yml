@@ -2303,7 +2303,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-08-13T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אני כל כך מבפנים… אני יודע שאף אחד לא יודע כלום, בעוד שכל השאר פשוט תוהים." 🏦
 
@@ -2346,7 +2346,9 @@ items:
         https://hesketon.co.il/social/2026-08-13_carousel-lloyd-blankfein-goldma/lloyd-blankfein-goldman-risk-reputation-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-08-13_carousel-lloyd-blankfein-goldma/lloyd-blankfein-goldman-risk-reputation-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Db_S_k3nBV6/
+    publishedAt: '2026-08-13T17:40:41.048Z'
+    mediaId: '17902336128512047'
   - id: 2026-08-14_quote-michelle-thaller-unive
     slug: michelle-thaller-universe-joe-rogan
     platform: instagram
