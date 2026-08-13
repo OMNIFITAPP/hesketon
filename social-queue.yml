@@ -1781,7 +1781,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-13T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 💰
 
@@ -1809,13 +1809,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-13_myth-nischa-shah-money-financ/nischa-shah-money-financial-freedom-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Db-HvR0lFdc/
     cover: >-
       https://hesketon.co.il/social/2026-08-13_myth-nischa-shah-money-financ/nischa-shah-money-financial-freedom-cover.jpg
     audio:
       audioId: '986385619708594'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-13T06:43:26.974Z'
+    mediaId: '17993264988007472'
   - id: 2026-08-14_myth-cesar-millan-calm-energy
     slug: cesar-millan-calm-energy-dog-leadership
     platform: instagram
