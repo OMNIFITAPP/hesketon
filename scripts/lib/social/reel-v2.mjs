@@ -66,6 +66,25 @@ export function ctaText(scene, post) {
  *
  * @returns {object[]} scenes with in/out set, plus a `total`
  */
+/**
+ * The moment to lift the grid cover from.
+ *
+ * A fixed timestamp is a guess, and it guessed wrong: at 3.0s a digest reel
+ * is either mid-cascade (half the sentence missing) or still on the cold
+ * open, which is deliberately bare — no logo, no label, no attribution. Both
+ * shipped to the grid, which is the most-seen surface the account has.
+ *
+ * Pick a scene instead and land 65% into it: comfortably after the reveal
+ * finishes, and scenes hard-cut so there is no exit animation to catch.
+ *
+ * @param {object[]} scenes  laid-out scenes (with in/out)
+ * @param {number} idx       which scene the cover should show
+ */
+export function coverTime(scenes, idx = 1) {
+  const s = scenes[Math.min(idx, scenes.length - 1)];
+  return +(s.in + (s.out - s.in) * 0.65).toFixed(3);
+}
+
 export function layoutTimeline(scenes, post, opts = {}) {
   const m = { ...MOTION, ...opts };
   let t = 0;

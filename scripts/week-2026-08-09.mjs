@@ -22,7 +22,7 @@ import { loadPublishedPosts } from './lib/social/parse-post.mjs';
 import { loadQueue, saveQueue } from './lib/social/select.mjs';
 import { fontCss, renderSlides } from './lib/social/render.mjs';
 import { buildCarousel, buildQuoteCard, buildLessonsCarousel } from './lib/social/templates.mjs';
-import { buildReelHtml, layoutTimeline, REEL } from './lib/social/reel-v2.mjs';
+import { buildReelHtml, layoutTimeline, coverTime, REEL } from './lib/social/reel-v2.mjs';
 import { renderFrames } from './lib/social/frames.mjs';
 import { verifyReel } from './lib/social/verify-reel.mjs';
 import { encodeFrames, probe } from './lib/social/video.mjs';
@@ -419,7 +419,7 @@ const outRoot = path.join(ROOT, 'public/social');
 const scratch = fs.mkdtempSync(path.join(os.tmpdir(), 'hesketon-w2-'));
 const css = fontCss();
 
-async function cutReel({ id, post, scenes, kicker }) {
+async function cutReel({ id, post, scenes, kicker, coverScene = 1 }) {
   const tl = layoutTimeline(scenes, post);
   const sb = { total: tl.total, kicker, scenes: tl.scenes };
   const html = buildReelHtml(post, sb, css);
@@ -442,7 +442,8 @@ async function cutReel({ id, post, scenes, kicker }) {
     pattern, fps: FPS, duration: sb.total,
     outMp4: path.join(outDir, `${post.slug}-reel.mp4`),
     coverJpg: path.join(outDir, `${post.slug}-cover.jpg`),
-    coverAt: Math.min(3.0, sb.total / 4),
+    // the frame the grid will show — chosen, not guessed
+    coverAt: coverTime(sb.scenes, coverScene),
   });
   return { out, sb, samples, info: await probe(out.file) };
 }
@@ -469,7 +470,7 @@ if (only === 'all' || only === 'myth') {
       { type: 'line', kicker: 'מציאות', text: m.context },
       { type: 'cta', kicker: 'הסכתון', progress: false },
     ];
-    const { out, sb, samples, info } = await cutReel({ id, post, scenes, kicker: 'מיתוס' });
+    const { out, sb, samples, info } = await cutReel({ id, post, scenes, kicker: 'מיתוס', coverScene: 1 });
     push({
       id, slug: m.slug, format: 'reel', kicker: 'מיתוס ↔ מציאות',
       when: at(m.day, '06:00'), caption: m.caption, hashtags: m.hashtags,
