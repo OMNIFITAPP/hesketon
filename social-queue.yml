@@ -1824,7 +1824,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-14T06:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       מיתוס ↔ מציאות 🐕
 
@@ -1847,13 +1847,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-14_myth-cesar-millan-calm-energy/cesar-millan-calm-energy-dog-leadership-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcAphApDz4V/
     cover: >-
       https://hesketon.co.il/social/2026-08-14_myth-cesar-millan-calm-energy/cesar-millan-calm-energy-dog-leadership-cover.jpg
     audio:
       audioId: '607917953812167'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-14T06:17:02.812Z'
+    mediaId: '17955686799000779'
   - id: 2026-08-15_myth-david-sinclair-aging-rev
     slug: david-sinclair-aging-reversal-longevity
     platform: instagram
