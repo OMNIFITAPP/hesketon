@@ -2359,7 +2359,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-08-14T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אסטרופיזיקה היא הסיפור של קצה האף שלך, ממש." ✨
 
@@ -2384,7 +2384,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-14_quote-michelle-thaller-unive/michelle-thaller-universe-joe-rogan-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DcB0KCxGzt7/
+    publishedAt: '2026-08-14T17:08:52.012Z'
+    mediaId: '18105174962464143'
   - id: 2026-08-15_lessons-stretching-flexibility
     slug: stretching-flexibility-science-protocol
     platform: instagram
