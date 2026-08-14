@@ -51,18 +51,24 @@ if (who) {
   const loose = (s) =>
     (s ?? '').toLowerCase().replace(/["'\\]/g, '').replace(/[אהוי]/g, '').replace(/\s+/g, ' ').trim();
   const q = loose(who);
-  // שם אמצע ("מייקל ג'יי. סיילור" מול "מייקל סיילור") שבר את ההתאמה פעם אחת
-  // והחמיץ פוסט קיים. לכן גם התאמה לפי מילים: אם כל מילות השאילתה מופיעות
-  // בשם, או שמילה ייחודית (שם משפחה) חופפת — זו התאמה.
-  const words = (s) => loose(s).split(' ').filter((w) => w.length >= 3);
+  // שתי דרכי התאמה, בכוונה נפרדות:
+  //  1. loose  — סובלני לאיות ("רביקנט" מול "רביקאנט"). משמיט אמות קריאה.
+  //  2. מילים  — סובלני לשם אמצע ("מייקל ג'יי. סיילור" מול "מייקל סיילור").
+  // חשוב: נתיב המילים משווה מילים *מלאות* ולא רק תחילית, ובלי השמטת אמות
+  // קריאה. אחרת "וויליאמס" נדבק ל"וויליאמסון" ומחזיר פוסטים של אדם אחר.
+  const words = (s) =>
+    (s ?? '').toLowerCase().replace(/["'.\\]/g, '').split(/[\s-]+/).filter((w) => w.length >= 3);
   const qw = words(who);
   const hit = (p) =>
     [p.guest, p.host, p.guestId, p.hostId].filter(Boolean).some((v) => {
       const l = loose(v);
-      if (l === q || l.includes(q) || q.includes(l)) return true;
+      if (l === q) return true;
+      // הכלה מותרת רק כשהצד הקצר ארוך מספיק כדי להיות ייחודי
+      if (q.length >= 6 && (l.includes(q) || q.includes(l))) return true;
       const vw = words(v);
       if (!qw.length || !vw.length) return false;
-      const shared = qw.filter((w) => vw.some((x) => x === w || x.startsWith(w) || w.startsWith(x)));
+      const shared = qw.filter((w) => vw.includes(w));
+      // כל מילות השאילתה נמצאות בשם, או לפחות שתיים חופפות
       return shared.length === qw.length || shared.length >= 2;
     });
 
