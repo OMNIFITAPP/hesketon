@@ -2088,7 +2088,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-14T10:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "היכולות של AI מכפילות את עצמן שוב ושוב. הבטיחות מתקדמת בקצב אחיד. הפער הולך וגדל." ⚠️
 
@@ -2109,13 +2109,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-14_reelv2-roman-yampolskiy-ai-sa/roman-yampolskiy-ai-safety-uncontrollable-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcBE0nWDj6f/
     cover: >-
       https://hesketon.co.il/social/2026-08-14_reelv2-roman-yampolskiy-ai-sa/roman-yampolskiy-ai-safety-uncontrollable-cover.jpg
     audio:
       audioId: '820979415498414'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-14T10:15:41.435Z'
+    mediaId: '17863304877658110'
   - id: 2026-08-15_reelv2-sam-harris-clear-think
     slug: sam-harris-clear-thinking-mindfulness-ai
     platform: instagram
