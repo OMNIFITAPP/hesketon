@@ -140,5 +140,11 @@
     "name": "StarTalk",
     "hostId": "neil-degrasse-tyson",
     "description": "מדע, חלל ותרבות בשיחות עם מדענים ואורחים — עם ניל דה-גראס טייסון."
+  },
+  {
+    "id": "economist-insider",
+    "name": "The Economist — Insider",
+    "hostId": "zanny-minton-beddoes",
+    "description": "ריאיונות עומק של ׳אקונומיסט׳ עם מקבלי החלטות, בהגשת העורכת הראשית."
   }
 ]
