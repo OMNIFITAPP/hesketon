@@ -2126,7 +2126,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-15T10:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       כמעט אף אחד אינו מסוגל לשים לב לדבר אחד במשך 30 שניות ברציפות. 🧘
 
@@ -2147,13 +2147,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-15_reelv2-sam-harris-clear-think/sam-harris-clear-thinking-mindfulness-ai-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcDpXVCDEsV/
     cover: >-
       https://hesketon.co.il/social/2026-08-15_reelv2-sam-harris-clear-think/sam-harris-clear-thinking-mindfulness-ai-cover.jpg
     audio:
       audioId: '884175553260987'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-15T10:13:21.415Z'
+    mediaId: '17896897944579415'
   - id: 2026-08-09_quote-kendrick-lamar-rick-ru
     slug: kendrick-lamar-rick-rubin-creative-process
     platform: instagram
