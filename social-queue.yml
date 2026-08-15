@@ -1862,7 +1862,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-15T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות ⏳
 
@@ -1887,13 +1887,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-15_myth-david-sinclair-aging-rev/david-sinclair-aging-reversal-longevity-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcDO56UgnOp/
     cover: >-
       https://hesketon.co.il/social/2026-08-15_myth-david-sinclair-aging-rev/david-sinclair-aging-reversal-longevity-cover.jpg
     audio:
       audioId: '1810265579431745'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-15T06:22:14.836Z'
+    mediaId: '18082893644287725'
   - id: 2026-08-09_reelv2-david-goggins-huberman
     slug: david-goggins-huberman-inner-strength
     platform: instagram
