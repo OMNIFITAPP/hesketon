@@ -2397,7 +2397,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-08-15T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מה המדע באמת אומר על מתיחות? 🧘‍♂️
 
@@ -2430,7 +2430,9 @@ items:
         https://hesketon.co.il/social/2026-08-15_lessons-stretching-flexibility/stretching-flexibility-science-protocol-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-08-15_lessons-stretching-flexibility/stretching-flexibility-science-protocol-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DcEZZ29ki3D/
+    publishedAt: '2026-08-15T17:12:55.257Z'
+    mediaId: '18096579584458118'
   - id: 2026-08-16_reelv2-matthew-mcconaughey-re
     slug: matthew-mcconaughey-reinventing-yourself-modern-wisdom
     platform: instagram
