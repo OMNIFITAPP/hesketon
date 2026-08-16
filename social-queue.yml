@@ -2707,7 +2707,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-08-16T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "תוכנית תמיד מנצחת היעדר תוכנית — גם אם היא לא הטובה ביותר." 🏋️
 
@@ -2736,7 +2736,9 @@ items:
         https://hesketon.co.il/social/2026-08-16_lessons-andy-galpin-fitness-pr/andy-galpin-fitness-principles-rich-roll-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-08-16_lessons-andy-galpin-fitness-pr/andy-galpin-fitness-principles-rich-roll-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DcG_GREH5V_/
+    publishedAt: '2026-08-16T17:20:49.469Z'
+    mediaId: '17945390013274870'
   - id: 2026-08-17_quote-kevin-oleary-wealth-di
     slug: kevin-oleary-wealth-discipline-diary-of-a-ceo
     platform: instagram
