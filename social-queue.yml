@@ -2958,7 +2958,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-16T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🚪
 
@@ -2988,13 +2988,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-16_myth-seth-godin-quitting-the-/seth-godin-quitting-the-dip-diary-of-a-ceo-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcF1xcgCaFM/
     cover: >-
       https://hesketon.co.il/social/2026-08-16_myth-seth-godin-quitting-the-/seth-godin-quitting-the-dip-diary-of-a-ceo-cover.jpg
     audio:
       audioId: '1242374782854719'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-16T06:40:21.292Z'
+    mediaId: '17915190699429622'
   - id: 2026-08-17_myth-mohnish-pabrai-dhandho-i
     slug: mohnish-pabrai-dhandho-investor-financial-freedom
     platform: instagram
