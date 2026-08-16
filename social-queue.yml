@@ -2439,7 +2439,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-16T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "נעדרתי מספיק זמן כדי להפוך לרעיון טוב חדש." 🎬
 
@@ -2465,13 +2465,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-16_reelv2-matthew-mcconaughey-re/matthew-mcconaughey-reinventing-yourself-modern-wisdom-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcGOOXlgE8f/
     cover: >-
       https://hesketon.co.il/social/2026-08-16_reelv2-matthew-mcconaughey-re/matthew-mcconaughey-reinventing-yourself-modern-wisdom-cover.jpg
     audio:
       audioId: '526825256283644'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-16T10:14:01.230Z'
+    mediaId: '18089943182545509'
   - id: 2026-08-17_reelv2-brian-cox-particle-phy
     slug: brian-cox-particle-physics-frontier-startalk
     platform: instagram
