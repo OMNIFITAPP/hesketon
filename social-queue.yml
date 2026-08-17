@@ -2480,7 +2480,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-17T10:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "לראשונה אפשר לומר שבפיזיקת החלקיקים אנחנו לא יודעים אם יש עוד משהו ממש מעבר לפינה." 🔬
 
@@ -2501,13 +2501,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-17_reelv2-brian-cox-particle-phy/brian-cox-particle-physics-frontier-startalk-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcI0El9jVcu/
     cover: >-
       https://hesketon.co.il/social/2026-08-17_reelv2-brian-cox-particle-phy/brian-cox-particle-physics-frontier-startalk-cover.jpg
     audio:
       audioId: '1486372649453979'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-17T10:23:31.000Z'
+    mediaId: '18090438242138714'
   - id: 2026-08-18_reelv2-dwayne-johnson-the-roc
     slug: dwayne-johnson-the-rock-joe-rogan-2063
     platform: instagram
