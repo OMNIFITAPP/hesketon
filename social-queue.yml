@@ -3007,7 +3007,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-17T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🎲
 
@@ -3035,13 +3035,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-17_myth-mohnish-pabrai-dhandho-i/mohnish-pabrai-dhandho-investor-financial-freedom-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcIbSGGiXsn/
     cover: >-
       https://hesketon.co.il/social/2026-08-17_myth-mohnish-pabrai-dhandho-i/mohnish-pabrai-dhandho-investor-financial-freedom-cover.jpg
     audio:
       audioId: '421348377170726'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-17T06:46:35.018Z'
+    mediaId: '18097871516577690'
   - id: 2026-08-18_myth-michael-saylor-store-of-
     slug: michael-saylor-store-of-value-house-diary-of-a-ceo
     platform: instagram
