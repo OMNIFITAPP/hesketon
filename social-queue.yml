@@ -2747,7 +2747,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-08-17T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "בניית עושר מסתכמת במילה אחת: משמעת." 💰
 
@@ -2769,7 +2769,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-17_quote-kevin-oleary-wealth-di/kevin-oleary-wealth-discipline-diary-of-a-ceo-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DcJjjpplvmo/
+    publishedAt: '2026-08-17T17:17:50.069Z'
+    mediaId: '18096834821288923'
   - id: 2026-08-18_carousel-alex-hormozi-reality-i
     slug: alex-hormozi-reality-is-the-moat-ai
     platform: instagram
