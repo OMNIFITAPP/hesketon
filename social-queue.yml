@@ -3054,7 +3054,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-18T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🏠
 
@@ -3084,13 +3084,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-18_myth-michael-saylor-store-of-/michael-saylor-store-of-value-house-diary-of-a-ceo-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcK67SqCVCR/
     cover: >-
       https://hesketon.co.il/social/2026-08-18_myth-michael-saylor-store-of-/michael-saylor-store-of-value-house-diary-of-a-ceo-cover.jpg
     audio:
       audioId: '948807320625767'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-18T06:01:38.311Z'
+    mediaId: '18086914739270762'
   - id: 2026-08-19_myth-kelly-starrett-wellness-
     slug: kelly-starrett-wellness-movement-play
     platform: instagram
