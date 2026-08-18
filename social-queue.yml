@@ -2780,7 +2780,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-08-18T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "המציאות היא החפיר." 🏰
 
@@ -2823,7 +2823,9 @@ items:
         https://hesketon.co.il/social/2026-08-18_carousel-alex-hormozi-reality-i/alex-hormozi-reality-is-the-moat-ai-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-08-18_carousel-alex-hormozi-reality-i/alex-hormozi-reality-is-the-moat-ai-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DcMIk15IJBN/
+    publishedAt: '2026-08-18T17:19:48.071Z'
+    mediaId: '17903543826536866'
   - id: 2026-08-19_lessons-james-clear-habits-get
     slug: james-clear-habits-getting-started-huberman
     platform: instagram
