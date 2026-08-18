@@ -2516,7 +2516,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-18T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       דוויין ג'ונסון לא גר בבית עד גיל 27. 🏈
 
@@ -2541,13 +2541,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-18_reelv2-dwayne-johnson-the-roc/dwayne-johnson-the-rock-joe-rogan-2063-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcLYVCQjQbt/
     cover: >-
       https://hesketon.co.il/social/2026-08-18_reelv2-dwayne-johnson-the-roc/dwayne-johnson-the-rock-joe-rogan-2063-cover.jpg
     audio:
       audioId: '778541440637690'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-18T10:18:33.183Z'
+    mediaId: '18194335720376521'
   - id: 2026-08-19_reelv2-annie-jacobsen-biologi
     slug: annie-jacobsen-biological-war-joe-rogan-2534
     platform: instagram
