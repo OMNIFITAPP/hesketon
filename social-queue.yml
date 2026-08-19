@@ -3103,7 +3103,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-19T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🎾
 
@@ -3132,13 +3132,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-19_myth-kelly-starrett-wellness-/kelly-starrett-wellness-movement-play-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcNf_I6CG2Y/
     cover: >-
       https://hesketon.co.il/social/2026-08-19_myth-kelly-starrett-wellness-/kelly-starrett-wellness-movement-play-cover.jpg
     audio:
       audioId: '351866282607327'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-19T06:03:53.821Z'
+    mediaId: '18108184552865532'
   - id: 2026-08-20_myth-andrew-huberman-cortisol
     slug: andrew-huberman-cortisol-habits-focus
     platform: instagram
