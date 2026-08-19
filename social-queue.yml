@@ -2556,7 +2556,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-19T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "יש נקודה בכל התוכניות האלה שבה הכאוס משתלט — והמשחק המלחמתי נגמר." ⚠️
 
@@ -2581,13 +2581,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-19_reelv2-annie-jacobsen-biologi/annie-jacobsen-biological-war-joe-rogan-2534-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcN9QBNlKDk/
     cover: >-
       https://hesketon.co.il/social/2026-08-19_reelv2-annie-jacobsen-biologi/annie-jacobsen-biological-war-joe-rogan-2534-cover.jpg
     audio:
       audioId: '2301335310186677'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-19T10:19:39.790Z'
+    mediaId: '18338871304249297'
   - id: 2026-08-20_reelv2-elon-musk-joe-rogan-14
     slug: elon-musk-joe-rogan-1470-talent-neuralink
     platform: instagram
