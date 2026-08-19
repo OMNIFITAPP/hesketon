@@ -2834,7 +2834,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-08-19T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "המשקל הכבד ביותר בחדר הכושר הוא דלת הכניסה." 🚪
 
@@ -2863,7 +2863,9 @@ items:
         https://hesketon.co.il/social/2026-08-19_lessons-james-clear-habits-get/james-clear-habits-getting-started-huberman-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-08-19_lessons-james-clear-habits-get/james-clear-habits-getting-started-huberman-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DcOtS3nmhwj/
+    publishedAt: '2026-08-19T17:19:01.111Z'
+    mediaId: '18147255994529247'
   - id: 2026-08-20_quote-bob-lazar-jeremy-corbe
     slug: bob-lazar-jeremy-corbell-area-51-joe-rogan
     platform: instagram
