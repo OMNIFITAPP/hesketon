@@ -2874,7 +2874,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-08-20T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "אין שום חיווט שמחבר בין רכיבי המשנה, בכלל. הדברים האלה גובלים בקסם." 🛸
 
@@ -2893,7 +2893,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-20_quote-bob-lazar-jeremy-corbe/bob-lazar-jeremy-corbell-area-51-joe-rogan-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DcRTZ12AbNa/
+    publishedAt: '2026-08-20T17:30:36.939Z'
+    mediaId: '18092620250419277'
   - id: 2026-08-21_carousel-ai-race-superintellige
     slug: ai-race-superintelligence-mallaby
     platform: instagram
