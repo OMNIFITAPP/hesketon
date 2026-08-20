@@ -3151,7 +3151,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-20T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות ☀️
 
@@ -3179,13 +3179,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-20_myth-andrew-huberman-cortisol/andrew-huberman-cortisol-habits-focus-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcQHuxakqMN/
     cover: >-
       https://hesketon.co.il/social/2026-08-20_myth-andrew-huberman-cortisol/andrew-huberman-cortisol-habits-focus-cover.jpg
     audio:
       audioId: '1223134719013093'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-20T06:29:39.074Z'
+    mediaId: '18018979499918793'
   - id: 2026-08-21_myth-jefferson-fisher-communi
     slug: jefferson-fisher-communication-conflict-assertiveness
     platform: instagram
