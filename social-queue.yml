@@ -2596,7 +2596,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-20T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "יותר מדי אנשים חכמים הולכים לפיננסים ולמשפטים. צריך יותר אנשים שמייצרים דברים." 🚀
 
@@ -2621,13 +2621,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-20_reelv2-elon-musk-joe-rogan-14/elon-musk-joe-rogan-1470-talent-neuralink-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcQiyEiFLIc/
     cover: >-
       https://hesketon.co.il/social/2026-08-20_reelv2-elon-musk-joe-rogan-14/elon-musk-joe-rogan-1470-talent-neuralink-cover.jpg
     audio:
       audioId: '1001849700279067'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-20T10:26:01.995Z'
+    mediaId: '17887835745672516'
   - id: 2026-08-21_reelv2-darby-saxbe-father-bra
     slug: darby-saxbe-father-brain-modern-wisdom
     platform: instagram
