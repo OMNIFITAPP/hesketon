@@ -3198,7 +3198,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-21T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🗣️
 
@@ -3226,13 +3226,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-21_myth-jefferson-fisher-communi/jefferson-fisher-communication-conflict-assertiveness-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcSsdRZkyMv/
     cover: >-
       https://hesketon.co.il/social/2026-08-21_myth-jefferson-fisher-communi/jefferson-fisher-communication-conflict-assertiveness-cover.jpg
     audio:
       audioId: '1384543860206123'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-21T06:29:10.799Z'
+    mediaId: '18337897549253426'
   - id: 2026-08-22_myth-naval-ravikant-specific-
     slug: naval-ravikant-specific-knowledge-leverage-joe-rogan-1309
     platform: instagram
