@@ -2636,7 +2636,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-21T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       המוח של אבות משתנה פיזית במעבר להורות. 🧠
 
@@ -2664,13 +2664,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-21_reelv2-darby-saxbe-father-bra/darby-saxbe-father-brain-modern-wisdom-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcTIRkYDIlL/
     cover: >-
       https://hesketon.co.il/social/2026-08-21_reelv2-darby-saxbe-father-bra/darby-saxbe-father-brain-modern-wisdom-cover.jpg
     audio:
       audioId: '440588108234177'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-21T10:32:11.941Z'
+    mediaId: '18136915972717396'
   - id: 2026-08-22_reelv2-kane-kallaway-content-
     slug: kane-kallaway-content-lego-bricks-system
     platform: instagram
