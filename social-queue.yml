@@ -2904,7 +2904,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-08-21T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "כל אדם סביר צריך להיות גם נלהב וגם קצת מפוחד. זו התגובה הרציונלית היחידה." 🤖
 
@@ -2944,7 +2944,9 @@ items:
         https://hesketon.co.il/social/2026-08-21_carousel-ai-race-superintellige/ai-race-superintelligence-mallaby-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-08-21_carousel-ai-race-superintellige/ai-race-superintelligence-mallaby-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DcT39wPm5Ir/
+    publishedAt: '2026-08-21T17:28:34.133Z'
+    mediaId: '17905663899307878'
   - id: 2026-08-22_quote-creatine-dosing-myths-
     slug: creatine-dosing-myths-candow
     platform: instagram
