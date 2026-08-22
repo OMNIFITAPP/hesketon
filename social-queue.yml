@@ -3245,7 +3245,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-22T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🧠
 
@@ -3276,10 +3276,12 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-22_myth-naval-ravikant-specific-/naval-ravikant-specific-knowledge-leverage-joe-rogan-1309-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcVQgT8kcFZ/
     cover: >-
       https://hesketon.co.il/social/2026-08-22_myth-naval-ravikant-specific-/naval-ravikant-specific-knowledge-leverage-joe-rogan-1309-cover.jpg
     audio:
       audioId: '1197857668796525'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-22T06:22:33.286Z'
+    mediaId: '18278832850295381'
