@@ -2679,7 +2679,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-22T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "האסטרטגיה אינה הרוטב. האסטרטגיה הופכת למצרך ברגע שאתה מכיר אותה." 🧱
 
@@ -2704,13 +2704,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-22_reelv2-kane-kallaway-content-/kane-kallaway-content-lego-bricks-system-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcVrirpE5vh/
     cover: >-
       https://hesketon.co.il/social/2026-08-22_reelv2-kane-kallaway-content-/kane-kallaway-content-lego-bricks-system-cover.jpg
     audio:
       audioId: '367579208647291'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-22T10:18:57.547Z'
+    mediaId: '18106823722896132'
   - id: 2026-08-16_lessons-andy-galpin-fitness-pr
     slug: andy-galpin-fitness-principles-rich-roll
     platform: instagram
