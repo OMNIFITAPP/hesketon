@@ -3295,7 +3295,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-08-23T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "איזו מהשתיים אתם אוהבים יותר?" — לפי ריק רובין, זו רוב היצירתיות. 🎛️
 
@@ -3317,7 +3317,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-23_quote-rick-rubin-creativity-/rick-rubin-creativity-huberman-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DcY_vhLlMIB/
+    publishedAt: '2026-08-23T17:12:41.897Z'
+    mediaId: '17893952655398298'
   - id: 2026-08-24_carousel-mrbeast-joe-rogan-poss
     slug: mrbeast-joe-rogan-possible-time-and-money
     platform: instagram
