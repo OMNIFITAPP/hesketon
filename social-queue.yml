@@ -3326,7 +3326,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-08-24T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "כמעט הכול אפשרי, אם אתם מוכנים להשקיע את הזמן ואת הכסף." 🎯
 
@@ -3366,7 +3366,9 @@ items:
         https://hesketon.co.il/social/2026-08-24_carousel-mrbeast-joe-rogan-poss/mrbeast-joe-rogan-possible-time-and-money-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-08-24_carousel-mrbeast-joe-rogan-poss/mrbeast-joe-rogan-possible-time-and-money-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Dcbl-inIwAy/
+    publishedAt: '2026-08-24T17:25:17.301Z'
+    mediaId: '18434835523132201'
   - id: 2026-08-25_lessons-andy-stumpf-psychology
     slug: andy-stumpf-psychology-of-endurance-williamson
     platform: instagram
