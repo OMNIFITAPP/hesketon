@@ -3882,7 +3882,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-24T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "זו הייתה תקרית האבטחה הראשונה שהרגשתי אותה ממש בבטן." 🤖
 
@@ -3910,13 +3910,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-24_reelv2-sam-altman-agi-compute/sam-altman-agi-compute-human-agency-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcazR9Ajera/
     cover: >-
       https://hesketon.co.il/social/2026-08-24_reelv2-sam-altman-agi-compute/sam-altman-agi-compute-human-agency-cover.jpg
     audio:
       audioId: '868648898493565'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-24T10:02:41.108Z'
+    mediaId: '17899655814564706'
   - id: 2026-08-25_reelv2-jensen-huang-nvidia-vi
     slug: jensen-huang-nvidia-vision-future
     platform: instagram
