@@ -3595,7 +3595,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-24T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🧘
 
@@ -3625,13 +3625,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-24_myth-naval-ravikant-44-harsh-/naval-ravikant-44-harsh-truths-modern-wisdom-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcabxM0DRBJ/
     cover: >-
       https://hesketon.co.il/social/2026-08-24_myth-naval-ravikant-44-harsh-/naval-ravikant-44-harsh-truths-modern-wisdom-cover.jpg
     audio:
       audioId: '336015428971390'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-24T06:37:12.131Z'
+    mediaId: '18094964318634588'
   - id: 2026-08-25_myth-jeremy-grantham-ai-bubbl
     slug: jeremy-grantham-ai-bubble-investment-warning
     platform: instagram
