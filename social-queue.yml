@@ -3929,7 +3929,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-25T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "כל מה שזז יהיה רובוטי יום אחד — וזה יקרה בקרוב." 🤖
 
@@ -3954,13 +3954,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-25_reelv2-jensen-huang-nvidia-vi/jensen-huang-nvidia-vision-future-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcdYelejEyX/
     cover: >-
       https://hesketon.co.il/social/2026-08-25_reelv2-jensen-huang-nvidia-vi/jensen-huang-nvidia-vision-future-cover.jpg
     audio:
       audioId: '296396337516448'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-25T10:06:11.132Z'
+    mediaId: '17934152742382171'
   - id: 2026-08-26_reelv2-yuval-noah-harari-ai-f
     slug: yuval-noah-harari-ai-future-danger
     platform: instagram
