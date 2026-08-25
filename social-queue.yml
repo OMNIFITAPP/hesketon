@@ -3642,7 +3642,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-25T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 📉
 
@@ -3670,13 +3670,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-25_myth-jeremy-grantham-ai-bubbl/jeremy-grantham-ai-bubble-investment-warning-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dcc_qHDDvin/
     cover: >-
       https://hesketon.co.il/social/2026-08-25_myth-jeremy-grantham-ai-bubbl/jeremy-grantham-ai-bubble-investment-warning-cover.jpg
     audio:
       audioId: '367425232839219'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-25T06:29:16.715Z'
+    mediaId: '17952652725236726'
   - id: 2026-08-26_myth-michael-saylor-inflation
     slug: michael-saylor-inflation-scalar-lex-fridman
     platform: instagram
