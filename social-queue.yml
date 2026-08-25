@@ -3375,7 +3375,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-08-25T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "השריר שנכשל באימון הלוחמים אינו מתחת לצוואר. הוא בין האוזניים." 🧠
 
@@ -3404,7 +3404,9 @@ items:
         https://hesketon.co.il/social/2026-08-25_lessons-andy-stumpf-psychology/andy-stumpf-psychology-of-endurance-williamson-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-08-25_lessons-andy-stumpf-psychology/andy-stumpf-psychology-of-endurance-williamson-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DceJnA8m1EF/
+    publishedAt: '2026-08-25T17:15:08.001Z'
+    mediaId: '18334206160249709'
   - id: 2026-08-26_quote-demis-hassabis-agi-wor
     slug: demis-hassabis-agi-world-models-deepmind
     platform: instagram
