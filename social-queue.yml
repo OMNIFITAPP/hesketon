@@ -3413,7 +3413,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-08-26T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "איש לא מצא ביקום שום דבר שאינו בר-חישוב. עד כה." 🧬
 
@@ -3435,7 +3435,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-26_quote-demis-hassabis-agi-wor/demis-hassabis-agi-world-models-deepmind-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Dcg5PejD7m0/
+    publishedAt: '2026-08-26T18:49:47.035Z'
+    mediaId: '18100640114622038'
   - id: 2026-08-27_carousel-ray-dalio-decline-smar
     slug: ray-dalio-decline-smart-rabbit-bartlett
     platform: instagram
