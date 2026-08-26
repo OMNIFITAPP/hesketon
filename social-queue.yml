@@ -3973,7 +3973,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-26T10:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "השאלה הגדולה היא האם נאלץ אותה להאט, או שהיא תאלץ אותנו להאיץ — עד שנתמוטט." ⚠️
 
@@ -3994,13 +3994,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-26_reelv2-yuval-noah-harari-ai-f/yuval-noah-harari-ai-future-danger-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dcf_lgxCrp8/
     cover: >-
       https://hesketon.co.il/social/2026-08-26_reelv2-yuval-noah-harari-ai-f/yuval-noah-harari-ai-future-danger-cover.jpg
     audio:
       audioId: '201296182631816'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-26T10:26:28.470Z'
+    mediaId: '18127594958507178'
   - id: 2026-08-27_reelv2-bill-browder-putin-ukr
     slug: bill-browder-putin-ukraine-magnitsky
     platform: instagram
