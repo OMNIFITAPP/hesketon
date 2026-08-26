@@ -3687,7 +3687,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-26T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 💸
 
@@ -3715,13 +3715,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-26_myth-michael-saylor-inflation/michael-saylor-inflation-scalar-lex-fridman-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcflwPXCmnp/
     cover: >-
       https://hesketon.co.il/social/2026-08-26_myth-michael-saylor-inflation/michael-saylor-inflation-scalar-lex-fridman-cover.jpg
     audio:
       audioId: '1429590864694795'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-26T06:40:47.172Z'
+    mediaId: '18142653856577649'
   - id: 2026-08-27_myth-stretching-flexibility-s
     slug: stretching-flexibility-science-protocol
     platform: instagram
