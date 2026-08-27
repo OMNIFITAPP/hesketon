@@ -3732,7 +3732,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-27T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🧘‍♂️
 
@@ -3760,13 +3760,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-27_myth-stretching-flexibility-s/stretching-flexibility-science-protocol-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcinYkTj0gj/
     cover: >-
       https://hesketon.co.il/social/2026-08-27_myth-stretching-flexibility-s/stretching-flexibility-science-protocol-cover.jpg
     audio:
       audioId: '348095775818880'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-27T10:52:45.109Z'
+    mediaId: '18119369860916449'
   - id: 2026-08-28_myth-tony-robbins-depression-
     slug: tony-robbins-depression-motivation-jordan-peterson
     platform: instagram
@@ -4011,7 +4013,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-27T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "פוטין אמר: 'פשוט מאוד — 50 אחוז לוולדימיר פוטין.' זה היה הרגע שבו חיי השתנו לנצח." 🇷🇺
 
@@ -4039,13 +4041,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-27_reelv2-bill-browder-putin-ukr/bill-browder-putin-ukraine-magnitsky-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcinePaDu3S/
     cover: >-
       https://hesketon.co.il/social/2026-08-27_reelv2-bill-browder-putin-ukr/bill-browder-putin-ukraine-magnitsky-cover.jpg
     audio:
       audioId: '1201213037233140'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-27T10:53:25.935Z'
+    mediaId: '18139486426608563'
   - id: 2026-08-28_reelv2-lance-armstrong-rise-f
     slug: lance-armstrong-rise-fall-growth-attia
     platform: instagram
