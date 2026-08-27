@@ -3444,7 +3444,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-08-27T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "לארנב חכם יש שלוש מחילות." 🐇
 
@@ -3484,7 +3484,9 @@ items:
         https://hesketon.co.il/social/2026-08-27_carousel-ray-dalio-decline-smar/ray-dalio-decline-smart-rabbit-bartlett-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-08-27_carousel-ray-dalio-decline-smar/ray-dalio-decline-smart-rabbit-bartlett-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DcjsIQcmTYg/
+    publishedAt: '2026-08-27T20:53:00.373Z'
+    mediaId: '18071211311480086'
   - id: 2026-08-28_lessons-darby-saxbe-father-bra
     slug: darby-saxbe-father-brain-modern-wisdom
     platform: instagram
