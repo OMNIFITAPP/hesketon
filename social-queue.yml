@@ -3493,7 +3493,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-08-28T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       המוח של אבות משתנה פיזית במעבר להורות. 🧠
 
@@ -3526,7 +3526,9 @@ items:
         https://hesketon.co.il/social/2026-08-28_lessons-darby-saxbe-father-bra/darby-saxbe-father-brain-modern-wisdom-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-08-28_lessons-darby-saxbe-father-bra/darby-saxbe-father-brain-modern-wisdom-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Dcl5On9Fqcy/
+    publishedAt: '2026-08-28T17:25:54.759Z'
+    mediaId: '18096793250060664'
   - id: 2026-08-29_quote-seth-godin-quitting-th
     slug: seth-godin-quitting-the-dip-diary-of-a-ceo
     platform: instagram
@@ -3777,7 +3779,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-28T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🔥
 
@@ -3805,13 +3807,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-28_myth-tony-robbins-depression-/tony-robbins-depression-motivation-jordan-peterson-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dcl5QefFN1J/
     cover: >-
       https://hesketon.co.il/social/2026-08-28_myth-tony-robbins-depression-/tony-robbins-depression-motivation-jordan-peterson-cover.jpg
     audio:
       audioId: '721036051671610'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-28T17:26:23.511Z'
+    mediaId: '17906841543530528'
   - id: 2026-08-29_myth-henry-shukman-meditation
     slug: henry-shukman-meditation-awakening-original-love
     platform: instagram
@@ -4058,7 +4062,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-28T10:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "אותו בחור היה צריך למות, ובחור חדש היה צריך לבוא במקומו." 🚴
 
@@ -4081,13 +4085,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-28_reelv2-lance-armstrong-rise-f/lance-armstrong-rise-fall-growth-attia-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dcl5UIKDPn5/
     cover: >-
       https://hesketon.co.il/social/2026-08-28_reelv2-lance-armstrong-rise-f/lance-armstrong-rise-fall-growth-attia-cover.jpg
     audio:
       audioId: '1524000175073376'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-28T17:27:00.532Z'
+    mediaId: '18095813570096771'
   - id: 2026-08-29_reelv2-dan-martell-how-to-use
     slug: dan-martell-how-to-use-ai-better-than-95-percent
     platform: instagram
