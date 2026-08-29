@@ -4102,7 +4102,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-29T10:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       רק כ-5% מאוכלוסיית העולם שילמו אי-פעם על גרסה בתשלום של AI. 🤖
 
@@ -4123,13 +4123,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-29_reelv2-dan-martell-how-to-use/dan-martell-how-to-use-ai-better-than-95-percent-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcoC-aZlMGV/
     cover: >-
       https://hesketon.co.il/social/2026-08-29_reelv2-dan-martell-how-to-use/dan-martell-how-to-use-ai-better-than-95-percent-cover.jpg
     audio:
       audioId: '641600257856431'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-29T13:30:11.215Z'
+    mediaId: '17913843837451874'
   - id: 2026-08-30_reelv2-neil-degrasse-tyson-al
     slug: neil-degrasse-tyson-aliens-whistleblowers
     platform: instagram
