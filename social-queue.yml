@@ -3822,7 +3822,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-29T06:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       מיתוס ↔ מציאות 🧘
 
@@ -3845,13 +3845,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-29_myth-henry-shukman-meditation/henry-shukman-meditation-awakening-original-love-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcncRdojxZc/
     cover: >-
       https://hesketon.co.il/social/2026-08-29_myth-henry-shukman-meditation/henry-shukman-meditation-awakening-original-love-cover.jpg
     audio:
       audioId: '1418770625449048'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-29T07:51:46.759Z'
+    mediaId: '18333011761260550'
   - id: 2026-08-30_myth-chris-camillo-social-arb
     slug: chris-camillo-social-arbitrage-ai-wave
     platform: instagram
