@@ -3535,7 +3535,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-08-29T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "'לעולם אל תוותר.' הוא טועה. וברור לגמרי שהוא טועה." 🚪
 
@@ -3554,7 +3554,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-29_quote-seth-godin-quitting-th/seth-godin-quitting-the-dip-diary-of-a-ceo-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DcodLdEAWxO/
+    publishedAt: '2026-08-29T17:18:33.196Z'
+    mediaId: '17906225520305105'
   - id: 2026-08-30_carousel-roman-yampolskiy-ai-sa
     slug: roman-yampolskiy-ai-safety-uncontrollable
     platform: instagram
