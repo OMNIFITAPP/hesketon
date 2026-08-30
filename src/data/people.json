@@ -508,5 +508,17 @@
     "nameHe": "ולאד טנב",
     "nameEn": "Vlad Tenev",
     "title": "מייסד ומנכ\"ל רובינהוד"
+  },
+  {
+    "id": "khabib-nurmagomedov",
+    "nameHe": "חביב נורמגומדוב",
+    "nameEn": "Khabib Nurmagomedov",
+    "title": "לוחם MMA לשעבר, אלוף UFC"
+  },
+  {
+    "id": "vonda-wright",
+    "nameHe": "וונדה רייט",
+    "nameEn": "Vonda Wright",
+    "title": "מנתחת אורתופדית וחוקרת הזדקנות"
   }
 ]
