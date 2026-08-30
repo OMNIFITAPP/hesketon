@@ -146,5 +146,11 @@
     "name": "The Economist — Insider",
     "hostId": "zanny-minton-beddoes",
     "description": "ריאיונות עומק של ׳אקונומיסט׳ עם מקבלי החלטות, בהגשת העורכת הראשית."
+  },
+  {
+    "id": "bigdeal",
+    "name": "BigDeal",
+    "hostId": "codie-sanchez",
+    "description": "שיחות על עסקים, בעלות ורכישת חברות — עם קודי סאנצ'ז."
   }
 ]
