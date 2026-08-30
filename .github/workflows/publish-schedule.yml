@@ -1,0 +1,72 @@
+name: Publish — release scheduled posts
+
+# מפרסם פוסטים שהגיע זמנם. פוסט מתוזמן ע"י pubDate עתידי בפרונטמטר:
+#     pubDate: '2026-09-06T18:00:00+03:00'
+# הבנייה מסתירה כל פוסט שה-pubDate שלו עדיין בעתיד (src/utils.ts), ולכן
+# "לפרסם" פירושו פשוט לבנות מחדש אחרי שהזמן עבר.
+#
+# חלונות הזמן: ראשון 18:00, שלישי 14:00, שישי 16:00 (שעון ישראל).
+#
+# למה חלון ולא שעה מדויקת — שתי סיבות:
+#  1. cron של GitHub הוא UTC ואינו יודע שעון קיץ. ישראל היא UTC+3 בקיץ
+#     ו-UTC+2 בחורף, ולכן שעה קבועה ב-UTC הייתה נודדת פעמיים בשנה.
+#     החלון מכסה את שתי האפשרויות, וההיסט שבתוך pubDate הוא שמכריע.
+#  2. המתזמן של GitHub הוא מיטב-מאמץ ומדלג תחת עומס — בריפו הזה כבר
+#     נצפו פערים של 2–4 שעות (ראו social-publish.yml). טיק כל 20 דקות
+#     לאורך ארבע שעות אומר שהטיק הראשון שאחרי הזמן מגיע מהר.
+# פוסט לעולם לא יעלה לפני הזמן שלו — הבנייה עצמה היא השער.
+
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "פרסם עכשיו גם אם אין פוסט בשל שממתין"
+        type: boolean
+        default: false
+  schedule:
+    - cron: "*/20 15-18 * * 0"   # ראשון 18:00 → 15:00/16:00 UTC
+    - cron: "*/20 11-14 * * 2"   # שלישי 14:00 → 11:00/12:00 UTC
+    - cron: "*/20 13-16 * * 5"   # שישי  16:00 → 13:00/14:00 UTC
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: publish-schedule
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    # הרצות מתוזמנות פועלות רק אחרי הפעלה מפורשת (משתנה ריפו
+    # PUBLISH_SCHEDULE_ENABLED=true). הרצה ידנית תמיד עובדת, כדי שאפשר
+    # יהיה לבדוק לפני שמדליקים.
+    if: ${{ vars.PUBLISH_SCHEDULE_ENABLED == 'true' || github.event_name == 'workflow_dispatch' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # יוצא 0 רק אם יש פוסט שהגיע זמנו ועדיין אינו ב-sitemap החי.
+      # אם ה-sitemap לא נגיש הסקריפט יוצא 1 בכוונה — בלי ידיעה לא
+      # מפרסמים, והטיק הבא ינסה שוב.
+      - id: due
+        run: |
+          if node scripts/check-due.mjs --ci; then
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: הפעלת דיפלוי
+        if: steps.due.outputs.publish == 'true' || inputs.force
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main
+
+      - name: אין מה לפרסם
+        if: steps.due.outputs.publish != 'true' && !inputs.force
+        run: echo "אין פוסט בשל שממתין — לא הופעל דיפלוי."

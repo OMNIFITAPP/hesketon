@@ -29,7 +29,8 @@
     "check:refs:verify": "node scripts/check-references.mjs --verify",
     "check:style": "node scripts/check-style.mjs",
     "check:dupes": "node scripts/check-dupes.mjs",
-    "covered": "node scripts/check-dupes.mjs"
+    "covered": "node scripts/check-dupes.mjs",
+    "due": "node scripts/check-due.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.18",

@@ -26,8 +26,17 @@ function episodeDate(p: CollectionEntry<'posts'>): number {
  * Drafts are hidden in production builds but visible while running `npm run dev`.
  */
 export async function getPublishedPosts(): Promise<CollectionEntry<'posts'>[]> {
+  // Scheduling: a post whose pubDate is still in the future is held back in
+  // production, so a finished post can sit on main until its slot. Write the
+  // slot straight into the frontmatter with an explicit offset —
+  //   pubDate: '2026-09-06T18:00:00+03:00'
+  // — and the offset in the string is what decides, so Israeli DST is handled
+  // by the date itself and never by a cron expression. A bare 'YYYY-MM-DD'
+  // parses as UTC midnight, i.e. already due, which keeps every existing post
+  // behaving exactly as before. Held posts stay visible in `npm run dev`.
+  const now = Date.now();
   const posts = await getCollection('posts', ({ data }) =>
-    import.meta.env.PROD ? data.draft !== true : true,
+    import.meta.env.PROD ? data.draft !== true && data.pubDate.getTime() <= now : true,
   );
   // We usually publish several summaries the same day, so the primary key ties
   // constantly. Break those by the air date, newest first — otherwise cards land
