@@ -3563,7 +3563,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-08-30T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "היכולות של AI מכפילות את עצמן שוב ושוב. הבטיחות מתקדמת בקצב אחיד." ⚠️
 
@@ -3600,7 +3600,9 @@ items:
         https://hesketon.co.il/social/2026-08-30_carousel-roman-yampolskiy-ai-sa/roman-yampolskiy-ai-safety-uncontrollable-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-08-30_carousel-roman-yampolskiy-ai-sa/roman-yampolskiy-ai-safety-uncontrollable-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DcrJzsrEm9X/
+    publishedAt: '2026-08-30T18:27:09.306Z'
+    mediaId: '18124684273876088'
   - id: 2026-08-24_myth-naval-ravikant-44-harsh-
     slug: naval-ravikant-44-harsh-truths-modern-wisdom
     platform: instagram
