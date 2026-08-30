@@ -3862,7 +3862,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-30T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 📱
 
@@ -3891,13 +3891,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-30_myth-chris-camillo-social-arb/chris-camillo-social-arbitrage-ai-wave-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcqUd3SkmHF/
     cover: >-
       https://hesketon.co.il/social/2026-08-30_myth-chris-camillo-social-arb/chris-camillo-social-arbitrage-ai-wave-cover.jpg
     audio:
       audioId: '1127106596130760'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-30T10:41:15.872Z'
+    mediaId: '18113999185983828'
   - id: 2026-08-24_reelv2-sam-altman-agi-compute
     slug: sam-altman-agi-compute-human-agency
     platform: instagram
@@ -4140,7 +4142,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-30T10:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "אם אתם טוענים שיש לכם חייזר בסככה שבחצר האחורית — פשוט תוציאו אותו החוצה." 👽
 
@@ -4163,13 +4165,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-30_reelv2-neil-degrasse-tyson-al/neil-degrasse-tyson-aliens-whistleblowers-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcqUi6kCCH2/
     cover: >-
       https://hesketon.co.il/social/2026-08-30_reelv2-neil-degrasse-tyson-al/neil-degrasse-tyson-aliens-whistleblowers-cover.jpg
     audio:
       audioId: '2878320389059718'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-30T10:41:58.951Z'
+    mediaId: '18379511212232085'
   - id: 2026-08-31_quote-kendrick-lamar-rick-ru
     slug: kendrick-lamar-rick-rubin-creative-process
     platform: instagram
