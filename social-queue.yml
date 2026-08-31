@@ -4420,7 +4420,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-08-31T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🧠
 
@@ -4448,13 +4448,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-31_myth-louisa-nicola-alzheimers/louisa-nicola-alzheimers-sleep-diary-of-a-ceo-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcskXaDEZ0q/
     cover: >-
       https://hesketon.co.il/social/2026-08-31_myth-louisa-nicola-alzheimers/louisa-nicola-alzheimers-sleep-diary-of-a-ceo-cover.jpg
     audio:
       audioId: '2070320316495253'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-31T07:38:40.075Z'
+    mediaId: '18106313861521566'
   - id: 2026-09-01_myth-hormozi-100k-in-3-months
     slug: hormozi-100k-in-3-months-2026
     platform: instagram
