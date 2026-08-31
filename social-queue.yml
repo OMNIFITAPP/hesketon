@@ -4182,7 +4182,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-08-31T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "אם אמרתי את זה בתקליט — אני לעולם לא חוזר בי מדבריי." 🎤
 
@@ -4201,7 +4201,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-31_quote-kendrick-lamar-rick-ru/kendrick-lamar-rick-rubin-creative-process-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Dct_ogBlBWv/
+    publishedAt: '2026-08-31T20:55:46.444Z'
+    mediaId: '18187350493408169'
   - id: 2026-09-01_carousel-offer-blueprint-hormoz
     slug: offer-blueprint-hormozi-sanchez-priestley
     platform: instagram
