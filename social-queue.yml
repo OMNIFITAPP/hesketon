@@ -4721,7 +4721,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-08-31T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "בני אדם מתפתחים קודם כול טרום-מילולית. לאבולוציה לקחו 500 מיליון שנה בלי תקשורת מילולית." 👁️
 
@@ -4746,13 +4746,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-08-31_reelv2-fei-fei-li-spatial-int/fei-fei-li-spatial-intelligence-huberman-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DctaCgzjXO9/
     cover: >-
       https://hesketon.co.il/social/2026-08-31_reelv2-fei-fei-li-spatial-int/fei-fei-li-spatial-intelligence-huberman-cover.jpg
     audio:
       audioId: '1016609443731395'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-08-31T15:27:41.332Z'
+    mediaId: '18092876948406723'
   - id: 2026-09-01_reelv2-laurence-fishburne-mat
     slug: laurence-fishburne-matrix-physics-startalk
     platform: instagram
