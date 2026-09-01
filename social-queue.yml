@@ -4465,7 +4465,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-01T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 💼
 
@@ -4494,13 +4494,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-01_myth-hormozi-100k-in-3-months/hormozi-100k-in-3-months-2026-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcvZuMPCQjA/
     cover: >-
       https://hesketon.co.il/social/2026-09-01_myth-hormozi-100k-in-3-months/hormozi-100k-in-3-months-2026-cover.jpg
     audio:
       audioId: '1089958938021297'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-01T10:03:21.855Z'
+    mediaId: '17945726271062845'
   - id: 2026-09-02_myth-seth-godin-this-is-strat
     slug: seth-godin-this-is-strategy-tim-ferriss
     platform: instagram
@@ -4763,7 +4765,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-01T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       האם בני אדם באמת יכולים לשמש כסוללה? 🔋
 
@@ -4791,13 +4793,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-01_reelv2-laurence-fishburne-mat/laurence-fishburne-matrix-physics-startalk-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcvZy0jju5O/
     cover: >-
       https://hesketon.co.il/social/2026-09-01_reelv2-laurence-fishburne-mat/laurence-fishburne-matrix-physics-startalk-cover.jpg
     audio:
       audioId: '2875190712727324'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-01T10:04:00.579Z'
+    mediaId: '17988506117851399'
   - id: 2026-09-02_reelv2-bob-lazar-jeremy-corbe
     slug: bob-lazar-jeremy-corbell-area-51-joe-rogan
     platform: instagram
