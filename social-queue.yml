@@ -4210,7 +4210,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-09-01T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "בדרך כלל, התמחור שלכם מדויק כששבעה מתוך עשרה אומרים 'לא'." 💼
 
@@ -4247,7 +4247,9 @@ items:
         https://hesketon.co.il/social/2026-09-01_carousel-offer-blueprint-hormoz/offer-blueprint-hormozi-sanchez-priestley-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-09-01_carousel-offer-blueprint-hormoz/offer-blueprint-hormozi-sanchez-priestley-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DcwQyZ3FGzs/
+    publishedAt: '2026-09-01T18:04:12.535Z'
+    mediaId: '18110362381874476'
   - id: 2026-09-02_lessons-rupert-lowe-britain-im
     slug: rupert-lowe-britain-immigration-free-speech
     platform: instagram
