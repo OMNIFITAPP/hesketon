@@ -4812,7 +4812,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-02T10:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "אין שום חיווט שמחבר בין רכיבי המשנה, בכלל... הדברים האלה גובלים בקסם." 🛸
 
@@ -4833,13 +4833,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-02_reelv2-bob-lazar-jeremy-corbe/bob-lazar-jeremy-corbell-area-51-joe-rogan-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DcyZbpKjid9/
     cover: >-
       https://hesketon.co.il/social/2026-09-02_reelv2-bob-lazar-jeremy-corbe/bob-lazar-jeremy-corbell-area-51-joe-rogan-cover.jpg
     audio:
       audioId: '1211414204067053'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-02T13:58:33.578Z'
+    mediaId: '18623894344035595'
   - id: 2026-09-03_reelv2-jd-vance-diary-of-a-ce
     slug: jd-vance-diary-of-a-ceo
     platform: instagram
