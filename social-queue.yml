@@ -4511,7 +4511,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-02T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🎯
 
@@ -4540,13 +4540,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-02_myth-seth-godin-this-is-strat/seth-godin-this-is-strategy-tim-ferriss-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dcx9ifLiWJi/
     cover: >-
       https://hesketon.co.il/social/2026-09-02_myth-seth-godin-this-is-strat/seth-godin-this-is-strategy-tim-ferriss-cover.jpg
     audio:
       audioId: '793158060872110'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-02T09:54:49.538Z'
+    mediaId: '18105031754133651'
   - id: 2026-09-03_myth-ray-dalio-15-uncorrelate
     slug: ray-dalio-15-uncorrelated-return-streams
     platform: instagram
