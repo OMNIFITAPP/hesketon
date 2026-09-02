@@ -4256,7 +4256,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-09-02T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "זו המלחמה העתיקה בין האינדיבידואליזם לקולקטיביזם." 🇬🇧
 
@@ -4285,7 +4285,9 @@ items:
         https://hesketon.co.il/social/2026-09-02_lessons-rupert-lowe-britain-im/rupert-lowe-britain-immigration-free-speech-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-09-02_lessons-rupert-lowe-britain-im/rupert-lowe-britain-immigration-free-speech-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DcyyRXCDn6w/
+    publishedAt: '2026-09-02T17:35:11.093Z'
+    mediaId: '18014207156947432'
   - id: 2026-09-03_quote-elon-musk-nikhil-kamat
     slug: elon-musk-nikhil-kamath-interview
     platform: instagram
