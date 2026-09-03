@@ -4557,7 +4557,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-03T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 📊
 
@@ -4588,13 +4588,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-03_myth-ray-dalio-15-uncorrelate/ray-dalio-15-uncorrelated-return-streams-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dc0hPSqjOfh/
     cover: >-
       https://hesketon.co.il/social/2026-09-03_myth-ray-dalio-15-uncorrelate/ray-dalio-15-uncorrelated-return-streams-cover.jpg
     audio:
       audioId: '640772971047304'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-03T09:45:16.340Z'
+    mediaId: '18121516346501961'
   - id: 2026-09-04_myth-lloyd-blankfein-goldman-
     slug: lloyd-blankfein-goldman-risk-reputation
     platform: instagram
