@@ -4294,7 +4294,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-09-03T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "אם אתם תקועים על אי בודד עם טריליון דולר, הכסף חסר תועלת — כי אין עבודה להקצות." 💭
 
@@ -4313,7 +4313,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-03_quote-elon-musk-nikhil-kamat/elon-musk-nikhil-kamath-interview-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Dc1Vt6lF3y_/
+    publishedAt: '2026-09-03T17:23:24.113Z'
+    mediaId: '18113426464797495'
   - id: 2026-09-04_carousel-elon-musk-economist-in
     slug: elon-musk-economist-interview-deflation-china
     platform: instagram
