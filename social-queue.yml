@@ -4852,7 +4852,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-03T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "חשבתי שטראמפ יהיה נשיא כושל. הוא לא היה. חשבתי שהמוסדות של אמריקה מתפקדים מהיסוד. הם לא." 🎙️
 
@@ -4877,13 +4877,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-03_reelv2-jd-vance-diary-of-a-ce/jd-vance-diary-of-a-ceo-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dc09v04jwIT/
     cover: >-
       https://hesketon.co.il/social/2026-09-03_reelv2-jd-vance-diary-of-a-ce/jd-vance-diary-of-a-ceo-cover.jpg
     audio:
       audioId: '957044555314519'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-03T13:54:38.460Z'
+    mediaId: '18082201346319080'
   - id: 2026-09-04_reelv2-michelle-thaller-unive
     slug: michelle-thaller-universe-joe-rogan
     platform: instagram
