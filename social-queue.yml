@@ -4605,7 +4605,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-04T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🏦
 
@@ -4636,13 +4636,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-04_myth-lloyd-blankfein-goldman-/lloyd-blankfein-goldman-risk-reputation-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dc3BSvFCFDO/
     cover: >-
       https://hesketon.co.il/social/2026-09-04_myth-lloyd-blankfein-goldman-/lloyd-blankfein-goldman-risk-reputation-cover.jpg
     audio:
       audioId: '1043995042476097'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-04T09:03:49.205Z'
+    mediaId: '17972021402936756'
   - id: 2026-09-05_myth-andrew-huberman-peptides
     slug: andrew-huberman-peptides-training-tim-ferriss
     platform: instagram
