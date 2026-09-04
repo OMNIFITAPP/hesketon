@@ -4322,7 +4322,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-09-04T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       אילון מאסק ב-The Economist — על דפלציה, סין, והכיוון שאליו הכלכלה העולמית נעה. 🌍
 
@@ -4357,7 +4357,9 @@ items:
         https://hesketon.co.il/social/2026-09-04_carousel-elon-musk-economist-in/elon-musk-economist-interview-deflation-china-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-09-04_carousel-elon-musk-economist-in/elon-musk-economist-interview-deflation-china-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Dc4HowjI915/
+    publishedAt: '2026-09-04T19:18:13.650Z'
+    mediaId: '18132973573640952'
   - id: 2026-09-05_lessons-chris-camillo-social-a
     slug: chris-camillo-social-arbitrage-ai-wave
     platform: instagram
