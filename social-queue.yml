@@ -4896,7 +4896,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-04T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אסטרופיזיקה היא הסיפור של קצה האף שלך, ממש. אנחנו חלק מהדבר הגדול והיפה הזה." ✨
 
@@ -4921,13 +4921,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-04_reelv2-michelle-thaller-unive/michelle-thaller-universe-joe-rogan-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dc3f060CGfp/
     cover: >-
       https://hesketon.co.il/social/2026-09-04_reelv2-michelle-thaller-unive/michelle-thaller-universe-joe-rogan-cover.jpg
     audio:
       audioId: '570628171167564'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-04T13:30:45.316Z'
+    mediaId: '18101578988366199'
   - id: 2026-09-05_reelv2-elon-musk-joe-rogan-11
     slug: elon-musk-joe-rogan-1169-ai-warning
     platform: instagram
