@@ -4940,7 +4940,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-05T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "ניסיתי לשכנע אנשים להאט את הקצב של הבינה המלאכותית. זה היה חסר תוחלת. אף אחד לא הקשיב." ⚠️
 
@@ -4965,13 +4965,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-05_reelv2-elon-musk-joe-rogan-11/elon-musk-joe-rogan-1169-ai-warning-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dc6AZgnDtYC/
     cover: >-
       https://hesketon.co.il/social/2026-09-05_reelv2-elon-musk-joe-rogan-11/elon-musk-joe-rogan-1169-ai-warning-cover.jpg
     audio:
       audioId: '485738582157668'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-05T12:53:53.840Z'
+    mediaId: '18120071098898465'
   - id: 2026-09-06_reelv2-ai-race-superintellige
     slug: ai-race-superintelligence-mallaby
     platform: instagram
