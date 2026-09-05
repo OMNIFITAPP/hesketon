@@ -4366,7 +4366,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-09-05T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "בכל יום, ובכל שנייה במהלך היום, אתה קונה מחדש כל מניה בתיק שלך." 📈
 
@@ -4397,7 +4397,9 @@ items:
         https://hesketon.co.il/social/2026-09-05_lessons-chris-camillo-social-a/chris-camillo-social-arbitrage-ai-wave-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-09-05_lessons-chris-camillo-social-a/chris-camillo-social-arbitrage-ai-wave-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Dc6hLCLm88o/
+    publishedAt: '2026-09-05T17:39:46.513Z'
+    mediaId: '18390094762207191'
   - id: 2026-09-06_quote-kelly-starrett-wellnes
     slug: kelly-starrett-wellness-movement-play
     platform: instagram
