@@ -4653,7 +4653,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-05T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 💊
 
@@ -4685,13 +4685,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-05_myth-andrew-huberman-peptides/andrew-huberman-peptides-training-tim-ferriss-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dc5oVwIjRXy/
     cover: >-
       https://hesketon.co.il/social/2026-09-05_myth-andrew-huberman-peptides/andrew-huberman-peptides-training-tim-ferriss-cover.jpg
     audio:
       audioId: '4142425685857932'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-05T09:23:30.712Z'
+    mediaId: '18429177307179990'
   - id: 2026-09-06_myth-vlad-tenev-broad-ownersh
     slug: vlad-tenev-broad-ownership-ai-agents-iced-coffee-hour
     platform: instagram
