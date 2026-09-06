@@ -4984,7 +4984,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-06T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "כל אדם סביר צריך להיות גם נלהב וגם קצת מפוחד. זה נשמע סותר, אבל זו התגובה הרציונלית היחידה."
       🤖
@@ -5011,13 +5011,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-06_reelv2-ai-race-superintellige/ai-race-superintelligence-mallaby-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dc8mxnMG4k5/
     cover: >-
       https://hesketon.co.il/social/2026-09-06_reelv2-ai-race-superintellige/ai-race-superintelligence-mallaby-cover.jpg
     audio:
       audioId: '390303261514437'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-06T13:07:50.913Z'
+    mediaId: '18214087612345399'
   - id: 2026-09-07_lessons-matthew-mcconaughey-re
     slug: matthew-mcconaughey-reinventing-yourself-modern-wisdom
     platform: instagram
