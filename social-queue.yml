@@ -4406,7 +4406,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-09-06T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "כולנו לומדים טוב יותר דרך משחק. המשחק הוא תרופת הפלא." 🎾
 
@@ -4425,7 +4425,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-06_quote-kelly-starrett-wellnes/kelly-starrett-wellness-movement-play-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Dc9KYjSIPSR/
+    publishedAt: '2026-09-06T18:18:15.897Z'
+    mediaId: '17867861796646085'
   - id: 2026-08-31_myth-louisa-nicola-alzheimers
     slug: louisa-nicola-alzheimers-sleep-diary-of-a-ceo
     platform: instagram
