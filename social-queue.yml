@@ -4702,7 +4702,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-06T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🤖
 
@@ -4730,13 +4730,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-06_myth-vlad-tenev-broad-ownersh/vlad-tenev-broad-ownership-ai-agents-iced-coffee-hour-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dc8Ob6xD8yf/
     cover: >-
       https://hesketon.co.il/social/2026-09-06_myth-vlad-tenev-broad-ownersh/vlad-tenev-broad-ownership-ai-agents-iced-coffee-hour-cover.jpg
     audio:
       audioId: '881418556952932'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-06T09:34:52.383Z'
+    mediaId: '18126538276766139'
   - id: 2026-08-31_reelv2-fei-fei-li-spatial-int
     slug: fei-fei-li-spatial-intelligence-huberman
     platform: instagram
