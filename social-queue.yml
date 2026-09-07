@@ -5028,7 +5028,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-09-07T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "נעדרתי מספיק זמן כדי להפוך לרעיון טוב חדש." 🎬
 
@@ -5061,7 +5061,9 @@ items:
         https://hesketon.co.il/social/2026-09-07_lessons-matthew-mcconaughey-re/matthew-mcconaughey-reinventing-yourself-modern-wisdom-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-09-07_lessons-matthew-mcconaughey-re/matthew-mcconaughey-reinventing-yourself-modern-wisdom-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Dc_2EUsgUgV/
+    publishedAt: '2026-09-07T19:18:32.512Z'
+    mediaId: '17885464254621162'
   - id: 2026-09-08_carousel-fei-fei-li-spatial-int
     slug: fei-fei-li-spatial-intelligence-huberman
     platform: instagram
