@@ -5568,7 +5568,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-07T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אם אתה בן 80 שמרים משקולות באופן עקבי, אתה חזק תפקודית כמו אדם בן 60 שלא עושה את זה." 💪
 
@@ -5593,13 +5593,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-07_reelv2-vonda-wright-mobility-/vonda-wright-mobility-ageing-diary-of-a-ceo-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dc_aU3qAqAN/
     cover: >-
       https://hesketon.co.il/social/2026-09-07_reelv2-vonda-wright-mobility-/vonda-wright-mobility-ageing-diary-of-a-ceo-cover.jpg
     audio:
       audioId: '1157813262009024'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-07T15:16:54.402Z'
+    mediaId: '18342773077255921'
   - id: 2026-09-08_reelv2-khabib-nurmagomedov-da
     slug: khabib-nurmagomedov-dagestan-lex-fridman-500
     platform: instagram
