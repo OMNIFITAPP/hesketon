@@ -5286,7 +5286,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-07T06:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       מיתוס ↔ מציאות 🔥
 
@@ -5310,13 +5310,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-07_myth-david-goggins-huberman-i/david-goggins-huberman-inner-strength-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dc-0MhBj3I3/
     cover: >-
       https://hesketon.co.il/social/2026-09-07_myth-david-goggins-huberman-i/david-goggins-huberman-inner-strength-cover.jpg
     audio:
       audioId: '1041859307965419'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-07T09:43:18.189Z'
+    mediaId: '18176115064439206'
   - id: 2026-09-08_myth-tommy-wood-future-proof-
     slug: tommy-wood-future-proof-brain
     platform: instagram
