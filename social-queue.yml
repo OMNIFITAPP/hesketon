@@ -5070,7 +5070,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-09-08T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "בני אדם מתפתחים קודם כול טרום-מילולית." 👁️
 
@@ -5110,7 +5110,9 @@ items:
         https://hesketon.co.il/social/2026-09-08_carousel-fei-fei-li-spatial-int/fei-fei-li-spatial-intelligence-huberman-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-09-08_carousel-fei-fei-li-spatial-int/fei-fei-li-spatial-intelligence-huberman-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DdCOss5CTn9/
+    publishedAt: '2026-09-08T17:32:12.852Z'
+    mediaId: '18119993786515436'
   - id: 2026-09-09_quote-dwayne-johnson-the-roc
     slug: dwayne-johnson-the-rock-joe-rogan-2063
     platform: instagram
