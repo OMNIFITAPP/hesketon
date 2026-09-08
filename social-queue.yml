@@ -5327,7 +5327,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-08T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🧠
 
@@ -5352,13 +5352,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-08_myth-tommy-wood-future-proof-/tommy-wood-future-proof-brain-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdBV56RgIoy/
     cover: >-
       https://hesketon.co.il/social/2026-09-08_myth-tommy-wood-future-proof-/tommy-wood-future-proof-brain-cover.jpg
     audio:
       audioId: '257998506674114'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-08T09:16:23.917Z'
+    mediaId: '18103004447262103'
   - id: 2026-09-09_myth-breathing-right-nestor
     slug: breathing-right-nestor
     platform: instagram
