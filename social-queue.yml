@@ -5612,7 +5612,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-08T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "כשאתה נכנס לחדר החשוך והלא נוח, ונשאר בו הרבה זמן — לא משנה כמה קשה." 🥋
 
@@ -5640,13 +5640,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-08_reelv2-khabib-nurmagomedov-da/khabib-nurmagomedov-dagestan-lex-fridman-500-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdB0o8ZCGVI/
     cover: >-
       https://hesketon.co.il/social/2026-09-08_reelv2-khabib-nurmagomedov-da/khabib-nurmagomedov-dagestan-lex-fridman-500-cover.jpg
     audio:
       audioId: '1304451697253803'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-08T13:44:56.195Z'
+    mediaId: '18090850559406076'
   - id: 2026-09-09_reelv2-seth-godin-four-horsem
     slug: seth-godin-four-horsemen-mediocrity-bigdeal
     platform: instagram
