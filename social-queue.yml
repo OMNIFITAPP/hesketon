@@ -5119,7 +5119,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-09-09T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "תודה על ההזדמנות, אני מעריך את זה מאוד — אבל אני הולך לסגור את הפרק הזה בחיים שלי." 🏈
 
@@ -5138,7 +5138,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-09_quote-dwayne-johnson-the-roc/dwayne-johnson-the-rock-joe-rogan-2063-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DdE2lNLFdyg/
+    publishedAt: '2026-09-09T17:59:09.637Z'
+    mediaId: '18101214191347079'
   - id: 2026-09-10_lessons-louisa-nicola-alzheime
     slug: louisa-nicola-alzheimers-sleep-diary-of-a-ceo
     platform: instagram
