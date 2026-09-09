@@ -5369,7 +5369,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-09T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🌬️
 
@@ -5397,13 +5397,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-09_myth-breathing-right-nestor/breathing-right-nestor-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdEAd7FHR3A/
     cover: >-
       https://hesketon.co.il/social/2026-09-09_myth-breathing-right-nestor/breathing-right-nestor-cover.jpg
     audio:
       audioId: '1044245831898294'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-09T10:06:45.635Z'
+    mediaId: '18114930175779916'
   - id: 2026-09-10_myth-morgan-housel-psychology
     slug: morgan-housel-psychology-of-money-huberman
     platform: instagram
@@ -5657,7 +5659,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-09T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       סת' גודין מונה ארבעה כוחות שמושכים אותנו לבינוניות: הכחשה, חוסר אונים, בוז ופחד. 🐎
 
@@ -5682,13 +5684,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-09_reelv2-seth-godin-four-horsem/seth-godin-four-horsemen-mediocrity-bigdeal-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdEAiruDnbR/
     cover: >-
       https://hesketon.co.il/social/2026-09-09_reelv2-seth-godin-four-horsem/seth-godin-four-horsemen-mediocrity-bigdeal-cover.jpg
     audio:
       audioId: '1294217722175214'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-09T10:07:23.619Z'
+    mediaId: '17944307511301278'
   - id: 2026-09-10_reelv2-kendrick-lamar-rick-ru
     slug: kendrick-lamar-rick-rubin-creative-process
     platform: instagram
