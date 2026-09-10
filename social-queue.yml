@@ -5147,7 +5147,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-09-10T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "זו מחלה שניתנת למניעה — אבל ברגע שמקבלים את האבחנה, אין תרופה." 🧠
 
@@ -5176,7 +5176,9 @@ items:
         https://hesketon.co.il/social/2026-09-10_lessons-louisa-nicola-alzheime/louisa-nicola-alzheimers-sleep-diary-of-a-ceo-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-09-10_lessons-louisa-nicola-alzheime/louisa-nicola-alzheimers-sleep-diary-of-a-ceo-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DdHXywBiaiF/
+    publishedAt: '2026-09-10T17:27:58.472Z'
+    mediaId: '18494341798103652'
   - id: 2026-09-11_carousel-brian-cox-particle-phy
     slug: brian-cox-particle-physics-frontier-startalk
     platform: instagram
