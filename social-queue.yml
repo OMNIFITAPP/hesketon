@@ -5414,7 +5414,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-10T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 💭
 
@@ -5442,13 +5442,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-10_myth-morgan-housel-psychology/morgan-housel-psychology-of-money-huberman-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdGj7Fpikw8/
     cover: >-
       https://hesketon.co.il/social/2026-09-10_myth-morgan-housel-psychology/morgan-housel-psychology-of-money-huberman-cover.jpg
     audio:
       audioId: '489323178876006'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-10T09:55:07.297Z'
+    mediaId: '17879744565626038'
   - id: 2026-09-11_myth-ido-portal-movement-mind
     slug: ido-portal-movement-mind-body-huberman
     platform: instagram
