@@ -5703,7 +5703,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-10T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אם אמרתי את זה בתקליט — אני לעולם לא חוזר בי מדבריי." 🎤
 
@@ -5728,13 +5728,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-10_reelv2-kendrick-lamar-rick-ru/kendrick-lamar-rick-rubin-creative-process-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdG_uo9guc7/
     cover: >-
       https://hesketon.co.il/social/2026-09-10_reelv2-kendrick-lamar-rick-ru/kendrick-lamar-rick-rubin-creative-process-cover.jpg
     audio:
       audioId: '740712970027383'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-10T13:58:22.440Z'
+    mediaId: '17907222513506588'
   - id: 2026-09-11_reelv2-offer-blueprint-hormoz
     slug: offer-blueprint-hormozi-sanchez-priestley
     platform: instagram
