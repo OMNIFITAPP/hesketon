@@ -5459,7 +5459,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-11T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🤸
 
@@ -5486,13 +5486,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-11_myth-ido-portal-movement-mind/ido-portal-movement-mind-body-huberman-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdJDbDcDZDA/
     cover: >-
       https://hesketon.co.il/social/2026-09-11_myth-ido-portal-movement-mind/ido-portal-movement-mind-body-huberman-cover.jpg
     audio:
       audioId: '1050932209337123'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-11T09:08:48.573Z'
+    mediaId: '18037106936834087'
   - id: 2026-09-12_myth-roman-yampolskiy-ai-safe
     slug: roman-yampolskiy-ai-safety-uncontrollable
     platform: instagram
