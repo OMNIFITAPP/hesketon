@@ -5747,7 +5747,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-11T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "בדרך כלל, התמחור שלכם מדויק כששבעה מתוך עשרה אומרים 'לא'." 💼
 
@@ -5772,13 +5772,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-11_reelv2-offer-blueprint-hormoz/offer-blueprint-hormozi-sanchez-priestley-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdJhnSaHX9g/
     cover: >-
       https://hesketon.co.il/social/2026-09-11_reelv2-offer-blueprint-hormoz/offer-blueprint-hormozi-sanchez-priestley-cover.jpg
     audio:
       audioId: '150504705576125'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-11T13:32:34.511Z'
+    mediaId: '18126153172815838'
   - id: 2026-09-12_reelv2-elon-musk-economist-in
     slug: elon-musk-economist-interview-deflation-china
     platform: instagram
