@@ -5503,7 +5503,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-12T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות ⚠️
 
@@ -5531,13 +5531,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-12_myth-roman-yampolskiy-ai-safe/roman-yampolskiy-ai-safety-uncontrollable-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdLWIKBgWk1/
     cover: >-
       https://hesketon.co.il/social/2026-09-12_myth-roman-yampolskiy-ai-safe/roman-yampolskiy-ai-safety-uncontrollable-cover.jpg
     audio:
       audioId: '590642038455974'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-12T06:30:41.664Z'
+    mediaId: '18009216587977219'
   - id: 2026-09-13_myth-vinh-giang-voice-communi
     slug: vinh-giang-voice-communication-skills
     platform: instagram
