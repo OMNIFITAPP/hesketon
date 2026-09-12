@@ -5791,7 +5791,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-12T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אני מספיק כלכלנית. אם פשוט מנפיקים צ'קים — תהיה אינפלציה." 🌍
 
@@ -5816,13 +5816,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-12_reelv2-elon-musk-economist-in/elon-musk-economist-interview-deflation-china-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdL1429DrSp/
     cover: >-
       https://hesketon.co.il/social/2026-09-12_reelv2-elon-musk-economist-in/elon-musk-economist-interview-deflation-china-cover.jpg
     audio:
       audioId: '948485328936194'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-12T11:08:44.081Z'
+    mediaId: '18409687348087935'
   - id: 2026-09-13_reelv2-rupert-lowe-britain-im
     slug: rupert-lowe-britain-immigration-free-speech
     platform: instagram
