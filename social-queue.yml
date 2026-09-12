@@ -5231,7 +5231,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-09-12T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "הדרך לצאת ממלכודת התחרות היא להיות אותנטי." 🧠
 
@@ -5253,7 +5253,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-12_quote-naval-ravikant-specifi/naval-ravikant-specific-knowledge-leverage-joe-rogan-1309-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DdMe93VjGEk/
+    publishedAt: '2026-09-12T17:06:44.505Z'
+    mediaId: '18368703370209497'
   - id: 2026-09-13_lessons-annie-jacobsen-biologi
     slug: annie-jacobsen-biological-war-joe-rogan-2534
     platform: instagram
