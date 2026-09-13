@@ -5548,7 +5548,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-13T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🎙️
 
@@ -5577,13 +5577,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-13_myth-vinh-giang-voice-communi/vinh-giang-voice-communication-skills-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdN43qmjGZN/
     cover: >-
       https://hesketon.co.il/social/2026-09-13_myth-vinh-giang-voice-communi/vinh-giang-voice-communication-skills-cover.jpg
     audio:
       audioId: '1010711630834055'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-13T06:12:43.954Z'
+    mediaId: '17871668604594145'
   - id: 2026-09-07_reelv2-vonda-wright-mobility-
     slug: vonda-wright-mobility-ageing-diary-of-a-ceo
     platform: instagram
