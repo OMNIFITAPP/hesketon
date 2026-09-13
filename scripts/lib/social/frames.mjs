@@ -12,6 +12,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import puppeteer from 'puppeteer';
+import { assertWebfontCoverage } from './font-gate.mjs';
 
 /**
  * @param {string} html   full reel document (from reel-v2.buildReelHtml)
@@ -28,7 +29,7 @@ export async function renderFrames(html, { duration, fps = 30, width, height, ou
   fs.mkdirSync(outDir, { recursive: true });
 
   const browser = await puppeteer.launch({
-    headless: 'new',
+    headless: 'shell',   // why 'shell': see render.mjs
     protocolTimeout: 300000,
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--font-render-hinting=none'],
   });
@@ -40,19 +41,24 @@ export async function renderFrames(html, { duration, fps = 30, width, height, ou
     await page.setContent(html, { waitUntil: 'load', timeout: 60000 });
 
     await page.evaluate(async () => {
-      const faces = ['400 100px Heebo', '700 100px Heebo', '800 100px Rubik', '900 100px Rubik'];
+      const faces = ['400 100px Heebo', '500 100px Heebo', '700 100px Heebo', '800 100px Rubik'];
       await Promise.all(faces.map((f) => document.fonts.load(f, 'אבג ABC').catch(() => {})));
       if (document.fonts?.ready) await document.fonts.ready;
     });
 
-    // Same hard gate as the slide renderer: a fallback font is worse than a failure.
-    const fontsOk = await page.evaluate(() =>
-      ['400 32px Heebo', '700 32px Heebo', '800 32px Rubik', '900 32px Rubik']
-        .every((f) => document.fonts.check(f, 'אבג')));
-    if (!fontsOk) throw new Error('Hebrew webfonts failed to load — refusing to render with a fallback font.');
-
     const hasRender = await page.evaluate(() => typeof window.__reel?.render === 'function');
     if (!hasRender) throw new Error('reel document did not expose window.__reel.render');
+
+    // Glyph-coverage gate, once per scene: hidden scenes paint nothing, so each
+    // one has to be put on screen to be checked. A fonts.check() list used to
+    // stand here and passed while the wordmark, label and CTA painted in
+    // Lucida Grande.
+    const mids = await page.evaluate(() => [...document.querySelectorAll('.scene')]
+      .map((s) => (parseFloat(s.dataset.in) + parseFloat(s.dataset.out)) / 2));
+    for (const [i, t] of mids.entries()) {
+      await page.evaluate((tt) => window.__reel.render(tt), t);
+      await assertWebfontCoverage(page, { label: `reel scene ${i}` });
+    }
 
     for (let i = 0; i < total; i++) {
       const t = i / fps;

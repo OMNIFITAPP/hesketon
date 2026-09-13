@@ -13,6 +13,7 @@
 // ============================================================
 
 import puppeteer from 'puppeteer';
+import { assertWebfontCoverage } from './font-gate.mjs';
 
 const SAFE = { left: 88, right: 992, top: 150, bottom: 1780 };
 
@@ -31,7 +32,7 @@ const SEL = '.line, .stat, .sub, .cta-ttl, .cta-pill, .cta-url, .typed, .attr, .
  */
 export async function verifyReel(html, { duration, step = 0.2, width, height }) {
   const browser = await puppeteer.launch({
-    headless: 'new', protocolTimeout: 300000,
+    headless: 'shell', protocolTimeout: 300000,   // why 'shell': see render.mjs
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--font-render-hinting=none'],
   });
   const violations = [];
@@ -56,6 +57,16 @@ export async function verifyReel(html, { duration, step = 0.2, width, height }) 
       return bad;
     });
     for (const j of junk) violations.push({ t: -1, issues: [`placeholder "${j.word}" in scene ${j.scene}: ${j.text}`] });
+
+    // Glyph coverage, per scene (see font-gate.mjs). Reported as a violation so
+    // the batch stops before a single frame is rendered.
+    const mids = await page.evaluate(() => [...document.querySelectorAll('.scene')]
+      .map((s) => (parseFloat(s.dataset.in) + parseFloat(s.dataset.out)) / 2));
+    for (const [i, t] of mids.entries()) {
+      await page.evaluate((tt) => window.__reel.render(tt), t);
+      try { await assertWebfontCoverage(page, { label: `scene ${i}` }); }
+      catch (e) { violations.push({ t: +t.toFixed(2), issues: [e.message] }); }
+    }
 
     for (let t = 0; t <= duration; t += step) {
       await page.evaluate((tt) => window.__reel.render(tt), t);
