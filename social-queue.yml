@@ -5835,7 +5835,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-13T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "זו המלחמה העתיקה בין האינדיבידואליזם לקולקטיביזם." 🇬🇧
 
@@ -5863,10 +5863,12 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-13_reelv2-rupert-lowe-britain-im/rupert-lowe-britain-immigration-free-speech-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdOfOAkE2XO/
     cover: >-
       https://hesketon.co.il/social/2026-09-13_reelv2-rupert-lowe-britain-im/rupert-lowe-britain-immigration-free-speech-cover.jpg
     audio:
       audioId: '417263269136109'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-13T11:47:52.913Z'
+    mediaId: '17918053236431950'
