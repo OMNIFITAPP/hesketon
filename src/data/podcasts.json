@@ -152,5 +152,11 @@
     "name": "BigDeal",
     "hostId": "codie-sanchez",
     "description": "שיחות על עסקים, בעלות ורכישת חברות — עם קודי סאנצ'ז."
+  },
+  {
+    "id": "silicon-valley-girl",
+    "name": "Silicon Valley Girl",
+    "hostId": "marina-mogilko",
+    "description": "שיחות על טכנולוגיה, יזמות וקריירה — עם מרינה מוגילקו."
   }
 ]

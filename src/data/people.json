@@ -538,5 +538,29 @@
     "nameHe": "סטאשה גומינק",
     "nameEn": "Stasha Gominak",
     "title": "נוירולוגית וחוקרת שינה"
+  },
+  {
+    "id": "andrew-ng",
+    "nameHe": "אנדרו אנג",
+    "nameEn": "Andrew Ng",
+    "title": "מדען מחשב, ממייסדי Google Brain ו-Coursera"
+  },
+  {
+    "id": "joe-liemandt",
+    "nameHe": "ג'ו לימנדט",
+    "nameEn": "Joe Liemandt",
+    "title": "יזם טכנולוגיה ומנהל Alpha School"
+  },
+  {
+    "id": "martin-picard",
+    "nameHe": "מרטין פיקארד",
+    "nameEn": "Martin Picard",
+    "title": "פרופסור לרפואה התנהגותית, אוניברסיטת קולומביה"
+  },
+  {
+    "id": "marina-mogilko",
+    "nameHe": "מרינה מוגילקו",
+    "nameEn": "Marina Mogilko",
+    "title": "יזמת ויוצרת תוכן"
   }
 ]
