@@ -46,7 +46,8 @@ const index = await Promise.all(
       thumbHq: youtubeThumb(d.source?.youtubeUrl, 'hq') ?? '',
       audio: d.source?.durationMinutes ?? 0,
       read: d.readingTime ?? 0,
-      date: dateFmt.format(date),
+      // Same label as the cards: this is the air date, not the site order.
+      date: (d.source?.publishedAt ? 'פרק מ־' : '') + dateFmt.format(date),
       podcast: d.source?.podcast ?? '',
       classic: !!d.classic,
     };
@@ -154,7 +155,7 @@ const href = `/posts/${initial.id}/`;
       <h2 class="featured__title"><a href={href} data-pk="title">{d.title}</a></h2>
       <p class="featured__desc" data-pk="desc">{d.description}</p>
       <div class="featured__meta">
-        <time data-pk="date">{dateFmt.format(episodeDate)}</time>
+        <time data-pk="date">{d.source?.publishedAt ? 'פרק מ־' : ''}{dateFmt.format(episodeDate)}</time>
         <span class="dot" data-pk="podcast" hidden={!d.source?.podcast}>מתוך «{d.source?.podcast}»</span>
       </div>
     </div>
