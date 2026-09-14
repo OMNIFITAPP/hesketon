@@ -154,7 +154,7 @@ const REELS = [
     day: '14', slug: 'jocko-willink-confidence-tradeoffs-modern-wisdom', audioId: '2206809489794688',
     scenes: [
       { type: 'type', text: 'מאיפה מגיע ביטחון עצמי?', bare: true, progress: false },
-      { type: 'line', text: 'לא מהישגים. מהיכולת לומר "אני לא בטוח מה לעשות".' },
+      { type: 'line', text: 'ביטחון עצמי מתחיל במשפט "אני לא בטוח מה לעשות".' },
       { type: 'mark', text: 'ווילינק מדגים: מנהל שאומר את זה בישיבה, מול הצוות.', key: 'בישיבה' },
       { type: 'pop', text: 'אין פתרונות — רק פשרות.', key: 'פשרות' },
       { type: 'line', text: 'מאמץ שמושקע כאן נלקח משם.' },
@@ -196,7 +196,7 @@ const REELS = [
     day: '16', slug: 'joe-liemandt-alpha-school-two-hours-huberman', audioId: '2044003369114324',
     scenes: [
       { type: 'type', text: 'בית ספר שילדים מעדיפים על חופשה?', bare: true, progress: false },
-      { type: 'line', text: 'בנותיו ניסו שבוע אחד בקיץ — וביקשו לחזור במקום לקייטנה.' },
+      { type: 'line', text: 'בנותיו של ג\'ו לימנדט ביקשו לחזור לבית הספר — במקום לקייטנה.' },
       { type: 'mark', text: 'המפתח לאושר של הילד שלכם הוא סטנדרטים גבוהים.', key: 'סטנדרטים' },
       { type: 'pop', text: 'הבסיס: מחקר מ-1984 על חונכות אישית ולמידה עד שליטה.', key: 'חונכות' },
       { type: 'line', text: 'בינה מלאכותית, לדבריו, הופכת את השילוב הזה לזול.' },
@@ -217,8 +217,8 @@ const REELS = [
     // this one leads on a different idea: what money actually is.
     day: '17', slug: 'elon-musk-nikhil-kamath-interview', audioId: '1100316650098321',
     scenes: [
-      { type: 'type', text: 'טריליון דולר על אי בודד. כמה זה שווה?', bare: true, progress: false },
-      { type: 'line', text: 'כלום. כי אין שם עבודה להקצות.' },
+      { type: 'type', text: 'כמה באמת שווה כסף?', bare: true, progress: false },
+      { type: 'line', text: 'טריליון דולר על אי בודד חסר תועלת — כי אין עבודה להקצות.' },
       { type: 'mark', text: 'כסף, לדבריו, הוא בסך הכול מסד נתונים להקצאת עבודה.', key: 'מסד' },
       { type: 'pop', text: 'ובעולם של שפע — אנרגיה היא המטבע האמיתי.', key: 'אנרגיה' },
       { type: 'line', text: 'ל-AI, לדבריו, צריכים להיות שלושה ערכים: אמת, יופי וסקרנות.' },
@@ -238,7 +238,7 @@ const REELS = [
     day: '18', slug: 'michelle-khare-fear-nine-month-plan-rich-roll', audioId: '1465703100656220',
     scenes: [
       { type: 'type', text: 'איך מתפטרים בלי לקפוץ לריק?', bare: true, progress: false },
-      { type: 'line', text: 'היא מבצעת פעלולים קיצוניים — ומגדירה את עצמה פחדנית.' },
+      { type: 'line', text: 'מישל קארה מבצעת פעלולים קיצוניים — ומגדירה את עצמה פחדנית.' },
       { type: 'mark', text: 'מי שלא מפחד — אין מה לצפות בו.', key: 'מפחד' },
       { type: 'pop', text: 'לפני שהתפטרה היא בנתה תוכנית של תשעה חודשים.', key: 'תשעה' },
       { type: 'line', text: 'צמצום הוצאות, וצילום סרטונים בכל סוף שבוע — גם בלי לפרסם.' },
@@ -258,7 +258,7 @@ const REELS = [
     day: '19', slug: 'andrew-ng-ai-jobs-product-bottleneck-silicon-valley-girl', audioId: '2560548683960084',
     scenes: [
       { type: 'type', text: 'ה-AI יחליף אתכם בעבודה?', bare: true, progress: false },
-      { type: 'line', text: 'אנג: היא לא בעמדה להחליף אנשים ברוב המכריע של המשרות.' },
+      { type: 'line', text: 'אנדרו אנג: AI לא בעמדה להחליף אנשים ברוב המכריע של המשרות.' },
       { type: 'stat', value: '30–40%', text: 'מהמשימות ברוב המשרות — לפי ניתוחים שהוא מצטט.' },
       { type: 'mark', text: 'והיתרה נעשית בעלת ערך רב יותר, לא פחות.', key: 'יותר' },
       { type: 'pop', text: 'צוואר הבקבוק החדש: ההחלטה מה לבנות.', key: 'לבנות' },
