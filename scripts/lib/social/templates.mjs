@@ -28,7 +28,11 @@ function esc(s) {
   return String(s ?? '')
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
+    .replace(/>/g, '&gt;')
+    // Keep a hyphen-joined token on one line. Chrome breaks after a hyphen, so
+    // "ב-StarTalk" left an orphan "ב-" at the end of a title line (2026-09-14).
+    // Element content only — esc() is never used inside an attribute.
+    .replace(/[^\s<>]+-[^\s<>]+/g, (w) => `<span style="white-space:nowrap">${w}</span>`);
 }
 
 /** A decorative equalizer/waveform strip — the brand's audio motif. */
