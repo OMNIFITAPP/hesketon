@@ -79,7 +79,8 @@ function doc({ width, height, body, dark = false }) {
   .sub{font-size:36px;line-height:1.5;color:${t.inkSoft};margin-top:36px;font-weight:400}
   /* ---- quote ---- */
   .qmark{font-family:'Rubik','Heebo',system-ui,sans-serif;font-weight:900;font-size:200px;line-height:.6;color:${t.accent};opacity:.25;height:120px}
-  .quote{font-family:'Rubik','Heebo',system-ui,sans-serif;font-weight:700;font-size:66px;line-height:1.32}
+  /* 800 = the reels' weight. Roei, 2026-09-13: quote days must match the reels. */
+  .quote{font-family:'Rubik','Heebo',system-ui,sans-serif;font-weight:800;font-size:66px;line-height:1.32}
   .cite{margin-top:48px;font-size:36px;font-weight:700;color:${t.accent}}
   .cite::before{content:'— '}
   /* ---- bullet / takeaway ---- */

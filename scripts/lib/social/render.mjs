@@ -10,27 +10,41 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import puppeteer from 'puppeteer';
+import { assertWebfontCoverage } from './font-gate.mjs';
 
 const FONTS_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), 'fonts');
 
-// Build @font-face CSS from the bundled woff2 files (base64 data URIs) so
+// Build @font-face CSS from the bundled font files (base64 data URIs) so
 // rendering never depends on a font CDN being reachable.
+//
+// ⚠️ Every file here must actually CARRY HEBREW. Until 2026-09-13 six of the
+// seven were Latin-only subsets. document.fonts.check() still passed, and every
+// feed post — plus the reel wordmark, label and CTA — painted its Hebrew in the
+// system font (Lucida Grande). Roei spotted it as "the quote font doesn't match
+// the reels". assertWebfontCoverage() now proves coverage from what Chrome
+// actually painted.
+//
+// Rubik: the one file with Hebrew is the ExtraBold cut, so it is registered
+// across the whole weight range and every Rubik rule paints 800 — the weight
+// the reels already use. Verified: identical ink at 400–900, no synthetic bold.
+// Heebo: full static cuts vendored from Google Fonts (SIL OFL), Hebrew complete.
 const FONT_FACES = [
-  ['Heebo', 400, 'Heebo-400.woff2'],
-  ['Heebo', 500, 'Heebo-500.woff2'],
-  ['Heebo', 700, 'Heebo-700.woff2'],
-  ['Rubik', 500, 'Rubik-500.woff2'],
-  ['Rubik', 700, 'Rubik-700.woff2'],
-  ['Rubik', 800, 'Rubik-800.woff2'],
-  ['Rubik', 900, 'Rubik-900.woff2'],
+  ['Heebo', 400, 'Heebo-400.ttf'],
+  ['Heebo', 500, 'Heebo-500.ttf'],
+  ['Heebo', 700, 'Heebo-700.ttf'],
+  ['Heebo', 800, 'Heebo-800.ttf'],
+  ['Heebo', 900, 'Heebo-900.ttf'],
+  ['Rubik', '100 900', 'Rubik-800.woff2'],
 ];
 
 function buildFontCss() {
   return FONT_FACES.map(([family, weight, file, range]) => {
     const b64 = fs.readFileSync(path.join(FONTS_DIR, file)).toString('base64');
-    const fmt = file.endsWith('.woff2') ? 'woff2' : 'woff';
+    const ext = path.extname(file).slice(1);
+    const fmt = { woff2: 'woff2', woff: 'woff', ttf: 'truetype', otf: 'opentype' }[ext];
+    if (!fmt) throw new Error(`unsupported font file: ${file}`);
     const ur = range ? `unicode-range:${range};` : '';
-    return `@font-face{font-family:'${family}';font-style:normal;font-weight:${weight};font-display:swap;src:url(data:font/${fmt};base64,${b64}) format('${fmt}');${ur}}`;
+    return `@font-face{font-family:'${family}';font-style:normal;font-weight:${weight};font-display:swap;src:url(data:font/${ext};base64,${b64}) format('${fmt}');${ur}}`;
   }).join('\n');
 }
 
@@ -52,7 +66,10 @@ export async function renderSlides(slides, outDir, prefix) {
   fs.mkdirSync(outDir, { recursive: true });
 
   const browser = await puppeteer.launch({
-    headless: 'new',
+    // chrome-headless-shell, not full "new" headless: on macOS the full browser
+    // stops producing frames once the display sleeps, and every screenshot then
+    // hangs to protocolTimeout (2026-09-13 — batches run unattended).
+    headless: 'shell',
     // Tall reel frames (2160×3840) occasionally exceeded the default CDP
     // deadline on screenshot capture; give it room rather than fail a batch.
     protocolTimeout: 300000,
@@ -75,26 +92,17 @@ export async function renderSlides(slides, outDir, prefix) {
       // Load every weight with actual Hebrew+Latin sample text, then wait.
       await page.evaluate(async () => {
         const faces = [
-          '400 100px Heebo', '500 100px Heebo', '700 100px Heebo',
-          '500 100px Rubik', '700 100px Rubik', '800 100px Rubik', '900 100px Rubik',
+          '400 100px Heebo', '500 100px Heebo', '700 100px Heebo', '800 100px Heebo', '900 100px Heebo',
+          '800 100px Rubik',
         ];
         await Promise.all(faces.map((f) => document.fonts.load(f, 'אבג ABC').catch(() => {})));
         if (document.fonts && document.fonts.ready) await document.fonts.ready;
       });
-      // Hard gate: verify every face actually resolves Hebrew glyphs.
-      // Better to fail the run than to silently publish a fallback font.
-      const fontsOk = await page.evaluate(() => {
-        const specs = [
-          '400 32px Heebo', '500 32px Heebo', '700 32px Heebo',
-          '500 32px Rubik', '700 32px Rubik', '800 32px Rubik', '900 32px Rubik',
-        ];
-        return specs.every((f) => document.fonts.check(f, 'אבג'));
-      });
-      if (!fontsOk) {
-        throw new Error('Hebrew webfonts failed to load in the render browser — refusing to render with a fallback font.');
-      }
       // Settle one more frame so the freshly-applied fonts are painted.
       await new Promise((r) => setTimeout(r, 250));
+      // Hard gate on what Chrome actually PAINTED. A fonts.check() list used to
+      // stand here and passed while the Hebrew was drawn in Lucida Grande.
+      await assertWebfontCoverage(page, { label: `${prefix} · ${s.name}` });
 
       const file = path.join(outDir, `${prefix}-${String(i + 1).padStart(2, '0')}-${s.name}.png`);
       // No `clip`: the viewport already equals the slide size, and clip +
