@@ -5,7 +5,9 @@ import { PEOPLE, PODCASTS, type Person, type Podcast } from './consts';
  * Two different dates, deliberately kept apart:
  *
  *   siteDate    — when *we* published the summary. This is what orders the site.
- *   episodeDate — when the episode itself aired. This is what the cards show.
+ *   episodeDate — when the episode itself aired. This is what the cards show,
+ *                 labelled "פרק מ־". Unlabelled, readers took it for the sort
+ *                 key, and the grid looked scrambled once older episodes went up.
  *
  * They used to be the same value, which buried new work: an older episode we
  * summarised today would sort by its original air date and land on page three.

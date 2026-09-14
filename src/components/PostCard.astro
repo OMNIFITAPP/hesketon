@@ -55,7 +55,7 @@ const isEpisodeDate = !!d.source?.publishedAt;
   <h2 class="card__title"><a href={`/posts/${post.id}/`}>{d.title}</a></h2>
   <p class="card__desc">{d.description}</p>
   <div class="card__meta">
-    <FormattedDate date={episodeDate} title={isEpisodeDate ? 'תאריך פרסום הפרק' : undefined} />
+    <FormattedDate date={episodeDate} prefix={isEpisodeDate ? 'פרק מ־' : undefined} title={isEpisodeDate ? 'תאריך פרסום הפרק' : undefined} />
     {!audio && d.readingTime && <span class="dot">{d.readingTime} דק׳ קריאה</span>}
   </div>
 </article>

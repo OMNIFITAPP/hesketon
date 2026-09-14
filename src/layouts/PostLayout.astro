@@ -67,7 +67,7 @@ const jsonLd = {
       <h1>{d.title}</h1>
       <div class="post-meta">
         <Compression audioMinutes={d.source?.durationMinutes} readMinutes={d.readingTime} />
-        <FormattedDate date={episodeDate} title={isEpisodeDate ? 'תאריך פרסום הפרק' : undefined} />
+        <FormattedDate date={episodeDate} prefix={isEpisodeDate ? 'פרק מ־' : undefined} title={isEpisodeDate ? 'תאריך פרסום הפרק' : undefined} />
         {!d.source?.durationMinutes && d.readingTime && (
           <span class="dot">{d.readingTime} דק׳ קריאה</span>
         )}
