@@ -5262,7 +5262,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-09-13T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "יש נקודה בכל התוכניות האלה שבה הכאוס משתלט — והמשחק המלחמתי נגמר." ⚠️
 
@@ -5291,7 +5291,9 @@ items:
         https://hesketon.co.il/social/2026-09-13_lessons-annie-jacobsen-biologi/annie-jacobsen-biological-war-joe-rogan-2534-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-09-13_lessons-annie-jacobsen-biologi/annie-jacobsen-biological-war-joe-rogan-2534-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DdPLufODyjI/
+    publishedAt: '2026-09-13T18:16:20.597Z'
+    mediaId: '18627471277043876'
   - id: 2026-09-07_myth-david-goggins-huberman-i
     slug: david-goggins-huberman-inner-strength
     platform: instagram
