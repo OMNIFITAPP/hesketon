@@ -158,5 +158,11 @@
     "name": "Silicon Valley Girl",
     "hostId": "marina-mogilko",
     "description": "שיחות על טכנולוגיה, יזמות וקריירה — עם מרינה מוגילקו."
+  },
+  {
+    "id": "what-now",
+    "name": "What Now? with Trevor Noah",
+    "hostId": "trevor-noah",
+    "description": "שיחות על העולם, תרבות וכלכלה — עם טרוור נואה."
   }
 ]
