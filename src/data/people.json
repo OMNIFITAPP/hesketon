@@ -562,5 +562,23 @@
     "nameHe": "מרינה מוגילקו",
     "nameEn": "Marina Mogilko",
     "title": "יזמת ויוצרת תוכן"
+  },
+  {
+    "id": "alice-han",
+    "nameHe": "אליס האן",
+    "nameEn": "Alice Han",
+    "title": "כלכלנית, מומחית לסין"
+  },
+  {
+    "id": "trevor-noah",
+    "nameHe": "טרוור נואה",
+    "nameEn": "Trevor Noah",
+    "title": "קומיקאי ומנחה"
+  },
+  {
+    "id": "richard-davidson",
+    "nameHe": "ריצ'רד דיווידסון",
+    "nameEn": "Richard Davidson",
+    "title": "נוירומדען, אוניברסיטת ויסקונסין"
   }
 ]
