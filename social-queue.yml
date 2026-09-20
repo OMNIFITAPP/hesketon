@@ -6757,7 +6757,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-09-20T10:30:46.698Z'
-    status: approved
+    status: published
     caption: |-
       סת' גודין מונה ארבעה כוחות שמושכים אותנו לבינוניות: הכחשה, חוסר אונים, בוז ופחד. 🐎
 
@@ -6786,4 +6786,6 @@ items:
         https://hesketon.co.il/social/2026-09-20_lessons-seth-godin-four-horsem/seth-godin-four-horsemen-mediocrity-bigdeal-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-09-20_lessons-seth-godin-four-horsem/seth-godin-four-horsemen-mediocrity-bigdeal-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DdgYRUXGOVS/
+    publishedAt: '2026-09-20T10:33:02.185Z'
+    mediaId: '18114489215080162'
