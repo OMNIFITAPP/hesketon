@@ -1,0 +1,23 @@
+name: Social — queue watchdog
+
+# Fails (and notifies) when the Instagram queue has gone quiet: items overdue,
+# a publish failure, or nothing scheduled for the next 48h. See
+# scripts/check-queue.mjs for why this exists.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 5 * * *"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    if: ${{ vars.SOCIAL_ENABLED == 'true' || github.event_name == 'workflow_dispatch' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: node scripts/check-queue.mjs
