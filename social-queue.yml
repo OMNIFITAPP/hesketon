@@ -6729,7 +6729,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-09-20T08:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "אם אתה בן 80 שמרים משקולות באופן עקבי, אתה חזק תפקודית כמו אדם בן 60 שלא עושה את זה." 💪
 
@@ -6748,7 +6748,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-20_quote-vonda-wright-mobility-/vonda-wright-mobility-ageing-diary-of-a-ceo-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DdgVFOqmBJV/
+    publishedAt: '2026-09-20T10:05:14.776Z'
+    mediaId: '17877996795543383'
   - id: 2026-09-20_lessons-seth-godin-four-horsem
     slug: seth-godin-four-horsemen-mediocrity-bigdeal
     platform: instagram
