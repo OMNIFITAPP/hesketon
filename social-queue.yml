@@ -6650,7 +6650,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-21T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🏋️
 
@@ -6678,13 +6678,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-21_myth-james-clear-habits-getti/james-clear-habits-getting-started-huberman-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Ddil2IID1fp/
     cover: >-
       https://hesketon.co.il/social/2026-09-21_myth-james-clear-habits-getti/james-clear-habits-getting-started-huberman-cover.jpg
     audio:
       audioId: '1189887502462489'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-21T07:10:32.688Z'
+    mediaId: '18131278513673498'
   - id: 2026-09-21_reelv2-martin-picard-mitochon
     slug: martin-picard-mitochondria-grey-hair-huberman
     platform: instagram
