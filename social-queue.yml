@@ -6693,7 +6693,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-21T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "גילינו שהלבנת שיער, לפחות באופן זמני, היא הפיכה." 🧬
 
@@ -6718,13 +6718,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-21_reelv2-martin-picard-mitochon/martin-picard-mitochondria-grey-hair-huberman-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdjVOg2CBAq/
     cover: >-
       https://hesketon.co.il/social/2026-09-21_reelv2-martin-picard-mitochon/martin-picard-mitochondria-grey-hair-huberman-cover.jpg
     audio:
       audioId: '361395693422150'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-21T14:04:39.596Z'
+    mediaId: '18082871297321765'
   - id: 2026-09-20_quote-vonda-wright-mobility-
     slug: vonda-wright-mobility-ageing-diary-of-a-ceo
     platform: instagram
