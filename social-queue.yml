@@ -5880,7 +5880,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-09-21T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       כמעט אף אחד אינו מסוגל לשים לב לדבר אחד במשך 30 שניות ברציפות — ולפי סם האריס, זה שורש הסבל
       הפסיכולוגי היומיומי. 🧘
@@ -5921,7 +5921,9 @@ items:
         https://hesketon.co.il/social/2026-09-21_carousel-sam-harris-clear-think/sam-harris-clear-thinking-mindfulness-ai-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-09-21_carousel-sam-harris-clear-think/sam-harris-clear-thinking-mindfulness-ai-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Ddj5-MkDOm-/
+    publishedAt: '2026-09-21T19:25:21.075Z'
+    mediaId: '17869189377646465'
   - id: 2026-09-22_quote-hormozi-100k-in-3-mont
     slug: hormozi-100k-in-3-months-2026
     platform: instagram
