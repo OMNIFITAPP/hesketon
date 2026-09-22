@@ -6456,7 +6456,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-22T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "הבנתי שאולי הכנסתי אותם למצב שבו הם משתמשים ביותר מאבני הבניין האלה — ובעצם דחפתי אותם למחסור
       אחר." 💊
@@ -6486,13 +6486,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-22_reelv2-stasha-gominak-vitamin/stasha-gominak-vitamin-d-sleep-repair-diary-of-a-ceo-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdlfJY8CN6d/
     cover: >-
       https://hesketon.co.il/social/2026-09-22_reelv2-stasha-gominak-vitamin/stasha-gominak-vitamin-d-sleep-repair-diary-of-a-ceo-cover.jpg
     audio:
       audioId: '1949007665469799'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-22T10:09:49.367Z'
+    mediaId: '18156541150512740'
   - id: 2026-09-23_reelv2-joe-liemandt-alpha-sch
     slug: joe-liemandt-alpha-school-two-hours-huberman
     platform: instagram
