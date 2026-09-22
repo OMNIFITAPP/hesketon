@@ -5930,7 +5930,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-09-22T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "הדרך המהירה ביותר להגיע ל-100,000 דולר היא לא הדרך המהירה ביותר להגיע למיליון או ל-10 מיליון.
       זו הטעות הגדולה בשאלה." 💼
@@ -5956,7 +5956,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-22_quote-hormozi-100k-in-3-mont/hormozi-100k-in-3-months-2026-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Ddmc_qzGH2q/
+    publishedAt: '2026-09-22T19:09:52.767Z'
+    mediaId: '18089483009678505'
   - id: 2026-09-23_lessons-khabib-nurmagomedov-da
     slug: khabib-nurmagomedov-dagestan-lex-fridman-500
     platform: instagram
