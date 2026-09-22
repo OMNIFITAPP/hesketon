@@ -6171,7 +6171,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-22T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🪖
 
@@ -6199,13 +6199,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-22_myth-andy-stumpf-psychology-o/andy-stumpf-psychology-of-endurance-williamson-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdlD2pxjjd5/
     cover: >-
       https://hesketon.co.il/social/2026-09-22_myth-andy-stumpf-psychology-o/andy-stumpf-psychology-of-endurance-williamson-cover.jpg
     audio:
       audioId: '404528493609472'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-22T06:11:16.632Z'
+    mediaId: '18104148161575073'
   - id: 2026-09-23_myth-mrbeast-joe-rogan-possib
     slug: mrbeast-joe-rogan-possible-time-and-money
     platform: instagram
