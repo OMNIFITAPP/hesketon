@@ -5965,7 +5965,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-09-23T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       חביב נורמגומדוב לא בחר בספורט — הוא התעורר לתוכו. אביו בנה חדר כושר בתוך הבית בכפר. 🥋
 
@@ -5998,7 +5998,9 @@ items:
         https://hesketon.co.il/social/2026-09-23_lessons-khabib-nurmagomedov-da/khabib-nurmagomedov-dagestan-lex-fridman-500-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-09-23_lessons-khabib-nurmagomedov-da/khabib-nurmagomedov-dagestan-lex-fridman-500-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Ddo-JGACf-Y/
+    publishedAt: '2026-09-23T18:37:58.594Z'
+    mediaId: '18432857464180062'
   - id: 2026-09-24_carousel-laurence-fishburne-mat
     slug: laurence-fishburne-matrix-physics-startalk
     platform: instagram
