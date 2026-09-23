@@ -6505,7 +6505,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-23T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "המפתח לאושר של הילד שלכם הוא סטנדרטים גבוהים." 🎒
 
@@ -6531,13 +6531,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-23_reelv2-joe-liemandt-alpha-sch/joe-liemandt-alpha-school-two-hours-huberman-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdoiJeFgBlr/
     cover: >-
       https://hesketon.co.il/social/2026-09-23_reelv2-joe-liemandt-alpha-sch/joe-liemandt-alpha-school-two-hours-huberman-cover.jpg
     audio:
       audioId: '2044003369114324'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-23T14:33:42.579Z'
+    mediaId: '18143809219585711'
   - id: 2026-09-24_reelv2-elon-musk-nikhil-kamat
     slug: elon-musk-nikhil-kamath-interview
     platform: instagram
