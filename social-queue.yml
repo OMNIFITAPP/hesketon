@@ -6216,7 +6216,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-23T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 💸
 
@@ -6243,13 +6243,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-23_myth-mrbeast-joe-rogan-possib/mrbeast-joe-rogan-possible-time-and-money-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdoBc2hjL8d/
     cover: >-
       https://hesketon.co.il/social/2026-09-23_myth-mrbeast-joe-rogan-possib/mrbeast-joe-rogan-possible-time-and-money-cover.jpg
     audio:
       audioId: '7386171101395182'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-23T09:47:56.549Z'
+    mediaId: '18112123949332472'
   - id: 2026-09-24_myth-andrew-huberman-neuropla
     slug: andrew-huberman-neuroplasticity-focus-rich-roll
     platform: instagram
