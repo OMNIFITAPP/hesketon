@@ -6260,7 +6260,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-24T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🧠
 
@@ -6288,13 +6288,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-24_myth-andrew-huberman-neuropla/andrew-huberman-neuroplasticity-focus-rich-roll-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Ddqkn37AcIW/
     cover: >-
       https://hesketon.co.il/social/2026-09-24_myth-andrew-huberman-neuropla/andrew-huberman-neuroplasticity-focus-rich-roll-cover.jpg
     audio:
       audioId: '4001862856739346'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-24T09:33:44.423Z'
+    mediaId: '17874479694634090'
   - id: 2026-09-25_myth-darby-saxbe-father-brain
     slug: darby-saxbe-father-brain-modern-wisdom
     platform: instagram
