@@ -6007,7 +6007,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-09-24T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       בני אדם כסוללה? לפי ניל דה-גראס טייסון אנחנו מקרינים בערך 80 עד 100 ואט — פחות או יותר נורה.
       💡
@@ -6048,7 +6048,9 @@ items:
         https://hesketon.co.il/social/2026-09-24_carousel-laurence-fishburne-mat/laurence-fishburne-matrix-physics-startalk-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-09-24_carousel-laurence-fishburne-mat/laurence-fishburne-matrix-physics-startalk-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DdriMsADB0Q/
+    publishedAt: '2026-09-24T18:31:25.003Z'
+    mediaId: '18166597324463547'
   - id: 2026-09-25_quote-henry-shukman-meditati
     slug: henry-shukman-meditation-awakening-original-love
     platform: instagram
