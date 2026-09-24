@@ -6550,7 +6550,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-24T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אם אתם תקועים על אי בודד עם טריליון דולר, הכסף חסר תועלת — כי אין עבודה להקצות." 🏝️
 
@@ -6575,13 +6575,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-24_reelv2-elon-musk-nikhil-kamat/elon-musk-nikhil-kamath-interview-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdrGOFajqIM/
     cover: >-
       https://hesketon.co.il/social/2026-09-24_reelv2-elon-musk-nikhil-kamat/elon-musk-nikhil-kamath-interview-cover.jpg
     audio:
       audioId: '1100316650098321'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-24T14:27:23.342Z'
+    mediaId: '18010914398960945'
   - id: 2026-09-25_reelv2-michelle-khare-fear-ni
     slug: michelle-khare-fear-nine-month-plan-rich-roll
     platform: instagram
