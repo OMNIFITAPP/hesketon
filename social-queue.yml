@@ -6305,7 +6305,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-25T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 👶
 
@@ -6333,13 +6333,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-25_myth-darby-saxbe-father-brain/darby-saxbe-father-brain-modern-wisdom-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdtMBl0CQK5/
     cover: >-
       https://hesketon.co.il/social/2026-09-25_myth-darby-saxbe-father-brain/darby-saxbe-father-brain-modern-wisdom-cover.jpg
     audio:
       audioId: '706731386409844'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-25T09:56:30.946Z'
+    mediaId: '18017845580945363'
   - id: 2026-09-26_myth-rick-rubin-creativity-hu
     slug: rick-rubin-creativity-huberman
     platform: instagram
