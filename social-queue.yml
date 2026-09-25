@@ -6057,7 +6057,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-09-25T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "מדיטציה היא ההרפתקה הגדולה של החיים — גם אם כל מה שאנחנו עושים הוא לשבת בשקט כמה דקות ביום."
       🌿
@@ -6083,7 +6083,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-25_quote-henry-shukman-meditati/henry-shukman-meditation-awakening-original-love-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DduKiAwjAPI/
+    publishedAt: '2026-09-25T19:02:24.917Z'
+    mediaId: '18130456931501915'
   - id: 2026-09-26_lessons-kane-kallaway-content-
     slug: kane-kallaway-content-lego-bricks-system
     platform: instagram
