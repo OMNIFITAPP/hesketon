@@ -6594,7 +6594,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-25T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אני כנראה הפחדנית הכי גדולה מבין כל מבצעי הפעלולים שקיימים על כדור הארץ." 🎬
 
@@ -6620,13 +6620,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-25_reelv2-michelle-khare-fear-ni/michelle-khare-fear-nine-month-plan-rich-roll-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Ddtt3gGj3_z/
     cover: >-
       https://hesketon.co.il/social/2026-09-25_reelv2-michelle-khare-fear-ni/michelle-khare-fear-nine-month-plan-rich-roll-cover.jpg
     audio:
       audioId: '1465703100656220'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-25T14:52:39.358Z'
+    mediaId: '17967771093150984'
   - id: 2026-09-26_reelv2-andrew-ng-ai-jobs-prod
     slug: andrew-ng-ai-jobs-product-bottleneck-silicon-valley-girl
     platform: instagram
