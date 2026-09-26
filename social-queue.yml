@@ -6350,7 +6350,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-26T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🎨
 
@@ -6379,13 +6379,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-26_myth-rick-rubin-creativity-hu/rick-rubin-creativity-huberman-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Ddvc74JgHQU/
     cover: >-
       https://hesketon.co.il/social/2026-09-26_myth-rick-rubin-creativity-hu/rick-rubin-creativity-huberman-cover.jpg
     audio:
       audioId: '5479037848790134'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-26T07:02:50.529Z'
+    mediaId: '18123216217926345'
   - id: 2026-09-27_myth-brian-cox-particle-physi
     slug: brian-cox-particle-physics-frontier-startalk
     platform: instagram
