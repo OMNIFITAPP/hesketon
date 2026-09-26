@@ -36,7 +36,13 @@ jobs:
     # Manual "Run workflow" always works, so you can test before enabling.
     if: ${{ vars.SOCIAL_ENABLED == 'true' || github.event_name == 'workflow_dispatch' }}
     steps:
+      # Check out main as it is when this job STARTS, not the commit that
+      # triggered it. A run that waited behind another (see concurrency) would
+      # otherwise read the queue from before that run marked its items
+      # published — and post them a second time. Instagram has no delete API.
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-node@v4
         with:
