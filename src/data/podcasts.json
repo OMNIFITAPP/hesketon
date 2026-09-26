@@ -164,5 +164,16 @@
     "name": "What Now? with Trevor Noah",
     "hostId": "trevor-noah",
     "description": "שיחות על העולם, תרבות וכלכלה — עם טרוור נואה."
+  },
+  {
+    "id": "the-mel-robbins-podcast",
+    "name": "The Mel Robbins Podcast",
+    "hostId": "mel-robbins",
+    "description": "שיחות עם מומחים על הרגלים, מוטיבציה ושינוי בחיי היומיום — עם מל רובינס."
+  },
+  {
+    "id": "big-think",
+    "name": "Big Think",
+    "description": "ריאיונות עומק עם מדענים, הוגים ומומחים על הרעיונות הגדולים."
   }
 ]

@@ -580,5 +580,17 @@
     "nameHe": "ריצ'רד דיווידסון",
     "nameEn": "Richard Davidson",
     "title": "נוירומדען, אוניברסיטת ויסקונסין"
+  },
+  {
+    "id": "mel-robbins",
+    "nameHe": "מל רובינס",
+    "nameEn": "Mel Robbins",
+    "title": "מנחת פודקאסט וסופרת"
+  },
+  {
+    "id": "tina-seelig",
+    "nameHe": "טינה סיליג",
+    "nameEn": "Tina Seelig",
+    "title": "מרצה ליזמות וליצירתיות, אוניברסיטת סטנפורד"
   }
 ]
