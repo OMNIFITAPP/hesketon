@@ -6092,7 +6092,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-09-26T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "האסטרטגיה אינה הרוטב. האסטרטגיה הופכת למצרך ברגע שאתה מכיר אותה." 🧱
 
@@ -6125,7 +6125,9 @@ items:
         https://hesketon.co.il/social/2026-09-26_lessons-kane-kallaway-content-/kane-kallaway-content-lego-bricks-system-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-09-26_lessons-kane-kallaway-content-/kane-kallaway-content-lego-bricks-system-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DdwncVqGJdV/
+    publishedAt: '2026-09-26T17:53:32.254Z'
+    mediaId: '17905199403574509'
   - id: 2026-09-27_carousel-martin-picard-mitochon
     slug: martin-picard-mitochondria-grey-hair-huberman
     platform: instagram
