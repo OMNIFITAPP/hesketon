@@ -6639,7 +6639,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-26T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אנשים שמשתמשים בבינה מלאכותית אולי יחליפו אנשים שלא משתמשים בה. אבל בינה מלאכותית לא נמצאת
       בעמדה להחליף אנשים ברוב המכריע של המשרות." 🤖
@@ -6665,13 +6665,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-26_reelv2-andrew-ng-ai-jobs-prod/andrew-ng-ai-jobs-product-bottleneck-silicon-valley-girl-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdvxYEZjxKB/
     cover: >-
       https://hesketon.co.il/social/2026-09-26_reelv2-andrew-ng-ai-jobs-prod/andrew-ng-ai-jobs-product-bottleneck-silicon-valley-girl-cover.jpg
     audio:
       audioId: '2560548683960084'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-26T10:01:27.356Z'
+    mediaId: '18114677995824500'
   - id: 2026-09-21_myth-james-clear-habits-getti
     slug: james-clear-habits-getting-started-huberman
     platform: instagram
