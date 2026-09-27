@@ -12,12 +12,28 @@ export async function getStaticPaths() {
 }
 
 const { person, posts } = Astro.props;
-const desc = `כל תקצירי הפודקאסטים עם ${person.nameHe}${
-  person.title ? ` — ${person.title}` : ''
-} בהסכתון.`;
+
+// Search Console: people reach these pages by typing the name, and the old
+// "X — כל התקצירים" snippet got almost no clicks. The title says what the page
+// gives (their ideas, in Hebrew); the description is built from real data.
+const pronoun = person.gender === 'f' ? 'שלה' : person.gender === 'm' ? 'שלו' : null;
+const title = pronoun
+  ? `${person.nameHe} — הרעיונות ${pronoun} בעברית, מתוך הפודקאסטים`
+  : `${person.nameHe} — הרעיונות המרכזיים בעברית, מתוך הפודקאסטים`;
+
+// Lead with a classic if there is one, otherwise the newest summary. Drop a
+// leading "Name …:" or trailing "— Name" so the name isn't said twice.
+const lead = posts.find((p) => p.data.classic) ?? posts[0];
+const nameParts = person.nameHe.replace(/^(ד["״]ר|פרופ['׳])\s+/, '').split(' ');
+const leadTitle = lead.data.title
+  .replace(new RegExp(`^(${nameParts.join(' ')}|${nameParts.at(-1)})[^:]{0,30}:\\s*`), '')
+  .replace(new RegExp(`\\s*—\\s*${person.nameHe}$`), '');
+const who = `${person.nameHe}${person.title ? `, ${person.title}` : ''}.`;
+const count = posts.length === 1 ? 'תקציר בעברית:' : `${posts.length} תקצירים בעברית, ביניהם:`;
+const desc = `${who} ${count} ${leadTitle}${/[.?!]$/.test(leadTitle) ? '' : '.'}`;
 ---
 
-<BaseLayout title={`${person.nameHe} — כל התקצירים`} description={desc}>
+<BaseLayout title={title} description={desc}>
   <section class="section wrap">
     <div class="page-title">
       <p class="muted person-eyebrow">אורח/ת</p>

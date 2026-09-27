@@ -3,13 +3,15 @@
     "id": "andy-galpin",
     "nameHe": "אנדי גלפין",
     "nameEn": "Andy Galpin",
-    "title": "פרופ' לפיזיולוגיה הישגית"
+    "title": "פרופ' לפיזיולוגיה הישגית",
+    "gender": "m"
   },
   {
     "id": "tommy-wood",
     "nameHe": "טומי ווד",
     "nameEn": "Tommy Wood",
-    "title": "חוקר מוח ובריאות"
+    "title": "חוקר מוח ובריאות",
+    "gender": "m"
   },
   {
     "id": "jd-vance",
@@ -21,211 +23,246 @@
     "id": "david-goggins",
     "nameHe": "דייוויד גוגינס",
     "nameEn": "David Goggins",
-    "title": "לוחם Navy SEAL לשעבר, אולטרה-מרתוניסט ומחבר \"Can't Hurt Me\""
+    "title": "לוחם Navy SEAL לשעבר, אולטרה-מרתוניסט ומחבר \"Can't Hurt Me\"",
+    "gender": "m"
   },
   {
     "id": "andrew-huberman",
     "nameHe": "אנדרו הוברמן",
     "nameEn": "Andrew Huberman",
-    "title": "נוירוביולוג, אוניברסיטת סטנפורד"
+    "title": "נוירוביולוג, אוניברסיטת סטנפורד",
+    "gender": "m"
   },
   {
     "id": "tony-robbins",
     "nameHe": "טוני רובינס",
     "nameEn": "Tony Robbins",
-    "title": "מאמן ומרצה"
+    "title": "מאמן ומרצה",
+    "gender": "m"
   },
   {
     "id": "jordan-peterson",
     "nameHe": "ג'ורדן פיטרסון",
     "nameEn": "Jordan Peterson",
-    "title": "פסיכולוג קליני ומחבר"
+    "title": "פסיכולוג קליני ומחבר",
+    "gender": "m"
   },
   {
     "id": "rhonda-patrick",
     "nameHe": "רונדה פטריק",
     "nameEn": "Rhonda Patrick",
-    "title": "חוקרת ביו-רפואה"
+    "title": "חוקרת ביו-רפואה",
+    "gender": "f"
   },
   {
     "id": "joe-rogan",
     "nameHe": "ג'ו רוגן",
     "nameEn": "Joe Rogan",
-    "title": "מנחה פודקאסט"
+    "title": "מנחה פודקאסט",
+    "gender": "m"
   },
   {
     "id": "steven-bartlett",
     "nameHe": "סטיבן ברטלט",
     "nameEn": "Steven Bartlett",
-    "title": "יזם ומנחה פודקאסט"
+    "title": "יזם ומנחה פודקאסט",
+    "gender": "m"
   },
   {
     "id": "chris-williamson",
     "nameHe": "כריס וויליאמסון",
     "nameEn": "Chris Williamson",
-    "title": "מנחה פודקאסט"
+    "title": "מנחה פודקאסט",
+    "gender": "m"
   },
   {
     "id": "mike-israetel",
     "nameHe": "מייק איסראטל",
     "nameEn": "Mike Israetel",
-    "title": "מדען ספורט"
+    "title": "מדען ספורט",
+    "gender": "m"
   },
   {
     "id": "jefferson-fisher",
     "nameHe": "ג'פרסון פישר",
     "nameEn": "Jefferson Fisher",
-    "title": "עורך דין ומומחה תקשורת"
+    "title": "עורך דין ומומחה תקשורת",
+    "gender": "m"
   },
   {
     "id": "nikhil-kamath",
     "nameHe": "ניקהיל קאמאת'",
     "nameEn": "Nikhil Kamath",
-    "title": "יזם ומשקיע, מנחה פודקאסט"
+    "title": "יזם ומשקיע, מנחה פודקאסט",
+    "gender": "m"
   },
   {
     "id": "elon-musk",
     "nameHe": "אילון מאסק",
     "nameEn": "Elon Musk",
-    "title": "יזם, מנכ\"ל טסלה ו-SpaceX"
+    "title": "יזם, מנכ\"ל טסלה ו-SpaceX",
+    "gender": "m"
   },
   {
     "id": "henry-shukman",
     "nameHe": "הנרי שוקמן",
     "nameEn": "Henry Shukman",
-    "title": "מורה זן ומחבר"
+    "title": "מורה זן ומחבר",
+    "gender": "m"
   },
   {
     "id": "rangan-chatterjee",
     "nameHe": "ראנגן צ'טרג'י",
     "nameEn": "Rangan Chatterjee",
-    "title": "רופא ומנחה פודקאסט"
+    "title": "רופא ומנחה פודקאסט",
+    "gender": "m"
   },
   {
     "id": "tim-ferriss",
     "nameHe": "טים פריס",
     "nameEn": "Tim Ferriss",
-    "title": "מחבר ומשקיע"
+    "title": "מחבר ומשקיע",
+    "gender": "m"
   },
   {
     "id": "jay-shetty",
     "nameHe": "ג'יי שטי",
     "nameEn": "Jay Shetty",
-    "title": "מנחה פודקאסט ומחבר"
+    "title": "מנחה פודקאסט ומחבר",
+    "gender": "m"
   },
   {
     "id": "yuval-noah-harari",
     "nameHe": "יובל נח הררי",
     "nameEn": "Yuval Noah Harari",
-    "title": "היסטוריון ומחבר"
+    "title": "היסטוריון ומחבר",
+    "gender": "m"
   },
   {
     "id": "rich-roll",
     "nameHe": "ריץ' רול",
     "nameEn": "Rich Roll",
-    "title": "מנחה פודקאסט"
+    "title": "מנחה פודקאסט",
+    "gender": "m"
   },
   {
     "id": "mohnish-pabrai",
     "nameHe": "מוניש פבראי",
     "nameEn": "Mohnish Pabrai",
-    "title": "משקיע ערך"
+    "title": "משקיע ערך",
+    "gender": "m"
   },
   {
     "id": "alex-hormozi",
     "nameHe": "אלכס הורמוזי",
     "nameEn": "Alex Hormozi",
-    "title": "יזם ומשקיע"
+    "title": "יזם ומשקיע",
+    "gender": "m"
   },
   {
     "id": "jack-neel",
     "nameHe": "ג'ק ניל",
     "nameEn": "Jack Neel",
-    "title": "יוצר תוכן ומנחה"
+    "title": "יוצר תוכן ומנחה",
+    "gender": "m"
   },
   {
     "id": "jeremy-grantham",
     "nameHe": "ג'רמי גרנת'ם",
     "nameEn": "Jeremy Grantham",
-    "title": "משקיע ואסטרטג שוק"
+    "title": "משקיע ואסטרטג שוק",
+    "gender": "m"
   },
   {
     "id": "david-sinclair",
     "nameHe": "דיוויד סינקלייר",
     "nameEn": "David Sinclair",
-    "title": "חוקר אריכות ימים, אוניברסיטת הרווארד"
+    "title": "חוקר אריכות ימים, אוניברסיטת הרווארד",
+    "gender": "m"
   },
   {
     "id": "michelle-thaller",
     "nameHe": "מישל ת'אלר",
     "nameEn": "Michelle Thaller",
-    "title": "אסטרופיזיקאית"
+    "title": "אסטרופיזיקאית",
+    "gender": "f"
   },
   {
     "id": "sam-harris",
     "nameHe": "סם האריס",
     "nameEn": "Sam Harris",
-    "title": "פילוסוף וחוקר מדעי המוח"
+    "title": "פילוסוף וחוקר מדעי המוח",
+    "gender": "m"
   },
   {
     "id": "dan-martell",
     "nameHe": "דן מרטל",
     "nameEn": "Dan Martell",
-    "title": "יזם ומשקיע"
+    "title": "יזם ומשקיע",
+    "gender": "m"
   },
   {
     "id": "grant-owen",
     "nameHe": "גרנט אואן",
     "nameEn": "Grant Owen",
-    "title": "יוצר תוכן ומנחה"
+    "title": "יוצר תוכן ומנחה",
+    "gender": "m"
   },
   {
     "id": "jensen-huang",
     "nameHe": "ג'נסן הואנג",
     "nameEn": "Jensen Huang",
-    "title": "מנכ״ל NVIDIA ומייסד"
+    "title": "מנכ״ל NVIDIA ומייסד",
+    "gender": "m"
   },
   {
     "id": "cleo-abram",
     "nameHe": "קלאו אברם",
     "nameEn": "Cleo Abram",
-    "title": "יוצרת ומנחת תוכן"
+    "title": "יוצרת ומנחת תוכן",
+    "gender": "f"
   },
   {
     "id": "vinh-giang",
     "nameHe": "וין ג'יאנג",
     "nameEn": "Vinh Giang",
-    "title": "מאמן תקשורת ונואם"
+    "title": "מאמן תקשורת ונואם",
+    "gender": "m"
   },
   {
     "id": "kelly-starrett",
     "nameHe": "קלי סטארט",
     "nameEn": "Kelly Starrett",
-    "title": "פיזיותרפיסט ומומחה תנועה"
+    "title": "פיזיותרפיסט ומומחה תנועה",
+    "gender": "m"
   },
   {
     "id": "bill-browder",
     "nameHe": "ביל בראודר",
     "nameEn": "Bill Browder",
-    "title": "משקיע ואקטיביסט, מייסד קרן הרמיטאז'"
+    "title": "משקיע ואקטיביסט, מייסד קרן הרמיטאז'",
+    "gender": "m"
   },
   {
     "id": "ido-portal",
     "nameHe": "עידו פורטל",
     "nameEn": "Ido Portal",
-    "title": "מורה לתנועה, מייסד Movement Culture"
+    "title": "מורה לתנועה, מייסד Movement Culture",
+    "gender": "m"
   },
   {
     "id": "nischa-shah",
     "nameHe": "נישה שאה",
     "nameEn": "Nischa Shah",
-    "title": "בנקאית השקעות לשעבר ומחנכת פיננסית"
+    "title": "בנקאית השקעות לשעבר ומחנכת פיננסית",
+    "gender": "f"
   },
   {
     "id": "cesar-millan",
     "nameHe": "סיזר מילאן",
     "nameEn": "Cesar Millan",
-    "title": "מומחה להתנהגות כלבים"
+    "title": "מומחה להתנהגות כלבים",
+    "gender": "m"
   },
   {
     "id": "rupert-lowe",
@@ -237,61 +274,71 @@
     "id": "darren-candow",
     "nameHe": "ד\"ר דארן קנדו",
     "nameEn": "Dr. Darren Candow",
-    "title": "חוקר קריאטין ופיזיולוגיה של המאמץ"
+    "title": "חוקר קריאטין ופיזיולוגיה של המאמץ",
+    "gender": "m"
   },
   {
     "id": "james-nestor",
     "nameHe": "ג'יימס נסטור",
     "nameEn": "James Nestor",
-    "title": "עיתונאי ומחבר רב-המכר \"Breath\""
+    "title": "עיתונאי ומחבר רב-המכר \"Breath\"",
+    "gender": "m"
   },
   {
     "id": "stuart-mcgill",
     "nameHe": "פרופ' סטיוארט מקגיל",
     "nameEn": "Stuart McGill",
-    "title": "פרופ' לביומכניקה של עמוד השדרה, מחבר \"Back Mechanic\""
+    "title": "פרופ' לביומכניקה של עמוד השדרה, מחבר \"Back Mechanic\"",
+    "gender": "m"
   },
   {
     "id": "peter-attia",
     "nameHe": "ד\"ר פיטר אטיה",
     "nameEn": "Peter Attia",
-    "title": "רופא ומחבר \"Outlive\", מנחה The Drive"
+    "title": "רופא ומחבר \"Outlive\", מנחה The Drive",
+    "gender": "m"
   },
   {
     "id": "sebastian-mallaby",
     "nameHe": "סבסטיאן מלבי",
     "nameEn": "Sebastian Mallaby",
-    "title": "עיתונאי וסופר, מחבר \"The Infinity Machine\""
+    "title": "עיתונאי וסופר, מחבר \"The Infinity Machine\"",
+    "gender": "m"
   },
   {
     "id": "lance-armstrong",
     "nameHe": "לאנס ארמסטרונג",
     "nameEn": "Lance Armstrong",
-    "title": "רוכב אופניים לשעבר, זוכה שבעה טורים דה פראנס שנשללו ממנו על רקע דופינג"
+    "title": "רוכב אופניים לשעבר, זוכה שבעה טורים דה פראנס שנשללו ממנו על רקע דופינג",
+    "gender": "m"
   },
   {
     "id": "neil-degrasse-tyson",
     "nameHe": "ניל דה-גראס טייסון",
     "nameEn": "Neil deGrasse Tyson",
-    "title": "אסטרופיזיקאי, מנהל הפלנטריום ע\"ש היידן, מחבר ומנחה \"StarTalk\""
+    "title": "אסטרופיזיקאי, מנהל הפלנטריום ע\"ש היידן, מחבר ומנחה \"StarTalk\"",
+    "gender": "m"
   },
   {
     "id": "andy-stumpf",
     "nameHe": "אנדי סטאמפ",
     "nameEn": "Andy Stumpf",
-    "title": "לוחם קומנדו ימי (Navy SEAL) לשעבר ומדריך אימון, מנחה הפודקאסט \"Cleared Hot\""
+    "title": "לוחם קומנדו ימי (Navy SEAL) לשעבר ומדריך אימון, מנחה הפודקאסט \"Cleared Hot\"",
+    "gender": "m"
   },
   {
     "id": "morgan-housel",
     "nameHe": "מורגן האוזל",
     "nameEn": "Morgan Housel",
-    "title": "שותף בקרן Collaborative Fund, מחבר רב-המכר \"The Psychology of Money\""
+    "title": "שותף בקרן Collaborative Fund, מחבר רב-המכר \"The Psychology of Money\"",
+    "gender": "m"
   },
   {
     "id": "codie-sanchez",
     "nameHe": "קודי סאנצ'ז",
     "nameEn": "Codie Sanchez",
-    "title": "משקיעה ויזמת, מייסדת Contrarian Thinking"
+    "title": "משקיעה ויזמת, מייסדת Contrarian Thinking",
+    "gender": "f"
   },
   {
     "id": "daniel-priestley",
@@ -303,19 +350,22 @@
     "id": "kevin-oleary",
     "nameHe": "קווין אולירי",
     "nameEn": "Kevin O'Leary",
-    "title": "משקיע ויזם, כוכב \"Shark Tank\" (\"מר וונדרפול\")"
+    "title": "משקיע ויזם, כוכב \"Shark Tank\" (\"מר וונדרפול\")",
+    "gender": "m"
   },
   {
     "id": "graham-stephan",
     "nameHe": "גרהם סטפן",
     "nameEn": "Graham Stephan",
-    "title": "יוצר תוכן פיננסי, מנחה The Iced Coffee Hour"
+    "title": "יוצר תוכן פיננסי, מנחה The Iced Coffee Hour",
+    "gender": "m"
   },
   {
     "id": "chris-camillo",
     "nameHe": "כריס קמילו",
     "nameEn": "Chris Camillo",
-    "title": "משקיע, חלוץ שיטת ה\"ארביטראז' החברתי\""
+    "title": "משקיע, חלוץ שיטת ה\"ארביטראז' החברתי\"",
+    "gender": "m"
   },
   {
     "id": "nico-leonard",
@@ -327,31 +377,36 @@
     "id": "matthew-walker",
     "nameHe": "מתיו ווקר",
     "nameEn": "Matthew Walker",
-    "title": "פרופ' לנוירומדע ופסיכולוגיה, מחבר \"Why We Sleep\""
+    "title": "פרופ' לנוירומדע ופסיכולוגיה, מחבר \"Why We Sleep\"",
+    "gender": "m"
   },
   {
     "id": "rick-rubin",
     "nameHe": "ריק רובין",
     "nameEn": "Rick Rubin",
-    "title": "מפיק מוזיקלי אגדי, מחבר \"The Creative Act\""
+    "title": "מפיק מוזיקלי אגדי, מחבר \"The Creative Act\"",
+    "gender": "m"
   },
   {
     "id": "kendrick-lamar",
     "nameHe": "קנדריק לאמאר",
     "nameEn": "Kendrick Lamar",
-    "title": "ראפר וזוכה פוליצר, מהאמנים המשפיעים בדורו"
+    "title": "ראפר וזוכה פוליצר, מהאמנים המשפיעים בדורו",
+    "gender": "m"
   },
   {
     "id": "naval-ravikant",
     "nameHe": "נאבל רביקאנט",
     "nameEn": "Naval Ravikant",
-    "title": "יזם, משקיע ופילוסוף, מייסד AngelList"
+    "title": "יזם, משקיע ופילוסוף, מייסד AngelList",
+    "gender": "m"
   },
   {
     "id": "bob-lazar",
     "nameHe": "בוב לזר",
     "nameEn": "Bob Lazar",
-    "title": "פיזיקאי שטוען כי עבד על הנדסה לאחור של חלליות ב-S4 (אזור 51)"
+    "title": "פיזיקאי שטוען כי עבד על הנדסה לאחור של חלליות ב-S4 (אזור 51)",
+    "gender": "m"
   },
   {
     "id": "jeremy-corbell",
@@ -363,13 +418,15 @@
     "id": "ray-dalio",
     "nameHe": "ריי דליו",
     "nameEn": "Ray Dalio",
-    "title": "מייסד ברידג'ווטר, משקיע מאקרו"
+    "title": "מייסד ברידג'ווטר, משקיע מאקרו",
+    "gender": "m"
   },
   {
     "id": "sam-parr",
     "nameHe": "סם פאר",
     "nameEn": "Sam Parr",
-    "title": "יזם ומנחה פודקאסט"
+    "title": "יזם ומנחה פודקאסט",
+    "gender": "m"
   },
   {
     "id": "shaan-puri",
@@ -381,216 +438,252 @@
     "id": "mrbeast",
     "nameHe": "MrBeast",
     "nameEn": "MrBeast",
-    "title": "יוצר תוכן ויזם"
+    "title": "יוצר תוכן ויזם",
+    "gender": "m"
   },
   {
     "id": "roman-yampolskiy",
     "nameHe": "רומאן יאמפולסקי",
     "nameEn": "Roman Yampolskiy",
-    "title": "חוקר בטיחות בינה מלאכותית, אוניברסיטת לואיוויל"
+    "title": "חוקר בטיחות בינה מלאכותית, אוניברסיטת לואיוויל",
+    "gender": "m"
   },
   {
     "id": "james-clear",
     "nameHe": "ג'יימס קליר",
     "nameEn": "James Clear",
-    "title": "מחבר \"הרגלים אטומיים\""
+    "title": "מחבר \"הרגלים אטומיים\"",
+    "gender": "m"
   },
   {
     "id": "lloyd-blankfein",
     "nameHe": "לויד בלנקפיין",
     "nameEn": "Lloyd Blankfein",
-    "title": "יו\"ר בכיר ומנכ\"ל לשעבר של גולדמן זאקס"
+    "title": "יו\"ר בכיר ומנכ\"ל לשעבר של גולדמן זאקס",
+    "gender": "m"
   },
   {
     "id": "demis-hassabis",
     "nameHe": "דמיס הסביס",
     "nameEn": "Demis Hassabis",
-    "title": "מייסד ומנכ\"ל Google DeepMind, חתן פרס נובל לכימיה"
+    "title": "מייסד ומנכ\"ל Google DeepMind, חתן פרס נובל לכימיה",
+    "gender": "m"
   },
   {
     "id": "hannah-fry",
     "nameHe": "האנה פריי",
     "nameEn": "Hannah Fry",
-    "title": "מתמטיקאית ומנחת פודקאסט"
+    "title": "מתמטיקאית ומנחת פודקאסט",
+    "gender": "f"
   },
   {
     "id": "michael-saylor",
     "nameHe": "מייקל ג'יי. סיילור",
     "nameEn": "Michael Saylor",
-    "title": "יו\"ר MicroStrategy, משקיע ביטקוין"
+    "title": "יו\"ר MicroStrategy, משקיע ביטקוין",
+    "gender": "m"
   },
   {
     "id": "lex-fridman",
     "nameHe": "לקס פרידמן",
     "nameEn": "Lex Fridman",
-    "title": "חוקר בינה מלאכותית ומנחה פודקאסט"
+    "title": "חוקר בינה מלאכותית ומנחה פודקאסט",
+    "gender": "m"
   },
   {
     "id": "kane-kallaway",
     "nameHe": "קיין קלאוויי",
     "nameEn": "Kane Kallaway",
-    "title": "יוצר תוכן ומשווק"
+    "title": "יוצר תוכן ומשווק",
+    "gender": "m"
   },
   {
     "id": "seth-godin",
     "nameHe": "סת גודין",
     "nameEn": "Seth Godin",
-    "title": "מחבר ואיש שיווק"
+    "title": "מחבר ואיש שיווק",
+    "gender": "m"
   },
   {
     "id": "sam-altman",
     "nameHe": "סם אלטמן",
     "nameEn": "Sam Altman",
-    "title": "מנכ\"ל OpenAI"
+    "title": "מנכ\"ל OpenAI",
+    "gender": "m"
   },
   {
     "id": "patrick-oshaughnessy",
     "nameHe": "פטריק אושונסי",
     "nameEn": "Patrick O'Shaughnessy",
-    "title": "משקיע ומנחה פודקאסט"
+    "title": "משקיע ומנחה פודקאסט",
+    "gender": "m"
   },
   {
     "id": "brian-cox",
     "nameHe": "בריאן קוקס",
     "nameEn": "Brian Cox",
-    "title": "פרופ' לפיזיקת חלקיקים"
+    "title": "פרופ' לפיזיקת חלקיקים",
+    "gender": "m"
   },
   {
     "id": "dwayne-johnson",
     "nameHe": "דוויין ג'ונסון",
     "nameEn": "Dwayne Johnson",
-    "title": "שחקן, מתאבק ויזם"
+    "title": "שחקן, מתאבק ויזם",
+    "gender": "m"
   },
   {
     "id": "annie-jacobsen",
     "nameHe": "אנני ג'ייקובסן",
     "nameEn": "Annie Jacobsen",
-    "title": "עיתונאית חוקרת וסופרת בתחום הביטחון"
+    "title": "עיתונאית חוקרת וסופרת בתחום הביטחון",
+    "gender": "f"
   },
   {
     "id": "matthew-mcconaughey",
     "nameHe": "מתיו מקונוהיי",
     "nameEn": "Matthew McConaughey",
-    "title": "שחקן וסופר"
+    "title": "שחקן וסופר",
+    "gender": "m"
   },
   {
     "id": "darby-saxbe",
     "nameHe": "דארבי סקסבי",
     "nameEn": "Darby Saxbe",
-    "title": "פסיכולוגית וחוקרת מוח ההורות"
+    "title": "פסיכולוגית וחוקרת מוח ההורות",
+    "gender": "f"
   },
   {
     "id": "zanny-minton-beddoes",
     "nameHe": "זאני מינטון בדוז",
     "nameEn": "Zanny Minton Beddoes",
-    "title": "עורכת ראשית של ׳אקונומיסט׳"
+    "title": "עורכת ראשית של ׳אקונומיסט׳",
+    "gender": "f"
   },
   {
     "id": "laurence-fishburne",
     "nameHe": "לורנס פישבורן",
     "nameEn": "Laurence Fishburne",
-    "title": "שחקן"
+    "title": "שחקן",
+    "gender": "m"
   },
   {
     "id": "louisa-nicola",
     "nameHe": "לואיזה ניקולה",
     "nameEn": "Louisa Nicola",
-    "title": "נוירופיזיולוגית וחוקרת ביצועים"
+    "title": "נוירופיזיולוגית וחוקרת ביצועים",
+    "gender": "f"
   },
   {
     "id": "fei-fei-li",
     "nameHe": "פיי-פיי לי",
     "nameEn": "Fei-Fei Li",
-    "title": "מדענית מחשב, פרופסור בסטנפורד"
+    "title": "מדענית מחשב, פרופסור בסטנפורד",
+    "gender": "f"
   },
   {
     "id": "vlad-tenev",
     "nameHe": "ולאד טנב",
     "nameEn": "Vlad Tenev",
-    "title": "מייסד ומנכ\"ל רובינהוד"
+    "title": "מייסד ומנכ\"ל רובינהוד",
+    "gender": "m"
   },
   {
     "id": "khabib-nurmagomedov",
     "nameHe": "חביב נורמגומדוב",
     "nameEn": "Khabib Nurmagomedov",
-    "title": "לוחם MMA לשעבר, אלוף UFC"
+    "title": "לוחם MMA לשעבר, אלוף UFC",
+    "gender": "m"
   },
   {
     "id": "vonda-wright",
     "nameHe": "וונדה רייט",
     "nameEn": "Vonda Wright",
-    "title": "מנתחת אורתופדית וחוקרת הזדקנות"
+    "title": "מנתחת אורתופדית וחוקרת הזדקנות",
+    "gender": "f"
   },
   {
     "id": "jocko-willink",
     "nameHe": "ג'וקו ווילינק",
     "nameEn": "Jocko Willink",
-    "title": "קצין חיל הים לשעבר, סופר ומנחה"
+    "title": "קצין חיל הים לשעבר, סופר ומנחה",
+    "gender": "m"
   },
   {
     "id": "michelle-khare",
     "nameHe": "מישל קארה",
     "nameEn": "Michelle Khare",
-    "title": "יוצרת תוכן ומפיקה"
+    "title": "יוצרת תוכן ומפיקה",
+    "gender": "f"
   },
   {
     "id": "stasha-gominak",
     "nameHe": "סטאשה גומינק",
     "nameEn": "Stasha Gominak",
-    "title": "נוירולוגית וחוקרת שינה"
+    "title": "נוירולוגית וחוקרת שינה",
+    "gender": "f"
   },
   {
     "id": "andrew-ng",
     "nameHe": "אנדרו אנג",
     "nameEn": "Andrew Ng",
-    "title": "מדען מחשב, ממייסדי Google Brain ו-Coursera"
+    "title": "מדען מחשב, ממייסדי Google Brain ו-Coursera",
+    "gender": "m"
   },
   {
     "id": "joe-liemandt",
     "nameHe": "ג'ו לימנדט",
     "nameEn": "Joe Liemandt",
-    "title": "יזם טכנולוגיה ומנהל Alpha School"
+    "title": "יזם טכנולוגיה ומנהל Alpha School",
+    "gender": "m"
   },
   {
     "id": "martin-picard",
     "nameHe": "מרטין פיקארד",
     "nameEn": "Martin Picard",
-    "title": "פרופסור לרפואה התנהגותית, אוניברסיטת קולומביה"
+    "title": "פרופסור לרפואה התנהגותית, אוניברסיטת קולומביה",
+    "gender": "m"
   },
   {
     "id": "marina-mogilko",
     "nameHe": "מרינה מוגילקו",
     "nameEn": "Marina Mogilko",
-    "title": "יזמת ויוצרת תוכן"
+    "title": "יזמת ויוצרת תוכן",
+    "gender": "f"
   },
   {
     "id": "alice-han",
     "nameHe": "אליס האן",
     "nameEn": "Alice Han",
-    "title": "כלכלנית, מומחית לסין"
+    "title": "כלכלנית, מומחית לסין",
+    "gender": "f"
   },
   {
     "id": "trevor-noah",
     "nameHe": "טרוור נואה",
     "nameEn": "Trevor Noah",
-    "title": "קומיקאי ומנחה"
+    "title": "קומיקאי ומנחה",
+    "gender": "m"
   },
   {
     "id": "richard-davidson",
     "nameHe": "ריצ'רד דיווידסון",
     "nameEn": "Richard Davidson",
-    "title": "נוירומדען, אוניברסיטת ויסקונסין"
+    "title": "נוירומדען, אוניברסיטת ויסקונסין",
+    "gender": "m"
   },
   {
     "id": "mel-robbins",
     "nameHe": "מל רובינס",
     "nameEn": "Mel Robbins",
-    "title": "מנחת פודקאסט וסופרת"
+    "title": "מנחת פודקאסט וסופרת",
+    "gender": "f"
   },
   {
     "id": "tina-seelig",
     "nameHe": "טינה סיליג",
     "nameEn": "Tina Seelig",
-    "title": "מרצה ליזמות וליצירתיות, אוניברסיטת סטנפורד"
+    "title": "מרצה ליזמות וליצירתיות, אוניברסיטת סטנפורד",
+    "gender": "f"
   }
 ]
