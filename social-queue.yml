@@ -6396,7 +6396,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-27T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🔭
 
@@ -6422,13 +6422,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-27_myth-brian-cox-particle-physi/brian-cox-particle-physics-frontier-startalk-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Ddx6-vvjtRM/
     cover: >-
       https://hesketon.co.il/social/2026-09-27_myth-brian-cox-particle-physi/brian-cox-particle-physics-frontier-startalk-cover.jpg
     audio:
       audioId: '174020782380726'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-27T06:03:54.151Z'
+    mediaId: '17926569432184960'
   - id: 2026-09-27_reelv2-jocko-willink-confiden
     slug: jocko-willink-confidence-tradeoffs-modern-wisdom
     platform: instagram
