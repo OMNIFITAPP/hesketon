@@ -152,6 +152,32 @@ export async function getPersonTagMap(): Promise<Map<string, Person>> {
   return map;
 }
 
+/** Markdown/HTML fragment → plain text (tags, **bold**, entities of our own making). */
+function plainText(s: string): string {
+  return s
+    .replace(/<[^>]+>/g, '')
+    .replace(/\*\*|__/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/** The bullets of a post's אמ;לק box — already reviewed text, safe to reuse. */
+export function tldrOf(post: CollectionEntry<'posts'>): string[] {
+  const box = post.body?.match(/<aside class="tldr[^"]*">([\s\S]*?)<\/aside>/);
+  if (!box) return [];
+  return [...box[1].matchAll(/<li>([\s\S]*?)<\/li>/g)].map((m) => plainText(m[1]));
+}
+
+/**
+ * True when `quote` appears word for word in the post. Ignores whitespace and
+ * the final punctuation mark, since a quote that ends a sentence on the person
+ * page may sit mid-sentence in the post ("…בשפה האנגלית," הוא אומר).
+ */
+export function postContainsQuote(post: CollectionEntry<'posts'>, quote: string): boolean {
+  const norm = (s: string) => plainText(s).replace(/[.,!?]$/, '');
+  return plainText(post.body ?? '').includes(norm(quote));
+}
+
 /** Posts from a given podcast (by canonical id or name). */
 export function postsForPodcast(
   podcast: Podcast,

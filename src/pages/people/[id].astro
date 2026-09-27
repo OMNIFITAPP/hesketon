@@ -1,25 +1,32 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
-import { getPeopleWithPosts } from '../../utils';
+import { SITE, PEOPLE, podcastById, podcastByName, type Podcast } from '../../consts';
+import { getPeopleWithPosts, getPublishedPosts, tldrOf, postContainsQuote } from '../../utils';
 
 export async function getStaticPaths() {
   const people = await getPeopleWithPosts();
+  const profiles = await getCollection('profiles');
+  for (const pr of profiles) {
+    if (!PEOPLE.some((p) => p.id === pr.id)) {
+      throw new Error(`profiles/${pr.id}.yaml: no person with that id in src/data/people.json`);
+    }
+  }
   return people.map(({ person, posts }) => ({
     params: { id: person.id },
-    props: { person, posts },
+    props: { person, posts, profile: profiles.find((p) => p.id === person.id)?.data },
   }));
 }
 
-const { person, posts } = Astro.props;
+const { person, posts, profile } = Astro.props;
+const g = (m: string, f: string, neutral: string) =>
+  person.gender === 'm' ? m : person.gender === 'f' ? f : neutral;
 
 // Search Console: people reach these pages by typing the name, and the old
 // "X — כל התקצירים" snippet got almost no clicks. The title says what the page
 // gives (their ideas, in Hebrew); the description is built from real data.
-const pronoun = person.gender === 'f' ? 'שלה' : person.gender === 'm' ? 'שלו' : null;
-const title = pronoun
-  ? `${person.nameHe} — הרעיונות ${pronoun} בעברית, מתוך הפודקאסטים`
-  : `${person.nameHe} — הרעיונות המרכזיים בעברית, מתוך הפודקאסטים`;
+const title = `${person.nameHe} — ${g('הרעיונות שלו', 'הרעיונות שלה', 'הרעיונות המרכזיים')} בעברית, מתוך הפודקאסטים`;
 
 // Lead with a classic if there is one, otherwise the newest summary. Drop a
 // leading "Name …:" or trailing "— Name" so the name isn't said twice.
@@ -31,28 +38,316 @@ const leadTitle = lead.data.title
 const who = `${person.nameHe}${person.title ? `, ${person.title}` : ''}.`;
 const count = posts.length === 1 ? 'תקציר בעברית:' : `${posts.length} תקצירים בעברית, ביניהם:`;
 const desc = `${who} ${count} ${leadTitle}${/[.?!]$/.test(leadTitle) ? '' : '.'}`;
+
+const isGuest = (p: (typeof posts)[number]) =>
+  p.data.source?.guestId === person.id || p.data.source?.guest === person.nameHe;
+const guestPosts = posts.filter(isGuest);
+const role = guestPosts.length ? g('אורח', 'אורחת', 'אורח/ת') : 'מנחה';
+
+// ── v2 blocks: only for people with a verified profile (src/content/profiles/) ──
+// Their ideas: the אמ;לק bullets of the posts where they are the guest —
+// all of them for a single post, two each (from up to three posts) otherwise.
+const ideaGroups = profile
+  ? guestPosts
+      .slice(0, 3)
+      .map((post) => ({ post, items: tldrOf(post).slice(0, guestPosts.length === 1 ? 5 : 2) }))
+      .filter((x) => x.items.length > 0)
+  : [];
+
+// Quotes must appear word for word in the post they cite — otherwise the build
+// stops. The post's own quotes already passed grounding against the transcript.
+const allPosts = profile?.quotes.length ? await getPublishedPosts() : [];
+const quotes = (profile?.quotes ?? []).map((q) => {
+  const post = allPosts.find((p) => p.id === q.post);
+  if (!post) throw new Error(`profiles/${person.id}.yaml: quote cites unknown post "${q.post}"`);
+  if (!postContainsQuote(post, q.he)) {
+    throw new Error(`profiles/${person.id}.yaml: quote not found verbatim in ${q.post}: "${q.he}"`);
+  }
+  return { text: q.he, post };
+});
+
+// All from one post: name the source once, under the quotes, not under each.
+const oneSource = quotes.length > 1 && quotes.every((q) => q.post.id === quotes[0].post.id);
+
+const shows = profile
+  ? [
+      ...new Map(
+        posts
+          .map((p) => podcastById(p.data.source?.podcastId) ?? podcastByName(p.data.source?.podcast))
+          .filter((x): x is Podcast => x !== undefined)
+          .map((x) => [x.id, x]),
+      ).values(),
+    ]
+  : [];
+
+const site = Astro.site ?? new URL(SITE.url);
+const jsonLd = profile && {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: title,
+  url: new URL(Astro.url.pathname, site).href,
+  inLanguage: 'he',
+  about: {
+    '@type': 'Person',
+    name: person.nameHe,
+    alternateName: [person.nameEn, ...profile.altNames].filter((n) => n && n !== person.nameHe),
+    description: profile.bio,
+    ...(person.title && { jobTitle: person.title }),
+    sameAs: profile.links.map((l) => l.url),
+  },
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: posts.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: new URL(`/posts/${p.id}/`, site).href,
+      name: p.data.title,
+    })),
+  },
+};
 ---
 
-<BaseLayout title={title} description={desc}>
+<BaseLayout title={title} description={desc} jsonLd={jsonLd || undefined}>
   <section class="section wrap">
     <div class="page-title">
-      <p class="muted person-eyebrow">אורח/ת</p>
+      <p class="muted person-eyebrow">{role}</p>
       <h1>{person.nameHe}</h1>
-      {person.title && <p class="muted">{person.title}</p>}
-      <p class="muted">{posts.length === 1 ? 'תקציר אחד' : `${posts.length} תקצירים`} בהסכתון</p>
+      {
+        profile ? (
+          <p class="muted">
+            {person.nameEn !== person.nameHe && (
+              <>
+                <bdi lang="en">{person.nameEn}</bdi>
+                {person.title && ' · '}
+              </>
+            )}
+            {person.title}
+          </p>
+        ) : (
+          person.title && <p class="muted">{person.title}</p>
+        )
+      }
+      <p class="muted">
+        {posts.length === 1 ? 'תקציר אחד' : `${posts.length} תקצירים`} בהסכתון
+        {
+          shows.length > 0 && (
+            <>
+              {' · '}
+              {shows.map((s, i) => (
+                <>
+                  {i > 0 && ', '}
+                  <a href={`/podcasts/${s.id}/`}>
+                    <bdi>{s.name}</bdi>
+                  </a>
+                </>
+              ))}
+            </>
+          )
+        }
+      </p>
     </div>
+
+    {
+      profile && (
+        <div class="person-v2">
+          <section class="pv-block" aria-labelledby="pv-who">
+            <h2 id="pv-who">{g('מי זה', 'מי זאת', 'מי זה')} {person.nameHe}?</h2>
+            <p>{profile.bio}</p>
+            <p class="pv-src">
+              {profile.sources.length === 1 ? 'מקור: ' : 'מקורות: '}
+              {profile.sources.map((s, i) => (
+                <>
+                  {i > 0 && ' · '}
+                  <a href={s.url} rel="noopener" target="_blank">
+                    <bdi>{s.title}</bdi>
+                  </a>
+                </>
+              ))}
+            </p>
+          </section>
+
+          {ideaGroups.length > 0 && (
+            <section class="pv-block pv-ideas" aria-labelledby="pv-ideas">
+              <h2 id="pv-ideas">{g('הרעיונות שלו, בקצרה', 'הרעיונות שלה, בקצרה', 'הרעיונות, בקצרה')}</h2>
+              {ideaGroups.map(({ post, items }) => (
+                <>
+                  <ul>
+                    {items.map((t) => (
+                      <li>{t}</li>
+                    ))}
+                  </ul>
+                  <p class="pv-src">
+                    מתוך התקציר: <a href={`/posts/${post.id}/`}>{post.data.title}</a>
+                  </p>
+                </>
+              ))}
+            </section>
+          )}
+
+          {quotes.length > 0 && (
+            <section class="pv-block" aria-labelledby="pv-quotes">
+              <h2 id="pv-quotes">{g('במילים שלו', 'במילים שלה', 'במילים שלהם')}</h2>
+              {quotes.map((q) => (
+                <figure class="pv-quote">
+                  <blockquote>"{q.text}"</blockquote>
+                  {!oneSource && (
+                    <figcaption>
+                      מתוך: <a href={`/posts/${q.post.id}/`}>{q.post.data.title}</a>
+                    </figcaption>
+                  )}
+                </figure>
+              ))}
+              {oneSource && (
+                <p class="pv-src">
+                  מתוך התקציר: <a href={`/posts/${quotes[0].post.id}/`}>{quotes[0].post.data.title}</a>
+                </p>
+              )}
+            </section>
+          )}
+
+          {profile.books.length > 0 && (
+            <section class="pv-block" aria-labelledby="pv-books">
+              <h2 id="pv-books">{profile.books.length === 1 ? g('הספר שלו', 'הספר שלה', 'הספר') : g('הספרים שלו', 'הספרים שלה', 'הספרים')}</h2>
+              <ul class="pv-books">
+                {profile.books.map((b) => (
+                  <li>
+                    <p class="pv-book-title">
+                      <bdi lang="en">{b.title}</bdi>
+                      <span class="muted"> · {b.year}</span>
+                    </p>
+                    <p class="muted pv-book-he">
+                      {b.titleHe ? (
+                        <>במהדורה העברית: {b.titleHe}</>
+                      ) : (
+                        b.gloss && <>בתרגום חופשי: "{b.gloss}"</>
+                      )}
+                      {b.with && (
+                        <>
+                          {' · '}עם <bdi lang="en">{b.with}</bdi>
+                        </>
+                      )}
+                    </p>
+                    <p>{b.about}</p>
+                    <a href={b.url} rel="noopener" target="_blank">
+                      לדף הספר ←
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </div>
+      )
+    }
+
+    {profile && <h2 class="pv-posts-title">{posts.length === 1 ? 'התקציר' : 'כל התקצירים'}</h2>}
     <div class="post-grid">
       {posts.map((post) => <PostCard post={post} />)}
     </div>
+
+    {
+      profile && profile.links.length > 0 && (
+        <p class="pv-links">
+          {g('איפה עוד שומעים אותו', 'איפה עוד שומעים אותה', 'איפה עוד שומעים')}:{' '}
+          {profile.links.map((l, i) => (
+            <>
+              {i > 0 && ' · '}
+              <a href={l.url} rel="noopener" target="_blank">
+                {l.label}
+              </a>
+            </>
+          ))}
+        </p>
+      )
+    }
     <p style="margin-top:2rem"><a href="/posts/">← לכל הפרקים</a></p>
   </section>
 </BaseLayout>
 
 <style>
   .person-eyebrow {
-    text-transform: uppercase;
     letter-spacing: 0.08em;
     font-size: 0.8rem;
     margin-bottom: 0.2rem;
+  }
+  .person-v2 {
+    max-width: var(--measure);
+    display: grid;
+    gap: 2.25rem;
+    margin-bottom: 3rem;
+  }
+  .pv-block h2 {
+    margin-bottom: 0.7rem;
+  }
+  .pv-block > p:last-child,
+  .pv-block ul {
+    margin-bottom: 0;
+  }
+  .pv-src {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin: 0.6rem 0 0;
+  }
+  .pv-ideas ul {
+    margin: 0;
+    padding: 1.1rem 1.4rem 1.1rem 1.1rem;
+    padding-inline-start: 2.3rem;
+    background: var(--accent-soft);
+    border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--line));
+    border-radius: var(--radius);
+    display: grid;
+    gap: 0.5rem;
+  }
+  .pv-ideas li::marker {
+    color: var(--accent);
+  }
+  .pv-quote {
+    margin: 0 0 1.2rem;
+    padding-inline-start: 1.1rem;
+    border-inline-start: 3px solid var(--accent);
+  }
+  .pv-quote blockquote {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.15rem;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .pv-quote figcaption {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-top: 0.4rem;
+  }
+  .pv-books {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+  }
+  .pv-books li {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 1rem 1.2rem;
+  }
+  .pv-books p {
+    margin: 0 0 0.4rem;
+  }
+  .pv-book-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .pv-book-he {
+    font-size: 0.92rem;
+  }
+  .pv-posts-title {
+    margin-bottom: 1.2rem;
+  }
+  .pv-links {
+    margin-top: 2rem;
+    color: var(--muted);
   }
 </style>
