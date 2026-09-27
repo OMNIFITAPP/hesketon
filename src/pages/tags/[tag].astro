@@ -31,7 +31,7 @@ const posts = (await getPublishedPosts()).filter((p) => (p.data.tags ?? []).incl
     <div class="page-title">
       <p class="eyebrow">תגית</p>
       <h1>#{tag}</h1>
-      <p class="muted">{posts.length} תקצירים</p>
+      <p class="muted">{posts.length === 1 ? 'תקציר אחד' : `${posts.length} תקצירים`}</p>
     </div>
     <div class="post-grid">
       {posts.map((post) => <PostCard post={post} />)}
