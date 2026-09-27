@@ -10,7 +10,7 @@ import ClassicTag from '../components/ClassicTag.astro';
 import LikeButton from '../components/LikeButton.astro';
 import { SITE, categoryByName, tagToSlug, youtubeThumb, personById, personByName, podcastById, podcastByName } from '../consts';
 import { bestThumb } from '../lib/thumbs';
-import { getRelatedPosts } from '../utils';
+import { getRelatedPosts, getPersonTagMap } from '../utils';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -19,6 +19,7 @@ interface Props {
 const { post } = Astro.props;
 const d = post.data;
 const related = await getRelatedPosts(post, 3);
+const personTags = await getPersonTagMap();
 const cat = categoryByName(d.category);
 const guestPerson = personById(d.source?.guestId) ?? personByName(d.source?.guest);
 const podcastEntity = podcastById(d.source?.podcastId) ?? podcastByName(d.source?.podcast);
@@ -165,7 +166,10 @@ const jsonLd = {
           <ul class="tag-list" style="margin-top:1.5rem">
             {d.tags.map((t) => (
               <li>
-                <a class="tag" href={`/tags/${tagToSlug(t)}/`}>
+                <a
+                  class="tag"
+                  href={personTags.has(t) ? `/people/${personTags.get(t)!.id}/` : `/tags/${tagToSlug(t)}/`}
+                >
                   #{t}
                 </a>
               </li>

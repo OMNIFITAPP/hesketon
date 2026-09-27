@@ -114,6 +114,44 @@ export async function getPeopleWithPosts(): Promise<
   );
 }
 
+/**
+ * A name reduced to what a reader would type: no ד"ר/פרופ' prefix, no geresh,
+ * quotes or dots, hyphens as spaces. So the tag "ניל דה גראס טייסון" and the
+ * person "ניל דה-גראס טייסון" are recognised as the same name.
+ */
+export function normalizeName(s: string): string {
+  return s
+    .replace(/^(ד["״]ר|פרופ['׳])\s+/, '')
+    .replace(/["״'׳.]/g, '')
+    .replace(/[-־]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+}
+
+/**
+ * Tags that are only a person's name, mapped to that person. Such a tag used to
+ * get its own archive page, which competed in search with the person's page
+ * (Search Console had /tags/דן-מרטל/ at position 4 and /people/dan-martell/ at
+ * 9). Now the chip links straight to the person, and the old tag URL redirects.
+ */
+export async function getPersonTagMap(): Promise<Map<string, Person>> {
+  const people = (await getPeopleWithPosts()).map((x) => x.person);
+  const byName = new Map<string, Person>();
+  for (const p of people) {
+    byName.set(normalizeName(p.nameHe), p);
+    byName.set(normalizeName(p.nameEn), p);
+  }
+  const map = new Map<string, Person>();
+  for (const post of await getPublishedPosts()) {
+    for (const t of post.data.tags ?? []) {
+      const person = byName.get(normalizeName(t));
+      if (person) map.set(t, person);
+    }
+  }
+  return map;
+}
+
 /** Posts from a given podcast (by canonical id or name). */
 export function postsForPodcast(
   podcast: Podcast,

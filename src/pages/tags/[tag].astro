@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
-import { tagToSlug } from '../../consts';
-import { getPublishedPosts } from '../../utils';
+import { SITE, tagToSlug } from '../../consts';
+import { getPublishedPosts, getPersonTagMap } from '../../utils';
 
 export async function getStaticPaths() {
   const posts = await getPublishedPosts();
@@ -20,21 +20,45 @@ export async function getStaticPaths() {
 }
 
 const { tag } = Astro.props;
-const posts = (await getPublishedPosts()).filter((p) => (p.data.tags ?? []).includes(tag));
+const person = (await getPersonTagMap()).get(tag);
+const target = person ? new URL(`/people/${person.id}/`, Astro.site ?? SITE.url) : undefined;
+// A tag that is only a person's name moves to that person's page. GitHub Pages
+// can't send a server 301, so the page below is the static equivalent: an
+// instant meta refresh plus a canonical, which Google treats as a permanent
+// redirect. Its body is ignored by Pagefind, so it never shows up in search.
+const posts = person
+  ? []
+  : (await getPublishedPosts()).filter((p) => (p.data.tags ?? []).includes(tag));
 ---
 
-<!-- noindex: 200+ tag pages, most listing a single post. They're navigation,
-     not destinations — indexing them buries the actual articles under thin
-     pages and burns a new domain's small crawl budget. Still crawlable. -->
-<BaseLayout title={`#${tag}`} description={`כל התקצירים בתגית ${tag}.`} noindex>
-  <section class="section wrap">
-    <div class="page-title">
-      <p class="eyebrow">תגית</p>
-      <h1>#{tag}</h1>
-      <p class="muted">{posts.length === 1 ? 'תקציר אחד' : `${posts.length} תקצירים`}</p>
-    </div>
-    <div class="post-grid">
-      {posts.map((post) => <PostCard post={post} />)}
-    </div>
-  </section>
-</BaseLayout>
+{
+  target ? (
+    <html lang="he" dir="rtl">
+      <head>
+        <meta charset="utf-8" />
+        <title>{person!.nameHe} · הסכתון</title>
+        <link rel="canonical" href={target.href} />
+        <meta http-equiv="refresh" content={`0; url=${target.pathname}`} />
+      </head>
+      <body data-pagefind-ignore="all">
+        <a href={target.pathname}>{person!.nameHe}</a>
+      </body>
+    </html>
+  ) : (
+    <!-- noindex: 200+ tag pages, most listing a single post. They're navigation,
+         not destinations — indexing them buries the actual articles under thin
+         pages and burns a new domain's small crawl budget. Still crawlable. -->
+    <BaseLayout title={`#${tag}`} description={`כל התקצירים בתגית ${tag}.`} noindex>
+      <section class="section wrap">
+        <div class="page-title">
+          <p class="eyebrow">תגית</p>
+          <h1>#{tag}</h1>
+          <p class="muted">{posts.length === 1 ? 'תקציר אחד' : `${posts.length} תקצירים`}</p>
+        </div>
+        <div class="post-grid">
+          {posts.map((post) => <PostCard post={post} />)}
+        </div>
+      </section>
+    </BaseLayout>
+  )
+}
