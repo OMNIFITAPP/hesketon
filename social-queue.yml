@@ -6437,7 +6437,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-27T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אחד הדברים העמוקים ביותר שאפשר לעשות כדי להיות בטוח יותר בעצמך הוא להיות בסדר עם לומר: אני לא
       בטוח מה לעשות עכשיו." 🎖️
@@ -6463,13 +6463,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-27_reelv2-jocko-willink-confiden/jocko-willink-confidence-tradeoffs-modern-wisdom-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdyWqxWCsMx/
     cover: >-
       https://hesketon.co.il/social/2026-09-27_reelv2-jocko-willink-confiden/jocko-willink-confidence-tradeoffs-modern-wisdom-cover.jpg
     audio:
       audioId: '2206809489794688'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-27T10:05:49.798Z'
+    mediaId: '18055831637566336'
   - id: 2026-09-22_reelv2-stasha-gominak-vitamin
     slug: stasha-gominak-vitamin-d-sleep-repair-diary-of-a-ceo
     platform: instagram
