@@ -1,11 +1,11 @@
 import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
 import { SITE } from '../consts';
+import { getPublishedPosts } from '../utils';
 
 export async function GET(context) {
-  const posts = (await getCollection('posts', ({ data }) => data.draft !== true)).sort(
-    (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
-  );
+  // Same gate as every page: a post held for a future slot has no page yet, so
+  // listing it here hands readers (and Google) a link that 404s until its slot.
+  const posts = await getPublishedPosts();
 
   return rss({
     title: SITE.title,
