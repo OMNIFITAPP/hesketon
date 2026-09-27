@@ -6134,7 +6134,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-09-27T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "גילינו שהלבנת שיער, לפחות באופן זמני, היא הפיכה." 🧬
 
@@ -6174,7 +6174,9 @@ items:
         https://hesketon.co.il/social/2026-09-27_carousel-martin-picard-mitochon/martin-picard-mitochondria-grey-hair-huberman-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-09-27_carousel-martin-picard-mitochon/martin-picard-mitochondria-grey-hair-huberman-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DdzHRojk9ed/
+    publishedAt: '2026-09-27T17:10:13.124Z'
+    mediaId: '18412475833086174'
   - id: 2026-09-22_myth-andy-stumpf-psychology-o
     slug: andy-stumpf-psychology-of-endurance-williamson
     platform: instagram
