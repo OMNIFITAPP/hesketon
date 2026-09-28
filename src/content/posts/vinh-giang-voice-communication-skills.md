@@ -16,7 +16,9 @@ source:
   podcast: On Purpose with Jay Shetty
   episode: וין ג'יאנג — למה קוטעים אותך, ואיך להשתמש בקול שלך
   host: ג'יי שטי
+  hostId: "jay-shetty"
   guest: וין ג'יאנג
+  guestId: "vinh-giang"
   youtubeUrl: https://www.youtube.com/watch?v=ru44DngJYoA
   publishedAt: 2025-05-19
   durationMinutes: 104

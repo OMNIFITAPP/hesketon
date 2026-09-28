@@ -16,7 +16,9 @@ source:
   podcast: Grant Owen
   episode: דן מרטל — איך להשתמש ב-AI טוב יותר מ-95% מהעולם
   host: גרנט אואן
+  hostId: "grant-owen"
   guest: דן מרטל
+  guestId: "dan-martell"
   youtubeUrl: https://www.youtube.com/watch?v=9q5JnlCyu4U
   publishedAt: 2026-06-24T00:00:00.000Z
   durationMinutes: 72

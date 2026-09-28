@@ -16,6 +16,7 @@ source:
   podcast: Huberman Lab
   episode: שיפור הגמישות — פרוטוקולי מתיחות מבוססי-מחקר
   host: אנדרו הוברמן
+  hostId: "andrew-huberman"
   youtubeUrl: https://www.youtube.com/watch?v=tkH2-_jMCSk
   publishedAt: 2022-06-13T00:00:00.000Z
   durationMinutes: 126

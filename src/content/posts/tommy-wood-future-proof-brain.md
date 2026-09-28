@@ -10,7 +10,9 @@ source:
   podcast: "The Joe Rogan Experience"
   episode: "Joe Rogan Experience #2450 — Tommy Wood"
   host: "ג'ו רוגן"
+  hostId: "joe-rogan"
   guest: "טומי ווד"
+  guestId: "tommy-wood"
   youtubeUrl: "https://www.youtube.com/watch?v=UPfN2G0RyQM"
   publishedAt: 2026-02-06
   durationMinutes: 131

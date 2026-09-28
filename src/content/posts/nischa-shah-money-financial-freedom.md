@@ -24,6 +24,7 @@ source:
   podcastId: on-purpose-jay-shetty
   episode: 'מומחית לכסף: איך לחשוב כמו ה־1%'
   host: ג'יי שטי
+  hostId: "jay-shetty"
   guest: נישה שאה
   guestId: nischa-shah
   youtubeUrl: https://www.youtube.com/watch?v=aXbgmRneWYY

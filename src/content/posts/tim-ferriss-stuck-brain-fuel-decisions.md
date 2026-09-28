@@ -16,7 +16,9 @@ source:
   podcast: On Purpose with Jay Shetty
   episode: טים פריס — הסיבה האמיתית שאתה מרגיש תקוע
   host: ג'יי שטי
+  hostId: "jay-shetty"
   guest: טים פריס
+  guestId: "tim-ferriss"
   youtubeUrl: https://www.youtube.com/watch?v=s0DohADRRlY
   publishedAt: 2026-04-20T00:00:00.000Z
   durationMinutes: 118

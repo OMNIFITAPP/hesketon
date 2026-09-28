@@ -16,7 +16,9 @@ source:
   podcast: The Joe Rogan Experience
   episode: 'ג''ו רוגן #2506 — מישל ת''אלר על היקום'
   host: ג'ו רוגן
+  hostId: "joe-rogan"
   guest: מישל ת'אלר
+  guestId: "michelle-thaller"
   youtubeUrl: https://www.youtube.com/watch?v=GZCmYrgOZU0
   publishedAt: 2026-05-28T00:00:00.000Z
   durationMinutes: 157

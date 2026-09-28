@@ -16,7 +16,9 @@ source:
   podcast: Perform with Dr. Andy Galpin
   episode: סם האריס — איך לחשוב בבהירות בעידן של הסחות דעת
   host: אנדי גלפין
+  hostId: "andy-galpin"
   guest: סם האריס
+  guestId: "sam-harris"
   youtubeUrl: https://www.youtube.com/watch?v=fzllImE-hbE
   publishedAt: 2026-05-27T00:00:00.000Z
   durationMinutes: 148

@@ -16,7 +16,9 @@ source:
   podcast: Modern Wisdom
   episode: A Blueprint For Mastering Every Conversation — Jefferson Fisher
   host: כריס וויליאמסון
+  hostId: "chris-williamson"
   guest: ג'פרסון פישר
+  guestId: "jefferson-fisher"
   youtubeUrl: https://www.youtube.com/watch?v=AwPNjPR-vVY
   publishedAt: 2026-05-04
   durationMinutes: 130

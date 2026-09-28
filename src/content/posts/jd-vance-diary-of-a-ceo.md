@@ -15,6 +15,7 @@ source:
   host: "סטיבן ברטלט"
   hostId: "steven-bartlett"
   guest: "ג'יי. די. ואנס"
+  guestId: "jd-vance"
   youtubeUrl: "https://www.youtube.com/watch?v=5cKDs7bIGPE"
   publishedAt: 2026-06-18
   durationMinutes: 108

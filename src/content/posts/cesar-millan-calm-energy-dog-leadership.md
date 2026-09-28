@@ -19,6 +19,7 @@ source:
   podcastId: huberman-lab
   episode: 'סיזר מילאן: לגדל כלב ולשלוט באנרגיה רגועה וסמכותית'
   host: אנדרו הוברמן
+  hostId: "andrew-huberman"
   guest: סיזר מילאן
   guestId: cesar-millan
   youtubeUrl: https://www.youtube.com/watch?v=n_qKxNcMvtM

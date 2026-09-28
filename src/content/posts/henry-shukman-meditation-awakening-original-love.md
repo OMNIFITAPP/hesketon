@@ -16,7 +16,9 @@ source:
   podcast: Feel Better, Live More
   episode: הנרי שוקמן — כשהחיים מרגישים "לא נכון", אל תתעלם
   host: ראנגן צ'טרג'י
+  hostId: "rangan-chatterjee"
   guest: הנרי שוקמן
+  guestId: "henry-shukman"
   youtubeUrl: https://www.youtube.com/watch?v=mjAOxOjDJIc
   publishedAt: 2025-10-29T00:00:00.000Z
   durationMinutes: 114

@@ -16,7 +16,9 @@ source:
   podcast: The Rich Roll Podcast
   episode: יובל נח הררי — עתיד ה-AI גרוע ממה שנדמה
   host: ריץ' רול
+  hostId: "rich-roll"
   guest: יובל נח הררי
+  guestId: "yuval-noah-harari"
   youtubeUrl: https://www.youtube.com/watch?v=_jl64f-821o
   publishedAt: 2024-10-28T00:00:00.000Z
   durationMinutes: 97

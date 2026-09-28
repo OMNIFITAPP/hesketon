@@ -18,6 +18,7 @@ source:
   host: "סטיבן ברטלט"
   hostId: "steven-bartlett"
   guest: ג'רמי גרנת'ם
+  guestId: "jeremy-grantham"
   youtubeUrl: https://www.youtube.com/watch?v=32u5T6lO8qk
   publishedAt: 2026-06-25T00:00:00.000Z
   durationMinutes: 105
