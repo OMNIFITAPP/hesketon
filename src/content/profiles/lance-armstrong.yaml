@@ -1,0 +1,24 @@
+# Verified 2026-09-28.
+# Bio: English Wikipedia, "Lance Armstrong" — born 1971 in Richardson, Texas;
+# stage three testicular cancer diagnosed October 1996, spread to lymph nodes,
+# lungs, brain and abdomen; cancer-free February 1997; seven consecutive Tour
+# de France wins 1999–2005; 2012 USADA investigation found doping throughout
+# his career — stripped of all titles from August 1998 and banned for life;
+# January 2013 Oprah Winfrey interview, a "limited confession".
+# The doping stays in the bio on purpose: it's the defining fact, and his
+# הסכתון summary is about it.
+# Books: none shown — his memoirs predate the findings.
+# Links: lancearmstrong.com (title "Lance Armstrong").
+bio: >-
+  לאנס ארמסטרונג הוא רוכב אופניים אמריקאי לשעבר, יליד ריצ'רדסון, טקסס (1971).
+  ב-1996 אובחן בסרטן אשכים בשלב שלישי, שהתפשט גם לריאות ולמוח, ואחרי שהחלים זכה
+  בטור דה פראנס שבע פעמים ברציפות, 1999–2005. ב-2012 קבעה סוכנות האנטי-דופינג
+  האמריקאית (USADA) שהשתמש בחומרים אסורים לאורך הקריירה; כל תאריו מאוגוסט 1998
+  נשללו והוא הורחק מהספורט לכל החיים. בינואר 2013 הודה בדופינג בראיון לאופרה
+  וינפרי.
+sources:
+  - title: Wikipedia
+    url: https://en.wikipedia.org/wiki/Lance_Armstrong
+links:
+  - label: האתר שלו
+    url: https://www.lancearmstrong.com/

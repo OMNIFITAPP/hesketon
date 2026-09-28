@@ -1,0 +1,30 @@
+# Verified 2026-09-28.
+# Bio: English Wikipedia, "David Goggins" — born 1975 in Buffalo, New York;
+# US Air Force 1994–1999; Navy SEAL 2001–2015; third at the 2007 Badwater 135;
+# former Guinness record for pull-ups (4,030 in 17 hours).
+# Book: Can't Hurt Me (4 Dec 2018) — Hebrew edition "מה שלא הורג", הוצאת מטר,
+# 2024 (e-vrit / Steimatzky); the "40% rule" is in the Hebrew blurb.
+# Alt names: Search Console saw 8 spellings; the site's is "דייוויד", the most
+# searched was "דיוויד גוגינס" (25 impressions).
+# Links: davidgoggins.com (title "David Goggins").
+bio: >-
+  דייוויד גוגינס הוא לוחם Navy SEAL לשעבר ורץ אולטרה-מרתון, יליד באפלו, ניו יורק
+  (1975). הוא שירת בחיל האוויר האמריקאי ובין 2001 ל-2015 כלוחם SEAL בצי, והשלים
+  כמה ממרוצי הסיבולת הקשים בעולם, בהם מקום שלישי ב-Badwater 135 ב-2007. בעבר החזיק
+  בשיא גינס בעליות מתח: 4,030 ב-17 שעות.
+sources:
+  - title: Wikipedia
+    url: https://en.wikipedia.org/wiki/David_Goggins
+altNames:
+  - דיוויד גוגינס
+books:
+  - title: Can't Hurt Me
+    year: 2018
+    titleHe: מה שלא הורג
+    about: >-
+      סיפור חייו, מילדות של עוני והתעללות ועד הצבא ומרוצי הסיבולת, ו"כלל 40
+      האחוזים": שרובנו מנצלים רק 40 אחוז מהיכולות שלנו.
+    url: https://www.e-vrit.co.il/Product/34599/%D7%9E%D7%94_%D7%A9%D7%9C%D7%90_%D7%94%D7%95%D7%A8%D7%92
+links:
+  - label: האתר שלו
+    url: https://davidgoggins.com/

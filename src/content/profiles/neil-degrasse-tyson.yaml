@@ -1,0 +1,31 @@
+# Verified 2026-09-28.
+# Bio: English Wikipedia, "Neil deGrasse Tyson" — born 1958 in New York City;
+# PhD in astrophysics, Columbia (1991); director of the Hayden Planetarium
+# since 1996 (at the American Museum of Natural History, per the Hebrew
+# edition's blurb); StarTalk from May 2009, radio then podcast and TV; hosted
+# Cosmos: A Spacetime Odyssey (2014), successor to Carl Sagan's series.
+# Book: Astrophysics for People in a Hurry (2017) — Hebrew edition
+# "אסטרופיזיקה למי שאין לו זמן", הוצאת תכלית, 2018. Search Console showed
+# people searching that Hebrew title.
+# Alt names: searched as "ניל דה גראס טייסון" and "ניל טייסון".
+# Links: the planetarium and StarTalk sites block automated checks — left out.
+bio: >-
+  ניל דה-גראס טייסון הוא אסטרופיזיקאי אמריקאי, יליד ניו יורק (1958), בעל דוקטורט
+  באסטרופיזיקה מאוניברסיטת קולומביה, ומאז 1996 מנהל הפלנטריום ע"ש היידן במוזיאון
+  האמריקאי לתולדות הטבע. ב-2009 השיק את StarTalk, שהתחיל כתוכנית רדיו והתרחב
+  לפודקאסט ולטלוויזיה, וב-2014 הגיש את Cosmos: A Spacetime Odyssey, ההמשך לסדרה
+  של קרל סייגן.
+sources:
+  - title: Wikipedia
+    url: https://en.wikipedia.org/wiki/Neil_deGrasse_Tyson
+altNames:
+  - ניל דה גראס טייסון
+  - ניל טייסון
+books:
+  - title: Astrophysics for People in a Hurry
+    year: 2017
+    titleHe: אסטרופיזיקה למי שאין לו זמן
+    about: >-
+      שאלות גדולות על החלל, הזמן והמציאות, בפרקים קצרים שאפשר לקרוא עם קפה של
+      בוקר.
+    url: https://www.e-vrit.co.il/Product/7999/%D7%90%D7%A1%D7%98%D7%A8%D7%95%D7%A4%D7%99%D7%96%D7%99%D7%A7%D7%94_%D7%9C%D7%9E%D7%99_%D7%A9%D7%90%D7%99%D7%9F_%D7%9C%D7%95_%D7%96%D7%9E%D7%9F
