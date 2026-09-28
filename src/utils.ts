@@ -197,7 +197,17 @@ export function isGroundedQuote(post: CollectionEntry<'posts'>, quote: string): 
   const record = post.body?.match(/<!--\s*מקורות הציטוטים[\s\S]*?-->/)?.[0];
   if (!record) return false;
   const letters = (s: string) => s.replace(/[^\p{L}\p{N}]+/gu, '');
-  return letters(record).includes(letters(quote));
+  const q = letters(quote);
+  if (letters(record).includes(q)) return true;
+  // Some records shorten a long quote to its opening words and "…". Count it
+  // when the quote starts with those words — at least 12 letters, so a
+  // two-word stub can't vouch for anything.
+  return record
+    .split('\n')
+    .map((l) => l.trim())
+    .filter((l) => /^["״]/.test(l) && /(…|\.\.\.)["״]?$/.test(l))
+    .map((l) => letters(l.replace(/(…|\.\.\.)["״]?$/, '')))
+    .some((prefix) => prefix.length >= 12 && q.startsWith(prefix));
 }
 
 /**
