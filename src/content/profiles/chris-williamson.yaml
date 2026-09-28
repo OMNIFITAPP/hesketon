@@ -1,0 +1,25 @@
+# Verified 2026-09-28.
+# Bio: English Wikipedia, "Chris Williamson (TV personality)" — born 23 Feb 1988
+# in Stockton-on-Tees, North East England; Business Management degree and a
+# master's in International Marketing at Newcastle University; nightclub
+# promotion while studying; first series of Love Island, 2015; Modern Wisdom
+# launched 2018, downloaded more than 1 billion times.
+# (A fan site said Love Island 2017 — Wikipedia's 2015 is the one used.)
+# Books: none (Wikipedia lists none).
+# Links: chriswillx.com; @ChrisWillx is the channel his site links to
+# (youtube.com/modernwisdompodcast resolves to the same channel id).
+# He appears on הסכתון only as the host, so his page has no ideas or quotes of
+# his own — those belong to his guests.
+bio: >-
+  כריס וויליאמסון הוא מנחה הפודקאסט Modern Wisdom, שהשיק ב-2018 ושהורד מאז יותר
+  ממיליארד פעמים. הוא נולד ב-1988 בצפון-מזרח אנגליה, למד מינהל עסקים ושיווק
+  בינלאומי באוניברסיטת ניוקאסל ועבד בקידום מועדוני לילה, וב-2015 השתתף בעונה
+  הראשונה של Love Island.
+sources:
+  - title: Wikipedia
+    url: https://en.wikipedia.org/wiki/Chris_Williamson_(TV_personality)
+links:
+  - label: האתר שלו
+    url: https://chriswillx.com/
+  - label: ערוץ היוטיוב שלו
+    url: https://www.youtube.com/@ChrisWillx

@@ -1,0 +1,38 @@
+# Verified 2026-09-28.
+# Bio + book: Penguin Random House (author bio: NYT bestselling author of The
+# Next Conversation, translated into 40 languages; trial lawyer, writer and
+# speaker helping people communicate better in everyday arguments and
+# conversations; podcast + email newsletter; founder of Fisher Firm. Book:
+# Tarcher, 18 Mar 2025, "Instant New York Times Bestseller").
+# Hebrew edition: jeffersonfisher.com/book lists Hebrew as "Coming Soon" (no
+# title yet) — replace `gloss` with `titleHe` once it's published.
+# Links: jeffersonfisher.com; @jeffersonfisher is the channel his site links to.
+# Quotes: none pinned. His summary predates quote grounding, and checking its
+# three quotes against the transcript found problems in all three (reported
+# 2026-09-28): the opening line is introduced as a saying ("They say that…")
+# and may be the host's; "my name isn't anger, it's grief" was rendered עצב;
+# "they're not afraid of anger…" gained "שקרנים".
+bio: >-
+  ג'פרסון פישר הוא עורך דין ליטיגציה, כותב ומרצה, שמטרתו לעזור לאנשים לתקשר טוב
+  יותר בוויכוחים ובשיחות של היומיום. ספרו The Next Conversation, שיצא ב-2025,
+  נכנס לרשימת רבי-המכר של הניו יורק טיימס ותורגם ל-40 שפות. הוא מגיש פודקאסט
+  וניוזלטר עם עצות לשיחות הקשות, ומייסד משרד עורכי הדין Fisher Firm.
+sources:
+  - title: Penguin Random House
+    url: https://www.penguinrandomhouse.com/books/750014/the-next-conversation-by-jefferson-fisher/
+books:
+  - title: The Next Conversation
+    year: 2025
+    gloss: השיחה הבאה
+    about: >-
+      שיטה בת שלושה חלקים לדבר בשליטה, בביטחון וביצירת חיבור, עם משפטים מוכנים
+      לוויכוחים סוערים, לאנשים קשים ולהצבת גבולות — ולמה שתיקה מכוונת משיגה לא
+      פעם יותר מעוד מילים.
+    url: https://www.penguinrandomhouse.com/books/750014/the-next-conversation-by-jefferson-fisher/
+links:
+  - label: האתר שלו
+    url: https://www.jeffersonfisher.com/
+  - label: הפודקאסט שלו
+    url: https://www.jeffersonfisher.com/podcast
+  - label: ערוץ היוטיוב שלו
+    url: https://www.youtube.com/@jeffersonfisher
