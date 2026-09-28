@@ -151,6 +151,13 @@ const jsonLd = profile && {
           person.title && <p class="muted">{person.title}</p>
         )
       }
+      {
+        /* Other forms people search — Search Console showed "אנתוני רובינס" but
+           never the site's "טוני רובינס". Visible text is what search matches. */
+        profile && profile.altNames.length > 0 && (
+          <p class="muted pv-alt">נכתב גם: {profile.altNames.join(' · ')}</p>
+        )
+      }
       <p class="muted">
         {posts.length === 1 ? 'תקציר אחד' : `${posts.length} תקצירים`} בהסכתון
         {
@@ -379,6 +386,10 @@ const jsonLd = profile && {
   }
   .pv-posts-title {
     margin-bottom: 1.2rem;
+  }
+  .pv-alt {
+    font-size: 0.9rem;
+    margin-top: -0.3rem;
   }
   .pv-links {
     margin-top: 2rem;
