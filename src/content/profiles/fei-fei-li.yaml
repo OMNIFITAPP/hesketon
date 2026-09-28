@@ -1,0 +1,39 @@
+# Verified 2026-09-28.
+# Bio: English Wikipedia, "Fei-Fei Li" — born 1976 in Beijing; joined her
+# father in the US at 16; professor of computer science at Stanford and
+# co-director of the Stanford Institute for Human-Centered AI; ImageNet, begun
+# in 2007 at Princeton, labelling over 14 million images; Chief Scientist of
+# AI/ML at Google Cloud, Jan 2017 – fall 2018; helped found World Labs in 2024
+# (AI with "spatial intelligence").
+# Book: The Worlds I See — Flatiron Books, 7 Nov 2023 (Macmillan). No Hebrew
+# edition found.
+# Links: Stanford profile; World Labs.
+# Quote: her summary's record labels quotes by topic, so the opening quote is
+# pinned by hand — checked against the record's English: "humans develop first
+# preverbally, evolution took 500 million years without verbal communication."
+bio: >-
+  פיי-פיי לי היא מדענית מחשב, פרופסור בסטנפורד ומנהלת-שותפה של המכון לבינה
+  מלאכותית ממוקדת-אדם (HAI) באוניברסיטה. היא נולדה ב-1976 בבייג'ינג והגיעה לארצות
+  הברית בגיל 16. ב-2007 החלה לבנות את ImageNet, מאגר של יותר מ-14 מיליון תמונות
+  מתויגות לזיהוי עצמים; בין 2017 ל-2018 הייתה המדענית הראשית לבינה מלאכותית
+  ב-Google Cloud, וב-2024 הייתה ממייסדי World Labs, חברה שמפתחת בינה מלאכותית
+  בעלת תבונה מרחבית.
+sources:
+  - title: Wikipedia
+    url: https://en.wikipedia.org/wiki/Fei-Fei_Li
+books:
+  - title: The Worlds I See
+    year: 2023
+    gloss: העולמות שאני רואה
+    about: >-
+      ממואר על הדרך מסין לניו ג'רזי ומשם לפרינסטון ולסטנפורד, לצד סיפור ההתפתחות
+      של הבינה המלאכותית — וקריאה לשמור את האדם במרכזה.
+    url: https://us.macmillan.com/books/9781250897930/theworldsisee/
+links:
+  - label: העמוד שלה בסטנפורד
+    url: https://profiles.stanford.edu/fei-fei-li
+  - label: World Labs
+    url: https://www.worldlabs.ai/
+quotes:
+  - he: 'בני אדם מתפתחים קודם כול טרום-מילולית. לאבולוציה לקחו 500 מיליון שנה בלי תקשורת מילולית.'
+    post: fei-fei-li-spatial-intelligence-huberman

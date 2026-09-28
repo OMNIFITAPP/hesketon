@@ -1,0 +1,33 @@
+# Verified 2026-09-28.
+# Bio: English Wikipedia, "Henry Shukman" — English, born 1962 in Oxford;
+# authorised Zen master in the Sanbo Zen lineage; spiritual director emeritus
+# of Mountain Cloud Zen Center (in Santa Fe, per the HarperCollins book page);
+# co-founder and lead meditation teacher of The Way app (launched Feb 2024);
+# earlier a poet, novelist and travel writer who won several literary awards.
+# Book: Original Love: The Four Inns on the Path of Awakening — HarperCollins,
+# 2024 (four inns: mindfulness, support, absorption, awakening). No Hebrew
+# edition found.
+# Links: henryshukman.com (blocks automated checks, but it's his site —
+# the book page lives at henryshukman.com/writing/original-love);
+# thewayapp.com.
+bio: >-
+  הנרי שוקמן הוא מורה זן אנגלי, יליד אוקספורד (1962), מאסטר זן מוסמך בשושלת
+  Sanbo Zen, ששימש מנהל רוחני של מרכז הזן Mountain Cloud בסנטה פה. לפני שהתמסר
+  להוראה היה משורר, סופר וכותב מסעות, וזכה בכמה פרסים ספרותיים. הוא ממייסדי
+  אפליקציית המדיטציה The Way והמורה הראשי בה.
+sources:
+  - title: Wikipedia
+    url: https://en.wikipedia.org/wiki/Henry_Shukman
+books:
+  - title: Original Love
+    year: 2024
+    gloss: אהבה מקורית
+    about: >-
+      מדריך רוחני חילוני שמציב "אהבה מקורית" במקום "חטא קדמון" כבסיס לחיים,
+      ובנוי סביב ארבעה "פונדקים" של תרגול: קשיבות, תמיכה, שקיעה והתעוררות.
+    url: https://www.harpercollins.ca/9780063356108/original-love/
+links:
+  - label: האתר שלו
+    url: https://www.henryshukman.com/
+  - label: אפליקציית המדיטציה שלו
+    url: https://thewayapp.com/

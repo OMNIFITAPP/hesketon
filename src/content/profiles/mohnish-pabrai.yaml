@@ -1,0 +1,31 @@
+# Verified 2026-09-28.
+# Bio: English Wikipedia, "Mohnish Pabrai" — born 1964 in Mumbai; started
+# TransTech in 1991, sold in 2000 for $20M; founded Pabrai Investment Funds in
+# 1999 (modelled on the 1950s Buffett partnerships, per the Wiley book page);
+# Dakshana Foundation with his wife in 2005, for disadvantaged Indians to reach
+# elite higher education; in 2007 bid US$650,100 with Guy Spier for a charity
+# lunch with Buffett. Spier's Hebrew edition spells him "גיא שפיר" (e-vrit).
+# Book: The Dhandho Investor — Wiley, April 2007. No Hebrew edition found.
+# Links: chaiwithpabrai.com.
+bio: >-
+  מוניש פבראי הוא משקיע ערך יליד מומבאי (1964). ב-1991 הקים את חברת ייעוץ המחשוב
+  TransTech ומכר אותה ב-2000 ב-20 מיליון דולר, וב-1999 ייסד את Pabrai Investment
+  Funds, קרנות שנבנו בדגם השותפויות של וורן באפט משנות ה-50. ב-2005 הקים עם אשתו
+  את קרן Dakshana, שעוזרת לצעירים מרקע מוחלש בהודו להגיע למוסדות להשכלה גבוהה,
+  וב-2007 הציע יחד עם גיא שפיר 650,100 דולר במכירה פומבית לצדקה על ארוחת צהריים
+  עם באפט.
+sources:
+  - title: Wikipedia
+    url: https://en.wikipedia.org/wiki/Mohnish_Pabrai
+books:
+  - title: The Dhandho Investor
+    year: 2007
+    gloss: משקיע הדהנדו
+    about: >-
+      איך שיטת הקצאת ההון של קהילת הפאטל ההודית עובדת גם בהשקעות ערך בבורסה.
+      "דהנדו" פירושו מאמץ שיוצר עושר, והעיקרון המרכזי: "עץ — אני מרוויח; פלי —
+      אני לא מפסיד הרבה".
+    url: https://www.wiley.com/en-us/The+Dhandho+Investor:+The+Low-Risk+Value+Method+to+High+Returns-p-9780470043899
+links:
+  - label: האתר שלו
+    url: https://chaiwithpabrai.com/
