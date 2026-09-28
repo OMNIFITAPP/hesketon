@@ -1,0 +1,26 @@
+# Verified 2026-09-28.
+# Bio: English Wikipedia, "Chris Camillo" — entrepreneur; started investing in
+# 2007 with $20,000 and made more than $2 million in returns over the next
+# three years; founded TickerTags in 2015, a social-listening platform for
+# keywords tied to public companies; featured in 2020 in Jack Schwager's
+# Unknown Market Wizards. ("Social arbitrage" isn't in the article; it's in
+# people.json's title and in his הסכתון summary, as his own term.)
+# Book: Laughing at Wall Street — St. Martin's Press, 2011. Linked on
+# Goodreads (Macmillan blocks automated checks). No Hebrew edition found.
+# Links: none verified.
+bio: >-
+  כריס קמילו הוא יזם ומשקיע עצמאי. ב-2007 התחיל להשקיע עם 20,000 דולר, ובשלוש
+  השנים שאחר כך הרוויח יותר משני מיליון דולר. ב-2015 ייסד את TickerTags, פלטפורמה
+  שמאפשרת למשקיעים לעקוב אחר השיח ברשת סביב מילות מפתח שקשורות לחברות ציבוריות,
+  וב-2020 הופיע בספר Unknown Market Wizards של ג'ק שוואגר.
+sources:
+  - title: Wikipedia
+    url: https://en.wikipedia.org/wiki/Chris_Camillo
+books:
+  - title: Laughing at Wall Street
+    year: 2011
+    gloss: צוחק על וול סטריט
+    about: >-
+      איך ניצח את אנשי המקצוע בהשקעות — מקריאת עיתונים צהובים, מקניות בקניון
+      ומפייסבוק — ואיך אפשר לעשות את זה גם בלי להיות איש מקצוע.
+    url: https://www.goodreads.com/book/show/11978532-laughing-at-wall-street
