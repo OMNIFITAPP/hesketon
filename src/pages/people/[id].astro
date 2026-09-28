@@ -9,6 +9,7 @@ import {
   tldrOf,
   postContainsQuote,
   leadQuoteOf,
+  isGroundedQuote,
   normalizeName,
 } from '../../utils';
 
@@ -63,8 +64,9 @@ const ideaGroups = profile
 
 // Their words. Pinned quotes from the profile come first; each must appear word
 // for word in the post it cites, or the build stops. Then the opening quote of
-// every summary where they are the guest — grounded against the transcript and
-// credited to them in the post — so the block grows each time they return.
+// every summary where they are the guest, when it's credited to them and listed
+// in the post's quote record (grounded against the transcript) — so the block
+// grows each time they return. Posts older than grounding contribute nothing.
 const allPosts = profile ? await getPublishedPosts() : [];
 const pinned = (profile?.quotes ?? []).map((q) => {
   const post = allPosts.find((p) => p.id === q.post);
@@ -77,7 +79,9 @@ const pinned = (profile?.quotes ?? []).map((q) => {
 const opening = profile
   ? guestPosts.flatMap((post) => {
       const q = leadQuoteOf(post);
-      return q && normalizeName(q.by) === normalizeName(person.nameHe) ? [{ text: q.text, post }] : [];
+      return q && normalizeName(q.by) === normalizeName(person.nameHe) && isGroundedQuote(post, q.text)
+        ? [{ text: q.text, post }]
+        : [];
     })
   : [];
 const sameWords = (a: string, b: string) =>
@@ -260,7 +264,17 @@ const jsonLd = profile && {
       )
     }
 
-    {profile && <h2 class="pv-posts-title">{posts.length === 1 ? 'התקציר' : 'כל התקצירים'}</h2>}
+    {
+      profile && (
+        <h2 class="pv-posts-title">
+          {guestPosts.length === 0
+            ? `שיחות מתוך הפודקאסט ${g('שלו', 'שלה', '')}`.trim()
+            : posts.length === 1
+              ? 'התקציר'
+              : 'כל התקצירים'}
+        </h2>
+      )
+    }
     <div class="post-grid">
       {posts.map((post) => <PostCard post={post} />)}
     </div>

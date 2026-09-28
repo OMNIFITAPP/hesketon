@@ -188,6 +188,19 @@ export function leadQuoteOf(post: CollectionEntry<'posts'>): { text: string; by:
 }
 
 /**
+ * True when `quote` is listed in the post's quote record — the hidden
+ * "מקורות הציטוטים" comment the pipeline writes after grounding each quote
+ * against the transcript. Posts written before grounding existed have no record,
+ * so nothing from them counts as checked.
+ */
+export function isGroundedQuote(post: CollectionEntry<'posts'>, quote: string): boolean {
+  const record = post.body?.match(/<!--\s*מקורות הציטוטים[\s\S]*?-->/)?.[0];
+  if (!record) return false;
+  const letters = (s: string) => s.replace(/[^\p{L}\p{N}]+/gu, '');
+  return letters(record).includes(letters(quote));
+}
+
+/**
  * The conversations a person came as a guest to, oldest first by air date —
  * the order readers should meet them in, whatever order we summarised them.
  */
