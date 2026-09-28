@@ -10,7 +10,7 @@ import ClassicTag from '../components/ClassicTag.astro';
 import LikeButton from '../components/LikeButton.astro';
 import { SITE, categoryByName, tagToSlug, youtubeThumb, personById, personByName, podcastById, podcastByName } from '../consts';
 import { bestThumb } from '../lib/thumbs';
-import { getRelatedPosts, getPersonTagMap } from '../utils';
+import { getRelatedPosts, getPersonTagMap, appearancesOf } from '../utils';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -23,6 +23,20 @@ const personTags = await getPersonTagMap();
 const cat = categoryByName(d.category);
 const guestPerson = personById(d.source?.guestId) ?? personByName(d.source?.guest);
 const podcastEntity = podcastById(d.source?.podcastId) ?? podcastByName(d.source?.podcast);
+
+// A returning guest: say which of their conversations this is (by air date)
+// and link the neighbouring one — the previous, or the next if this is the first.
+const ORDINALS = ['הראשונה', 'השנייה', 'השלישית', 'הרביעית', 'החמישית', 'השישית', 'השביעית', 'השמינית', 'התשיעית', 'העשירית'];
+const appearances = guestPerson ? await appearancesOf(guestPerson) : [];
+const nth = appearances.findIndex((p) => p.id === post.id);
+const returning =
+  guestPerson && appearances.length > 1 && nth !== -1
+    ? {
+        ordinal: ORDINALS[nth] ?? `ה-${nth + 1}`,
+        label: nth > 0 ? 'הקודמת' : 'הבאה',
+        other: appearances[nth > 0 ? nth - 1 : 1],
+      }
+    : undefined;
 // Prefer the episode's own publish date over when we posted the summary.
 const episodeDate = d.source?.publishedAt ?? d.pubDate;
 const isEpisodeDate = !!d.source?.publishedAt;
@@ -74,6 +88,17 @@ const jsonLd = {
         )}
         {d.source?.podcast && <span class="dot">מתוך «{d.source.podcast}»</span>}
       </div>
+      {
+        returning && (
+          <p class="post-returning">
+            <a href={`/people/${guestPerson!.id}/`}>
+              ההופעה {returning.ordinal} של {guestPerson!.nameHe} בהסכתון
+            </a>
+            {' · '}
+            {returning.label}: <a href={`/posts/${returning.other.id}/`}>{returning.other.data.title}</a>
+          </p>
+        )
+      }
     </header>
 
     {

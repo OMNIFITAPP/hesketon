@@ -3,7 +3,14 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
 import { SITE, PEOPLE, podcastById, podcastByName, type Podcast } from '../../consts';
-import { getPeopleWithPosts, getPublishedPosts, tldrOf, postContainsQuote } from '../../utils';
+import {
+  getPeopleWithPosts,
+  getPublishedPosts,
+  tldrOf,
+  postContainsQuote,
+  leadQuoteOf,
+  normalizeName,
+} from '../../utils';
 
 export async function getStaticPaths() {
   const people = await getPeopleWithPosts();
@@ -54,10 +61,12 @@ const ideaGroups = profile
       .filter((x) => x.items.length > 0)
   : [];
 
-// Quotes must appear word for word in the post they cite — otherwise the build
-// stops. The post's own quotes already passed grounding against the transcript.
-const allPosts = profile?.quotes.length ? await getPublishedPosts() : [];
-const quotes = (profile?.quotes ?? []).map((q) => {
+// Their words. Pinned quotes from the profile come first; each must appear word
+// for word in the post it cites, or the build stops. Then the opening quote of
+// every summary where they are the guest — grounded against the transcript and
+// credited to them in the post — so the block grows each time they return.
+const allPosts = profile ? await getPublishedPosts() : [];
+const pinned = (profile?.quotes ?? []).map((q) => {
   const post = allPosts.find((p) => p.id === q.post);
   if (!post) throw new Error(`profiles/${person.id}.yaml: quote cites unknown post "${q.post}"`);
   if (!postContainsQuote(post, q.he)) {
@@ -65,6 +74,17 @@ const quotes = (profile?.quotes ?? []).map((q) => {
   }
   return { text: q.he, post };
 });
+const opening = profile
+  ? guestPosts.flatMap((post) => {
+      const q = leadQuoteOf(post);
+      return q && normalizeName(q.by) === normalizeName(person.nameHe) ? [{ text: q.text, post }] : [];
+    })
+  : [];
+const sameWords = (a: string, b: string) =>
+  a.replace(/[^\p{L}\p{N}]+/gu, '') === b.replace(/[^\p{L}\p{N}]+/gu, '');
+const quotes = [...pinned, ...opening]
+  .filter((q, i, all) => all.findIndex((o) => sameWords(o.text, q.text)) === i)
+  .slice(0, 4);
 
 // All from one post: name the source once, under the quotes, not under each.
 const oneSource = quotes.length > 1 && quotes.every((q) => q.post.id === quotes[0].post.id);

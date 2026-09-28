@@ -178,6 +178,25 @@ export function postContainsQuote(post: CollectionEntry<'posts'>, quote: string)
   return plainText(post.body ?? '').includes(norm(quote));
 }
 
+/** The post's opening quote and the name it's credited to (every post has one). */
+export function leadQuoteOf(post: CollectionEntry<'posts'>): { text: string; by: string } | undefined {
+  const m = post.body?.match(
+    /<blockquote class="pull--lead">([\s\S]*?)<cite>\s*[—–-]\s*([^<]+?)\s*<\/cite>/,
+  );
+  if (!m) return undefined;
+  return { text: plainText(m[1]).replace(/^["״]|["״]$/g, ''), by: m[2] };
+}
+
+/**
+ * The conversations a person came as a guest to, oldest first by air date —
+ * the order readers should meet them in, whatever order we summarised them.
+ */
+export async function appearancesOf(person: Person): Promise<CollectionEntry<'posts'>[]> {
+  return (await getPublishedPosts())
+    .filter((p) => p.data.source?.guestId === person.id || p.data.source?.guest === person.nameHe)
+    .sort((a, b) => episodeDate(a) - episodeDate(b));
+}
+
 /** Posts from a given podcast (by canonical id or name). */
 export function postsForPodcast(
   podcast: Podcast,
