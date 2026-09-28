@@ -80,3 +80,11 @@ source:
 <!-- refs-keep: "דבר אחד שחזר במחקר של מלבי" — הביטוי מפנה לעבודת התחקיר
      העיתונאית של מלבי לספרו, לא למחקר מדעי שניתן לצטט. אין כאן ממצא שדורש
      הפניה. (השער תופס "מחקר ש" ולכן גם "מחקר של".) -->
+
+<!-- מקורות הציטוטים (לאימות; לא מוצג באתר — נבדק מול התמליל 2026-09-29):
+"כל אדם סביר צריך להיות גם נלהב וגם קצת מפוחד. זה נשמע סותר, אבל זו התגובה הרציונלית היחידה."
+  ⇐ "I think any reasonable person should be both excited and a bit frightened ... It sounds contradictory but actually that's the only rational response. (0:15:34)"
+
+"יש לך AI רב-עוצמה, אבל אתה חושש מ-AI רוסי או סיני שיתקוף. אתה איטי מדי מכדי לזהות את ההתקפה בזמן, אז אתה מסמיך את ה-AI שלך: שמור על עצמך, הגן, תקוף בחזרה אם צריך — ובכל מקרה, הישרד."
+  ⇐ "[ניסוי המחשבה של ג'פרי הינטון, כפי שמלבי מספר] You have an AI. It's very powerful, but you're worried that there's a Russian AI or a Chinese AI. It's going to come and attack your AI. Now, you as a human, you're too slow and dumb to know when that attack is coming. So, you got to empower your own AI to watch out for the attack. And when the attack is coming, defend yourself or maybe counterattack. Whatever you do, make sure you survive. (0:18:53)"
+-->

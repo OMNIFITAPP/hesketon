@@ -37,7 +37,7 @@ references:
 ---
 
 <blockquote class="pull--lead">
-"אתה אמור להרגיש קצת לחוץ בבוקר. זה נורמלי. זה בריא. וזה מכין אותך להיות רגוע יותר בצהריים."
+"אתה אמור להרגיש קצת לחוץ בבוקר. זה נורמלי. זה בריא. וזה מכין אותך להיות רגוע יותר אחר הצהריים."
 <cite>— אנדרו הוברמן</cite>
 </blockquote>
 
@@ -60,7 +60,7 @@ references:
 
 החלון של השעה הראשונה לאחר הקימה הוא קריטי. בתקופה הזו, מסלול ייחודי במוח — נפרד מציר ה-HPA הרגיל (ההיפותלמוס, בלוטת יותרת המוח ובלוטת יותרת הכליה) — מאפשר להגביר את שיא הקורטיזול. <mark>חשיפה לאור בהיר בשעה הראשונה לאחר הקימה יכולה להעלות את שיא הקורטיזול של הבוקר בעד 50%</mark>. אחרי כ-90 דקות, ההזדמנות הזו נסגרת.
 
-> "אם לא מגבירים את קורטיזול הבוקר, מערכת הקורטיזול נשארת מוכנה לאירועי לחץ שיגרמו לעליות גדולות וממושכות אחר הצהריים — מה שמקשה על ההירדמות ועל השינה."
+> "אם לא מגבירים את קורטיזול הבוקר, מערכת הקורטיזול נשארת מוכנה לאירועי לחץ שיגרמו לעליות גדולות וממושכות מאוחר יותר — מה שמקשה על ההירדמות ועל השינה."
 > — אנדרו הוברמן
 
 מה שעוזר: אור שמש או תאורה מלאכותית עוצמתית, הידרציה מוקדמת, ופעילות גופנית — אפילו קפיצות קצרות. מה שלא עוזר כמו שחושבים: טבילה בקרח. הוברמן מדגיש שמחקרים מראים שטבילה קרה מורידה קורטיזול ומעלה אדרנלין ודופמין<sup><a class="cite" href="#ref-1">1</a></sup> — לא את מה שמיוחס לה בשיח הנפוץ.
@@ -109,3 +109,17 @@ references:
 - **לפני שיושבים לעבוד, תשעממו את עצמכם:** הפחיתו קלטים חושיים לפחות 10 דקות לפני כל מקטע ריכוז. הביצועים ישתפרו.
 - **בדקו את עצמכם במקום לקרוא שוב:** לא חזרה על חומר, אלא שליפה ממנו — זו הדרך שבה הזיכרון מתחזק.
 - **רף נמוך הוא הזדמנות:** לא צריך להיות גאון. צריך לעשות את מה שאחרים לא עושים — להתרכז, להתמיד ולא לבזבז את כל הקשב על מה שאחרים עושים.
+
+<!-- מקורות הציטוטים (לאימות; לא מוצג באתר — נבדק מול התמליל 2026-09-29):
+"אתה אמור להרגיש קצת לחוץ בבוקר. זה נורמלי. זה בריא. וזה מכין אותך להיות רגוע יותר אחר הצהריים."
+  ⇐ "you're actually supposed to feel a little stressed first thing in the morning. This is normal. This is healthy and it sets you up for being more calm in the afternoon. (0:05:31)"
+
+"אם לא מגבירים את קורטיזול הבוקר, מערכת הקורטיזול נשארת מוכנה לאירועי לחץ שיגרמו לעליות גדולות וממושכות מאוחר יותר — מה שמקשה על ההירדמות ועל השינה."
+  ⇐ "If you don't spike your morning cortisol, what ends up happening is your cortisol system ... is primed for stress events to give you big lasting increases in cortisol later, which make it hard to fall asleep, which make it hard to stay asleep (0:05:12)"
+
+"המזונות המנחמים המקוריים לא היו פיצה וגלידה. הם היו מזונות עמילניים וחמים — שמדכאים קורטיזול כי הגוף מבין שלא צריך לגייס מאגרים."
+  ⇐ "Those aren't the comfort foods that were originally described as comfort foods. The comfort foods that were coined comfort foods are starchy, warm foods which guess what suppress cortisol because when those foods are available, your brain and essentially your adrenals know that you don't have to mobilize from stored (0:26:21)"
+
+"אני מופתע שמישהו בכלל מסוגל להתרכז. אני לא מאמין שלכולם יש ADHD — אני חושב שפשוט לא הבנו ממה מחשבות בנויות."
+  ⇐ "I'm amazed that anyone can focus at all. I don't believe everyone has ADHD. I think we've just not understood what thoughts are built up from. (1:03:22)"
+-->

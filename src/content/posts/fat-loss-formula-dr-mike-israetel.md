@@ -89,7 +89,7 @@ source:
 
 לגבי סוג הפעילות: "אפקט הבתר-שריפה" (צריכת חמצן עודפת לאחר אימון) מוגזם מאוד בשיח הפופולרי — הוא מוסיף אולי כמה עשרות קלוריות, לא מספיק כדי לשנות את התמונה. מה שחשוב הוא קיימות. הליכה עדיפה על ריצה שמכאיבה את הברכיים וגורמת לכם לפרוש.
 
-> "אין שום דבר קסום בחצי שעה על האליפטיקל. מה שחשוב זה שתשרוף את הקלוריות. כל סוג של פעילות שווה בערך — ספור כמה זמן אתה עושה אותה."
+> "אתה יכול לעשות אגרוף, שיעור זומבה בחדר הכושר, שחייה, אופניים, ריצה, אליפטיקל, ללכת בחלק מהימים — כל עוד אתה שורף את הקלוריות בדרך כלשהי."
 
 ## אימון כוח: ההבדל בין ירידה במשקל לבין שינוי אמיתי
 
@@ -108,3 +108,14 @@ source:
 **עקביות מנצחת שלמות.** לא צריך את הפרוטוקול המושלם — צריך פרוטוקול שאפשר לחזור אליו מחר, מחרתיים, ובעוד שלושה שבועות כשהמוטיבציה יורדת.
 
 **הרכב המזון משנה לאיכות החיים, לא לאיבוד השומן.** ירקות, חלבון רזה, פחמימות מורכבות ושומנים בריאים עוזרים להרגיש שבעים יותר עם פחות קלוריות — ויתרון זה הוא עצום. אבל אין מזון "שורף שומן" ואין מזון שמחסל דיאטה. רק הסכום הכולל בסוף היום.
+
+<!-- מקורות הציטוטים (לאימות; לא מוצג באתר — נבדק מול התמליל 2026-09-29):
+"אם אתה לא סופר קלוריות ואתה מרזה — הגוף שלך נראה טוב יותר, הבגדים עושים לך טוב יותר — אל תתחיל לספור. מה שאתה עושה עובד, תמשיך."
+  ⇐ "if you are losing weight you look cleaner your clothes are fitting better and better and better but you don't count calories don't you dare start God bless you whatever you're doing it's working keep it up (0:15:10)"
+
+"אתה יכול לאכול קטו ולרדת הרבה במשקל ולהגיד 'ראית? אלה היו ההורמונים, אלה לא היו הקלוריות' — אבל הקלוריות היו שם כל הזמן. הדיאטה הקטוגנית פשוט הכניסה אותך לגירעון כל כך חזק שלא הייתה לך שום דרך לחזור לכמויות שיכולת לאכול רק עם צ'יפס וגלידה."
+  ⇐ "you try to keto diet ... you lose a bunch of weight and you're like see it was hormones it was keto it was never the calories well actually it was always the calories but the keto diet allowed you to get into a calorie deficit so powerfully that you didn't even need [to] track calories you were just never going to make it back to what you could only do with potato chips and ice cream (0:12:02)"
+
+"אתה יכול לעשות אגרוף, שיעור זומבה בחדר הכושר, שחייה, אופניים, ריצה, אליפטיקל, ללכת בחלק מהימים — כל עוד אתה שורף את הקלוריות בדרך כלשהי."
+  ⇐ "you can do regular boxing you can do Zumba class at your gym you can do swimming you can do cycling you can do running you can do the elliptical you can walk some days as long as you're getting the calories going some way (1:28:09)"
+-->

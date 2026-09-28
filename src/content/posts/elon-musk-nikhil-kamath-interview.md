@@ -25,7 +25,7 @@ source:
 ---
 
 <blockquote class="pull--lead">
-"אם אתם תקועים על אי בודד עם טריליון דולר, הכסף חסר תועלת — כי אין עבודה להקצות."
+"אם אין עבודה להקצות, הכסף חסר משמעות. אז אם הייתם על אי בודד עם טריליון דולר — זה לא משנה."
 <cite>— אילון מאסק</cite>
 </blockquote>
 
@@ -89,3 +89,11 @@ source:
 **אנרגיה היא המטבע האמיתי.** בין אם ביטקוין, לוויינים סולאריים או עתיד הכלכלה — מאסק מחזיר הכול לאנרגיה. זהו הדבר היחיד שאי אפשר לחוקק יש מאין.
 
 **AI עשוי לפתור את משבר החוב.** לדבריו, AI ורובוטיקה הם כמעט הדבר היחיד שיכול לפתור את החוב האמריקאי העצום — דרך זינוק בתפוקה שיוביל לדפלציה בתוך שנים ספורות.
+
+<!-- מקורות הציטוטים (לאימות; לא מוצג באתר — נבדק מול התמליל 2026-09-29):
+"אם אין עבודה להקצות, הכסף חסר משמעות. אז אם הייתם על אי בודד עם טריליון דולר — זה לא משנה."
+  ⇐ "if there's no labor to allocate it it's meaningless. So if you were to be on a desert island with a trillion you know dollars or whatever doesn't matter. (0:38:59)"
+
+"ההתקדמות ב-AI וברובוטיקה תביא אותנו לנקודה שבה עבודה תהיה אופציונלית — בערך כמו שאתה יכול לגדל ירקות משלך בגינה, או ללכת לחנות ולקנות ירקות."
+  ⇐ "the advancements in AI and robotics will bring us to the point where working is optional um in the same way that like say you could you can grow your own vegetables in your garden or you could go to the store and buy vegetables (0:32:07)"
+-->

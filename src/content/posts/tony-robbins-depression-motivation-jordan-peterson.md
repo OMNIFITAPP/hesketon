@@ -113,3 +113,17 @@ references:
 **מה שחשוב לך יותר מעצמך הוא הדלק האמיתי.** משפחה, שליחות, תרומה — כשהמטרה מחוברת לאחרים, היא מתחזקת ומתרחבת. כשהיא מתרכזת רק בך, היא מתכווצת.
 
 **ההכנה הפרטית היא ההופעה הציבורית.** בין אם מדובר בנאום, בשיחה חשובה, או בשינוי הרגל — מה שמוכן מבעוד מועד הוא מה שיהיה זמין כשצריך. אין קיצורי דרך לשם.
+
+<!-- מקורות הציטוטים (לאימות; לא מוצג באתר — נבדק מול התמליל 2026-09-29):
+"אנחנו לא חווים את החיים — אנחנו חווים את החיים שאנחנו מתמקדים בהם"
+  ⇐ "we don't experience life we experience the life we focus on (0:08:43)"
+
+"93% מהם לא הראו תסמינים כלל. לא היה שום דבר כזה שנעשה אי פעם."
+  ⇐ "93% of them had no symptoms whatsoever it's nothing like it has ever been done (0:12:57)"
+
+"כל אחד יכול להתמודד עם יום קשה אם יש לו מחר מרתק."
+  ⇐ "anyone can deal with a difficult today if they have a compelling tomorrow (0:31:04)"
+
+"המטרה שלי היא תמיד חיפוש. יש לי שאלה — שאלה אמיתית — ואני רוצה להתקדם בתשובה עליה."
+  ⇐ "[ג'ורדן פיטרסון] the aim for me is always a quest it's like I have a question yes and it's a real question and I want to get farther in answering it (0:58:50)"
+-->
