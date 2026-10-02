@@ -167,6 +167,9 @@ source:
 <!-- refs-keep: דיווידסון מתאר בעל פה ניסוי מבוקר ואקראי של הקבוצה שלו (חמש דקות ביום, 28 ימים, סמן דלקתי, תגובה לחיסון שפעת, מיקרוביום, מעקב שישה חודשים) בלי לנקוב בכתב עת, במחברים או בשנה, וכן ניסויים נוספים על התנהגות אלטרואיסטית, ומזכיר התרעת בריאות של מנהל שירותי הבריאות האמריקאי מ-2023. חיפוש ב-Crossref לא העלה פרסום שתואם את תיאור הניסוי, והכתובות הרשמיות של ההתרעה חוסמות בדיקה אוטומטית (403). לפי חוק המקורות אין לנחש URL ואין לצרף מקור שאינו מאומת — ולכן הטענות מדווחות כדבריו, בלי בלוק references. -->
 
 <!-- מקורות הציטוטים (לאימות; לא מוצג באתר):
+"אתם לא צריכים לבחור. אפשר לעשות את שניהם יחד — וזה לא ייקח זמן נוסף."
+  ⇐ ציטוט הפתיחה — המקור באנגלית מעוגן בבלוק שלהלן.
+
 שאלת הפתיחה (פטריק)
   ⇐ "if you only have so much time in the day and you're wanting to partake in habits that are going to benefit your mind, why would I spend time doing something like meditation when I could spend that same amount of time doing exercise, where I know that particularly vigorous exercise is going to be beneficial for my brain — it's going to increase things like neuroplasticity… but also positive affect."
 

@@ -173,6 +173,9 @@ source:
 <!-- refs-keep: האן מזכירה בשיחה מאמר של כלכלן סיני על "משטר אוטוריטרי מבוזר אזורית" בלי לנקוב בשם המחבר, בכתב העת או בשנה, וכן נתונים כלכליים בעל פה. הפוסט מדווח על אזכור בשיחה ואינו מציג הפניה, ולפי חוק המקורות אין לנחש URL. -->
 
 <!-- מקורות הציטוטים (לאימות; לא מוצג באתר):
+"מה שאני קוראת לו ארבעת ה-D הם הבעיות האמיתיות בסין — אלה שמקבלי ההחלטות עצמם מבינים."
+  ⇐ ציטוט הפתיחה — המקור באנגלית מעוגן בבלוק שלהלן.
+
 העדשה המערבית מול הדיון בסין
   ⇐ "It's a massive struggle between democracy and authoritarian regimes… Whereas in China, they're thinking about structural issues." · "they have a framework by which they analyze China. They think it's the next Soviet Union. They think it's the next Imperial Germany."
 

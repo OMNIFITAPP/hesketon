@@ -205,6 +205,9 @@ source:
 <!-- refs-keep: סיליג מתארת עבודה מתוך הקורסים שלה בסטנפורד ומתוך ספרה (What I Wish I Knew About Luck, HarperOne) — תרגילים בכיתה, סיפורים אישיים ומסגרת רעיונית — ולא מביאה מחקר מסוים עם נתונים. אין בפוסט טענה שמיוחסת למחקר, ולכן אין בלוק references. הספר עצמו אומת (Apple Books, Google Books), אבל לפי הכלל ספרים אינם נרשמים כ-references. -->
 
 <!-- מקורות הציטוטים (לאימות; לא מוצג באתר):
+"אנחנו תמיד במרחק החלטה אחת מחיים אחרים לגמרי."
+  ⇐ ציטוט הפתיחה — המקור באנגלית מעוגן בבלוק שלהלן.
+
 "לכאורה"
   ⇐ "the definition of luck is success or failure apparently caused by chance. >> Success or failure apparently. >> Apparently. Exactly. >> But what is the apparently in there for? >> And that's the point… The word apparently, it looks on the surface as though it's chance, but really underneath there are things that you've done to tempt good luck your way."
 

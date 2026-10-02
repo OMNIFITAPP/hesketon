@@ -168,6 +168,9 @@ source:
 - **ואת נתוני ההצלחה כדאי לקרוא בהקשר.** הם מגיעים ממנהל בית הספר עצמו, ולא ממחקר חיצוני.
 
 <!-- מקורות הציטוטים (לאימות; לא מוצג באתר):
+"המפתח לאושר של הילד שלכם הוא סטנדרטים גבוהים. אני לא יכול לנהל בית ספר שהם אוהבים יותר מחופשה, אם יש לי סטנדרטים נמוכים."
+  ⇐ ציטוט הפתיחה — המקור באנגלית מעוגן בבלוק שלהלן.
+
 "בית ספר מוזר ומאולתר" + אין מורה מול כיתה
   ⇐ "I didn't start Alpha — I'm the principal, going in my fifth year. It was started by Brian and MacKenzie 12 years ago… I went to Catholic school. I have two daughters, they were in Catholic school. MacKenzie starts this school and she's like, 'You got to come to my new school.' And I looked at it and I'm like, 'This is a totally weird, janky school.' Like, no way." הוברמן: "What did you see that led you to…" לימנדט: "There's no teacher in front of a classroom. I'm like, 'This is totally crazy,' right? And oh, they're going to learn on some apps — the girls reciting their vocabulary words while they were doing handstands."
 

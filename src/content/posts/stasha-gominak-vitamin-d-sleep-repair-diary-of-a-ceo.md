@@ -186,6 +186,9 @@ source:
 <!-- refs-keep: גומינק מספרת על מחקר קליני שלה ועל ספרות מהארבעים והחמישים כידע רקע בשיחה, בלי לנקוב בפרסום, במחברים או בשנה. הפוסט מדווח על אמירה בעל פה ואינו מציג הפניה, ולפי חוק המקורות אין לנחש URL. -->
 
 <!-- מקורות הציטוטים (לאימות; לא מוצג באתר):
+"הבנתי שאולי הכנסתי אותם למצב שבו הם משתמשים ביותר מאבני הבניין האלה — ובעצם דחפתי אותם למחסור אחר."
+  ⇐ ציטוט הפתיחה — המקור באנגלית מעוגן בבלוק שלהלן.
+
 המטופלת הראשונה + בדיקת השינה
   ⇐ "[she] comes back and says, 'Hey, this drug you gave me for my headaches made my headaches better, but I'm so tired.' And I'm looking at her sleep study going, 'Holy crap, no wonder she's tired. Okay, this is really, really bad.' And this is invisible — absolutely invisible to the rest of the physicians, cuz she looks perfect. So I do a B12 level and a thyroid test because I have no idea what to do. And the B12 is profoundly low… Now the weird part about this is I've never done a B12 level in a headache patient since I've been doing headaches as a part of neurology, which is a large part of neurology."
 

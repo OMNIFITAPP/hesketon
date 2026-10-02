@@ -35,8 +35,12 @@ const posts = readdirSync(DIR)
       guestId: pick('guestId'),
       hostId: pick('hostId'),
       heads: [...raw.matchAll(/^## (.+)$/gm)].map((m) => m[1]),
-      // ציטוטי המקור, כפי שנרשמו בעקבות המקורות
-      sources: [...raw.matchAll(/⇐\s*"?(.{30,})/g)].map((m) => norm(m[1]).slice(0, 70)),
+      // ציטוטי המקור, כפי שנרשמו בעקבות המקורות. שורת ⇐ בעברית בלבד (כמו
+      // "(כנ"ל)" או הפניה לעוגן בהמשך הבלוק) מתנרמלת למחרוזת ריקה — היא אינה
+      // ציטוט מקור, ובלי הסינון כל שתיים כאלה בפוסטים שונים נספרות ככפילות.
+      sources: [...raw.matchAll(/⇐\s*"?(.{30,})/g)]
+        .map((m) => norm(m[1]).slice(0, 70))
+        .filter((s) => s.length >= 20),
     };
   })
   .filter((p) => !p.draft);
