@@ -175,5 +175,11 @@
     "id": "big-think",
     "name": "Big Think",
     "description": "ריאיונות עומק עם מדענים, הוגים ומומחים על הרעיונות הגדולים."
+  },
+  {
+    "id": "the-living-room-podcast",
+    "name": "The LIVING Room Podcast",
+    "hostId": "chris-wharton",
+    "description": "שיחות על בריאות, אריכות ימים וחיים מכוונים — מתוך The WNDR Lab, בהנחיית כריס וורטון."
   }
 ]

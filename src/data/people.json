@@ -685,5 +685,29 @@
     "nameEn": "Tina Seelig",
     "title": "מרצה ליזמות וליצירתיות, אוניברסיטת סטנפורד",
     "gender": "f"
+  },
+  {
+    "id": "michael-moritz",
+    "nameHe": "מייקל מוריץ",
+    "nameEn": "Michael Moritz",
+    "title": "משקיע הון סיכון, עמד בראש Sequoia Capital"
+  },
+  {
+    "id": "kevin-ryan",
+    "nameHe": "קווין ריאן",
+    "nameEn": "Kevin P. Ryan",
+    "title": "יזם סדרתי ומשקיע, מייסד AlleyCorp"
+  },
+  {
+    "id": "robert-downey-jr",
+    "nameHe": "רוברט דאוני ג'וניור",
+    "nameEn": "Robert Downey Jr.",
+    "title": "שחקן"
+  },
+  {
+    "id": "chris-wharton",
+    "nameHe": "כריס וורטון",
+    "nameEn": "Chris Wharton",
+    "title": "מייסד The WNDR Lab ומנחה פודקאסט"
   }
 ]
