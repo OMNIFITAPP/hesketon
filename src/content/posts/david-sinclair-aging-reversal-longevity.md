@@ -18,6 +18,7 @@ source:
   host: "סטיבן ברטלט"
   hostId: "steven-bartlett"
   guest: דיוויד סינקלייר
+  guestId: "david-sinclair"
   youtubeUrl: https://www.youtube.com/watch?v=DnvWAP99r3Y
   publishedAt: 2026-03-23T00:00:00.000Z
   durationMinutes: 149

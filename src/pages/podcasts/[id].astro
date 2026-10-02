@@ -26,7 +26,7 @@ const desc = `כל תקצירי הפרקים מהפודקאסט ${podcast.name}$
       <h1>{podcast.name}</h1>
       {host && <p class="muted">בהנחיית {host.nameHe}</p>}
       {podcast.description && <p class="muted">{podcast.description}</p>}
-      <p class="muted">{posts.length} תקצירים בהסכתון</p>
+      <p class="muted">{posts.length === 1 ? 'תקציר אחד' : `${posts.length} תקצירים`} בהסכתון</p>
     </div>
     <div class="post-grid">
       {posts.map((post) => <PostCard post={post} />)}

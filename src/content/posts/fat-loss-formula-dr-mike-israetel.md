@@ -16,7 +16,9 @@ source:
   podcast: Modern Wisdom
   episode: A Simple Formula for a Lean, Muscular Physique — Dr Mike Israetel
   host: כריס וויליאמסון
+  hostId: "chris-williamson"
   guest: מייק איסראטל
+  guestId: "mike-israetel"
   youtubeUrl: https://www.youtube.com/watch?v=aJFiGC13xIw
   publishedAt: 2024-07-01
   durationMinutes: 142

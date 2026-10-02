@@ -10,7 +10,9 @@ source:
   podcast: "FoundMyFitness"
   episode: "Dr. Andy Galpin: Optimal Diet, Supplements & Recovery"
   host: "רונדה פטריק"
+  hostId: "rhonda-patrick"
   guest: "אנדי גלפין"
+  guestId: "andy-galpin"
   youtubeUrl: "https://www.youtube.com/watch?v=DwtNC2A8gBk"
   publishedAt: 2025-04-28
   durationMinutes: 228

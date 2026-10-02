@@ -6092,7 +6092,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-09-26T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "האסטרטגיה אינה הרוטב. האסטרטגיה הופכת למצרך ברגע שאתה מכיר אותה." 🧱
 
@@ -6125,14 +6125,16 @@ items:
         https://hesketon.co.il/social/2026-09-26_lessons-kane-kallaway-content-/kane-kallaway-content-lego-bricks-system-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-09-26_lessons-kane-kallaway-content-/kane-kallaway-content-lego-bricks-system-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DdwncVqGJdV/
+    publishedAt: '2026-09-26T17:53:32.254Z'
+    mediaId: '17905199403574509'
   - id: 2026-09-27_carousel-martin-picard-mitochon
     slug: martin-picard-mitochondria-grey-hair-huberman
     platform: instagram
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-09-27T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "גילינו שהלבנת שיער, לפחות באופן זמני, היא הפיכה." 🧬
 
@@ -6172,7 +6174,9 @@ items:
         https://hesketon.co.il/social/2026-09-27_carousel-martin-picard-mitochon/martin-picard-mitochondria-grey-hair-huberman-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-09-27_carousel-martin-picard-mitochon/martin-picard-mitochondria-grey-hair-huberman-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DdzHRojk9ed/
+    publishedAt: '2026-09-27T17:10:13.124Z'
+    mediaId: '18412475833086174'
   - id: 2026-09-22_myth-andy-stumpf-psychology-o
     slug: andy-stumpf-psychology-of-endurance-williamson
     platform: instagram
@@ -6350,7 +6354,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-26T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🎨
 
@@ -6379,20 +6383,22 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-26_myth-rick-rubin-creativity-hu/rick-rubin-creativity-huberman-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Ddvc74JgHQU/
     cover: >-
       https://hesketon.co.il/social/2026-09-26_myth-rick-rubin-creativity-hu/rick-rubin-creativity-huberman-cover.jpg
     audio:
       audioId: '5479037848790134'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-26T07:02:50.529Z'
+    mediaId: '18123216217926345'
   - id: 2026-09-27_myth-brian-cox-particle-physi
     slug: brian-cox-particle-physics-frontier-startalk
     platform: instagram
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-09-27T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🔭
 
@@ -6418,20 +6424,22 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-27_myth-brian-cox-particle-physi/brian-cox-particle-physics-frontier-startalk-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Ddx6-vvjtRM/
     cover: >-
       https://hesketon.co.il/social/2026-09-27_myth-brian-cox-particle-physi/brian-cox-particle-physics-frontier-startalk-cover.jpg
     audio:
       audioId: '174020782380726'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-27T06:03:54.151Z'
+    mediaId: '17926569432184960'
   - id: 2026-09-27_reelv2-jocko-willink-confiden
     slug: jocko-willink-confidence-tradeoffs-modern-wisdom
     platform: instagram
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-27T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אחד הדברים העמוקים ביותר שאפשר לעשות כדי להיות בטוח יותר בעצמך הוא להיות בסדר עם לומר: אני לא
       בטוח מה לעשות עכשיו." 🎖️
@@ -6457,13 +6465,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-27_reelv2-jocko-willink-confiden/jocko-willink-confidence-tradeoffs-modern-wisdom-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdyWqxWCsMx/
     cover: >-
       https://hesketon.co.il/social/2026-09-27_reelv2-jocko-willink-confiden/jocko-willink-confidence-tradeoffs-modern-wisdom-cover.jpg
     audio:
       audioId: '2206809489794688'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-27T10:05:49.798Z'
+    mediaId: '18055831637566336'
   - id: 2026-09-22_reelv2-stasha-gominak-vitamin
     slug: stasha-gominak-vitamin-d-sleep-repair-diary-of-a-ceo
     platform: instagram
@@ -6637,7 +6647,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-09-26T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אנשים שמשתמשים בבינה מלאכותית אולי יחליפו אנשים שלא משתמשים בה. אבל בינה מלאכותית לא נמצאת
       בעמדה להחליף אנשים ברוב המכריע של המשרות." 🤖
@@ -6663,13 +6673,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-09-26_reelv2-andrew-ng-ai-jobs-prod/andrew-ng-ai-jobs-product-bottleneck-silicon-valley-girl-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DdvxYEZjxKB/
     cover: >-
       https://hesketon.co.il/social/2026-09-26_reelv2-andrew-ng-ai-jobs-prod/andrew-ng-ai-jobs-product-bottleneck-silicon-valley-girl-cover.jpg
     audio:
       audioId: '2560548683960084'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-09-26T10:01:27.356Z'
+    mediaId: '18114677995824500'
   - id: 2026-09-21_myth-james-clear-habits-getti
     slug: james-clear-habits-getting-started-huberman
     platform: instagram

@@ -1,0 +1,29 @@
+# Verified 2026-09-28.
+# Bio: English Wikipedia, "Jeremy Grantham" — British, born 1938; co-founder and
+# chief investment strategist of GMO LLC, Boston; avoided Japanese equities and
+# real estate in the late 1980s and tech stocks in the Internet bubble, and
+# limited his exposure to the housing bubble; in 2019 dedicated 98% (about
+# $1 billion) of his personal wealth to fighting climate change.
+# GMO founded in Boston in 1977: English Wikipedia, "GMO LLC".
+# Book: The Making of a Permabear, with Edward Chancellor — Grove Atlantic,
+# 13 Jan 2026 (publisher page). No Hebrew edition found.
+# Links: none — he has no personal site or channel of his own.
+bio: >-
+  ג'רמי גרנת'ם הוא משקיע בריטי, ממייסדי חברת ניהול ההשקעות GMO, שהוקמה בבוסטון
+  ב-1977, והאסטרטג הראשי שלה להשקעות. הוא ידוע בזיהוי בועות: נמנע ממניות ומנדל"ן
+  ביפן בסוף שנות ה-80 וממניות טכנולוגיה בבועת האינטרנט, וצמצם את החשיפה שלו לבועת
+  הדיור. ב-2019 ייעד כ-98% מהונו, כמיליארד דולר, למאבק במשבר האקלים.
+sources:
+  - title: Wikipedia
+    url: https://en.wikipedia.org/wiki/Jeremy_Grantham
+  - title: Wikipedia — GMO
+    url: https://en.wikipedia.org/wiki/GMO_LLC
+books:
+  - title: The Making of a Permabear
+    year: 2026
+    with: Edward Chancellor
+    gloss: כך נולד דוב נצחי
+    about: >-
+      ממואר של שישה עשורים בעולם ההשקעות: איך בנה את GMO, למה עמד מול שיגעון
+      הדוט-קום גם כשלקוחות עזבו, ואיך הפנה את הונו להגנה על הסביבה.
+    url: https://groveatlantic.com/book/the-making-of-a-permabear/

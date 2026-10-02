@@ -1,6 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
-import { CATEGORIES } from './consts';
+import { CATEGORIES, PEOPLE } from './consts';
 
 const categoryNames = CATEGORIES.map((c) => c.name) as [string, ...string[]];
 
@@ -76,7 +76,64 @@ const posts = defineCollection({
         durationMinutes: z.number().optional(),
       })
       .optional(),
+  })
+    // A returning guest must land on the same person page every time. Person
+    // pages come from people.json, and a guest name spelled a little differently
+    // silently drops the post from that page. So a published (or scheduled) post
+    // with a guest must carry a known id. Drafts are exempt.
+    .superRefine((data, ctx) => {
+      const s = data.source;
+      if (data.draft || !s?.guest) return;
+      if (!s.guestId) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['source', 'guestId'],
+          message: `guest "${s.guest}" has no guestId — add the person's id from src/data/people.json (add the person there first if they're new)`,
+        });
+      } else if (!PEOPLE.some((p) => p.id === s.guestId)) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['source', 'guestId'],
+          message: `guestId "${s.guestId}" is not in src/data/people.json`,
+        });
+      }
+    }),
+});
+
+// Person profiles — the verified facts behind a person page (v2). One YAML
+// file per person, named by the id in src/data/people.json. Everything here is
+// checked by hand against a source; the person page refuses to build if a
+// profile names an unknown person or quotes a line its post doesn't contain.
+const profiles = defineCollection({
+  loader: glob({ base: './src/content/profiles', pattern: '**/*.yaml' }),
+  schema: z.object({
+    /** 1–3 sentences of Hebrew. Every fact in it must appear in `sources`. */
+    bio: z.string(),
+    sources: z.array(z.object({ title: z.string(), url: z.string().url() })).min(1),
+    /** Other forms people search, e.g. "אנתוני רובינס" for טוני רובינס. */
+    altNames: z.array(z.string()).default([]),
+    books: z
+      .array(
+        z.object({
+          /** The title as published. */
+          title: z.string(),
+          year: z.number(),
+          /** Co-authors, as published. */
+          with: z.string().optional(),
+          /** Title of a Hebrew edition — only when one exists and was checked. */
+          titleHe: z.string().optional(),
+          /** No Hebrew edition: a free translation, always labelled as such. */
+          gloss: z.string().optional(),
+          about: z.string(),
+          url: z.string().url(),
+        }),
+      )
+      .default([]),
+    /** Official channels only. Also emitted as Person.sameAs. */
+    links: z.array(z.object({ label: z.string(), url: z.string().url() })).default([]),
+    /** Verbatim from a post whose quotes passed grounding; `post` is its slug. */
+    quotes: z.array(z.object({ he: z.string(), post: z.string() })).default([]),
   }),
 });
 
-export const collections = { posts };
+export const collections = { posts, profiles };

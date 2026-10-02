@@ -1,0 +1,47 @@
+# Verified 2026-09-28.
+# Bio: English Wikipedia, "Tony Robbins" — Anthony Jay Robbins, born 1960 in
+# North Hollywood; American author, coach and motivational speaker; worked for
+# Jim Rohn from 17, learned NLP, then taught his own self-improvement seminars.
+# Alt names: Search Console had 17 impressions for "אנתוני/אנטוני רובינס" and
+# none for the site's "טוני רובינס". Older Hebrew translations credit him as
+# "אנתוני רובינס" (e-vrit author page) — which is likely why people search it.
+# Books, all with Hebrew editions:
+#  - Awaken the Giant Within (1991) → "להעיר את הענק שבפנים", אור עם (2 parts)
+#  - Money: Master the Game (2014) → "לשלוט במשחק הכסף", מטאור (2 parts)
+#  - Life Force (2022, with Peter Diamandis and Robert Hariri) → "כוח החיים", אור עם
+# Links: tonyrobbins.com.
+bio: >-
+  טוני רובינס הוא סופר, מאמן ונואם מוטיבציה אמריקאי, יליד צפון הוליווד (1960).
+  בגיל 17 התחיל לעבוד אצל נואם המוטיבציה ג'ים רון, ובהמשך למד NLP (תכנות
+  נוירו-לשוני) והתחיל להעביר סמינרים משלו לשיפור עצמי.
+sources:
+  - title: Wikipedia
+    url: https://en.wikipedia.org/wiki/Tony_Robbins
+altNames:
+  - אנתוני רובינס
+  - אנטוני רובינס
+  - Anthony Robbins
+books:
+  - title: Awaken the Giant Within
+    year: 1991
+    titleHe: להעיר את הענק שבפנים
+    about: >-
+      איך לקחת שליטה על החיים — בתחום הנפשי, הרגשי, הגופני והכלכלי.
+    url: https://en.wikipedia.org/wiki/Awaken_the_Giant_Within
+  - title: 'Money: Master the Game'
+    year: 2014
+    titleHe: לשלוט במשחק הכסף
+    about: >-
+      תוכנית בשבעה צעדים לחופש כלכלי, שנבנתה מראיונות עם משקיעים כמו ג'ון בוגל,
+      וורן באפט וריי דליו.
+    url: https://www.e-vrit.co.il/Product/30027/%D7%9C%D7%A9%D7%9C%D7%95%D7%98_%D7%91%D7%9E%D7%A9%D7%97%D7%A7_%D7%94%D7%9B%D7%A1%D7%A3_%D7%97%D7%9C%D7%A7_%D7%90_
+  - title: Life Force
+    year: 2022
+    with: Peter Diamandis, Robert Hariri
+    titleHe: כוח החיים
+    about: >-
+      על פריצות דרך ברפואה, על בסיס ראיונות עם יותר ממאה חלוצים בתחום.
+    url: https://www.e-vrit.co.il/Product/39691/%D7%9B%D7%95%D7%97_%D7%94%D7%97%D7%99%D7%99%D7%9D
+links:
+  - label: האתר שלו
+    url: https://www.tonyrobbins.com/

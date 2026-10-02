@@ -16,7 +16,9 @@ source:
   podcast: Jack Neel
   episode: אלכס הורמוזי — איך הייתי מרוויח 100K בשלושה חודשים ב-2026
   host: ג'ק ניל
+  hostId: "jack-neel"
   guest: אלכס הורמוזי
+  guestId: "alex-hormozi"
   youtubeUrl: https://www.youtube.com/watch?v=flBuEEenQRg
   publishedAt: 2026-06-19T00:00:00.000Z
   durationMinutes: 98

@@ -18,6 +18,7 @@ source:
   host: "סטיבן ברטלט"
   hostId: "steven-bartlett"
   guest: מוניש פבראי
+  guestId: "mohnish-pabrai"
   youtubeUrl: https://www.youtube.com/watch?v=qgeQ5kMVwRA
   publishedAt: 2025-08-21T00:00:00.000Z
   durationMinutes: 106

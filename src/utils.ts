@@ -114,6 +114,112 @@ export async function getPeopleWithPosts(): Promise<
   );
 }
 
+/**
+ * A name reduced to what a reader would type: no ד"ר/פרופ' prefix, no geresh,
+ * quotes or dots, hyphens as spaces. So the tag "ניל דה גראס טייסון" and the
+ * person "ניל דה-גראס טייסון" are recognised as the same name.
+ */
+export function normalizeName(s: string): string {
+  return s
+    .replace(/^(ד["״]ר|פרופ['׳])\s+/, '')
+    .replace(/["״'׳.]/g, '')
+    .replace(/[-־]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+}
+
+/**
+ * Tags that are only a person's name, mapped to that person. Such a tag used to
+ * get its own archive page, which competed in search with the person's page
+ * (Search Console had /tags/דן-מרטל/ at position 4 and /people/dan-martell/ at
+ * 9). Now the chip links straight to the person, and the old tag URL redirects.
+ */
+export async function getPersonTagMap(): Promise<Map<string, Person>> {
+  const people = (await getPeopleWithPosts()).map((x) => x.person);
+  const byName = new Map<string, Person>();
+  for (const p of people) {
+    byName.set(normalizeName(p.nameHe), p);
+    byName.set(normalizeName(p.nameEn), p);
+  }
+  const map = new Map<string, Person>();
+  for (const post of await getPublishedPosts()) {
+    for (const t of post.data.tags ?? []) {
+      const person = byName.get(normalizeName(t));
+      if (person) map.set(t, person);
+    }
+  }
+  return map;
+}
+
+/** Markdown/HTML fragment → plain text (tags, **bold**, entities of our own making). */
+function plainText(s: string): string {
+  return s
+    .replace(/<[^>]+>/g, '')
+    .replace(/\*\*|__/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/** The bullets of a post's אמ;לק box — already reviewed text, safe to reuse. */
+export function tldrOf(post: CollectionEntry<'posts'>): string[] {
+  const box = post.body?.match(/<aside class="tldr[^"]*">([\s\S]*?)<\/aside>/);
+  if (!box) return [];
+  return [...box[1].matchAll(/<li>([\s\S]*?)<\/li>/g)].map((m) => plainText(m[1]));
+}
+
+/**
+ * True when `quote` appears word for word in the post. Ignores whitespace and
+ * the final punctuation mark, since a quote that ends a sentence on the person
+ * page may sit mid-sentence in the post ("…בשפה האנגלית," הוא אומר).
+ */
+export function postContainsQuote(post: CollectionEntry<'posts'>, quote: string): boolean {
+  const norm = (s: string) => plainText(s).replace(/[.,!?]$/, '');
+  return plainText(post.body ?? '').includes(norm(quote));
+}
+
+/** The post's opening quote and the name it's credited to (every post has one). */
+export function leadQuoteOf(post: CollectionEntry<'posts'>): { text: string; by: string } | undefined {
+  const m = post.body?.match(
+    /<blockquote class="pull--lead">([\s\S]*?)<cite>\s*[—–-]\s*([^<]+?)\s*<\/cite>/,
+  );
+  if (!m) return undefined;
+  return { text: plainText(m[1]).replace(/^["״]|["״]$/g, ''), by: m[2] };
+}
+
+/**
+ * True when `quote` is listed in the post's quote record — the hidden
+ * "מקורות הציטוטים" comment the pipeline writes after grounding each quote
+ * against the transcript. Posts written before grounding existed have no record,
+ * so nothing from them counts as checked.
+ */
+export function isGroundedQuote(post: CollectionEntry<'posts'>, quote: string): boolean {
+  const record = post.body?.match(/<!--\s*מקורות הציטוטים[\s\S]*?-->/)?.[0];
+  if (!record) return false;
+  const letters = (s: string) => s.replace(/[^\p{L}\p{N}]+/gu, '');
+  const q = letters(quote);
+  if (letters(record).includes(q)) return true;
+  // Some records shorten a long quote to its opening words and "…". Count it
+  // when the quote starts with those words — at least 12 letters, so a
+  // two-word stub can't vouch for anything.
+  return record
+    .split('\n')
+    .map((l) => l.trim())
+    .filter((l) => /^["״]/.test(l) && /(…|\.\.\.)["״]?$/.test(l))
+    .map((l) => letters(l.replace(/(…|\.\.\.)["״]?$/, '')))
+    .some((prefix) => prefix.length >= 12 && q.startsWith(prefix));
+}
+
+/**
+ * The conversations a person came as a guest to, oldest first by air date —
+ * the order readers should meet them in, whatever order we summarised them.
+ */
+export async function appearancesOf(person: Person): Promise<CollectionEntry<'posts'>[]> {
+  return (await getPublishedPosts())
+    .filter((p) => p.data.source?.guestId === person.id || p.data.source?.guest === person.nameHe)
+    .sort((a, b) => episodeDate(a) - episodeDate(b));
+}
+
 /** Posts from a given podcast (by canonical id or name). */
 export function postsForPodcast(
   podcast: Podcast,

@@ -114,7 +114,9 @@ export function tagToSlug(tag: string): string {
 import peopleData from './data/people.json';
 import podcastsData from './data/podcasts.json';
 
-export type Person = { id: string; nameHe: string; nameEn: string; title?: string };
+// gender drives Hebrew grammar on the person page ("הרעיונות שלו/שלה"). Left
+// unset, the page falls back to wording with no pronoun — never a guess.
+export type Person = { id: string; nameHe: string; nameEn: string; title?: string; gender?: 'm' | 'f' };
 export type Podcast = { id: string; name: string; hostId?: string; description?: string };
 
 export const PEOPLE: Person[] = peopleData as Person[];

@@ -1,0 +1,38 @@
+# Verified 2026-09-28.
+# Bio: English Wikipedia, "Cesar Millan" — born 1969 in Culiacán, Mexico; came
+# to the US in 1990 aged 21 with $100 and no English; Dog Whisperer with Cesar
+# Millan on National Geographic Channel, Sept 2004 – Sept 2012; founded the Dog
+# Psychology Center; "calm-assertive energy", and exercise, discipline and
+# affection "in that order". Criticism kept on purpose: the RSPCA stated his
+# methods "can cause pain and fear" (same article). Remove if Roei disagrees.
+# Book: Cesar's Way, with Melissa Jo Peltier — Harmony, 4 Apr 2006 (Penguin
+# Random House lists 2006-04-04; Wikipedia's 2007 is a later edition).
+# Hebrew edition: "הלוחש לכלבים", הוצאת מטר (צומת ספרים; Simania / Google Books
+# describe it as the translation, with the same exercise-discipline-affection
+# formula). Store year 2011 looks like a reprint, so no Hebrew year is shown.
+# Links: cesarmillan.com (title "Cesar Millan – Official Site");
+# @CesarMillanOfficial is the channel that site links.
+bio: >-
+  סיזר מילאן הוא מומחה להתנהגות כלבים, יליד מקסיקו (1969), שהגיע לארצות הברית
+  ב-1990, בגיל 21, בלי אנגלית ועם 100 דולר. הוא התפרסם בזכות סדרת הטלוויזיה Dog
+  Whisperer with Cesar Millan, ששודרה בנשיונל ג'יאוגרפיק מ-2004 עד 2012, וייסד את
+  המרכז לפסיכולוגיה של כלבים. הגישה שלו — "אנרגיה רגועה ואסרטיבית", ופעילות
+  גופנית, משמעת וחיבה, בסדר הזה — שנויה במחלוקת: ארגון רווחת בעלי החיים הבריטי
+  RSPCA טען ששיטותיו עלולות לגרום לכלבים כאב ופחד.
+sources:
+  - title: Wikipedia
+    url: https://en.wikipedia.org/wiki/Cesar_Millan
+books:
+  - title: Cesar's Way
+    year: 2006
+    with: Melissa Jo Peltier
+    titleHe: הלוחש לכלבים
+    about: >-
+      המדריך שלו להבנת כלבים ולתיקון בעיות התנהגות נפוצות, עם הנוסחה שלו לכלב
+      מאוזן: פעילות גופנית, משמעת וחיבה, בסדר הזה.
+    url: https://www.penguinrandomhouse.com/books/114413/cesars-way-by-cesar-millan-with-melissa-jo-peltier/
+links:
+  - label: האתר שלו
+    url: https://www.cesarmillan.com/
+  - label: ערוץ היוטיוב שלו
+    url: https://www.youtube.com/@CesarMillanOfficial

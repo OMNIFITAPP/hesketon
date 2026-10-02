@@ -21,6 +21,7 @@ source:
   podcastId: joe-rogan-experience
   episode: 'JRE #2524 — רופרט לואו'
   host: ג׳ו רוגן
+  hostId: "joe-rogan"
   guest: רופרט לואו
   guestId: rupert-lowe
   youtubeUrl: https://www.youtube.com/watch?v=k29cMrVtVXY

@@ -1,0 +1,42 @@
+# Verified 2026-09-28.
+# Bio: collabfund.com author page ("a partner at Collaborative Fund");
+# morganhousel.com ("New York Times Bestselling author of The Psychology of
+# Money, The Art of Spending Money, and Same As Ever"); former columnist at
+# The Motley Fool and The Wall Street Journal per the Hebrew edition's page
+# (e-vrit). No Wikipedia article exists.
+# Books: The Psychology of Money — Harriman House, 2020; Hebrew edition
+# "הפסיכולוגיה של הכסף", הוצאת סלע מאיר (e-vrit). Search Console: people search
+# "פסיכולוגיה של הכסף" and הסכתון ranks 4th. The Art of Spending Money —
+# Portfolio, 7 Oct 2025 (Penguin Random House); no Hebrew edition found.
+# Same As Ever left out: year/publisher not confirmed from a primary page.
+# Links: morganhousel.com.
+bio: >-
+  מורגן האוזל הוא שותף בקרן ההון סיכון Collaborative Fund, ולפני כן כתב טורים
+  ב-The Motley Fool ובוול סטריט ג'ורנל. ספריו The Psychology of Money,‏ Same As
+  Ever ו-The Art of Spending Money נכנסו לרשימת רבי-המכר של הניו יורק טיימס.
+sources:
+  - title: Collaborative Fund
+    url: https://collabfund.com/blog/authors/morgan/
+  - title: האתר שלו
+    url: https://www.morganhousel.com/
+  - title: e-vrit — המהדורה העברית
+    url: https://e-vrit.co.il/product/40430/%D7%94%D7%A4%D7%A1%D7%99%D7%9B%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%94-%D7%A9%D7%9C-%D7%94%D7%9B%D7%A1%D7%A3
+books:
+  - title: The Psychology of Money
+    year: 2020
+    titleHe: הפסיכולוגיה של הכסף
+    about: >-
+      20 סיפורים קצרים על הדרכים המוזרות שבהן אנשים חושבים על כסף, והטענה
+      שהצלחה כלכלית תלויה פחות בידע ויותר בהתנהגות.
+    url: https://www.harriman-house.com/authors/morgan-housel/the-psychology-of-money/9780857197689
+  - title: The Art of Spending Money
+    year: 2025
+    gloss: אמנות הוצאת הכסף
+    about: >-
+      בחירות פשוטות לחיים עשירים יותר: למה רובנו רודפים אחרי דברים שמרשימים אחרים
+      במקום דברים שמשפרים את החיים, ואיך מבחינים בין נוחות למותרות ובין תועלת
+      לסטטוס.
+    url: https://www.penguinrandomhouse.com/books/741239/the-art-of-spending-money-by-morgan-housel/
+links:
+  - label: האתר שלו
+    url: https://www.morganhousel.com/

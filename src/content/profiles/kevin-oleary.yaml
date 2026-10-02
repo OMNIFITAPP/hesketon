@@ -1,0 +1,32 @@
+# Verified 2026-09-28.
+# Bio: English Wikipedia, "Kevin O'Leary" — born 1954 in Montreal; co-founded
+# SoftKey in 1986; SoftKey bought The Learning Company in 1995 for $606M and
+# took its name; Mattel bought TLC in 1999 for US$4.2B; Dragons' Den from 2006,
+# Shark Tank since 2009; the shows popularised "Mr. Wonderful". Politics left out
+# (הסכתון does not cover politics).
+# Book: Cold Hard Truth: On Business, Money & Life — Doubleday Canada, 2011
+# (Penguin Random House Canada). First of his Cold Hard Truth money series.
+# No Hebrew edition found.
+# Links: kevinoleary.com; youtube.com/KevinOLeary is the channel his site links
+# (not @KevinOLearyTV, which is a different channel id).
+bio: >-
+  קווין אולירי הוא איש עסקים ומשקיע יליד מונטריאול, המוכר בכינויו "מר וונדרפול"
+  מהתוכניות Dragons' Den ו-Shark Tank, שבה הוא משקיע מאז 2009. ב-1986 היה ממייסדי
+  חברת התוכנה SoftKey, שרכשה ב-1995 את The Learning Company ואימצה את שמה, וב-1999
+  נרכשה החברה בידי מאטל ב-4.2 מיליארד דולר.
+sources:
+  - title: Wikipedia
+    url: https://en.wikipedia.org/wiki/Kevin_O%27Leary
+books:
+  - title: Cold Hard Truth
+    year: 2011
+    gloss: האמת הקשה
+    about: >-
+      הספר הראשון בסדרת ספרי הכסף שלו: על יזמות, עסקים, כסף וחיים, ולמה מי שרוצה
+      להצליח ולצבור הון צריך לעבוד בשביל זה.
+    url: https://www.penguinrandomhouse.ca/books/212721/cold-hard-truth-by-kevin-oleary/9780385671767
+links:
+  - label: האתר שלו
+    url: https://kevinoleary.com/
+  - label: ערוץ היוטיוב שלו
+    url: https://www.youtube.com/KevinOLeary

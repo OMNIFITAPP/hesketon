@@ -1,0 +1,36 @@
+# Verified 2026-09-28.
+# Bio: English Wikipedia, "Sam Harris" — born 1967 in Los Angeles; American
+# neuroscientist and philosopher; PhD in cognitive neuroscience from UCLA
+# (2009) on the neural basis of belief, disbelief and uncertainty; Making Sense
+# podcast since September 2013; Waking Up meditation app, September 2018
+# (secular mindfulness).
+# Books: The End of Faith (2004) — Hebrew edition "מהומת אלוהים: דת, טרור ועתיד
+# התבונה", 2006 (Simania / Google Books). Waking Up (2014) — no Hebrew
+# edition found. Search Console showed "סם האריס ספרים".
+# Links: samharris.org; wakingup.com.
+bio: >-
+  סם האריס הוא נוירוסדען ופילוסוף אמריקאי, יליד לוס אנג'לס (1967), בעל דוקטורט
+  במדעי המוח הקוגניטיביים מ-UCLA, שבו חקר את הבסיס העצבי של אמונה, ספקנות ואי-ודאות.
+  מאז 2013 הוא מגיש את הפודקאסט Making Sense, וב-2018 השיק את אפליקציית המדיטציה
+  Waking Up, שמלמדת תרגול קשיבות חילוני.
+sources:
+  - title: Wikipedia
+    url: https://en.wikipedia.org/wiki/Sam_Harris
+books:
+  - title: The End of Faith
+    year: 2004
+    titleHe: מהומת אלוהים
+    about: >-
+      ספרו הראשון: על דת, טרור ועתיד התבונה.
+    url: https://en.wikipedia.org/wiki/The_End_of_Faith
+  - title: Waking Up
+    year: 2014
+    gloss: להתעורר
+    about: >-
+      מדריך לרוחניות בלי דת.
+    url: https://en.wikipedia.org/wiki/Waking_Up:_A_Guide_to_Spirituality_Without_Religion
+links:
+  - label: האתר שלו
+    url: https://www.samharris.org/
+  - label: אפליקציית המדיטציה שלו
+    url: https://www.wakingup.com/

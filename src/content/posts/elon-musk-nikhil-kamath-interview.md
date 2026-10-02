@@ -16,7 +16,9 @@ source:
   podcast: People by WTF
   episode: 'Elon Musk: A Different Conversation w/ Nikhil Kamath (Ep. 16)'
   host: ניקהיל קאמאת'
+  hostId: "nikhil-kamath"
   guest: אילון מאסק
+  guestId: "elon-musk"
   youtubeUrl: https://www.youtube.com/watch?v=Rni7Fz7208c
   publishedAt: 2025-11-30
   durationMinutes: 114

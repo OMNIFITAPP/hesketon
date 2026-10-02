@@ -1,0 +1,36 @@
+# Verified 2026-09-28.
+# Bio: English Wikipedia, "Annie Jacobsen" — American investigative journalist
+# and author; 2016 Pulitzer Prize finalist (History) for The Pentagon's Brain;
+# Area 51 (2011), Operation Paperclip (2014); co-wrote episodes of Jack Ryan
+# (Amazon); Nuclear War: A Scenario (2024).
+# Books: Biological War: A Scenario — Dutton, 28 Jul 2026, instant NYT
+# bestseller (Penguin Random House); it's the book her הסכתון summary (Joe
+# Rogan #2534) is about. Nuclear War: A Scenario — 2024; Hebrew edition
+# "מלחמה גרעינית", כנרת זמורה דביר (e-vrit).
+# Links: anniejacobsen.com.
+bio: >-
+  אנני ג'ייקובסן היא עיתונאית תחקירים וסופרת אמריקאית שכותבת על מערכות הביטחון
+  והמודיעין של ארצות הברית. בין ספריה Area 51 ו-Operation Paperclip, וב-2016 הייתה
+  בין המועמדים הסופיים לפרס פוליצר להיסטוריה על The Pentagon's Brain. היא גם כתבה
+  פרקים לסדרה Jack Ryan של אמזון.
+sources:
+  - title: Wikipedia
+    url: https://en.wikipedia.org/wiki/Annie_Jacobsen
+books:
+  - title: 'Biological War: A Scenario'
+    year: 2026
+    gloss: 'מלחמה ביולוגית: תרחיש'
+    about: >-
+      מה קורה בשעות, בימים ובשבועות שאחרי שחרור של נשק ביולוגי — על בסיס ראיונות
+      עם מומחים בכירים בממשל, ברפואה ובצבא, ועל תוכניות נשק מתועדות.
+    url: https://www.penguinrandomhouse.com/books/783250/biological-war-by-annie-jacobsen/
+  - title: 'Nuclear War: A Scenario'
+    year: 2024
+    titleHe: מלחמה גרעינית
+    about: >-
+      תרחיש, דקה אחר דקה, של מלחמה גרעינית עולמית שנפתחת בשיגור מצפון קוריאה,
+      על בסיס ראיונות עם ראשי מערכת הביטחון האמריקאית.
+    url: https://en.wikipedia.org/wiki/Nuclear_War:_A_Scenario
+links:
+  - label: האתר שלה
+    url: https://www.anniejacobsen.com/

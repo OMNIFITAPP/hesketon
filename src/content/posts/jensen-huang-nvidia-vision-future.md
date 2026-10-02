@@ -16,7 +16,9 @@ source:
   podcast: Huge Conversations
   episode: החזון של ג'נסן הואנג לעתיד
   host: קלאו אברם
+  hostId: "cleo-abram"
   guest: ג'נסן הואנג
+  guestId: "jensen-huang"
   youtubeUrl: https://www.youtube.com/watch?v=7ARBJQn6QkM
   publishedAt: 2025-01-27T00:00:00.000Z
   durationMinutes: 63
