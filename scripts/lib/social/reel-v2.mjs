@@ -107,6 +107,14 @@ function esc(s) {
   return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+/**
+ * A word's HTML inside its reveal mask. A trailing period gets a sliver of
+ * room (commas never collide, and spacing them reads as a detached comma): at weight 800 Rubik sets a period hard against the corner of
+ * ר/ד, and "החייזר." read as "החייזה" on a grid cover (2026-09-26). Not in
+ * esc(), which also writes attribute values.
+ */
+const wordHtml = (w) => esc(w).replace(/\.+(?=["'״׳]*$)/, (m) => `<span class="pu">${m}</span>`);
+
 /** Punctuation a highlight key shouldn't have to include. */
 const strip = (w) => String(w).replace(/[.,—:;"'?!״׳]/g, '');
 
@@ -125,7 +133,7 @@ function assertKey(text, key, kind) {
 /** Split a line into mask-reveal word spans. */
 function words(text) {
   return String(text).trim().split(/\s+/)
-    .map((w) => `<span class="mw"><b>${esc(w)}</b></span>`).join(' ');
+    .map((w) => `<span class="mw"><b>${wordHtml(w)}</b></span>`).join(' ');
 }
 
 /**
@@ -136,8 +144,8 @@ function wordsWithMark(text, key) {
   assertKey(text, key, 'mark');
   return String(text).trim().split(/\s+/).map((w) => {
     const bare = strip(w);
-    if (bare !== key) return `<span class="mw"><b>${esc(w)}</b></span>`;
-    return `<span class="mw"><b><span class="mark"><span class="mark-bg"></span><span class="mark-tx">${esc(w)}</span></span></b></span>`;
+    if (bare !== key) return `<span class="mw"><b>${wordHtml(w)}</b></span>`;
+    return `<span class="mw"><b><span class="mark"><span class="mark-bg"></span><span class="mark-tx">${wordHtml(w)}</span></span></b></span>`;
   }).join(' ');
 }
 
@@ -151,8 +159,8 @@ function wordsWithPop(text, key) {
   assertKey(text, key, 'pop');
   return String(text).trim().split(/\s+/).map((w) => {
     const bare = strip(w);
-    if (bare !== key) return `<span class="mw"><b>${esc(w)}</b></span>`;
-    return `<span class="mw pop"><b>${esc(w)}</b></span>`;
+    if (bare !== key) return `<span class="mw"><b>${wordHtml(w)}</b></span>`;
+    return `<span class="mw pop"><b>${wordHtml(w)}</b></span>`;
   }).join(' ');
 }
 
@@ -272,6 +280,7 @@ body.invert .seg b i{background:${T.invInk}}
 .mw{display:inline-block;overflow:hidden;vertical-align:bottom;
   padding:.06em .04em .2em;margin:-.06em -.04em -.2em}
 .mw b{display:inline-block;font-weight:inherit;will-change:transform}
+.mw .pu{margin-inline-start:.07em}
 /* the popped word swells, so it needs real air around it — without this the
    scaled box touches its neighbours */
 .mw.pop{margin-inline:.12em}
