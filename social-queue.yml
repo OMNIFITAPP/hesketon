@@ -7292,7 +7292,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-03T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 👽
 
@@ -7320,13 +7320,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-03_myth-neil-degrasse-tyson-alie/neil-degrasse-tyson-aliens-whistleblowers-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeBaarkCexj/
     cover: >-
       https://hesketon.co.il/social/2026-10-03_myth-neil-degrasse-tyson-alie/neil-degrasse-tyson-aliens-whistleblowers-cover.jpg
     audio:
       audioId: '1719530634773795'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-03T06:27:07.145Z'
+    mediaId: '18086383580295301'
   - id: 2026-10-04_myth-kevin-oleary-wealth-disc
     slug: kevin-oleary-wealth-discipline-diary-of-a-ceo
     platform: instagram
