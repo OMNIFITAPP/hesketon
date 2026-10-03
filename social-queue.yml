@@ -7015,7 +7015,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-10-03T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       אילון מאסק אצל ג'ו רוגן: "יש הקצאת יתר של כישרון לפיננסים ולמשפטים… צריך פחות אנשים בעריכת
       דין, פחות בפיננסים, ויותר אנשים שמייצרים דברים." 🚀
@@ -7056,7 +7056,9 @@ items:
         https://hesketon.co.il/social/2026-10-03_carousel-elon-musk-joe-rogan-14/elon-musk-joe-rogan-1470-talent-neuralink-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-10-03_carousel-elon-musk-joe-rogan-14/elon-musk-joe-rogan-1470-talent-neuralink-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DeCoZJnmHY3/
+    publishedAt: '2026-10-03T17:48:09.507Z'
+    mediaId: '17922446307429766'
   - id: 2026-10-04_quote-yuval-noah-harari-ai-f
     slug: yuval-noah-harari-ai-future-danger
     platform: instagram
