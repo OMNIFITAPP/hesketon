@@ -7529,7 +7529,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-10-03T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אנחנו תמיד במרחק החלטה אחת מחיים אחרים לגמרי." ⛵
 
@@ -7555,13 +7555,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-03_reelv2-tina-seelig-luck-sailb/tina-seelig-luck-sailboat-mel-robbins-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeBzUtEiRXn/
     cover: >-
       https://hesketon.co.il/social/2026-10-03_reelv2-tina-seelig-luck-sailb/tina-seelig-luck-sailboat-mel-robbins-cover.jpg
     audio:
       audioId: '492855763044836'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-03T10:04:47.947Z'
+    mediaId: '18105834047248251'
   - id: 2026-10-04_reelv2-codie-sanchez-ownershi
     slug: codie-sanchez-ownership-without-capital-diary-of-a-ceo
     platform: instagram
