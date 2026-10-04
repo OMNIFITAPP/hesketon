@@ -7337,7 +7337,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-04T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 💰
 
@@ -7365,13 +7365,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-04_myth-kevin-oleary-wealth-disc/kevin-oleary-wealth-discipline-diary-of-a-ceo-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeEGzUwDptb/
     cover: >-
       https://hesketon.co.il/social/2026-10-04_myth-kevin-oleary-wealth-disc/kevin-oleary-wealth-discipline-diary-of-a-ceo-cover.jpg
     audio:
       audioId: '1455678704913700'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-04T07:33:34.817Z'
+    mediaId: '18086761220288388'
   - id: 2026-10-05_reelv2-richard-davidson-conte
     slug: richard-davidson-contemplative-aerobics-foundmyfitness
     platform: instagram
