@@ -7574,7 +7574,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-10-04T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "הדרך היחידה לחופש היא דרך בעלות, והעולם לא רוצה לתת לכם אותה." 🔑
 
@@ -7600,13 +7600,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-04_reelv2-codie-sanchez-ownershi/codie-sanchez-ownership-without-capital-diary-of-a-ceo-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeEYLTTlQln/
     cover: >-
       https://hesketon.co.il/social/2026-10-04_reelv2-codie-sanchez-ownershi/codie-sanchez-ownership-without-capital-diary-of-a-ceo-cover.jpg
     audio:
       audioId: '660037926613998'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-04T10:05:10.438Z'
+    mediaId: '18192654286396197'
   - id: 2026-10-06_reelv2-michelle-thaller-unive
     slug: michelle-thaller-universe-not-built-for-us-big-think
     platform: instagram
