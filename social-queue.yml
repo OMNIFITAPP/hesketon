@@ -7065,7 +7065,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-10-04T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "השאלה הגדולה היא האם נאלץ אותה להאט, או שהיא תאלץ אותנו להאיץ — עד שנתמוטט ונמות." 🧠
 
@@ -7087,7 +7087,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-04_quote-yuval-noah-harari-ai-f/yuval-noah-harari-ai-future-danger-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DeFH7lEDO7I/
+    publishedAt: '2026-10-04T17:02:07.713Z'
+    mediaId: '17970809331141536'
   - id: 2026-10-05_myth-andy-galpin-fitness-prin
     slug: andy-galpin-fitness-principles-rich-roll
     platform: instagram
