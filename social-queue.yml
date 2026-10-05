@@ -7384,7 +7384,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-10-05T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אתם לא צריכים לבחור. אפשר לעשות את שניהם יחד — וזה לא ייקח זמן נוסף." 🧘
 
@@ -7409,13 +7409,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-05_reelv2-richard-davidson-conte/richard-davidson-contemplative-aerobics-foundmyfitness-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeG_frMDFm9/
     cover: >-
       https://hesketon.co.il/social/2026-10-05_reelv2-richard-davidson-conte/richard-davidson-contemplative-aerobics-foundmyfitness-cover.jpg
     audio:
       audioId: '1583516402326404'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-05T10:27:23.989Z'
+    mediaId: '18017777003740956'
   - id: 2026-10-08_reelv2-alice-han-china-four-d
     slug: alice-han-china-four-ds-what-now
     platform: instagram
