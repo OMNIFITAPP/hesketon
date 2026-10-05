@@ -7096,7 +7096,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-05T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🏋️
 
@@ -7125,13 +7125,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-05_myth-andy-galpin-fitness-prin/andy-galpin-fitness-principles-rich-roll-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeGjn_SFLcz/
     cover: >-
       https://hesketon.co.il/social/2026-10-05_myth-andy-galpin-fitness-prin/andy-galpin-fitness-principles-rich-roll-cover.jpg
     audio:
       audioId: '981174716484269'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-05T06:23:47.551Z'
+    mediaId: '18212025373362210'
   - id: 2026-10-06_myth-matthew-mcconaughey-rein
     slug: matthew-mcconaughey-reinventing-yourself-modern-wisdom
     platform: instagram
