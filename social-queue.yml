@@ -7142,7 +7142,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-06T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🎬
 
@@ -7170,13 +7170,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-06_myth-matthew-mcconaughey-rein/matthew-mcconaughey-reinventing-yourself-modern-wisdom-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeJNhW3Eoba/
     cover: >-
       https://hesketon.co.il/social/2026-10-06_myth-matthew-mcconaughey-rein/matthew-mcconaughey-reinventing-yourself-modern-wisdom-cover.jpg
     audio:
       audioId: '913718797258608'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-06T07:08:27.878Z'
+    mediaId: '18121316575941869'
   - id: 2026-10-07_myth-creatine-dosing-myths-ca
     slug: creatine-dosing-myths-candow
     platform: instagram
