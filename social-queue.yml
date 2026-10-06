@@ -7625,7 +7625,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-10-06T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "היקום לא תוכנן ולא נבנה כדי להיות מובן לתודעה האנושית." 🌌
 
@@ -7650,13 +7650,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-06_reelv2-michelle-thaller-unive/michelle-thaller-universe-not-built-for-us-big-think-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeJjY1AlSw5/
     cover: >-
       https://hesketon.co.il/social/2026-10-06_reelv2-michelle-thaller-unive/michelle-thaller-universe-not-built-for-us-big-think-cover.jpg
     audio:
       audioId: '140261895808427'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-06T10:19:26.480Z'
+    mediaId: '18014968130976302'
   - id: 2026-10-10_myth-kendrick-lamar-rick-rubi
     slug: kendrick-lamar-rick-rubin-creative-process
     platform: instagram
