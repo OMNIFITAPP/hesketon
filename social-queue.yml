@@ -6865,7 +6865,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-10-06T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       הדרך שבה אתם מדברים אינה "הקול הטבעי" שלכם — היא הרגל. ומה שנלמד, אפשר לשנות. 🎙️
 
@@ -6894,7 +6894,9 @@ items:
         https://hesketon.co.il/social/2026-10-06_lessons-vinh-giang-voice-commu/vinh-giang-voice-communication-skills-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-10-06_lessons-vinh-giang-voice-commu/vinh-giang-voice-communication-skills-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DeKawAvE-bb/
+    publishedAt: '2026-10-06T18:22:56.236Z'
+    mediaId: '18222449542337510'
   - id: 2026-10-07_carousel-dan-martell-how-to-use
     slug: dan-martell-how-to-use-ai-better-than-95-percent
     platform: instagram
