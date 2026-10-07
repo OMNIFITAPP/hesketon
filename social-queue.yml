@@ -7187,7 +7187,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-07T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 💊
 
@@ -7215,13 +7215,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-07_myth-creatine-dosing-myths-ca/creatine-dosing-myths-candow-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeLvLBwktIE/
     cover: >-
       https://hesketon.co.il/social/2026-10-07_myth-creatine-dosing-myths-ca/creatine-dosing-myths-candow-cover.jpg
     audio:
       audioId: '344556620926802'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-07T06:40:51.956Z'
+    mediaId: '18069661334781699'
   - id: 2026-10-08_myth-demis-hassabis-agi-world
     slug: demis-hassabis-agi-world-models-deepmind
     platform: instagram
