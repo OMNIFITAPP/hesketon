@@ -6903,7 +6903,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-10-07T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "יש רק שני עתידים אפשריים: או שתשתף פעולה עם ה-AI ותשתמש בו כדי לייצר ערך בעולם — או שתעבוד
       בשבילו." 🤖
@@ -6944,7 +6944,9 @@ items:
         https://hesketon.co.il/social/2026-10-07_carousel-dan-martell-how-to-use/dan-martell-how-to-use-ai-better-than-95-percent-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-10-07_carousel-dan-martell-how-to-use/dan-martell-how-to-use-ai-better-than-95-percent-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DeM6xUNDN5d/
+    publishedAt: '2026-10-07T17:41:12.335Z'
+    mediaId: '18117449692984167'
   - id: 2026-10-08_quote-tim-ferriss-stuck-brai
     slug: tim-ferriss-stuck-brain-fuel-decisions
     platform: instagram
