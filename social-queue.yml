@@ -6953,7 +6953,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-10-08T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אם תפסיק עם הרשתות החברתיות שבועיים בלבד, זה ייטיב עם אנשים רבים באותה מידה כמו עשר שנות
       טיפול." 📵
@@ -6976,7 +6976,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-08_quote-tim-ferriss-stuck-brai/tim-ferriss-stuck-brain-fuel-decisions-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DePbZpdFzPR/
+    publishedAt: '2026-10-08T17:04:44.767Z'
+    mediaId: '18409718938090386'
   - id: 2026-10-09_lessons-mohnish-pabrai-dhandho
     slug: mohnish-pabrai-dhandho-investor-financial-freedom
     platform: instagram
