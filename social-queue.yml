@@ -7436,7 +7436,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-10-08T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "מה שאני קוראת לו ארבעת ה-D הם הבעיות האמיתיות בסין — אלה שמקבלי ההחלטות עצמם מבינים." 📉
 
@@ -7462,13 +7462,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-08_reelv2-alice-han-china-four-d/alice-han-china-four-ds-what-now-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeOrHvkDQO8/
     cover: >-
       https://hesketon.co.il/social/2026-10-08_reelv2-alice-han-china-four-d/alice-han-china-four-ds-what-now-cover.jpg
     audio:
       audioId: '250416556399344'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-08T10:03:13.888Z'
+    mediaId: '17936300898395609'
   - id: 2026-10-10_carousel-joe-liemandt-alpha-sch
     slug: joe-liemandt-alpha-school-two-hours-huberman
     platform: instagram
