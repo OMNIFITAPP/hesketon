@@ -7274,7 +7274,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-09T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🚴
 
@@ -7299,13 +7299,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-09_myth-lance-armstrong-rise-fal/lance-armstrong-rise-fall-growth-attia-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeQ0udtiWOV/
     cover: >-
       https://hesketon.co.il/social/2026-10-09_myth-lance-armstrong-rise-fal/lance-armstrong-rise-fall-growth-attia-cover.jpg
     audio:
       audioId: '290641658216199'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-09T06:05:39.898Z'
+    mediaId: '18187506214420029'
   - id: 2026-10-03_myth-neil-degrasse-tyson-alie
     slug: neil-degrasse-tyson-aliens-whistleblowers
     platform: instagram
