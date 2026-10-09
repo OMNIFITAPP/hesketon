@@ -181,5 +181,11 @@
     "name": "The LIVING Room Podcast",
     "hostId": "chris-wharton",
     "description": "שיחות על בריאות, אריכות ימים וחיים מכוונים — מתוך The WNDR Lab, בהנחיית כריס וורטון."
+  },
+  {
+    "id": "founders",
+    "name": "Founders",
+    "hostId": "david-senra",
+    "description": "דייוויד סנרה קורא ביוגרפיות של יזמים ומזקק מהן את שיטות העבודה שלהם."
   }
 ]

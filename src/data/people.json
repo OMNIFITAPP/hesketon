@@ -709,5 +709,17 @@
     "nameHe": "כריס וורטון",
     "nameEn": "Chris Wharton",
     "title": "מייסד The WNDR Lab ומנחה פודקאסט"
+  },
+  {
+    "id": "david-senra",
+    "nameHe": "דייוויד סנרה",
+    "nameEn": "David Senra",
+    "title": "מנחה הפודקאסט Founders"
+  },
+  {
+    "id": "david-adelman",
+    "nameHe": "דייוויד אדלמן",
+    "nameEn": "David Adelman",
+    "title": "יזם נדל\"ן ומשקיע, מבעלי פילדלפיה סבנטי סיקסרס"
   }
 ]
