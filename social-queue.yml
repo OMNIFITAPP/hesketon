@@ -7681,7 +7681,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-10T06:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       מיתוס ↔ מציאות 🎤
 
@@ -7704,13 +7704,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-10_myth-kendrick-lamar-rick-rubi/kendrick-lamar-rick-rubin-creative-process-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeTbzOhD5PM/
     cover: >-
       https://hesketon.co.il/social/2026-10-10_myth-kendrick-lamar-rick-rubi/kendrick-lamar-rick-rubin-creative-process-cover.jpg
     audio:
       audioId: '472437631290189'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-10T06:25:33.464Z'
+    mediaId: '18018279566949116'
   - id: 2026-10-11_myth-jensen-huang-nvidia-visi
     slug: jensen-huang-nvidia-vision-future
     platform: instagram
