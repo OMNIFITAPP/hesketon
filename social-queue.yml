@@ -7483,7 +7483,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-10-10T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       בית ספר שבו הלימודים העיוניים נמשכים כשעתיים ביום — וילדים מעדיפים אותו על פני חופשה. 🎒
 
@@ -7523,7 +7523,9 @@ items:
         https://hesketon.co.il/social/2026-10-10_carousel-joe-liemandt-alpha-sch/joe-liemandt-alpha-school-two-hours-huberman-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-10-10_carousel-joe-liemandt-alpha-sch/joe-liemandt-alpha-school-two-hours-huberman-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DeUoILZGPVw/
+    publishedAt: '2026-10-10T17:32:10.842Z'
+    mediaId: '18027821801856955'
   - id: 2026-10-11_quote-jocko-willink-confiden
     slug: jocko-willink-confidence-tradeoffs-modern-wisdom
     platform: instagram
