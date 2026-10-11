@@ -7721,7 +7721,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-11T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🚀
 
@@ -7747,13 +7747,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-11_myth-jensen-huang-nvidia-visi/jensen-huang-nvidia-vision-future-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeV-JpKD_Y6/
     cover: >-
       https://hesketon.co.il/social/2026-10-11_myth-jensen-huang-nvidia-visi/jensen-huang-nvidia-vision-future-cover.jpg
     audio:
       audioId: '2846867285481429'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-11T06:04:09.929Z'
+    mediaId: '17910373296515627'
   - id: 2026-10-12_lessons-michelle-khare-fear-ni
     slug: michelle-khare-fear-nine-month-plan-rich-roll
     platform: instagram
