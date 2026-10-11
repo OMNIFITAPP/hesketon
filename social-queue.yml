@@ -7532,7 +7532,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-10-11T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אחד הדברים העמוקים ביותר שאפשר לעשות כדי להיות בטוח יותר בעצמך הוא להיות בסדר עם לומר: אני לא
       בטוח מה לעשות עכשיו." 🎖️
@@ -7554,7 +7554,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-11_quote-jocko-willink-confiden/jocko-willink-confidence-tradeoffs-modern-wisdom-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DeXJZ8bDuPY/
+    publishedAt: '2026-10-11T17:01:21.159Z'
+    mediaId: '17930856606161985'
   - id: 2026-10-03_reelv2-tina-seelig-luck-sailb
     slug: tina-seelig-luck-sailboat-mel-robbins
     platform: instagram
