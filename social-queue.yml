@@ -8031,7 +8031,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-12T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🧘
 
@@ -8057,13 +8057,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-12_myth-sam-harris-clear-thinkin/sam-harris-clear-thinking-mindfulness-ai-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeY6lz-jFFt/
     cover: >-
       https://hesketon.co.il/social/2026-10-12_myth-sam-harris-clear-thinkin/sam-harris-clear-thinking-mindfulness-ai-cover.jpg
     audio:
       audioId: '1161033588023183'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-12T09:30:51.610Z'
+    mediaId: '18130987868508961'
   - id: 2026-10-13_myth-vonda-wright-mobility-ag
     slug: vonda-wright-mobility-ageing-diary-of-a-ceo
     platform: instagram
