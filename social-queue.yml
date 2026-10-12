@@ -7764,7 +7764,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-10-12T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "אני כנראה הפחדנית הכי גדולה מבין כל מבצעי הפעלולים שקיימים על כדור הארץ." 🎬
 
@@ -7793,7 +7793,9 @@ items:
         https://hesketon.co.il/social/2026-10-12_lessons-michelle-khare-fear-ni/michelle-khare-fear-nine-month-plan-rich-roll-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-10-12_lessons-michelle-khare-fear-ni/michelle-khare-fear-nine-month-plan-rich-roll-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DeZ9ekMH26X/
+    publishedAt: '2026-10-12T19:14:52.551Z'
+    mediaId: '18092881664451603'
   - id: 2026-10-13_carousel-andrew-ng-ai-jobs-prod
     slug: andrew-ng-ai-jobs-product-bottleneck-silicon-valley-girl
     platform: instagram
