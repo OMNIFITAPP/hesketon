@@ -8305,7 +8305,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-10-12T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "האדם שבפנים לא משתנה. מה שמשתנה הוא העוצמה כלפי חוץ." 🧒
 
@@ -8330,13 +8330,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-12_reelv2-michael-moritz-first-f/michael-moritz-first-fourteen-years-invest-like-the-best-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeY-aOhj_N-/
     cover: >-
       https://hesketon.co.il/social/2026-10-12_reelv2-michael-moritz-first-f/michael-moritz-first-fourteen-years-invest-like-the-best-cover.jpg
     audio:
       audioId: '368344604025863'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-12T10:04:13.730Z'
+    mediaId: '18070925240768051'
   - id: 2026-10-14_reelv2-robert-downey-jr-disci
     slug: robert-downey-jr-discipline-living-room-podcast
     platform: instagram
