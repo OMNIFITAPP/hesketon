@@ -690,54 +690,70 @@
     "id": "michael-moritz",
     "nameHe": "מייקל מוריץ",
     "nameEn": "Michael Moritz",
-    "title": "משקיע הון סיכון, עמד בראש Sequoia Capital"
+    "title": "משקיע הון סיכון, עמד בראש Sequoia Capital",
+    "gender": "m"
   },
   {
     "id": "kevin-ryan",
     "nameHe": "קווין ריאן",
     "nameEn": "Kevin P. Ryan",
-    "title": "יזם סדרתי ומשקיע, מייסד AlleyCorp"
+    "title": "יזם סדרתי ומשקיע, מייסד AlleyCorp",
+    "gender": "m"
   },
   {
     "id": "robert-downey-jr",
     "nameHe": "רוברט דאוני ג'וניור",
     "nameEn": "Robert Downey Jr.",
-    "title": "שחקן"
+    "title": "שחקן",
+    "gender": "m"
   },
   {
     "id": "chris-wharton",
     "nameHe": "כריס וורטון",
     "nameEn": "Chris Wharton",
-    "title": "מייסד The WNDR Lab ומנחה פודקאסט"
+    "title": "מייסד The WNDR Lab ומנחה פודקאסט",
+    "gender": "m"
   },
   {
     "id": "david-senra",
     "nameHe": "דייוויד סנרה",
     "nameEn": "David Senra",
-    "title": "מנחה הפודקאסט Founders"
+    "title": "מנחה הפודקאסט Founders",
+    "gender": "m"
   },
   {
     "id": "david-adelman",
     "nameHe": "דייוויד אדלמן",
     "nameEn": "David Adelman",
-    "title": "יזם נדל\"ן ומשקיע, מבעלי פילדלפיה סבנטי סיקסרס"
+    "title": "יזם נדל\"ן ומשקיע, מבעלי פילדלפיה סבנטי סיקסרס",
+    "gender": "m"
   },
   {
     "id": "angela-duckworth",
     "nameHe": "אנג'לה דאקוורת",
     "nameEn": "Angela Duckworth",
-    "title": "פסיכולוגית, מחברת \"גריט\""
+    "title": "פסיכולוגית, מחברת \"גריט\"",
+    "gender": "f"
   },
   {
     "id": "dana-white",
     "nameHe": "דיינה וייט",
     "nameEn": "Dana White",
-    "title": "מנכ\"ל UFC"
+    "title": "מנכ\"ל UFC",
+    "gender": "m"
   },
   {
     "id": "carlo-rovelli",
     "nameHe": "קרלו רובלי",
     "nameEn": "Carlo Rovelli",
-    "title": "פיזיקאי תיאורטי, חוקר כבידה קוונטית"
+    "title": "פיזיקאי תיאורטי, חוקר כבידה קוונטית",
+    "gender": "m"
+  },
+  {
+    "id": "sam-sulek",
+    "nameHe": "סם סולק",
+    "nameEn": "Sam Sulek",
+    "title": "מפתח גוף ויוצר תוכן",
+    "gender": "m"
   }
 ]
