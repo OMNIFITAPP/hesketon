@@ -7802,7 +7802,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-10-13T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       לפי ניתוחים של כלכלנים שאנדרו אנג מצטט, בינה מלאכותית יכולה לבצע כ-30 עד 40 אחוזים מהמשימות
       ברוב המשרות — והיתרה נעשית בעלת ערך רב יותר, לא פחות. 🤖
@@ -7843,7 +7843,9 @@ items:
         https://hesketon.co.il/social/2026-10-13_carousel-andrew-ng-ai-jobs-prod/andrew-ng-ai-jobs-product-bottleneck-silicon-valley-girl-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-10-13_carousel-andrew-ng-ai-jobs-prod/andrew-ng-ai-jobs-product-bottleneck-silicon-valley-girl-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Decad14mKxO/
+    publishedAt: '2026-10-13T18:06:39.590Z'
+    mediaId: '18229289782328995'
   - id: 2026-10-14_quote-andrew-huberman-neurop
     slug: andrew-huberman-neuroplasticity-focus-rich-roll
     platform: instagram
