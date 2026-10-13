@@ -11,6 +11,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "fetch": "node scripts/fetch-transcript.mjs",
+    "intake": "node scripts/intake.mjs",
     "resolve-name": "node scripts/resolve-name.mjs",
     "check-names": "node scripts/check-names.mjs",
     "check:reviews": "node scripts/check-reviews.mjs",
