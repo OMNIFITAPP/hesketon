@@ -8074,7 +8074,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-13T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 💪
 
@@ -8099,13 +8099,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-13_myth-vonda-wright-mobility-ag/vonda-wright-mobility-ageing-diary-of-a-ceo-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DebUeuzCt9g/
     cover: >-
       https://hesketon.co.il/social/2026-10-13_myth-vonda-wright-mobility-ag/vonda-wright-mobility-ageing-diary-of-a-ceo-cover.jpg
     audio:
       audioId: '6909262049112583'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-13T07:55:42.650Z'
+    mediaId: '18112421081147633'
   - id: 2026-10-14_myth-offer-blueprint-hormozi-
     slug: offer-blueprint-hormozi-sanchez-priestley
     platform: instagram
