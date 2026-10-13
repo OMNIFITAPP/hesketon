@@ -187,5 +187,10 @@
     "name": "Founders",
     "hostId": "david-senra",
     "description": "דייוויד סנרה קורא ביוגרפיות של יזמים ומזקק מהן את שיטות העבודה שלהם."
+  },
+  {
+    "id": "informo",
+    "name": "informo",
+    "description": "ערוץ ראיונות ביוטיוב עם משקיעים, מנהלים ומומחים."
   }
 ]
