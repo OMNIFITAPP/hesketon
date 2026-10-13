@@ -755,5 +755,12 @@
     "nameEn": "Sam Sulek",
     "title": "מפתח גוף ויוצר תוכן",
     "gender": "m"
+  },
+  {
+    "id": "ronnie-fieg",
+    "nameHe": "רוני פיג",
+    "nameEn": "Ronnie Fieg",
+    "title": "מייסד, מנכ\"ל ומנהל קריאטיבי של Kith",
+    "gender": "m"
   }
 ]
