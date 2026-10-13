@@ -20,8 +20,12 @@ const SITEMAP = 'https://hesketon.co.il/sitemap-0.xml';
 const ci = process.argv.includes('--ci');
 const wantSlots = process.argv.includes('--slots');
 
-/** ראשון 18:00 · שלישי 14:00 · שישי 16:00, שעון ישראל. [יום בשבוע, שעה] */
-const SLOTS = [[0, 18], [2, 14], [5, 16]];
+/**
+ * שישה שיבוצים בשבוע, שעון ישראל (מ-18.10.2026; קודם שלושה: ראשון, שלישי, שישי).
+ * ראשון 18:00 · שני 18:00 · שלישי 14:00 · רביעי 18:00 · חמישי 18:00 · שישי 16:00.
+ * שבת בלי פרסום. [יום בשבוע, שעה]
+ */
+const SLOTS = [[0, 18], [1, 18], [2, 14], [3, 18], [4, 18], [5, 16]];
 
 /** ההיסט של ישראל (‎+02:00/‎+03:00) בתאריך נתון — כך שעון קיץ נגזר ולא מנוחש. */
 function israelOffset(d) {
@@ -97,7 +101,7 @@ try {
 if (wantSlots) {
   const taken = new Set(posts.map((p) => p.date.toISOString()));
   const free = slotStrings(12).filter((s) => !taken.has(new Date(s).toISOString()));
-  console.log('\n  השיבוצים הפנויים הבאים (ראשון 18:00 · שלישי 14:00 · שישי 16:00):\n');
+  console.log('\n  השיבוצים הפנויים הבאים (ראשון–חמישי 18:00, שלישי 14:00, שישי 16:00):\n');
   for (const s of free.slice(0, 8)) console.log(`  pubDate: '${s}'   ${fmt(new Date(s))}`);
   console.log('');
   process.exit(0);
