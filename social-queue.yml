@@ -8116,7 +8116,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-14T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 💼
 
@@ -8144,13 +8144,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-14_myth-offer-blueprint-hormozi-/offer-blueprint-hormozi-sanchez-priestley-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dedv1e8mHOo/
     cover: >-
       https://hesketon.co.il/social/2026-10-14_myth-offer-blueprint-hormozi-/offer-blueprint-hormozi-sanchez-priestley-cover.jpg
     audio:
       audioId: '3679159392392793'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-14T06:33:06.646Z'
+    mediaId: '17970686922169629'
   - id: 2026-10-15_myth-fei-fei-li-spatial-intel
     slug: fei-fei-li-spatial-intelligence-huberman
     platform: instagram
