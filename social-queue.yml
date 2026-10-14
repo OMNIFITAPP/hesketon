@@ -7852,7 +7852,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-10-14T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "נוירופלסטיות מופעלת על ידי מיקוד עז — אבל היא מתרחשת בזמן שינה עמוקה ומנוחה." 🧠
 
@@ -7871,7 +7871,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-14_quote-andrew-huberman-neurop/andrew-huberman-neuroplasticity-focus-rich-roll-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Dee7IVcmCGH/
+    publishedAt: '2026-10-14T17:30:38.521Z'
+    mediaId: '18118297397003308'
   - id: 2026-10-15_lessons-stasha-gominak-vitamin
     slug: stasha-gominak-vitamin-d-sleep-repair-diary-of-a-ceo
     platform: instagram
