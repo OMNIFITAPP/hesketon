@@ -8353,7 +8353,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-10-14T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אני לא כזה מתפקד. מה שאני כן, זה ממושמע מספיק כדי לכסות על החסרונות שלי." 🎬
 
@@ -8378,13 +8378,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-14_reelv2-robert-downey-jr-disci/robert-downey-jr-discipline-living-room-podcast-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeeM2ZtknJ7/
     cover: >-
       https://hesketon.co.il/social/2026-10-14_reelv2-robert-downey-jr-disci/robert-downey-jr-discipline-living-room-podcast-cover.jpg
     audio:
       audioId: '622819303274042'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-14T10:46:35.363Z'
+    mediaId: '17907132384579714'
   - id: 2026-10-16_reelv2-kevin-ryan-ten-year-tr
     slug: kevin-ryan-ten-year-trends-tim-ferriss
     platform: instagram
