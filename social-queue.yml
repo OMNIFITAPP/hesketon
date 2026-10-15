@@ -7880,7 +7880,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-10-15T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       ד"ר סטאשה גומינק, נוירולוגית, הגיעה לוויטמין D במקרה — ומצאה שכל אדם זקוק לכמות אחרת. 💊
 
@@ -7916,7 +7916,9 @@ items:
         https://hesketon.co.il/social/2026-10-15_lessons-stasha-gominak-vitamin/stasha-gominak-vitamin-d-sleep-repair-diary-of-a-ceo-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-10-15_lessons-stasha-gominak-vitamin/stasha-gominak-vitamin-d-sleep-repair-diary-of-a-ceo-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DehdIdaGC2s/
+    publishedAt: '2026-10-15T17:06:14.340Z'
+    mediaId: '18108143192625612'
   - id: 2026-10-16_carousel-tina-seelig-luck-sailb
     slug: tina-seelig-luck-sailboat-mel-robbins
     platform: instagram
