@@ -8161,7 +8161,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-15T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 👁️
 
@@ -8186,13 +8186,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-15_myth-fei-fei-li-spatial-intel/fei-fei-li-spatial-intelligence-huberman-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DegRT-cFcPb/
     cover: >-
       https://hesketon.co.il/social/2026-10-15_myth-fei-fei-li-spatial-intel/fei-fei-li-spatial-intelligence-huberman-cover.jpg
     audio:
       audioId: '659733666333735'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-15T06:03:58.410Z'
+    mediaId: '18124585955481321'
   - id: 2026-10-16_myth-khabib-nurmagomedov-dage
     slug: khabib-nurmagomedov-dagestan-lex-fridman-500
     platform: instagram
