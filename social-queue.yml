@@ -8203,7 +8203,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-16T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🥋
 
@@ -8228,13 +8228,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-16_myth-khabib-nurmagomedov-dage/khabib-nurmagomedov-dagestan-lex-fridman-500-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dei47F-gCpp/
     cover: >-
       https://hesketon.co.il/social/2026-10-16_myth-khabib-nurmagomedov-dage/khabib-nurmagomedov-dagestan-lex-fridman-500-cover.jpg
     audio:
       audioId: '3062218523947162'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-16T06:28:40.817Z'
+    mediaId: '17991305231856450'
   - id: 2026-10-17_myth-laurence-fishburne-matri
     slug: laurence-fishburne-matrix-physics-startalk
     platform: instagram
