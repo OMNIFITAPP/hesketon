@@ -7925,7 +7925,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-10-16T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אנחנו תמיד במרחק החלטה אחת מחיים אחרים לגמרי." ⛵
 
@@ -7965,7 +7965,9 @@ items:
         https://hesketon.co.il/social/2026-10-16_carousel-tina-seelig-luck-sailb/tina-seelig-luck-sailboat-mel-robbins-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-10-16_carousel-tina-seelig-luck-sailb/tina-seelig-luck-sailboat-mel-robbins-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DekJe8hFzLT/
+    publishedAt: '2026-10-16T18:12:14.590Z'
+    mediaId: '18147072661574691'
   - id: 2026-10-17_quote-codie-sanchez-ownershi
     slug: codie-sanchez-ownership-without-capital-diary-of-a-ceo
     platform: instagram
