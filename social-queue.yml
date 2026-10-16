@@ -8401,7 +8401,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-10-16T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "כדי לבנות חברה חשובה, לצערי, אי אפשר לעשות את זה בשנתיים-שלוש. זה לוקח עשר שנים." 📈
 
@@ -8426,10 +8426,12 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-16_reelv2-kevin-ryan-ten-year-tr/kevin-ryan-ten-year-trends-tim-ferriss-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DejV_uQjPoa/
     cover: >-
       https://hesketon.co.il/social/2026-10-16_reelv2-kevin-ryan-ten-year-tr/kevin-ryan-ten-year-trends-tim-ferriss-cover.jpg
     audio:
       audioId: '2923548401114855'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-16T10:42:45.217Z'
+    mediaId: '18109246240911097'
