@@ -8245,7 +8245,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-17T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 💡
 
@@ -8271,13 +8271,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-17_myth-laurence-fishburne-matri/laurence-fishburne-matrix-physics-startalk-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Dela4MAj7Fx/
     cover: >-
       https://hesketon.co.il/social/2026-10-17_myth-laurence-fishburne-matri/laurence-fishburne-matrix-physics-startalk-cover.jpg
     audio:
       audioId: '642822283435945'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-17T06:03:52.354Z'
+    mediaId: '18097694798397214'
   - id: 2026-10-18_myth-seth-godin-four-horsemen
     slug: seth-godin-four-horsemen-mediocrity-bigdeal
     platform: instagram
