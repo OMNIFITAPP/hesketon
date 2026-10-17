@@ -7974,7 +7974,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-10-17T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "הדרך היחידה לחופש היא דרך בעלות, והעולם לא רוצה לתת לכם אותה." 🔑
 
@@ -7993,7 +7993,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-17_quote-codie-sanchez-ownershi/codie-sanchez-ownership-without-capital-diary-of-a-ceo-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Demstlrjdmu/
+    publishedAt: '2026-10-17T17:58:33.178Z'
+    mediaId: '17929076913421782'
   - id: 2026-10-18_lessons-richard-davidson-conte
     slug: richard-davidson-contemplative-aerobics-foundmyfitness
     platform: instagram
