@@ -8002,7 +8002,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-10-18T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מדיטציה או אימון? לפי פרופ' ריצ'רד דיווידסון אין צורך לבחור — אפשר לעשות את שניהם באותו זמן.
       🧘
@@ -8036,7 +8036,9 @@ items:
         https://hesketon.co.il/social/2026-10-18_lessons-richard-davidson-conte/richard-davidson-contemplative-aerobics-foundmyfitness-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-10-18_lessons-richard-davidson-conte/richard-davidson-contemplative-aerobics-foundmyfitness-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DepLQ7SmFzb/
+    publishedAt: '2026-10-18T17:04:02.305Z'
+    mediaId: '18023304113870305'
   - id: 2026-10-12_myth-sam-harris-clear-thinkin
     slug: sam-harris-clear-thinking-mindfulness-ai
     platform: instagram
