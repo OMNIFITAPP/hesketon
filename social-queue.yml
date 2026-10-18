@@ -8288,7 +8288,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-18T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות ✍️
 
@@ -8314,13 +8314,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-18_myth-seth-godin-four-horsemen/seth-godin-four-horsemen-mediocrity-bigdeal-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/Den_slsj1AF/
     cover: >-
       https://hesketon.co.il/social/2026-10-18_myth-seth-godin-four-horsemen/seth-godin-four-horsemen-mediocrity-bigdeal-cover.jpg
     audio:
       audioId: '429293805595060'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-18T06:04:01.503Z'
+    mediaId: '17971780608156526'
   - id: 2026-10-12_reelv2-michael-moritz-first-f
     slug: michael-moritz-first-fourteen-years-invest-like-the-best
     platform: instagram
