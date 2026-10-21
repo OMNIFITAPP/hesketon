@@ -8451,7 +8451,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-10-21T18:30:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "היקום לא תוכנן ולא נבנה כדי להיות מובן לתודעה האנושית." 🌌
 
@@ -8470,7 +8470,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-21_quote-michelle-thaller-unive/michelle-thaller-universe-not-built-for-us-big-think-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DexNQbvmE53/
+    publishedAt: '2026-10-21T19:55:17.584Z'
+    mediaId: '17985335958115310'
   - id: 2026-10-21_lessons-michael-moritz-first-f
     slug: michael-moritz-first-fourteen-years-invest-like-the-best
     platform: instagram
