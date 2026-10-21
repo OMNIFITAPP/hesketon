@@ -8702,7 +8702,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-10-21T15:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "הדרך למצוינות היא עקביות. והדרך לעקביות היא סביבה שמאפשרת עקביות." 🧭
 
@@ -8724,13 +8724,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-21_reelv2-angela-duckworth-situa/angela-duckworth-situation-beats-willpower-modern-wisdom-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DewtLUAEUx1/
     cover: >-
       https://hesketon.co.il/social/2026-10-21_reelv2-angela-duckworth-situa/angela-duckworth-situation-beats-willpower-modern-wisdom-cover.jpg
     audio:
       audioId: '971529610468450'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-21T15:15:26.725Z'
+    mediaId: '18106924664251455'
   - id: 2026-10-22_reelv2-andrew-huberman-light-
     slug: andrew-huberman-light-breathing-phone-diary-of-a-ceo
     platform: instagram
