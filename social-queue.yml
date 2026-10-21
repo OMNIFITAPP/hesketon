@@ -8477,7 +8477,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-10-21T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       מייקל מוריץ שואל מייסדים בעיקר על הילדות שלהם — על השנים שעד גיל 12–14. 🧒
 
@@ -8506,7 +8506,9 @@ items:
         https://hesketon.co.il/social/2026-10-21_lessons-michael-moritz-first-f/michael-moritz-first-fourteen-years-invest-like-the-best-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-10-21_lessons-michael-moritz-first-f/michael-moritz-first-fourteen-years-invest-like-the-best-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/Dew53t8lxhg/
+    publishedAt: '2026-10-21T17:05:51.478Z'
+    mediaId: '18336909895277697'
   - id: 2026-10-22_carousel-kevin-ryan-ten-year-tr
     slug: kevin-ryan-ten-year-trends-tim-ferriss
     platform: instagram
