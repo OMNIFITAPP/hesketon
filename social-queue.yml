@@ -9004,7 +9004,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-22T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 💼
 
@@ -9032,13 +9032,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-22_myth-alex-hormozi-reality-is-/alex-hormozi-reality-is-the-moat-ai-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeyfIKykaVN/
     cover: >-
       https://hesketon.co.il/social/2026-10-22_myth-alex-hormozi-reality-is-/alex-hormozi-reality-is-the-moat-ai-cover.jpg
     audio:
       audioId: '1296207915590828'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-22T07:51:06.027Z'
+    mediaId: '18642163354026424'
   - id: 2026-10-23_myth-sam-altman-agi-compute-h
     slug: sam-altman-agi-compute-human-agency
     platform: instagram
