@@ -8743,7 +8743,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-10-22T14:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אתם רוצים ימים בהירים, ואתם רוצים לילות חשוכים." ☀️
 
@@ -8765,13 +8765,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-22_reelv2-andrew-huberman-light-/andrew-huberman-light-breathing-phone-diary-of-a-ceo-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DezKCmNitqd/
     cover: >-
       https://hesketon.co.il/social/2026-10-22_reelv2-andrew-huberman-light-/andrew-huberman-light-breathing-phone-diary-of-a-ceo-cover.jpg
     audio:
       audioId: '1367491768595866'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-22T14:06:06.474Z'
+    mediaId: '18446117617134764'
   - id: 2026-10-22_reelv2-bill-gates-how-he-work
     slug: bill-gates-how-he-works-founders
     platform: instagram
