@@ -8778,7 +8778,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-10-22T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "יתרון מרכזי שהיה לי הוא שהייתי קנאי: לקחתי את כל היכולות שלי, יום ולילה, והתמקדתי רק באיך
       כותבים תוכנה טובה." 💻
@@ -8801,13 +8801,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-22_reelv2-bill-gates-how-he-work/bill-gates-how-he-works-founders-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/DeyuVbLExZK/
     cover: >-
       https://hesketon.co.il/social/2026-10-22_reelv2-bill-gates-how-he-work/bill-gates-how-he-works-founders-cover.jpg
     audio:
       audioId: '1085899805683756'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-22T10:04:21.127Z'
+    mediaId: '18133066237746424'
   - id: 2026-10-23_reelv2-dana-white-no-days-off
     slug: dana-white-no-days-off-diary-of-a-ceo
     platform: instagram
