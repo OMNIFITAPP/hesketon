@@ -8517,7 +8517,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-10-22T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "כדי לבנות חברה חשובה, לצערי, אי אפשר לעשות את זה בשנתיים-שלוש. זה לוקח עשר שנים." 📈
 
@@ -8557,7 +8557,9 @@ items:
         https://hesketon.co.il/social/2026-10-22_carousel-kevin-ryan-ten-year-tr/kevin-ryan-ten-year-trends-tim-ferriss-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-10-22_carousel-kevin-ryan-ten-year-tr/kevin-ryan-ten-year-trends-tim-ferriss-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/DezeRcjIIq4/
+    publishedAt: '2026-10-22T17:02:33.439Z'
+    mediaId: '17955060654038562'
   - id: 2026-10-23_quote-robert-downey-jr-disci
     slug: robert-downey-jr-discipline-living-room-podcast
     platform: instagram
