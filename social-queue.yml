@@ -8566,7 +8566,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-10-23T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אני לא כזה מתפקד. מה שאני כן, זה ממושמע מספיק כדי לכסות על החסרונות שלי." 🎬
 
@@ -8588,7 +8588,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-23_quote-robert-downey-jr-disci/robert-downey-jr-discipline-living-room-podcast-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/De2C5jWjiVP/
+    publishedAt: '2026-10-23T17:01:04.454Z'
+    mediaId: '18359025880169451'
   - id: 2026-10-24_lessons-alice-han-china-four-d
     slug: alice-han-china-four-ds-what-now
     platform: instagram
