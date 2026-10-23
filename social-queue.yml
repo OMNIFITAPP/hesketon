@@ -8820,7 +8820,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-10-23T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אם אתם רוצים להקים עסק משלכם כי אתם רוצים יותר זמן לעצמכם, אתם בוחרים בדבר הלא נכון." 🥊
 
@@ -8842,13 +8842,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-23_reelv2-dana-white-no-days-off/dana-white-no-days-off-diary-of-a-ceo-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/De1ZUr5DYla/
     cover: >-
       https://hesketon.co.il/social/2026-10-23_reelv2-dana-white-no-days-off/dana-white-no-days-off-diary-of-a-ceo-cover.jpg
     audio:
       audioId: '1031203210559520'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-23T10:58:04.476Z'
+    mediaId: '18348518671281596'
   - id: 2026-10-24_reelv2-sam-sulek-train-hard-b
     slug: sam-sulek-train-hard-before-smart-modern-wisdom
     platform: instagram
