@@ -9053,7 +9053,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-23T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🤖
 
@@ -9078,13 +9078,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-23_myth-sam-altman-agi-compute-h/sam-altman-agi-compute-human-agency-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/De1G7WsjTae/
     cover: >-
       https://hesketon.co.il/social/2026-10-23_myth-sam-altman-agi-compute-h/sam-altman-agi-compute-human-agency-cover.jpg
     audio:
       audioId: '3213789592130632'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-23T08:17:20.689Z'
+    mediaId: '18117617008802511'
   - id: 2026-10-24_myth-kane-kallaway-content-le
     slug: kane-kallaway-content-lego-bricks-system
     platform: instagram
