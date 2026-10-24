@@ -8597,7 +8597,7 @@ items:
     format: lessons
     kicker: 3 דברים שלמדנו
     scheduledFor: '2026-10-24T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מה באמת מדאיג את מקבלי ההחלטות בסין? לפי אליס האן — לא האידיאולוגיה, אלא ארבע בעיות מבניות. 📉
 
@@ -8630,7 +8630,9 @@ items:
         https://hesketon.co.il/social/2026-10-24_lessons-alice-han-china-four-d/alice-han-china-four-ds-what-now-04-t03.png
       - >-
         https://hesketon.co.il/social/2026-10-24_lessons-alice-han-china-four-d/alice-han-china-four-ds-what-now-05-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/De4sU1clzAv/
+    publishedAt: '2026-10-24T17:41:31.454Z'
+    mediaId: '18117979747811267'
   - id: 2026-10-25_carousel-ronnie-fieg-kith-more-
     slug: ronnie-fieg-kith-more-than-they-pay-for-open-residency
     platform: instagram
