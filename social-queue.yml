@@ -8859,7 +8859,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-10-24T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אני מעדיף להתאמן ממש חזק מאשר ממש חכם." 🏋️
 
@@ -8884,13 +8884,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-24_reelv2-sam-sulek-train-hard-b/sam-sulek-train-hard-before-smart-modern-wisdom-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/De333ZXD9K9/
     cover: >-
       https://hesketon.co.il/social/2026-10-24_reelv2-sam-sulek-train-hard-b/sam-sulek-train-hard-before-smart-modern-wisdom-cover.jpg
     audio:
       audioId: '546771675662388'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-24T10:03:29.358Z'
+    mediaId: '17939690412386537'
   - id: 2026-10-25_reelv2-carlo-rovelli-no-objec
     slug: carlo-rovelli-no-objective-reality-joe-rogan
     platform: instagram
