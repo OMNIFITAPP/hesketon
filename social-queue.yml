@@ -9097,7 +9097,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-24T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🧱
 
@@ -9122,13 +9122,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-24_myth-kane-kallaway-content-le/kane-kallaway-content-lego-bricks-system-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/De3cdz6EWSx/
     cover: >-
       https://hesketon.co.il/social/2026-10-24_myth-kane-kallaway-content-le/kane-kallaway-content-lego-bricks-system-cover.jpg
     audio:
       audioId: '1135647976946888'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-24T06:04:01.749Z'
+    mediaId: '18168256663486220'
   - id: 2026-10-25_myth-tim-ferriss-stuck-brain-
     slug: tim-ferriss-stuck-brain-fuel-decisions
     platform: instagram
