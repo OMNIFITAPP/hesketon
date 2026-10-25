@@ -804,5 +804,12 @@
     "nameEn": "Brad Gerstner",
     "title": "משקיע ומנחה פודקאסט",
     "gender": "m"
+  },
+  {
+    "id": "robert-greene",
+    "nameHe": "רוברט גרין",
+    "nameEn": "Robert Greene",
+    "title": "סופר",
+    "gender": "m"
   }
 ]
