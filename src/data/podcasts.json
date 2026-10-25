@@ -192,5 +192,11 @@
     "id": "informo",
     "name": "informo",
     "description": "ערוץ ראיונות ביוטיוב עם משקיעים, מנהלים ומומחים."
+  },
+  {
+    "id": "simon-squibb",
+    "name": "Simon Squibb",
+    "hostId": "simon-squibb",
+    "description": "הערוץ של סיימון סקוויב: שיעורים ושיחות על פתיחת עסק."
   }
 ]
