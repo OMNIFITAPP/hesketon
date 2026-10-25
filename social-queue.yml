@@ -8901,7 +8901,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-10-25T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "החלום הזה על אובייקטיביות מוחלטת, לדעתי, הוא הטעות." 🌌
 
@@ -8926,13 +8926,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-25_reelv2-carlo-rovelli-no-objec/carlo-rovelli-no-objective-reality-joe-rogan-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/De6fiH8AWjV/
     cover: >-
       https://hesketon.co.il/social/2026-10-25_reelv2-carlo-rovelli-no-objec/carlo-rovelli-no-objective-reality-joe-rogan-cover.jpg
     audio:
       audioId: '1588297948715714'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-25T10:28:33.179Z'
+    mediaId: '17937367962402635'
   - id: 2026-10-26_reelv2-mohnish-pabrai-never-s
     slug: mohnish-pabrai-never-sell-great-business-informo
     platform: instagram
