@@ -9141,7 +9141,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-25T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🧠
 
@@ -9166,13 +9166,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-25_myth-tim-ferriss-stuck-brain-/tim-ferriss-stuck-brain-fuel-decisions-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/De6BAt2EjdT/
     cover: >-
       https://hesketon.co.il/social/2026-10-25_myth-tim-ferriss-stuck-brain-/tim-ferriss-stuck-brain-fuel-decisions-cover.jpg
     audio:
       audioId: '1995172257602083'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-25T06:01:54.671Z'
+    mediaId: '18119857430096262'
   - id: 2026-10-26_myth-dwayne-johnson-the-rock-
     slug: dwayne-johnson-the-rock-joe-rogan-2063
     platform: instagram
