@@ -204,5 +204,11 @@
     "name": "Mark Bell's Power Project",
     "hostId": "mark-bell",
     "description": "פודקאסט על כוח, אימון, תזונה ובריאות."
+  },
+  {
+    "id": "bg2-pod",
+    "name": "Bg2 Pod",
+    "hostId": "brad-gerstner",
+    "description": "שיחות של משקיעים על טכנולוגיה, שווקים וכלכלה."
   }
 ]
