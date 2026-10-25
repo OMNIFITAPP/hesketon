@@ -8639,7 +8639,7 @@ items:
     format: carousel
     kicker: תקציר מזוקק
     scheduledFor: '2026-10-25T17:00:00.000Z'
-    status: approved
+    status: published
     caption: |-
       "תנו לאנשים יותר ממה שהם משלמים עליו. זה המוטו." 👟
 
@@ -8676,7 +8676,9 @@ items:
         https://hesketon.co.il/social/2026-10-25_carousel-ronnie-fieg-kith-more-/ronnie-fieg-kith-more-than-they-pay-for-open-residency-09-t04.png
       - >-
         https://hesketon.co.il/social/2026-10-25_carousel-ronnie-fieg-kith-more-/ronnie-fieg-kith-more-than-they-pay-for-open-residency-10-99-cta.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/De7Nacjl5c6/
+    publishedAt: '2026-10-25T17:09:09.709Z'
+    mediaId: '17980118045915387'
   - id: 2026-10-26_quote-tony-robbins-ai-future
     slug: tony-robbins-ai-future-of-work-meaning
     platform: instagram
