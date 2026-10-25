@@ -783,5 +783,19 @@
     "nameEn": "Simon Squibb",
     "title": "יזם ומשקיע",
     "gender": "m"
+  },
+  {
+    "id": "joel-jamieson",
+    "nameHe": "ג'ואל ג'יימיסון",
+    "nameEn": "Joel Jamieson",
+    "title": "מאמן כושר גופני ויזם",
+    "gender": "m"
+  },
+  {
+    "id": "mark-bell",
+    "nameHe": "מארק בל",
+    "nameEn": "Mark Bell",
+    "title": "מרים משקולות ומנחה פודקאסט",
+    "gender": "m"
   }
 ]

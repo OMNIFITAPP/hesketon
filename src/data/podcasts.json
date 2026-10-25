@@ -198,5 +198,11 @@
     "name": "Simon Squibb",
     "hostId": "simon-squibb",
     "description": "הערוץ של סיימון סקוויב: שיעורים ושיחות על פתיחת עסק."
+  },
+  {
+    "id": "power-project",
+    "name": "Mark Bell's Power Project",
+    "hostId": "mark-bell",
+    "description": "פודקאסט על כוח, אימון, תזונה ובריאות."
   }
 ]
