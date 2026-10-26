@@ -8685,7 +8685,7 @@ items:
     format: quote
     kicker: ציטוט
     scheduledFor: '2026-10-26T17:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "אנשים לא יוחלפו על ידי AI. הם יוחלפו על ידי מישהו שיודע להשתמש ב-AI." 🤖
 
@@ -8707,7 +8707,9 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-26_quote-tony-robbins-ai-future/tony-robbins-ai-future-of-work-meaning-01-quote.png
-    permalink: ''
+    permalink: https://www.instagram.com/p/De90StPoK3k/
+    publishedAt: '2026-10-26T17:27:21.279Z'
+    mediaId: '18133092676785109'
   - id: 2026-10-21_reelv2-angela-duckworth-situa
     slug: angela-duckworth-situation-beats-willpower-modern-wisdom
     platform: instagram
