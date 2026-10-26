@@ -9185,7 +9185,7 @@ items:
     format: reel
     kicker: מיתוס ↔ מציאות
     scheduledFor: '2026-10-26T06:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       מיתוס ↔ מציאות 🏈
 
@@ -9210,10 +9210,12 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-26_myth-dwayne-johnson-the-rock-/dwayne-johnson-the-rock-joe-rogan-2063-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/De8mgdYkQfp/
     cover: >-
       https://hesketon.co.il/social/2026-10-26_myth-dwayne-johnson-the-rock-/dwayne-johnson-the-rock-joe-rogan-2063-cover.jpg
     audio:
       audioId: '248622797387636'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-26T06:08:02.637Z'
+    mediaId: '18065197625791344'
