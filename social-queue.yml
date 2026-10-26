@@ -8943,7 +8943,7 @@ items:
     format: reel
     kicker: ריל
     scheduledFor: '2026-10-26T10:00:00.000Z'
-    status: approved
+    status: published
     caption: >-
       "עסקים מצוינים הם נדירים מאוד, וצריך להחזיק בהם גם כשהם נראים יקרים מדי. לקח לי יותר מ-20 שנה
       ללמוד את זה." 📊
@@ -8969,13 +8969,15 @@ items:
     assets:
       - >-
         https://hesketon.co.il/social/2026-10-26_reelv2-mohnish-pabrai-never-s/mohnish-pabrai-never-sell-great-business-informo-reel.mp4
-    permalink: ''
+    permalink: https://www.instagram.com/reel/De9BMhnES9A/
     cover: >-
       https://hesketon.co.il/social/2026-10-26_reelv2-mohnish-pabrai-never-s/mohnish-pabrai-never-sell-great-business-informo-cover.jpg
     audio:
       audioId: '864536098206214'
       audioVolume: 100
       videoVolume: 0
+    publishedAt: '2026-10-26T10:01:11.037Z'
+    mediaId: '17967742065197026'
   - id: 2026-10-21_myth-martin-picard-mitochondr
     slug: martin-picard-mitochondria-grey-hair-huberman
     platform: instagram
