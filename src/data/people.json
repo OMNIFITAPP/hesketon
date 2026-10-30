@@ -846,5 +846,12 @@
     "nameEn": "Emma Grede",
     "title": "יזמת ומנחת פודקאסט",
     "gender": "f"
+  },
+  {
+    "id": "jimmy-carr",
+    "nameHe": "ג'ימי קאר",
+    "nameEn": "Jimmy Carr",
+    "title": "קומיקאי",
+    "gender": "m"
   }
 ]
