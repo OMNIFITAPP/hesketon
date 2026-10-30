@@ -216,5 +216,11 @@
     "name": "GSP Podcast",
     "hostId": "georges-st-pierre",
     "description": "ז'ורז' סן־פייר משוחח עם מאמנים, לוחמים ואנשים שהשפיעו עליו."
+  },
+  {
+    "id": "aspire-emma-grede",
+    "name": "Aspire with Emma Grede",
+    "hostId": "emma-grede",
+    "description": "אמה גריד משוחחת עם יזמים ויזמיות על בניית עסקים."
   }
 ]

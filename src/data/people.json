@@ -832,5 +832,19 @@
     "nameEn": "Georges St-Pierre",
     "title": "לוחם MMA לשעבר ומנחה פודקאסט",
     "gender": "m"
+  },
+  {
+    "id": "mark-cuban",
+    "nameHe": "מארק קיובן",
+    "nameEn": "Mark Cuban",
+    "title": "יזם ומשקיע",
+    "gender": "m"
+  },
+  {
+    "id": "emma-grede",
+    "nameHe": "אמה גריד",
+    "nameEn": "Emma Grede",
+    "title": "יזמת ומנחת פודקאסט",
+    "gender": "f"
   }
 ]
