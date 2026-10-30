@@ -811,5 +811,12 @@
     "nameEn": "Robert Greene",
     "title": "סופר",
     "gender": "m"
+  },
+  {
+    "id": "ross-edgley",
+    "nameHe": "רוס אדגלי",
+    "nameEn": "Ross Edgley",
+    "title": "שחיין סיבולת ומדען ספורט",
+    "gender": "m"
   }
 ]
