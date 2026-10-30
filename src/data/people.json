@@ -818,5 +818,19 @@
     "nameEn": "Ross Edgley",
     "title": "שחיין סיבולת ומדען ספורט",
     "gender": "m"
+  },
+  {
+    "id": "john-danaher",
+    "nameHe": "ג'ון דנאהר",
+    "nameEn": "John Danaher",
+    "title": "מאמן ג'יו־ג'יטסו",
+    "gender": "m"
+  },
+  {
+    "id": "georges-st-pierre",
+    "nameHe": "ז'ורז' סן־פייר",
+    "nameEn": "Georges St-Pierre",
+    "title": "לוחם MMA לשעבר ומנחה פודקאסט",
+    "gender": "m"
   }
 ]

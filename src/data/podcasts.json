@@ -210,5 +210,11 @@
     "name": "Bg2 Pod",
     "hostId": "brad-gerstner",
     "description": "שיחות של משקיעים על טכנולוגיה, שווקים וכלכלה."
+  },
+  {
+    "id": "gsp-podcast",
+    "name": "GSP Podcast",
+    "hostId": "georges-st-pierre",
+    "description": "ז'ורז' סן־פייר משוחח עם מאמנים, לוחמים ואנשים שהשפיעו עליו."
   }
 ]
