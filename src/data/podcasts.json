@@ -222,5 +222,11 @@
     "name": "Aspire with Emma Grede",
     "hostId": "emma-grede",
     "description": "אמה גריד משוחחת עם יזמים ויזמיות על בניית עסקים."
+  },
+  {
+    "id": "this-past-weekend",
+    "name": "This Past Weekend w/ Theo Von",
+    "hostId": "theo-von",
+    "description": "הקומיקאי תיאו פון משוחח עם אורחים מכל התחומים, בלי תסריט."
   }
 ]

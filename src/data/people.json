@@ -867,5 +867,12 @@
     "nameEn": "Adam Neumann",
     "title": "יזם",
     "gender": "m"
+  },
+  {
+    "id": "theo-von",
+    "nameHe": "תיאו פון",
+    "nameEn": "Theo Von",
+    "title": "קומיקאי ומנחה",
+    "gender": "m"
   }
 ]
