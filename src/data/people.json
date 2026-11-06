@@ -860,5 +860,12 @@
     "nameEn": "Vanessa Van Edwards",
     "title": "חוקרת התנהגות",
     "gender": "f"
+  },
+  {
+    "id": "adam-neumann",
+    "nameHe": "אדם נוימן",
+    "nameEn": "Adam Neumann",
+    "title": "יזם",
+    "gender": "m"
   }
 ]
