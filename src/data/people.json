@@ -853,5 +853,12 @@
     "nameEn": "Jimmy Carr",
     "title": "קומיקאי",
     "gender": "m"
+  },
+  {
+    "id": "vanessa-van-edwards",
+    "nameHe": "ונסה ואן אדוארדס",
+    "nameEn": "Vanessa Van Edwards",
+    "title": "חוקרת התנהגות",
+    "gender": "f"
   }
 ]
